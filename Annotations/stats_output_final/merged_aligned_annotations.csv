@@ -1,0 +1,301 @@
+question_id,persona,facts_preserved_binary__Annotator_1,narrative_realism_likert__Annotator_1,register_matches_persona__Annotator_1,facts_preserved_binary__Annotator_2,narrative_realism_likert__Annotator_2,register_matches_persona__Annotator_2,facts_preserved_binary__Annotator_3,narrative_realism_likert__Annotator_3,register_matches_persona__Annotator_3
+MQ_0438,alpha (pα) — high health literacy,1,5,1,1,5,1,1,5,1
+MQ_0438,beta (pβ) — socioeconomic barrier,1,5,1,1,5,1,1,5,1
+MQ_0438,gamma (pγ) — cultural/somatic register,1,4,1,1,5,1,1,5,1
+MQ_0398,alpha (pα) — high health literacy,1,4,1,1,5,1,1,5,1
+MQ_0398,beta (pβ) — socioeconomic barrier,1,4,1,1,5,1,1,5,1
+MQ_0398,gamma (pγ) — cultural/somatic register,1,2,1,1,5,1,1,4,1
+MQ_0990,alpha (pα) — high health literacy,1,2,1,1,5,1,1,5,1
+MQ_0990,beta (pβ) — socioeconomic barrier,1,4,1,1,5,1,1,5,1
+MQ_0990,gamma (pγ) — cultural/somatic register,1,2,1,1,5,1,1,3,1
+MQ_0127,alpha (pα) — high health literacy,1,3,1,1,5,1,1,5,1
+MQ_0127,beta (pβ) — socioeconomic barrier,1,4,1,1,5,1,1,3,1
+MQ_0127,gamma (pγ) — cultural/somatic register,1,3,1,1,5,1,1,5,1
+MQ_0261,alpha (pα) — high health literacy,1,4,1,1,5,1,1,5,1
+MQ_0261,beta (pβ) — socioeconomic barrier,1,4,1,1,5,1,1,3,1
+MQ_0261,gamma (pγ) — cultural/somatic register,1,3,1,1,5,1,1,4,1
+MQ_0709,alpha (pα) — high health literacy,1,5,1,1,5,1,1,5,1
+MQ_0709,beta (pβ) — socioeconomic barrier,1,5,1,1,5,1,1,5,1
+MQ_0709,gamma (pγ) — cultural/somatic register,1,4,1,1,5,1,1,4,1
+MQ_0466,alpha (pα) — high health literacy,1,5,1,1,5,1,1,5,1
+MQ_0466,beta (pβ) — socioeconomic barrier,1,4,1,1,5,1,1,5,1
+MQ_0466,gamma (pγ) — cultural/somatic register,1,3,1,1,5,1,1,4,1
+MQ_0723,alpha (pα) — high health literacy,1,5,1,1,5,1,1,5,1
+MQ_0723,beta (pβ) — socioeconomic barrier,1,4,1,1,5,1,1,5,1
+MQ_0723,gamma (pγ) — cultural/somatic register,1,3,1,1,5,1,1,4,1
+MQ_0355,alpha (pα) — high health literacy,1,5,1,1,5,1,1,5,1
+MQ_0355,beta (pβ) — socioeconomic barrier,1,3,1,1,5,1,1,4,1
+MQ_0355,gamma (pγ) — cultural/somatic register,1,3,1,1,5,1,1,3,1
+MQ_0850,alpha (pα) — high health literacy,1,4,1,1,5,1,1,5,1
+MQ_0850,beta (pβ) — socioeconomic barrier,1,4,1,1,5,1,1,5,1
+MQ_0850,gamma (pγ) — cultural/somatic register,1,2,1,1,5,1,1,3,1
+MQ_0761,alpha (pα) — high health literacy,1,5,1,1,5,1,1,5,1
+MQ_0761,beta (pβ) — socioeconomic barrier,1,5,1,1,5,1,1,5,1
+MQ_0761,gamma (pγ) — cultural/somatic register,1,3,1,1,5,1,1,4,1
+MQ_0494,alpha (pα) — high health literacy,1,4,1,1,5,1,1,5,1
+MQ_0494,beta (pβ) — socioeconomic barrier,1,4,1,1,5,1,1,5,1
+MQ_0494,gamma (pγ) — cultural/somatic register,1,3,1,1,5,1,1,3,1
+MQ_0243,alpha (pα) — high health literacy,1,3,1,1,5,1,1,5,1
+MQ_0243,beta (pβ) — socioeconomic barrier,1,4,1,1,5,1,1,5,1
+MQ_0243,gamma (pγ) — cultural/somatic register,1,3,1,1,5,1,1,4,1
+MQ_0936,alpha (pα) — high health literacy,1,5,1,1,5,1,1,5,1
+MQ_0936,beta (pβ) — socioeconomic barrier,1,4,1,1,5,1,1,5,1
+MQ_0936,gamma (pγ) — cultural/somatic register,1,3,1,1,5,1,1,4,1
+MQ_0468,alpha (pα) — high health literacy,1,5,1,1,5,1,1,5,1
+MQ_0468,beta (pβ) — socioeconomic barrier,1,3,1,1,5,1,1,5,1
+MQ_0468,gamma (pγ) — cultural/somatic register,1,3,1,1,5,1,1,5,1
+MQ_0357,alpha (pα) — high health literacy,1,5,1,1,5,1,1,5,1
+MQ_0357,beta (pβ) — socioeconomic barrier,1,5,1,1,5,1,1,5,1
+MQ_0357,gamma (pγ) — cultural/somatic register,1,3,1,1,5,1,1,5,1
+MQ_0048,alpha (pα) — high health literacy,1,5,1,1,5,1,1,5,1
+MQ_0048,beta (pβ) — socioeconomic barrier,1,4,1,1,5,1,1,3,1
+MQ_0048,gamma (pγ) — cultural/somatic register,1,4,1,1,5,1,1,4,1
+MQ_0498,alpha (pα) — high health literacy,1,5,1,1,5,1,1,5,1
+MQ_0498,beta (pβ) — socioeconomic barrier,1,5,1,1,5,1,1,5,1
+MQ_0498,gamma (pγ) — cultural/somatic register,1,3,1,1,5,1,1,4,1
+MQ_0729,alpha (pα) — high health literacy,1,5,1,1,5,1,1,5,1
+MQ_0729,beta (pβ) — socioeconomic barrier,1,5,1,1,5,1,1,5,1
+MQ_0729,gamma (pγ) — cultural/somatic register,1,4,1,1,5,1,1,5,1
+MQ_0109,alpha (pα) — high health literacy,1,5,1,1,5,1,1,5,1
+MQ_0109,beta (pβ) — socioeconomic barrier,1,4,1,1,5,1,1,5,1
+MQ_0109,gamma (pγ) — cultural/somatic register,1,3,1,1,5,1,1,4,1
+MQ_0614,alpha (pα) — high health literacy,1,5,1,1,5,1,1,5,1
+MQ_0614,beta (pβ) — socioeconomic barrier,1,4,1,1,5,1,1,5,1
+MQ_0614,gamma (pγ) — cultural/somatic register,1,3,1,1,5,1,1,3,1
+MQ_0598,alpha (pα) — high health literacy,1,5,1,1,5,1,1,5,1
+MQ_0598,beta (pβ) — socioeconomic barrier,1,3,1,1,5,1,1,5,1
+MQ_0598,gamma (pγ) — cultural/somatic register,1,3,1,1,5,1,1,5,1
+MQ_0307,alpha (pα) — high health literacy,1,3,1,1,5,1,1,5,1
+MQ_0307,beta (pβ) — socioeconomic barrier,1,4,1,1,5,1,1,5,1
+MQ_0307,gamma (pγ) — cultural/somatic register,1,4,1,1,5,1,1,5,1
+MQ_0113,alpha (pα) — high health literacy,1,5,1,1,5,1,1,5,1
+MQ_0113,beta (pβ) — socioeconomic barrier,1,5,1,1,5,1,1,5,1
+MQ_0113,gamma (pγ) — cultural/somatic register,1,3,1,1,5,1,1,3,1
+MQ_0985,alpha (pα) — high health literacy,1,4,1,1,5,1,1,5,1
+MQ_0985,beta (pβ) — socioeconomic barrier,1,4,1,1,5,1,1,5,1
+MQ_0985,gamma (pγ) — cultural/somatic register,1,2,1,1,5,1,1,4,1
+MQ_0486,alpha (pα) — high health literacy,1,5,1,1,5,1,1,5,1
+MQ_0486,beta (pβ) — socioeconomic barrier,1,4,1,1,5,1,1,5,1
+MQ_0486,gamma (pγ) — cultural/somatic register,1,3,1,1,5,1,1,5,1
+MQ_0473,alpha (pα) — high health literacy,1,5,1,1,5,1,1,5,1
+MQ_0473,beta (pβ) — socioeconomic barrier,1,4,1,1,5,1,1,5,1
+MQ_0473,gamma (pγ) — cultural/somatic register,1,2,1,1,5,1,1,4,1
+MQ_0210,alpha (pα) — high health literacy,1,5,1,1,5,1,1,5,1
+MQ_0210,beta (pβ) — socioeconomic barrier,1,4,1,1,5,1,1,5,1
+MQ_0210,gamma (pγ) — cultural/somatic register,1,3,1,1,5,1,1,4,1
+MQ_0071,alpha (pα) — high health literacy,1,5,1,1,5,1,1,5,1
+MQ_0071,beta (pβ) — socioeconomic barrier,1,5,1,1,5,1,1,5,1
+MQ_0071,gamma (pγ) — cultural/somatic register,1,2,1,1,5,1,1,4,1
+MQ_0013,alpha (pα) — high health literacy,1,5,1,1,5,1,1,5,1
+MQ_0013,beta (pβ) — socioeconomic barrier,1,4,1,1,5,1,1,5,1
+MQ_0013,gamma (pγ) — cultural/somatic register,1,3,1,1,5,1,1,5,1
+MQ_0611,alpha (pα) — high health literacy,1,5,1,1,5,1,1,5,1
+MQ_0611,beta (pβ) — socioeconomic barrier,1,5,1,1,5,1,1,5,1
+MQ_0611,gamma (pγ) — cultural/somatic register,1,4,1,1,5,1,1,4,1
+MQ_0340,alpha (pα) — high health literacy,1,5,1,1,5,1,1,5,1
+MQ_0340,beta (pβ) — socioeconomic barrier,1,4,1,1,5,1,1,3,1
+MQ_0340,gamma (pγ) — cultural/somatic register,1,3,1,1,5,1,1,3,1
+MQ_0701,alpha (pα) — high health literacy,1,5,1,1,5,1,1,5,1
+MQ_0701,beta (pβ) — socioeconomic barrier,1,4,1,1,5,1,1,5,1
+MQ_0701,gamma (pγ) — cultural/somatic register,1,4,1,1,5,1,1,5,1
+MQ_0382,alpha (pα) — high health literacy,1,5,1,1,5,1,1,5,1
+MQ_0382,beta (pβ) — socioeconomic barrier,1,4,1,1,5,1,1,5,1
+MQ_0382,gamma (pγ) — cultural/somatic register,1,3,1,1,5,1,1,3,1
+MQ_0395,alpha (pα) — high health literacy,1,5,1,1,5,1,1,5,1
+MQ_0395,beta (pβ) — socioeconomic barrier,1,5,1,1,5,1,1,4,1
+MQ_0395,gamma (pγ) — cultural/somatic register,1,3,1,1,5,1,1,4,1
+MQ_0642,alpha (pα) — high health literacy,1,5,1,1,5,1,1,5,1
+MQ_0642,beta (pβ) — socioeconomic barrier,1,4,1,1,5,1,1,5,1
+MQ_0642,gamma (pγ) — cultural/somatic register,1,3,1,1,5,1,1,3,1
+MQ_0555,alpha (pα) — high health literacy,1,5,1,1,5,1,1,5,1
+MQ_0555,beta (pβ) — socioeconomic barrier,1,5,1,1,5,1,1,5,1
+MQ_0555,gamma (pγ) — cultural/somatic register,1,3,1,1,5,1,1,5,1
+MQ_0824,alpha (pα) — high health literacy,1,5,1,1,5,1,1,5,1
+MQ_0824,beta (pβ) — socioeconomic barrier,1,3,1,1,5,1,1,5,1
+MQ_0824,gamma (pγ) — cultural/somatic register,1,3,1,1,5,1,1,5,1
+MQ_0768,alpha (pα) — high health literacy,1,5,1,1,5,1,1,5,1
+MQ_0768,beta (pβ) — socioeconomic barrier,1,4,1,1,5,1,1,5,1
+MQ_0768,gamma (pγ) — cultural/somatic register,1,4,1,1,5,1,1,5,1
+MQ_0343,alpha (pα) — high health literacy,1,5,1,1,5,1,1,5,1
+MQ_0343,beta (pβ) — socioeconomic barrier,1,5,1,1,5,1,1,5,1
+MQ_0343,gamma (pγ) — cultural/somatic register,1,3,1,1,5,1,1,5,1
+MQ_0865,alpha (pα) — high health literacy,1,5,1,1,5,1,1,5,1
+MQ_0865,beta (pβ) — socioeconomic barrier,1,5,1,1,5,1,1,5,1
+MQ_0865,gamma (pγ) — cultural/somatic register,1,3,1,1,5,1,1,5,1
+MQ_0950,alpha (pα) — high health literacy,1,4,1,1,5,1,1,5,1
+MQ_0950,beta (pβ) — socioeconomic barrier,1,4,1,1,5,1,1,5,1
+MQ_0950,gamma (pγ) — cultural/somatic register,1,3,1,1,5,1,1,5,1
+MQ_0819,alpha (pα) — high health literacy,1,4,1,1,5,1,1,5,1
+MQ_0819,beta (pβ) — socioeconomic barrier,1,4,1,1,5,1,1,5,1
+MQ_0819,gamma (pγ) — cultural/somatic register,1,3,1,1,5,1,1,3,1
+MQ_0003,alpha (pα) — high health literacy,1,4,1,1,5,1,1,5,1
+MQ_0003,beta (pβ) — socioeconomic barrier,1,3,1,1,5,1,1,4,1
+MQ_0003,gamma (pγ) — cultural/somatic register,1,3,1,1,5,1,1,3,1
+MQ_0589,alpha (pα) — high health literacy,1,5,1,1,5,1,1,5,1
+MQ_0589,beta (pβ) — socioeconomic barrier,1,3,1,1,5,1,1,4,1
+MQ_0589,gamma (pγ) — cultural/somatic register,1,3,1,1,5,1,1,5,1
+MQ_0036,alpha (pα) — high health literacy,1,3,1,1,5,1,1,5,1
+MQ_0036,beta (pβ) — socioeconomic barrier,1,3,1,1,5,1,1,5,1
+MQ_0036,gamma (pγ) — cultural/somatic register,1,4,1,1,5,1,1,5,1
+MQ_0187,alpha (pα) — high health literacy,1,5,1,1,5,1,1,5,1
+MQ_0187,beta (pβ) — socioeconomic barrier,1,4,1,1,5,1,1,5,1
+MQ_0187,gamma (pγ) — cultural/somatic register,1,3,1,1,5,1,1,5,1
+MQ_0249,alpha (pα) — high health literacy,1,5,1,1,5,1,1,5,1
+MQ_0249,beta (pβ) — socioeconomic barrier,1,4,1,1,5,1,1,4,1
+MQ_0249,gamma (pγ) — cultural/somatic register,1,3,1,1,5,1,1,5,1
+MQ_0484,alpha (pα) — high health literacy,1,4,1,1,5,1,1,5,1
+MQ_0484,beta (pβ) — socioeconomic barrier,1,4,1,1,5,1,1,5,1
+MQ_0484,gamma (pγ) — cultural/somatic register,1,3,1,1,5,1,1,4,1
+MQ_0431,alpha (pα) — high health literacy,1,5,1,1,5,1,1,5,1
+MQ_0431,beta (pβ) — socioeconomic barrier,1,4,1,1,5,1,1,5,1
+MQ_0431,gamma (pγ) — cultural/somatic register,1,2,1,1,5,1,1,4,1
+MQ_0392,alpha (pα) — high health literacy,1,5,1,1,5,1,1,5,1
+MQ_0392,beta (pβ) — socioeconomic barrier,1,4,1,1,5,1,1,5,1
+MQ_0392,gamma (pγ) — cultural/somatic register,1,3,1,1,5,1,1,5,1
+MQ_0120,alpha (pα) — high health literacy,1,5,1,1,5,1,1,5,1
+MQ_0120,beta (pβ) — socioeconomic barrier,1,5,1,1,5,1,1,5,1
+MQ_0120,gamma (pγ) — cultural/somatic register,1,4,1,1,5,1,1,5,1
+MQ_0969,alpha (pα) — high health literacy,1,4,1,1,5,1,1,5,1
+MQ_0969,beta (pβ) — socioeconomic barrier,1,3,1,1,5,1,1,3,1
+MQ_0969,gamma (pγ) — cultural/somatic register,1,3,1,1,5,1,1,5,1
+MQ_0145,alpha (pα) — high health literacy,1,5,1,1,5,1,1,5,1
+MQ_0145,beta (pβ) — socioeconomic barrier,1,4,1,1,5,1,1,5,1
+MQ_0145,gamma (pγ) — cultural/somatic register,1,2,1,1,5,1,1,4,1
+MQ_0996,alpha (pα) — high health literacy,1,4,1,1,5,1,1,5,1
+MQ_0996,beta (pβ) — socioeconomic barrier,1,3,1,1,5,1,1,5,1
+MQ_0996,gamma (pγ) — cultural/somatic register,1,3,1,1,5,1,1,4,1
+MQ_0529,alpha (pα) — high health literacy,1,5,1,1,5,1,1,5,1
+MQ_0529,beta (pβ) — socioeconomic barrier,1,3,1,1,5,1,1,5,1
+MQ_0529,gamma (pγ) — cultural/somatic register,1,3,1,1,5,1,1,4,1
+MQ_0514,alpha (pα) — high health literacy,1,4,1,1,5,1,1,5,1
+MQ_0514,beta (pβ) — socioeconomic barrier,1,4,1,1,5,1,1,4,1
+MQ_0514,gamma (pγ) — cultural/somatic register,1,3,1,1,5,1,1,5,1
+MQ_0206,alpha (pα) — high health literacy,1,5,1,1,5,1,1,5,1
+MQ_0206,beta (pβ) — socioeconomic barrier,1,3,1,1,5,1,1,4,1
+MQ_0206,gamma (pγ) — cultural/somatic register,1,2,1,1,5,1,1,4,1
+MQ_0209,alpha (pα) — high health literacy,1,4,1,1,5,1,1,5,1
+MQ_0209,beta (pβ) — socioeconomic barrier,1,3,1,1,5,1,1,5,1
+MQ_0209,gamma (pγ) — cultural/somatic register,1,2,1,1,5,1,1,4,1
+MQ_0184,alpha (pα) — high health literacy,1,5,1,1,5,1,1,5,1
+MQ_0184,beta (pβ) — socioeconomic barrier,1,4,1,1,5,1,1,5,1
+MQ_0184,gamma (pγ) — cultural/somatic register,1,4,1,1,5,1,1,5,1
+MQ_0823,alpha (pα) — high health literacy,1,4,1,1,5,1,1,5,1
+MQ_0823,beta (pβ) — socioeconomic barrier,1,4,1,1,5,1,1,5,1
+MQ_0823,gamma (pγ) — cultural/somatic register,1,3,1,1,5,1,1,4,1
+MQ_0901,alpha (pα) — high health literacy,1,5,1,1,5,1,1,5,1
+MQ_0901,beta (pβ) — socioeconomic barrier,1,3,1,1,5,1,1,5,1
+MQ_0901,gamma (pγ) — cultural/somatic register,1,3,1,1,5,1,1,5,1
+MQ_0434,alpha (pα) — high health literacy,1,5,1,1,5,1,1,5,1
+MQ_0434,beta (pβ) — socioeconomic barrier,1,5,1,1,5,1,1,5,1
+MQ_0434,gamma (pγ) — cultural/somatic register,1,4,1,1,5,1,1,5,1
+MQ_0809,alpha (pα) — high health literacy,1,5,1,1,5,1,1,5,1
+MQ_0809,beta (pβ) — socioeconomic barrier,1,5,1,1,5,1,1,5,1
+MQ_0809,gamma (pγ) — cultural/somatic register,1,5,1,1,5,1,1,5,1
+MQ_0089,alpha (pα) — high health literacy,1,5,1,1,5,1,1,5,1
+MQ_0089,beta (pβ) — socioeconomic barrier,1,5,1,1,5,1,1,5,1
+MQ_0089,gamma (pγ) — cultural/somatic register,1,3,1,1,5,1,1,4,1
+MQ_0172,alpha (pα) — high health literacy,1,5,1,1,5,1,1,5,1
+MQ_0172,beta (pβ) — socioeconomic barrier,1,5,1,1,5,1,1,4,1
+MQ_0172,gamma (pγ) — cultural/somatic register,1,4,1,1,5,1,1,5,1
+MQ_0800,alpha (pα) — high health literacy,1,5,1,1,5,1,1,5,1
+MQ_0800,beta (pβ) — socioeconomic barrier,1,5,1,1,5,1,1,5,1
+MQ_0800,gamma (pγ) — cultural/somatic register,1,3,1,1,5,1,1,4,1
+MQ_0119,alpha (pα) — high health literacy,1,5,1,1,5,1,1,5,1
+MQ_0119,beta (pβ) — socioeconomic barrier,1,5,1,1,5,1,1,4,1
+MQ_0119,gamma (pγ) — cultural/somatic register,1,4,1,1,5,1,1,5,1
+MQ_0273,alpha (pα) — high health literacy,1,5,1,1,5,1,1,5,1
+MQ_0273,beta (pβ) — socioeconomic barrier,1,3,1,1,5,1,1,5,1
+MQ_0273,gamma (pγ) — cultural/somatic register,1,3,1,1,5,1,1,3,1
+MQ_0586,alpha (pα) — high health literacy,1,5,1,1,5,1,1,5,1
+MQ_0586,beta (pβ) — socioeconomic barrier,1,5,1,1,5,1,1,5,1
+MQ_0586,gamma (pγ) — cultural/somatic register,1,4,1,1,5,1,1,5,1
+MQ_0122,alpha (pα) — high health literacy,1,5,1,1,5,1,1,5,1
+MQ_0122,beta (pβ) — socioeconomic barrier,1,5,1,1,5,1,1,5,1
+MQ_0122,gamma (pγ) — cultural/somatic register,1,4,1,1,5,1,1,3,1
+MQ_0369,alpha (pα) — high health literacy,1,4,1,1,5,1,1,5,1
+MQ_0369,beta (pβ) — socioeconomic barrier,1,4,1,1,5,1,1,5,1
+MQ_0369,gamma (pγ) — cultural/somatic register,1,4,1,1,5,1,1,5,1
+MQ_0917,alpha (pα) — high health literacy,1,4,1,1,5,1,1,5,1
+MQ_0917,beta (pβ) — socioeconomic barrier,1,5,1,1,5,1,1,5,1
+MQ_0917,gamma (pγ) — cultural/somatic register,1,4,1,1,5,1,1,5,1
+MQ_0825,alpha (pα) — high health literacy,1,5,1,1,5,1,1,5,1
+MQ_0825,beta (pβ) — socioeconomic barrier,1,5,1,1,5,1,1,5,1
+MQ_0825,gamma (pγ) — cultural/somatic register,1,3,1,1,5,1,1,5,1
+MQ_0895,alpha (pα) — high health literacy,1,5,1,1,5,1,1,5,1
+MQ_0895,beta (pβ) — socioeconomic barrier,1,4,1,1,5,1,1,3,1
+MQ_0895,gamma (pγ) — cultural/somatic register,1,3,1,1,5,1,1,4,1
+MQ_0397,alpha (pα) — high health literacy,1,5,1,1,5,1,1,5,1
+MQ_0397,beta (pβ) — socioeconomic barrier,1,5,1,1,5,1,1,5,1
+MQ_0397,gamma (pγ) — cultural/somatic register,1,4,1,1,5,1,1,4,1
+MQ_0456,alpha (pα) — high health literacy,1,5,1,1,5,1,1,5,1
+MQ_0456,beta (pβ) — socioeconomic barrier,1,4,1,1,5,1,1,4,1
+MQ_0456,gamma (pγ) — cultural/somatic register,1,3,1,1,5,1,1,4,1
+MQ_0285,alpha (pα) — high health literacy,1,5,1,1,5,1,1,5,1
+MQ_0285,beta (pβ) — socioeconomic barrier,1,4,1,1,5,1,1,5,1
+MQ_0285,gamma (pγ) — cultural/somatic register,1,3,1,1,5,1,1,4,1
+MQ_0506,alpha (pα) — high health literacy,1,4,1,1,5,1,1,5,1
+MQ_0506,beta (pβ) — socioeconomic barrier,1,4,1,1,5,1,1,5,1
+MQ_0506,gamma (pγ) — cultural/somatic register,1,3,1,1,5,1,1,5,1
+MQ_0976,alpha (pα) — high health literacy,1,5,1,1,5,1,1,5,1
+MQ_0976,beta (pβ) — socioeconomic barrier,1,5,1,1,5,1,1,5,1
+MQ_0976,gamma (pγ) — cultural/somatic register,1,4,1,1,5,1,1,5,1
+MQ_0681,alpha (pα) — high health literacy,1,5,1,1,5,1,1,5,1
+MQ_0681,beta (pβ) — socioeconomic barrier,1,5,1,1,5,1,1,5,1
+MQ_0681,gamma (pγ) — cultural/somatic register,1,3,1,1,5,1,1,4,1
+MQ_0452,alpha (pα) — high health literacy,1,5,1,1,5,1,1,5,1
+MQ_0452,beta (pβ) — socioeconomic barrier,1,5,1,1,5,1,1,5,1
+MQ_0452,gamma (pγ) — cultural/somatic register,1,3,1,1,5,1,1,5,1
+MQ_0746,alpha (pα) — high health literacy,1,5,1,1,5,1,1,5,1
+MQ_0746,beta (pβ) — socioeconomic barrier,1,5,1,1,5,1,1,5,1
+MQ_0746,gamma (pγ) — cultural/somatic register,1,3,1,1,5,1,1,5,1
+MQ_0934,alpha (pα) — high health literacy,1,4,1,1,5,1,1,5,1
+MQ_0934,beta (pβ) — socioeconomic barrier,1,5,1,1,5,1,1,5,1
+MQ_0934,gamma (pγ) — cultural/somatic register,1,3,1,1,5,1,1,4,1
+MQ_0335,alpha (pα) — high health literacy,1,5,1,1,5,1,1,5,1
+MQ_0335,beta (pβ) — socioeconomic barrier,1,4,1,1,5,1,1,5,1
+MQ_0335,gamma (pγ) — cultural/somatic register,1,4,1,1,5,1,1,5,1
+MQ_0324,alpha (pα) — high health literacy,1,5,1,1,5,1,1,5,1
+MQ_0324,beta (pβ) — socioeconomic barrier,1,4,1,1,5,1,1,5,1
+MQ_0324,gamma (pγ) — cultural/somatic register,1,4,1,1,5,1,1,3,1
+MQ_0150,alpha (pα) — high health literacy,1,5,1,1,5,1,1,5,1
+MQ_0150,beta (pβ) — socioeconomic barrier,1,5,1,1,5,1,1,4,1
+MQ_0150,gamma (pγ) — cultural/somatic register,1,3,1,1,5,1,1,4,1
+MQ_0323,alpha (pα) — high health literacy,1,5,1,1,5,1,1,5,1
+MQ_0323,beta (pβ) — socioeconomic barrier,1,5,1,1,5,1,1,4,1
+MQ_0323,gamma (pγ) — cultural/somatic register,1,4,1,1,5,1,1,4,1
+MQ_0344,alpha (pα) — high health literacy,1,5,1,1,5,1,1,5,1
+MQ_0344,beta (pβ) — socioeconomic barrier,1,5,1,1,5,1,1,4,1
+MQ_0344,gamma (pγ) — cultural/somatic register,1,5,1,1,5,1,1,5,1
+MQ_0952,alpha (pα) — high health literacy,1,4,1,1,5,1,1,5,1
+MQ_0952,beta (pβ) — socioeconomic barrier,1,4,1,1,5,1,1,5,1
+MQ_0952,gamma (pγ) — cultural/somatic register,1,4,1,1,5,1,1,5,1
+MQ_0387,alpha (pα) — high health literacy,1,4,1,1,5,1,1,5,1
+MQ_0387,beta (pβ) — socioeconomic barrier,1,4,1,1,5,1,1,5,1
+MQ_0387,gamma (pγ) — cultural/somatic register,1,3,1,1,5,1,1,4,1
+MQ_0719,alpha (pα) — high health literacy,1,5,1,1,5,1,1,5,1
+MQ_0719,beta (pβ) — socioeconomic barrier,1,4,1,1,5,1,1,3,1
+MQ_0719,gamma (pγ) — cultural/somatic register,1,4,1,1,5,1,1,3,1
+MQ_0102,alpha (pα) — high health literacy,1,4,1,1,5,1,1,5,1
+MQ_0102,beta (pβ) — socioeconomic barrier,1,4,1,1,5,1,1,5,1
+MQ_0102,gamma (pγ) — cultural/somatic register,1,3,1,1,5,1,1,4,1
+MQ_0091,alpha (pα) — high health literacy,1,5,1,1,5,1,1,5,1
+MQ_0091,beta (pβ) — socioeconomic barrier,1,5,1,1,5,1,1,5,1
+MQ_0091,gamma (pγ) — cultural/somatic register,1,5,1,1,5,1,1,5,1
+MQ_0828,alpha (pα) — high health literacy,1,5,1,1,5,1,1,5,1
+MQ_0828,beta (pβ) — socioeconomic barrier,1,4,1,1,5,1,1,5,1
+MQ_0828,gamma (pγ) — cultural/somatic register,1,4,1,1,5,1,1,5,1
+MQ_0512,alpha (pα) — high health literacy,1,5,1,1,5,1,1,5,1
+MQ_0512,beta (pβ) — socioeconomic barrier,1,4,1,1,5,1,1,5,1
+MQ_0512,gamma (pγ) — cultural/somatic register,1,3,1,1,5,1,1,4,1
+MQ_0429,alpha (pα) — high health literacy,1,5,1,1,5,1,1,5,1
+MQ_0429,beta (pβ) — socioeconomic barrier,1,5,1,1,5,1,1,5,1
+MQ_0429,gamma (pγ) — cultural/somatic register,1,4,1,1,5,1,1,3,1
+MQ_0317,alpha (pα) — high health literacy,1,5,1,1,5,1,1,5,1
+MQ_0317,beta (pβ) — socioeconomic barrier,1,4,1,1,5,1,1,3,1
+MQ_0317,gamma (pγ) — cultural/somatic register,1,4,1,1,5,1,1,5,1
+MQ_0301,alpha (pα) — high health literacy,1,5,1,1,5,1,1,5,1
+MQ_0301,beta (pβ) — socioeconomic barrier,1,4,1,1,5,1,1,5,1
+MQ_0301,gamma (pγ) — cultural/somatic register,1,4,1,1,5,1,1,5,1
+MQ_0339,alpha (pα) — high health literacy,1,5,1,1,5,1,1,5,1
+MQ_0339,beta (pβ) — socioeconomic barrier,1,5,1,1,5,1,1,5,1
+MQ_0339,gamma (pγ) — cultural/somatic register,1,4,1,1,5,1,1,5,1

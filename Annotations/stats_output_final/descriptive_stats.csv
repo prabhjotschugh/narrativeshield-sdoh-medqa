@@ -1,0 +1,13 @@
+annotator,persona,n,facts_preserved_rate,register_match_rate,realism_mean,realism_median,realism_sd
+Annotator_1,alpha (pα) — high health literacy,100,1.0,1.0,4.68,5.0,0.6010092521851234
+Annotator_1,beta (pβ) — socioeconomic barrier,100,1.0,1.0,4.22,4.0,0.6753973764841086
+Annotator_1,gamma (pγ) — cultural/somatic register,100,1.0,1.0,3.26,3.0,0.6759953379792621
+Annotator_2,alpha (pα) — high health literacy,100,1.0,1.0,5.0,5.0,0.0
+Annotator_2,beta (pβ) — socioeconomic barrier,100,1.0,1.0,5.0,5.0,0.0
+Annotator_2,gamma (pγ) — cultural/somatic register,100,1.0,1.0,5.0,5.0,0.0
+Annotator_3,alpha (pα) — high health literacy,100,1.0,1.0,5.0,5.0,0.0
+Annotator_3,beta (pβ) — socioeconomic barrier,100,1.0,1.0,4.71,5.0,0.6079440431453863
+Annotator_3,gamma (pγ) — cultural/somatic register,100,1.0,1.0,4.3,4.0,0.7316785737969485
+POOLED (all annotators),alpha (pα) — high health literacy,300,1.0,1.0,4.8933333333333335,5.0,0.37739942143555444
+POOLED (all annotators),beta (pβ) — socioeconomic barrier,300,1.0,1.0,4.6433333333333335,5.0,0.6143127510281771
+POOLED (all annotators),gamma (pγ) — cultural/somatic register,300,1.0,1.0,4.1866666666666665,4.0,0.9172203658631166

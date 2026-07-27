@@ -1,0 +1,17 @@
+# Inference dependencies
+torch
+transformers
+accelerate
+datasets
+huggingface_hub
+
+# Evaluation and Statistics
+pandas
+numpy
+tqdm
+sentence-transformers
+scikit-learn
+statsmodels
+
+# Dataset generation (Gemini)
+google-generativeai

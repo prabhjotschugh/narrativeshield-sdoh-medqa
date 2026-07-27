@@ -1,0 +1,24 @@
+metric_target,comparison,statistic,value
+Facts Preserved,all_annotators,status,constant_kappa_undefined
+Facts Preserved,Annotator_1 vs Annotator_2,percent_agreement,1.0
+Facts Preserved,Annotator_1 vs Annotator_2,cohens_kappa,
+Facts Preserved,Annotator_1 vs Annotator_3,percent_agreement,1.0
+Facts Preserved,Annotator_1 vs Annotator_3,cohens_kappa,
+Facts Preserved,Annotator_2 vs Annotator_3,percent_agreement,1.0
+Facts Preserved,Annotator_2 vs Annotator_3,cohens_kappa,
+Facts Preserved,all_annotators,fleiss_kappa,
+Register Match,all_annotators,status,constant_kappa_undefined
+Register Match,Annotator_1 vs Annotator_2,percent_agreement,1.0
+Register Match,Annotator_1 vs Annotator_2,cohens_kappa,
+Register Match,Annotator_1 vs Annotator_3,percent_agreement,1.0
+Register Match,Annotator_1 vs Annotator_3,cohens_kappa,
+Register Match,Annotator_2 vs Annotator_3,percent_agreement,1.0
+Register Match,Annotator_2 vs Annotator_3,cohens_kappa,
+Register Match,all_annotators,fleiss_kappa,
+Narrative Realism [ALL annotators],subset,krippendorff_alpha,-0.013716816664070208
+Narrative Realism [ALL annotators],subset,"ICC(2,1)",0.1346424579317846
+Narrative Realism [EXCLUDING flagged straightliner(s)],subset,krippendorff_alpha,0.22644287423014953
+Narrative Realism [EXCLUDING flagged straightliner(s)],subset,"ICC(2,1)",0.3239965977740136
+Narrative Realism,Annotator_1 vs Annotator_2,percent_agreement,0.37666666666666665
+Narrative Realism,Annotator_1 vs Annotator_3,percent_agreement,0.42
+Narrative Realism,Annotator_2 vs Annotator_3,percent_agreement,0.75

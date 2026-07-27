@@ -1,0 +1,33 @@
+test,target,annotator,comparison,statistic,p_value,n01,n10,defined,significant_at_0.05
+McNemar,Facts Preserved,Annotator_1,alpha (pα) — high health literacy vs beta (pβ) — socioeconomic barrier,,,0.0,0.0,False,False
+McNemar,Facts Preserved,Annotator_1,alpha (pα) — high health literacy vs gamma (pγ) — cultural/somatic register,,,0.0,0.0,False,False
+McNemar,Facts Preserved,Annotator_1,beta (pβ) — socioeconomic barrier vs gamma (pγ) — cultural/somatic register,,,0.0,0.0,False,False
+McNemar,Facts Preserved,Annotator_2,alpha (pα) — high health literacy vs beta (pβ) — socioeconomic barrier,,,0.0,0.0,False,False
+McNemar,Facts Preserved,Annotator_2,alpha (pα) — high health literacy vs gamma (pγ) — cultural/somatic register,,,0.0,0.0,False,False
+McNemar,Facts Preserved,Annotator_2,beta (pβ) — socioeconomic barrier vs gamma (pγ) — cultural/somatic register,,,0.0,0.0,False,False
+McNemar,Facts Preserved,Annotator_3,alpha (pα) — high health literacy vs beta (pβ) — socioeconomic barrier,,,0.0,0.0,False,False
+McNemar,Facts Preserved,Annotator_3,alpha (pα) — high health literacy vs gamma (pγ) — cultural/somatic register,,,0.0,0.0,False,False
+McNemar,Facts Preserved,Annotator_3,beta (pβ) — socioeconomic barrier vs gamma (pγ) — cultural/somatic register,,,0.0,0.0,False,False
+McNemar,Facts Preserved,majority_vote,alpha (pα) — high health literacy vs beta (pβ) — socioeconomic barrier,,,0.0,0.0,False,False
+McNemar,Facts Preserved,majority_vote,alpha (pα) — high health literacy vs gamma (pγ) — cultural/somatic register,,,0.0,0.0,False,False
+McNemar,Facts Preserved,majority_vote,beta (pβ) — socioeconomic barrier vs gamma (pγ) — cultural/somatic register,,,0.0,0.0,False,False
+Cochran's Q,Facts Preserved,majority_vote,all personas,,,,,False,False
+McNemar,Register Match,Annotator_1,alpha (pα) — high health literacy vs beta (pβ) — socioeconomic barrier,,,0.0,0.0,False,False
+McNemar,Register Match,Annotator_1,alpha (pα) — high health literacy vs gamma (pγ) — cultural/somatic register,,,0.0,0.0,False,False
+McNemar,Register Match,Annotator_1,beta (pβ) — socioeconomic barrier vs gamma (pγ) — cultural/somatic register,,,0.0,0.0,False,False
+McNemar,Register Match,Annotator_2,alpha (pα) — high health literacy vs beta (pβ) — socioeconomic barrier,,,0.0,0.0,False,False
+McNemar,Register Match,Annotator_2,alpha (pα) — high health literacy vs gamma (pγ) — cultural/somatic register,,,0.0,0.0,False,False
+McNemar,Register Match,Annotator_2,beta (pβ) — socioeconomic barrier vs gamma (pγ) — cultural/somatic register,,,0.0,0.0,False,False
+McNemar,Register Match,Annotator_3,alpha (pα) — high health literacy vs beta (pβ) — socioeconomic barrier,,,0.0,0.0,False,False
+McNemar,Register Match,Annotator_3,alpha (pα) — high health literacy vs gamma (pγ) — cultural/somatic register,,,0.0,0.0,False,False
+McNemar,Register Match,Annotator_3,beta (pβ) — socioeconomic barrier vs gamma (pγ) — cultural/somatic register,,,0.0,0.0,False,False
+McNemar,Register Match,majority_vote,alpha (pα) — high health literacy vs beta (pβ) — socioeconomic barrier,,,0.0,0.0,False,False
+McNemar,Register Match,majority_vote,alpha (pα) — high health literacy vs gamma (pγ) — cultural/somatic register,,,0.0,0.0,False,False
+McNemar,Register Match,majority_vote,beta (pβ) — socioeconomic barrier vs gamma (pγ) — cultural/somatic register,,,0.0,0.0,False,False
+Cochran's Q,Register Match,majority_vote,all personas,,,,,False,False
+Chi-square independence,Facts Preserved,pooled,all personas,,,,,False,False
+Chi-square independence,Register Match,pooled,all personas,,,,,False,False
+Kruskal-Wallis,Narrative Realism,pooled,all personas,138.69429596364856,7.636885790167322e-31,,,True,True
+Mann-Whitney U,Narrative Realism,pooled,alpha (pα) — high health literacy vs beta (pβ) — socioeconomic barrier,53912.5,5.056514143598941e-10,,,True,True
+Mann-Whitney U,Narrative Realism,pooled,alpha (pα) — high health literacy vs gamma (pγ) — cultural/somatic register,64435.0,3.954247731461427e-30,,,True,True
+Mann-Whitney U,Narrative Realism,pooled,beta (pβ) — socioeconomic barrier vs gamma (pγ) — cultural/somatic register,56876.5,1.4879551642442124e-10,,,True,True

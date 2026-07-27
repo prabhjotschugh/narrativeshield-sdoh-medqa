@@ -1,0 +1,8 @@
+Model,ΔOMR Overall (B3−B1),ΔOMR Pα,ΔOMR Pβ,ΔOMR Pγ,ΔNAG,ΔDSS,ΔDSS<0.8(%),Interpretation
+llama31,0.001,-0.006,-0.001,0.01,-0.016,0.0132,-2.2,B3 helps: NAG↓ DSS↑
+llama32,0.0113,0.009,0.026,-0.001,-0.013,0.0365,-2.4,B3 helps: NAG↓ DSS↑
+mistral7b,-0.0063,-0.019,0.008,-0.008,-0.011,0.0176,-3.2,B3 helps: NAG↓ DSS↑
+qwen25,0.0096,-0.005,0.015,0.019,-0.024,0.0054,-2.3,B3 reduces anchoring (NAG↓)
+gemma3_12b,-0.0057,-0.006,-0.008,-0.003,-0.003,0.0115,-4.2,B3 improves stability (DSS↑)
+gemma4_e4b,0.0,-0.011,0.014,-0.003,-0.008,0.014,-3.3,B3 improves stability (DSS↑)
+biomistral,-0.4257,-0.459,-0.423,-0.395,-0.064,0.3679,-80.8,B3 helps: NAG↓ DSS↑

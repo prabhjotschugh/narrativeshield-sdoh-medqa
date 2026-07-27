@@ -1,0 +1,8 @@
+Model,ΔOMR Overall,ΔOMR Pα,ΔOMR Pβ,ΔOMR Pγ,ΔNAG,ΔDSS,ΔDSS<0.8(%),Interpretation
+llama31,-0.0077,-0.043,0.012,0.008,-0.051,-0.1363,36.7,CoT reduces anchoring (NAG↓)
+llama32,-0.017,-0.025,-0.018,-0.008,-0.007,-0.1359,42.9,CoT negligible effect
+mistral7b,0.0117,0.01,0.019,0.006,0.004,-0.0288,18.5,CoT negligible effect
+qwen25,-0.0287,-0.049,0.015,-0.052,0.003,-0.1397,31.8,CoT negligible effect
+gemma3_12b,-0.213,-0.242,-0.198,-0.199,-0.043,-0.1393,37.8,CoT reduces anchoring (NAG↓)
+gemma4_e4b,-0.3407,-0.382,-0.315,-0.325,-0.057,-0.1278,36.9,CoT reduces anchoring (NAG↓)
+biomistral,-0.1947,-0.133,-0.244,-0.207,0.083,0.0062,8.8,CoT worsens anchoring (NAG↑)

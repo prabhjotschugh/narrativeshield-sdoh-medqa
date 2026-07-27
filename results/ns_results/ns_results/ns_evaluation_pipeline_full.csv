@@ -1,0 +1,8 @@
+Model,Ablation,N,Parse Rate,Agent1 Parse Rate,Agent3 Fallback Rate,Mean Tools/Question,Questions With Tools (%),Mean Latency (sec/q)
+llama31,full,1000,100.00%,96.77%,0.00%,2.04,52.30%,19.47
+mistral7b,full,1000,100.00%,90.03%,0.00%,1.02,39.43%,21.81
+qwen25,full,1000,100.00%,96.83%,0.00%,1.75,47.30%,16.63
+gemma3_12b,full,1000,100.00%,96.03%,0.00%,1.63,45.07%,42.05
+gemma4_e4b,full,1000,100.00%,90.13%,0.00%,1.12,41.43%,50.82
+biomistral,full,1000,100.00%,1.10%,3.03%,0.25,15.93%,12.92
+llama32,full,1000,100.00%,94.87%,0.03%,1.90,52.13%,18.31
