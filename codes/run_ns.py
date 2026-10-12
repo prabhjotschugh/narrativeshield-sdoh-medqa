@@ -1,5 +1,5 @@
 """
-NarrativeShield — Full Agentic Pipeline (v2 — EACL Main)
+NarrativeShield — Full Agentic Pipeline (v2)
 =========================================================
 
 Architecture (3-agent, deterministic tool injection):
@@ -31,7 +31,7 @@ Tools (all deterministic — no live API calls):
                          withdrawal profiles, mechanism, key facts
   T2  Lab Interpreter  — static reference ranges, clinical interpretation
   T3  Clinical Scorers — Wells DVT/PE, CURB-65, Glasgow, Apgar
-  [T4  openFDA REST     — called when drug not in static KB and TACC network allows]
+  [T4  openFDA REST     — called when drug not in static KB and HPC network allows]
   [T5  RxNorm REST      — called as fallback for drug class lookup]
 
 Key design decisions vs v1:
@@ -58,8 +58,17 @@ Usage:
 # CACHE REDIRECT — before any HuggingFace import
 # ─────────────────────────────────────────────────────────────────────────────
 import os
+import shutil
 
-SCRATCH_BASE = "/scratch/10778/prabhjotschugh"
+# HPC (aarch64 GH nodes) defaults CC to NVIDIA's `nvc`, which Triton then uses
+# to JIT-compile helpers and chokes on gcc-only flags (-Wno-psabi), crashing
+# generate(). Force gcc before torch/transformers are imported.
+_gcc = shutil.which("gcc")
+if _gcc:
+    os.environ["CC"] = _gcc
+    os.environ["CXX"] = shutil.which("g++") or _gcc
+
+SCRATCH_BASE = "/path/to/scratch"
 HF_CACHE_DIR = f"{SCRATCH_BASE}/hf_cache"
 OUTPUT_DIR   = f"{SCRATCH_BASE}/ns_results"
 os.makedirs(HF_CACHE_DIR, exist_ok=True)
@@ -91,8 +100,8 @@ import torch
 from datasets import load_dataset
 from huggingface_hub import login, snapshot_download
 from tqdm import tqdm
+from rerun_ns_stem import question_stem
 from transformers import (
-    AutoModelForImageTextToText,
     AutoProcessor,
     Gemma3ForConditionalGeneration,
     pipeline,
@@ -112,7 +121,7 @@ torch.backends.cudnn.allow_tf32       = True
 # CONFIGURATION
 # ─────────────────────────────────────────────────────────────────────────────
 HF_TOKEN     = os.getenv("HF_TOKEN", "YOUR_HF_TOKEN_HERE")
-DATASET_NAME = "Prabhjotschugh/narrativeshield-sdoh-medqa"
+DATASET_NAME = os.environ.get("DATASET_NAME", os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "dataset", "medqa_1000.csv"))
 PERSONAS     = ["alpha", "beta", "gamma"]
 PERSONA_KEYS = {"alpha": "persona_alpha", "beta": "persona_beta", "gamma": "persona_gamma"}
 
@@ -122,14 +131,24 @@ TOKENS_AGENT2 = 700
 TOKENS_AGENT3 = 16   # letter only
 
 MODEL_REGISTRY = {
-    "llama31":    ("meta-llama/Llama-3.1-8B-Instruct",    "pipeline_text"),
-    "mistral7b":  ("mistralai/Mistral-7B-Instruct-v0.3",  "pipeline_text"),
-    "qwen25":     ("Qwen/Qwen2.5-7B-Instruct",            "pipeline_text"),
-    "gemma3_12b": ("google/gemma-3-12b-it",               "gemma3_manual"),
-    "gemma4_e4b": ("google/gemma-4-E4B-it",               "gemma4_manual"),
-    "biomistral": ("BioMistral/BioMistral-7B",            "pipeline_text"),
-    "llama32":    ("meta-llama/Llama-3.2-3B-Instruct",    "pipeline_text"),
+    "llama32_3b":         ("meta-llama/Llama-3.2-3B-Instruct",             "pipeline_text"),
+    "medgemma_4b":        ("google/medgemma-4b-it",                       "medgemma_manual"),
+    "phi4_mini":          ("microsoft/Phi-4-mini-instruct",               "pipeline_text"),
+    "qwen25_7b":          ("Qwen/Qwen2.5-7B-Instruct",                    "pipeline_text"),
+    "mistral7b":          ("mistralai/Mistral-7B-Instruct-v0.3",          "pipeline_text"),
+    "qwen3_8b":           ("Qwen/Qwen3-8B",                               "pipeline_text"),
+    "ministral8b":        ("mistralai/Ministral-8B-Instruct-2410",        "pipeline_text"),
+    "llama31_8b":         ("meta-llama/Llama-3.1-8B-Instruct",            "pipeline_text"),
+    "openbiollm_8b":      ("aaditya/Llama3-OpenBioLLM-8B",                "pipeline_text"),
+    "gemma3_12b":         ("google/gemma-3-12b-it",                       "gemma3_manual"),
+    "qwen25_14b":         ("Qwen/Qwen2.5-14B-Instruct",                   "pipeline_text"),
+    "mistral_small_24b":  ("mistralai/Mistral-Small-24B-Instruct-2501",   "pipeline_text"),
 }
+
+# Models that require content-block message format ([{"type": "text", ...}])
+# instead of plain string content — both are manually-loaded Gemma-family
+# checkpoints (gemma3_manual / medgemma_manual loader strategies).
+CONTENT_BLOCK_MODELS = {"gemma3_12b", "medgemma_4b"}
 
 
 # ═════════════════════════════════════════════════════════════════════════════
@@ -955,16 +974,12 @@ Use null for missing scalars and [] for missing lists. Output only the JSON."""
 
 def build_agent1_messages(model_key: str, narrative: str) -> list:
     content = f"PATIENT NARRATIVE:\n{narrative.strip()}\n\nExtract the clinical facts as JSON."
-    if model_key in ("gemma3_12b", "gemma4_e4b"):
-        # Gemma: content blocks
+    if model_key in CONTENT_BLOCK_MODELS:
+        # Manually-loaded Gemma-family models (gemma3_12b, medgemma_4b): content blocks
         combined = AGENT1_SYSTEM + "\n\n" + content
         return [{"role": "user", "content": [{"type": "text", "text": combined}]}]
-    elif model_key == "biomistral":
-        # BioMistral has no system role — fold system prompt into user turn
-        combined = AGENT1_SYSTEM + "\n\n" + content
-        return [{"role": "user", "content": combined}]
     else:
-        # llama31, llama32, mistral7b, qwen25 — standard system/user
+        # All other models — standard system/user chat template
         return [
             {"role": "system", "content": AGENT1_SYSTEM},
             {"role": "user",   "content": content},
@@ -1008,10 +1023,8 @@ RULES:
         "Apply the reasoning protocol."
     )
 
-    if model_key in ("gemma3_12b", "gemma4_e4b"):
+    if model_key in CONTENT_BLOCK_MODELS:
         return [{"role": "user", "content": [{"type": "text", "text": system + "\n\n" + content}]}]
-    elif model_key == "biomistral":
-        return [{"role": "user", "content": system + "\n\n" + content}]
     else:
         return [
             {"role": "system", "content": system},
@@ -1032,10 +1045,8 @@ def build_agent3_messages(model_key: str, agent2_text: str, options: dict) -> li
         "Based on the reasoning above, output the single best answer letter."
     )
 
-    if model_key in ("gemma3_12b", "gemma4_e4b"):
+    if model_key in CONTENT_BLOCK_MODELS:
         return [{"role": "user", "content": [{"type": "text", "text": system + "\n\n" + content}]}]
-    elif model_key == "biomistral":
-        return [{"role": "user", "content": system + "\n\n" + content}]
     else:
         return [{"role": "system", "content": system}, {"role": "user", "content": content}]
 
@@ -1049,10 +1060,8 @@ def build_agent1only_messages(model_key: str, clinical_json_str: str,
         f"CLINICAL FACTS:\n{clinical_json_str}\n\n"
         f"QUESTION:\n{question}\n\nOPTIONS:\n{options_str}\n\nAnswer letter:"
     )
-    if model_key in ("gemma3_12b", "gemma4_e4b"):
+    if model_key in CONTENT_BLOCK_MODELS:
         return [{"role": "user", "content": [{"type": "text", "text": system + "\n\n" + content}]}]
-    elif model_key == "biomistral":
-        return [{"role": "user", "content": system + "\n\n" + content}]
     else:
         return [{"role": "system", "content": system}, {"role": "user", "content": content}]
 
@@ -1094,6 +1103,20 @@ def extract_answer_letter(text: str) -> Optional[str]:
     return None
 
 
+def letter_from_option_text(text, options):
+    """
+    Fallback when a model names the option's TEXT instead of its letter
+    (e.g. OpenBioLLM answers '{"answer": "Frontotemporal dementia"}').
+    Returns the letter only if exactly one option's text appears in the output.
+    """
+    if not text or not options:
+        return None
+    norm = lambda x: " ".join(re.sub(r"[^a-z0-9 ]+", " ", str(x).lower()).split())
+    t = norm(text)
+    hits = [k for k, v in options.items() if len(norm(v)) >= 3 and norm(v) in t]
+    return hits[0] if len(hits) == 1 else None
+
+
 def extract_clinical_json(agent1_text: str) -> tuple:
     """Parses Agent 1 JSON output. Returns (json_str, parsed_dict)."""
     text = agent1_text.strip()
@@ -1127,16 +1150,71 @@ def extract_clinical_json(agent1_text: str) -> tuple:
 
 
 # ═════════════════════════════════════════════════════════════════════════════
-#  MODEL LOADING (identical to B1 — same TACC Lustre pattern)
+#  MODEL LOADING (identical to B1 — same HPC Lustre pattern)
 # ═════════════════════════════════════════════════════════════════════════════
 
 def _download_to_scratch(repo_id: str, subdir: str) -> str:
     local = f"{HF_CACHE_DIR}/{subdir}"
-    if not os.path.isdir(local):
-        print(f"  Downloading {repo_id} → {local}")
-        snapshot_download(repo_id=repo_id, token=HF_TOKEN,
-                          local_dir=local, local_dir_use_symlinks=False)
+    # Always call snapshot_download: it resumes partial downloads and is a
+    # near-instant no-op when complete. (Checking only isdir() was a bug - a
+    # failed/gated download leaves an empty folder that looked "cached".)
+    print(f"  Syncing {repo_id} -> {local}")
+    try:
+        snapshot_download(
+            repo_id=repo_id,
+            token=HF_TOKEN,
+            local_dir=local,
+            local_dir_use_symlinks=False,
+        )
+    except Exception as e:
+        if os.path.isfile(os.path.join(local, "config.json")):
+            print(f"  [warn] sync failed ({type(e).__name__}); using existing files in {local}")
+        else:
+            raise
     return local
+
+
+LLAMA3_CHAT_TEMPLATE = (
+    "{% set loop_messages = messages %}{% for message in loop_messages %}"
+    "{% set content = '<|start_header_id|>' + message['role'] + '<|end_header_id|>\n\n'"
+    " + message['content'] | trim + '<|eot_id|>' %}"
+    "{% if loop.index0 == 0 %}{% set content = bos_token + content %}{% endif %}"
+    "{{ content }}{% endfor %}"
+    "{% if add_generation_prompt %}{{ '<|start_header_id|>assistant<|end_header_id|>\n\n' }}{% endif %}"
+)
+
+
+def _build_text_pipeline(repo_id: str):
+    """
+    Text-generation pipeline with three model-specific fixes found in the
+    HPC smoke test (transformers v5):
+      1. Mistral tekken-tokenizer repos (Ministral-8B, Mistral-Small-24B):
+         pipeline() forwards device_map/_from_pipeline kwargs into
+         MistralCommonBackend.from_pretrained, which rejects them. Fall back
+         to loading tokenizer and model separately.
+      2. OpenBioLLM ships no chat template -> use the Llama-3 template.
+      3. Qwen3 defaults to "thinking" mode, which burns the whole token
+         budget on <think> text before answering -> disable thinking.
+    """
+    try:
+        pipe = pipeline("text-generation", model=repo_id, device_map="auto",
+                        torch_dtype=torch.bfloat16, token=HF_TOKEN)
+    except ValueError as e:
+        if "MistralCommonBackend" not in str(e):
+            raise
+        from transformers import AutoModelForCausalLM, AutoTokenizer
+        tok = AutoTokenizer.from_pretrained(repo_id, token=HF_TOKEN)
+        mdl = AutoModelForCausalLM.from_pretrained(
+            repo_id, device_map="auto", torch_dtype=torch.bfloat16, token=HF_TOKEN)
+        pipe = pipeline("text-generation", model=mdl, tokenizer=tok)
+
+    if "OpenBioLLM" in repo_id and not getattr(pipe.tokenizer, "chat_template", None):
+        pipe.tokenizer.chat_template = LLAMA3_CHAT_TEMPLATE
+    if "Qwen3" in repo_id:
+        import functools
+        pipe.tokenizer.apply_chat_template = functools.partial(
+            pipe.tokenizer.apply_chat_template, enable_thinking=False)
+    return pipe
 
 
 def load_model(model_key: str, repo_id: str, strategy: str):
@@ -1144,8 +1222,7 @@ def load_model(model_key: str, repo_id: str, strategy: str):
     t0 = time.time()
 
     if strategy == "pipeline_text":
-        pipe = pipeline("text-generation", model=repo_id,
-                        device_map="auto", torch_dtype=torch.bfloat16, token=HF_TOKEN)
+        pipe = _build_text_pipeline(repo_id)
         if pipe.tokenizer.pad_token_id is None:
             pipe.tokenizer.pad_token_id = pipe.tokenizer.eos_token_id
         obj = pipe; loader_type = "pipeline"
@@ -1157,10 +1234,16 @@ def load_model(model_key: str, repo_id: str, strategy: str):
             local, device_map="auto", torch_dtype=torch.bfloat16, token=HF_TOKEN).eval()
         obj = (proc, model); loader_type = "processor_model"
 
-    elif strategy == "gemma4_manual":
-        local = _download_to_scratch(repo_id, "gemma-4-E4B-it")
+    elif strategy == "medgemma_manual":
+        # google/medgemma-4b-it's config.json lists architectures =
+        # ["Gemma3ForConditionalGeneration"], model_type="gemma3" (confirmed
+        # against the published config: text_config hidden_size=2560/34
+        # layers, vision_config hidden_size=1152/27 layers via a SigLIP
+        # encoder pretrained on de-identified medical images) — same loader
+        # class as gemma3_manual below, not AutoModelForImageTextToText.
+        local = _download_to_scratch(repo_id, "medgemma-4b-it")
         proc  = AutoProcessor.from_pretrained(local, token=HF_TOKEN)
-        model = AutoModelForImageTextToText.from_pretrained(
+        model = Gemma3ForConditionalGeneration.from_pretrained(
             local, device_map="auto", torch_dtype=torch.bfloat16, token=HF_TOKEN).eval()
         obj = (proc, model); loader_type = "processor_model"
 
@@ -1235,7 +1318,7 @@ def run_pipeline(model_key: str, loader_type: str, obj,
         a_msgs = build_agent1only_messages(model_key, json_str, question, options)
         a_raw  = infer(loader_type, obj, a_msgs, TOKENS_AGENT3)
         record["agent3_raw"]    = a_raw
-        record["final_answer"]  = extract_answer_letter(a_raw)
+        record["final_answer"]  = extract_answer_letter(a_raw) or letter_from_option_text(a_raw, options)
         record["answer_source"] = "agent1only"
         record["pipeline_latency_sec"] = round(time.time() - t0, 2)
         return record
@@ -1264,7 +1347,7 @@ def run_pipeline(model_key: str, loader_type: str, obj,
         a3_msgs = build_agent3_messages(model_key, a2_raw, options)
         a3_raw  = infer(loader_type, obj, a3_msgs, TOKENS_AGENT3)
         record["agent3_raw"]    = a3_raw
-        record["final_answer"]  = extract_answer_letter(a3_raw) or extract_answer_letter(a2_raw)
+        record["final_answer"]  = extract_answer_letter(a3_raw) or extract_answer_letter(a2_raw) or letter_from_option_text(a3_raw, options)
         record["answer_source"] = "agent3_fallback"
 
     record["pipeline_latency_sec"] = round(time.time() - t0, 2)
@@ -1325,7 +1408,11 @@ def evaluate_model(model_key: str, repo_id: str, strategy: str,
             except Exception:
                 options = row["options"] if isinstance(row["options"], dict) else {}
 
-            question   = row["question"]
+            # Only the question sentence reaches the reasoning call. row["question"]
+            # is the full original vignette in clinical wording; passing it (as
+            # earlier versions did) shows the reasoning model the clean case for
+            # every persona and invalidates the comparison.
+            question   = question_stem(row["question"])
             answer_idx = row["answer_idx"]
 
             q_record = {
@@ -1411,17 +1498,19 @@ def main():
     args = parser.parse_args()
 
     print("=" * 65)
-    print("  NarrativeShield — Agentic Pipeline v2 (EACL Main)")
+    print("  NarrativeShield — Agentic Pipeline v2")
     print(f"  Ablation  : {args.ablation}")
     print(f"  Model(s)  : {args.model}")
     print(f"  Output    : {OUTPUT_DIR}")
     print("=" * 65)
 
-    login(token=HF_TOKEN, add_to_git_credential=False)
+    # No login() call: HF_TOKEN is read from the environment and passed as token=...
+    # everywhere. login() writes a shared stored_tokens file in the HF cache,
+    # which concurrent jobs corrupt (race) and crash on.
     print("  HuggingFace auth OK\n")
 
     print(f"  Loading dataset: {DATASET_NAME} …")
-    raw_ds   = load_dataset(DATASET_NAME, split="train")
+    raw_ds   = load_dataset("csv", data_files=DATASET_NAME, split="train")
     all_rows = list(raw_ds)
     print(f"  Total questions: {len(all_rows)}\n")
 

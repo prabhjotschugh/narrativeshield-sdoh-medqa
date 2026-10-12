@@ -1,0 +1,13 @@
+Model,Delta OMR Overall (B4-B1),Delta NAG,Delta DSS,Delta DSS<0.8(%),Interpretation
+llama32_3b,0.0317,-0.013,-0.0827,34.1,B4 reduces anchoring (NAG down)
+medgemma_4b,0.066,-0.034,-0.0639,8.0,B4 reduces anchoring (NAG down)
+phi4_mini,0.037,0.016,0.0471,-1.1,B4 improves stability (DSS up)
+qwen25_7b,0.0433,-0.018,-0.1265,25.8,B4 reduces anchoring (NAG down)
+mistral7b,0.0014,-0.01,-0.0186,13.8,negligible effect
+qwen3_8b,0.071,-0.046,0.1279,-3.2,B4 helps: NAG down DSS up
+ministral8b,-0.0277,-0.025,0.1207,-19.8,B4 helps: NAG down DSS up
+llama31_8b,0.0453,-0.044,-0.1177,29.4,B4 reduces anchoring (NAG down)
+openbiollm_8b,-0.1253,-0.03,-0.1097,26.6,B4 reduces anchoring (NAG down)
+gemma3_12b,0.022,-0.036,-0.1182,26.7,B4 reduces anchoring (NAG down)
+qwen25_14b,0.0584,-0.002,0.0748,-18.8,B4 improves stability (DSS up)
+mistral_small_24b,0.012,-0.024,-0.0906,5.7,B4 reduces anchoring (NAG down)

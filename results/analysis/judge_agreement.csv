@@ -1,0 +1,13 @@
+judge,persona,n,agree_any,kappa_any,spearman_count,rate_base,rate_judge,mean_rel_base,mean_rel_judge
+gemini-2.5-flash,alpha,210,0.424,0.12,0.234,0.214,0.771,0.238,1.595
+gemini-2.5-flash,beta,191,0.921,0.413,0.556,0.895,0.963,1.723,3.534
+gemini-2.5-flash,gamma,203,0.818,0.372,0.61,0.749,0.921,1.374,2.921
+gemini-2.5-flash,all,604,0.714,0.312,0.627,0.609,0.882,1.089,2.654
+gemini-3.1-flash-lite,alpha,1000,0.587,0.264,0.375,0.226,0.611,0.264,1.097
+gemini-3.1-flash-lite,beta,1000,0.887,0.447,0.545,0.859,0.912,1.591,1.66
+gemini-3.1-flash-lite,gamma,1000,0.894,0.659,0.672,0.793,0.823,1.431,1.506
+gemini-3.1-flash-lite,all,3000,0.789,0.509,0.576,0.626,0.782,1.095,1.421
+gemini-3.1-pro-preview,alpha,1000,0.817,0.576,0.612,0.226,0.375,0.264,0.606
+gemini-3.1-pro-preview,beta,1000,0.909,0.502,0.627,0.859,0.942,1.591,2.75
+gemini-3.1-pro-preview,gamma,1000,0.878,0.531,0.633,0.793,0.909,1.431,2.478
+gemini-3.1-pro-preview,all,3000,0.868,0.699,0.757,0.626,0.742,1.095,1.945

@@ -1,0 +1,13 @@
+cond,group,n,gap,ci
+B1,management,363,0.086,"[0.059,0.111]"
+B1,diagnosis,553,0.102,"[0.084,0.121]"
+B1,other,65,0.148,"[0.097,0.201]"
+B1,investigation,19,0.067,"[-0.055,0.170]"
+B4,management,363,0.055,"[0.036,0.077]"
+B4,diagnosis,553,0.091,"[0.075,0.106]"
+B4,other,65,0.097,"[0.054,0.141]"
+B4,investigation,19,-0.007,"[-0.122,0.093]"
+NS-rewrite,management,363,0.043,"[0.028,0.058]"
+NS-rewrite,diagnosis,553,0.054,"[0.042,0.066]"
+NS-rewrite,other,65,0.042,"[0.013,0.071]"
+NS-rewrite,investigation,19,-0.026,"[-0.101,0.036]"

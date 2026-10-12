@@ -1,0 +1,301 @@
+model,question_id,persona,agent1_parse_success,audit_pass,facts_present,facts_missing,total_facts_extracted,audit_note
+llama32_3b,MQ_0655,alpha,True,False,14,5,19,Key sexual history details and the correct symptom onset timeline were omitted.
+llama32_3b,MQ_0655,beta,True,False,12,5,17,"Key exam findings, sexual history details, and correct onset duration were omitted or misrepresented."
+llama32_3b,MQ_0655,gamma,True,False,13,3,16,"Omitted respiratory rate, negated flank pain, and misstated onset duration as days instead of hours."
+llama32_3b,MQ_0115,alpha,True,False,14,4,18,"Key symptom durations, specific trigger, and sensory level were omitted or distorted."
+llama32_3b,MQ_0115,beta,True,False,16,2,18,Missed ibuprofen medication use and the 8-month duration of dysphagia and dysarthria.
+llama32_3b,MQ_0115,gamma,True,False,12,5,17,"Key clinical details including symptom durations, Lhermitte-like sensation on sneezing, and sensory loss below the neck were omitted."
+llama32_3b,MQ_0026,alpha,True,False,12,1,13,The extracted JSON omits the patient's 10-kg weight loss.
+llama32_3b,MQ_0026,beta,True,False,10,6,16,"Multiple clinical symptoms, durations, and family history details were omitted."
+llama32_3b,MQ_0026,gamma,True,False,8,5,13,"The rewritten narrative omits key diagnostic antibodies, headache, and accurate duration while transposing blood pressure values."
+llama32_3b,MQ_0760,alpha,True,False,10,2,12,The anatomical site of abdominal tenderness and daily medication frequency were omitted.
+llama32_3b,MQ_0760,beta,True,False,7,5,12,Key physical exam findings including abdominal tenderness and orientation status were omitted or distorted.
+llama32_3b,MQ_0760,gamma,True,False,9,5,14,"Multiple exam findings, vitals, and negative symptoms were omitted from the structured extraction."
+llama32_3b,MQ_0282,alpha,True,False,15,1,16,Severe anxiety was omitted from past medical history.
+llama32_3b,MQ_0282,beta,True,False,14,2,16,Rewritten JSON misses the patient's nerve issues and ineffective attempt to sleep it off.
+llama32_3b,MQ_0282,gamma,True,False,14,4,18,Key negative exam finding of no back tenderness and specific strength grade were omitted.
+llama32_3b,MQ_0251,alpha,True,False,21,5,26,"Social history, negative exam finding, and symptom durations were omitted."
+llama32_3b,MQ_0251,beta,True,False,14,9,23,"Multiple vital lab values, social history details, and pertinent negative symptoms were omitted."
+llama32_3b,MQ_0251,gamma,True,False,16,12,28,Multiple pertinent negatives and specific historical details were omitted from the JSON extraction.
+llama32_3b,MQ_0229,alpha,True,False,16,9,25,"Multiple lifestyle details, physical measurements, and biopsy findings were omitted from the extraction."
+llama32_3b,MQ_0229,beta,True,False,20,8,28,"Key details including symptom duration, social history, anthropometrics, and biopsy findings are omitted."
+llama32_3b,MQ_0229,gamma,True,False,19,8,27,"Multiple vital measurements, biopsy findings, and social history details were omitted."
+llama32_3b,MQ_0143,alpha,True,False,15,5,20,"Key history elements including smoking status, pulsus paradoxus, and prodromal symptoms were omitted or contradicted."
+llama32_3b,MQ_0143,beta,True,False,19,7,26,"Multiple clinical details including pain positional/pleuritic triggers, URI duration, appearance, and pulsus paradoxus were omitted."
+llama32_3b,MQ_0143,gamma,True,False,13,7,20,"Key clinical features including pleuritic chest pain, symptom durations, and pulsus paradoxus were omitted."
+llama32_3b,MQ_0755,alpha,True,False,12,9,21,"Multiple clinical history details, negative physical exam findings, and social history were omitted."
+llama32_3b,MQ_0755,beta,True,False,13,5,18,"Multiple clinical details including back ache duration, alcohol history, and right-sided MI localization were omitted."
+llama32_3b,MQ_0755,gamma,True,False,10,9,19,"Multiple pertinent negatives, history details, and diagnostic tests were omitted."
+llama32_3b,MQ_0105,alpha,True,False,15,1,16,Reason for visit to establish primary care was omitted.
+llama32_3b,MQ_0105,beta,True,False,12,3,15,Key history details including IV drug route and symptom duration were omitted.
+llama32_3b,MQ_0105,gamma,True,False,12,4,16,Multiple clinical history and physical exam findings were omitted from the extraction.
+llama32_3b,MQ_0693,alpha,True,False,17,3,20,Normal cardiopulmonary exam findings and constitutional symptom duration were omitted.
+llama32_3b,MQ_0693,beta,True,False,13,6,19,Multiple exam findings and historical elements were omitted from the extraction.
+llama32_3b,MQ_0693,gamma,True,False,13,9,22,"The rewrite omits lesion morphology details, cardiopulmonary exam negatives, and medication/duration specifics while hallucinating inhaler use."
+llama32_3b,MQ_0759,alpha,True,False,9,6,15,Key reproductive history and symptom details were omitted or incorrectly recorded.
+llama32_3b,MQ_0759,beta,True,False,10,4,14,"Key reproductive history details including menses frequency, intercourse frequency, and partner fertility are missing."
+llama32_3b,MQ_0759,gamma,True,False,8,7,15,"Key fertility history, menstrual details, and pelvic exam findings were omitted."
+llama32_3b,MQ_0914,alpha,True,False,19,2,21,The JSON omits mass growth over time and ADHD symptom control.
+llama32_3b,MQ_0914,beta,True,False,9,11,20,"Multiple physical exam findings, growth parameters, and symptom characteristics were omitted from the extraction."
+llama32_3b,MQ_0914,gamma,True,False,14,6,20,"Key physical exam findings including growth percentiles, Tanner staging, and testicular volume were omitted."
+llama32_3b,MQ_0559,alpha,True,False,13,3,16,Key laboratory findings including positive anti-U1 RNP and elevated CK values were omitted.
+llama32_3b,MQ_0559,beta,True,False,9,5,14,"Key exam findings, Raynaud phases, and lab abnormality states were omitted."
+llama32_3b,MQ_0559,gamma,True,False,13,4,17,"Multiple negative symptoms, home treatments, and lab elevation details were omitted."
+llama32_3b,MQ_0090,alpha,True,False,8,5,13,"Key clinical details including interval growth, painlessness, and mammogram confirmation are missing."
+llama32_3b,MQ_0090,beta,True,False,10,3,13,"The rewritten extraction omitted bump mobility, smoking quantity, and absence of back pain."
+llama32_3b,MQ_0090,gamma,True,False,11,2,13,Rewritten JSON omitted nodule fixation and interval growth of the mass.
+llama32_3b,MQ_0605,alpha,True,False,13,2,15,African American ethnicity and the elevated status of CRP were omitted from the extraction.
+llama32_3b,MQ_0605,beta,True,False,12,4,16,"Key clinical findings including bacteremia, soft tissue infection, and CRP elevation were omitted or misclassified."
+llama32_3b,MQ_0605,gamma,True,False,12,5,17,Key findings including Salmonella bacteremia and pallor were omitted from the extraction.
+llama32_3b,MQ_0433,alpha,True,False,24,2,26,The extracted JSON omits the lesion dimensions and the positive KOH result showing hyphae.
+llama32_3b,MQ_0433,beta,True,False,14,5,19,"Key findings including fatigue, lesion enlargement, and microscopic fungal detection were omitted."
+llama32_3b,MQ_0433,gamma,True,False,16,4,20,"Key diagnostic skin scraping finding, vitals, and lesion dimensions were omitted."
+llama32_3b,MQ_0033,alpha,True,False,14,4,18,"The JSON missed IVP findings, social alcohol use, and misstated onset duration."
+llama32_3b,MQ_0033,beta,True,False,14,4,18,"Rewritten JSON misses key stone localization, colicky nature, restlessness, and misstates symptom duration as nine days."
+llama32_3b,MQ_0033,gamma,True,False,15,8,23,"Multiple clinical symptoms, habits, and imaging details were omitted or incorrectly recorded."
+llama32_3b,MQ_0031,alpha,True,False,11,2,13,The extraction omitted the bicycle accident mechanism and the finding of stable vital signs.
+llama32_3b,MQ_0031,beta,True,False,9,7,16,"Key clinical facts including weight-bearing status, acute onset timing, and prior treatments were omitted or mischaracterized."
+llama32_3b,MQ_0031,gamma,True,False,10,4,14,"Several clinical details including tenderness to palpation, stable vitals, and home treatments were omitted."
+llama32_3b,MQ_0096,alpha,True,False,16,4,20,Key clinical details including absolute lymphocytosis and paroxysmal cough character were omitted.
+llama32_3b,MQ_0096,beta,True,False,14,3,17,Key clinical facts including vaccination status and lymphocytosis were omitted from the structured extraction.
+llama32_3b,MQ_0096,gamma,True,False,13,1,14,The extracted data omits the patient's reported up-to-date vaccination status.
+llama32_3b,MQ_0224,alpha,True,False,17,6,23,"Multiple clinical examination findings, pain characteristics, and social history details were omitted."
+llama32_3b,MQ_0224,beta,True,False,8,8,16,"Key neurological exam findings, radiation, and social history were omitted."
+llama32_3b,MQ_0224,gamma,True,False,10,8,18,Key exam findings like straight leg raise and critical red flag negations were omitted.
+llama32_3b,MQ_0239,alpha,True,False,14,6,20,"The JSON extracted lab names with null values, losing the abnormal results, and omitted postprandial symptom resolution."
+llama32_3b,MQ_0239,beta,True,False,16,8,24,"Key lab abnormalities, enzyme deficiency, glycogen structure, and food responsiveness were omitted."
+llama32_3b,MQ_0239,gamma,True,False,11,11,22,"The JSON omitted developmental history, relieving factors, organ exam specifics, and key laboratory and enzymatic findings."
+llama32_3b,MQ_0518,alpha,True,False,15,7,22,"PFT findings, symptom progression details, and durations were omitted in the JSON extraction."
+llama32_3b,MQ_0518,beta,True,False,12,7,19,"Multiple durations, smoking history, and progression details were omitted or inaccurate in the extraction."
+llama32_3b,MQ_0518,gamma,True,False,13,9,22,"Multiple clinical facts including pulmonary function tests, smoking status, and hypertension were omitted."
+llama32_3b,MQ_0617,alpha,True,False,14,4,18,"The JSON omits feeding history, delivery setting, growth percentiles, and diarrhea duration."
+llama32_3b,MQ_0617,beta,True,False,15,5,20,"Multiple clinical facts regarding birth history, growth percentiles, and symptom duration were omitted."
+llama32_3b,MQ_0617,gamma,True,False,11,6,17,"Multiple clinical facts including diarrhea, growth percentiles, and respiratory rate were omitted."
+llama32_3b,MQ_0028,alpha,True,False,14,1,15,Arrival via law enforcement is omitted from the structured extraction.
+llama32_3b,MQ_0028,beta,True,False,16,6,22,Multiple clinical facts including auditory hallucinations and specific serum lab identities were omitted.
+llama32_3b,MQ_0028,gamma,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+llama32_3b,MQ_0575,alpha,True,False,15,6,21,"Multiple clinical details regarding symptom durations, menstrual history, sexual activity, and vitals were omitted."
+llama32_3b,MQ_0575,beta,True,False,7,6,13,Key clinical facts including amenorrhea and social history were omitted from the extraction.
+llama32_3b,MQ_0575,gamma,True,False,6,13,19,"Multiple vital signs, physical measurements, negative pregnancy test, and key gynecologic history were omitted."
+llama32_3b,MQ_0204,alpha,True,False,9,4,13,Key obstetrical history and repeat confirmatory ultrasound scan were omitted from the extraction.
+llama32_3b,MQ_0204,beta,True,False,10,2,12,The JSON omits the multi-day symptom duration and the confirmatory repeat ultrasound performed one hour later.
+llama32_3b,MQ_0204,gamma,True,False,10,1,11,The repeat ultrasound confirmation after one hour was omitted from the structured extraction.
+llama32_3b,MQ_0734,alpha,True,False,16,5,21,"Stepwise decline timeline, independence preservation, afebrile status, and normal abdominal exam were omitted."
+llama32_3b,MQ_0734,beta,True,False,11,7,18,"Key symptom timelines, medication non-adherence, and cognitive symptoms were omitted or incorrectly marked absent."
+llama32_3b,MQ_0734,gamma,True,False,15,6,21,"Multiple key timeline details, negative exam findings, and physical exam specifics were omitted."
+llama32_3b,MQ_0666,alpha,True,False,10,6,16,"Multiple clinical facts regarding symptom duration, current medications, and functional impairment were omitted."
+llama32_3b,MQ_0666,beta,True,False,6,4,10,Key chronicity details and family history status were omitted or misrepresented.
+llama32_3b,MQ_0666,gamma,True,False,7,4,11,"The JSON missed symptom duration, specific choreiform movements, and crucial negative family history details."
+llama32_3b,MQ_0719,alpha,True,False,19,7,26,"The extracted JSON omits negative exam findings, symptom duration, smoking history, differential, and CT modality."
+llama32_3b,MQ_0719,beta,True,False,18,8,26,"Multiple clinical exam findings, negative review of systems, platelets, smoking status, and correct symptom duration were omitted."
+llama32_3b,MQ_0719,gamma,True,False,26,6,32,"Rewritten JSON misses non-smoking status, normal organ exams, and specific symptom triggers."
+llama32_3b,MQ_0987,alpha,True,False,19,3,22,Key historical details including obesity and recent medication non-adherence were omitted from the extraction.
+llama32_3b,MQ_0987,beta,True,False,12,8,20,Several critical past medical conditions and acute medication misuse details were omitted.
+llama32_3b,MQ_0987,gamma,True,False,15,5,20,Key comorbidities including diabetes and obesity were omitted from the structured extraction.
+llama32_3b,MQ_0430,alpha,True,False,17,3,20,Key clinical facts including fatigue/decreased activity and anthropometric findings were omitted.
+llama32_3b,MQ_0430,beta,True,False,16,4,20,"The JSON missed sex, lethargy, normal growth, and peripheral blood smear findings."
+llama32_3b,MQ_0430,gamma,True,False,23,2,25,The JSON omits the symptom onset timeframe and trial of star anise infusions.
+llama32_3b,MQ_0226,alpha,True,False,11,2,13,Extraction omits smoking history and social engagement decline.
+llama32_3b,MQ_0226,beta,True,False,11,3,14,"Constipation, stool softener use, and depression concerns were omitted from the extraction."
+llama32_3b,MQ_0226,gamma,True,False,9,5,14,"Multiple prominent clinical symptoms including nocturia, constipation, and spine pain were omitted."
+llama32_3b,MQ_0460,alpha,True,False,16,5,21,"Key clinical facts including weight loss, travel, and smoking history were omitted."
+llama32_3b,MQ_0460,beta,True,False,16,4,20,"Key clinical details including travel history, weight loss, and absence of back pain were omitted."
+llama32_3b,MQ_0460,gamma,True,False,10,6,16,"Multiple clinical facts including smoking history, travel history, and manometry findings were omitted."
+llama32_3b,MQ_0604,alpha,True,False,16,1,17,Missing the negative history of prior similar episodes.
+llama32_3b,MQ_0604,beta,True,False,11,5,16,"Key gynecologic, sexual, and functional history details were omitted from the extraction."
+llama32_3b,MQ_0604,gamma,True,False,14,4,18,"Omitted home remedy trial, sexual history, non-vesicular nature, and first lifetime occurrence."
+llama32_3b,MQ_0285,alpha,True,False,10,6,16,"Multiple clinical history elements, specific inter-episodic features, and negations were omitted."
+llama32_3b,MQ_0285,beta,True,False,11,7,18,Key hypomanic episode symptoms and medication history were omitted from the extraction.
+llama32_3b,MQ_0285,gamma,True,False,5,9,14,"Multiple critical diagnostic features of bipolar disorder including hypomania, episode durations, and negative findings were omitted."
+llama32_3b,MQ_0829,alpha,True,False,15,6,21,"Key symptom durations, gait impairment, and laboratory normality were omitted from the extraction."
+llama32_3b,MQ_0829,beta,True,False,13,5,18,"Rewritten JSON omits symptom durations, over-the-counter medication use, normal reflex comparisons, and normal lab results."
+llama32_3b,MQ_0829,gamma,True,False,14,4,18,"The rewrite omitted the chronic headache, gait stumbling, and misstated the duration of leg symptoms."
+llama32_3b,MQ_0891,alpha,True,False,15,7,22,Multiple clinical history details and normal physical exam findings were omitted from the extraction.
+llama32_3b,MQ_0891,beta,True,False,12,9,21,"The rewritten JSON omits several pertinent negatives, urinalysis findings, pain duration/severity, and misattributes family history."
+llama32_3b,MQ_0891,gamma,True,False,9,6,15,"Multiple clinical symptoms including dysuria and vomiting, sexual history, and physical exam findings were omitted."
+llama32_3b,MQ_0007,alpha,True,False,17,8,25,"Multiple clinical details including nocturia, post-void pain relief, negative cultures, and exam findings were omitted."
+llama32_3b,MQ_0007,beta,True,False,15,8,23,"Multiple clinical details including cystoscopy specifics, negative urine labs, and pain relief with voiding were omitted."
+llama32_3b,MQ_0007,gamma,True,False,13,9,22,"Multiple clinical facts including exam findings, negative tests, and symptom patterns were omitted."
+llama32_3b,MQ_0778,alpha,True,False,25,9,34,Key viral hepatitis serologies and social history details were completely omitted.
+llama32_3b,MQ_0778,beta,True,False,20,8,28,"Multiple negative history findings, exam details, and viral serologies were omitted."
+llama32_3b,MQ_0778,gamma,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+llama32_3b,MQ_0826,alpha,True,False,15,5,20,"Social history, anthropometrics, and internship context were omitted from the extraction."
+llama32_3b,MQ_0826,beta,True,False,12,5,17,"Rewritten missed anthropometrics, alcohol history, and erroneously listed hemoptysis as present."
+llama32_3b,MQ_0826,gamma,True,False,12,8,20,"Key vitals, anthropometrics, and specific imaging measurement were omitted in the JSON extraction."
+llama32_3b,MQ_0164,alpha,True,False,25,6,31,"Multiple specific CSF findings, history details, and weight loss specifics were omitted from the extraction."
+llama32_3b,MQ_0164,beta,True,False,20,5,25,"Rewritten JSON misses key headache exacerbating factors, fatigue, and specific symptom durations."
+llama32_3b,MQ_0164,gamma,True,False,15,7,22,"Multiple constitutional symptoms, brain imaging findings, and the CD4 count were omitted."
+llama32_3b,MQ_0715,alpha,True,False,6,2,8,The extracted JSON omits details regarding symptomatic relief from elevation and posture comfort.
+llama32_3b,MQ_0715,beta,True,False,6,3,9,"The JSON omits symptom duration, positional relief with pillows, and associated back pain."
+llama32_3b,MQ_0715,gamma,True,False,8,2,10,Fatigue and sleeping elevated on pillows were omitted from the extraction.
+llama32_3b,MQ_0984,alpha,True,False,20,1,21,The symptom of dark-colored urine was omitted from the extraction.
+llama32_3b,MQ_0984,beta,True,False,14,6,20,"Key qualitative hepatitis serology results, dark urine, and absent back pain were omitted from the extraction."
+llama32_3b,MQ_0984,gamma,True,False,18,4,22,"Rewritten JSON incorrectly negated vomiting, corrupted HBsAg lab value, and misstated duration."
+llama32_3b,MQ_0349,alpha,True,False,17,1,18,Stable vital signs finding was omitted from the structured representation.
+llama32_3b,MQ_0349,beta,True,False,13,6,19,Critical hematologic lab results and systemic findings were omitted.
+llama32_3b,MQ_0349,gamma,True,False,10,7,17,"Multiple laboratory findings, vital signs, and symptom characteristics were omitted."
+llama32_3b,MQ_0965,alpha,True,False,15,1,16,The timing of the initial wrist pain onset last week was omitted.
+llama32_3b,MQ_0965,beta,True,False,14,1,15,The timing of the preceding wrist pain from last week was omitted.
+llama32_3b,MQ_0965,gamma,True,False,12,3,15,"Sexual history, contraceptive use, and negated flank pain were omitted from the extraction."
+llama32_3b,MQ_0160,alpha,True,False,13,2,15,Postpartum status was mischaracterized as gestational age and term delivery history was omitted.
+llama32_3b,MQ_0160,beta,True,False,7,6,13,Key clinical details including mechanism of injury and specific physical exam maneuvers were omitted.
+llama32_3b,MQ_0160,gamma,True,False,11,4,15,Key physical exam finding (Finkelstein maneuver) and occupational history were omitted.
+llama32_3b,MQ_0221,alpha,True,False,13,1,14,Encounter setting at primary care physician was omitted from the structured extraction.
+llama32_3b,MQ_0221,beta,True,False,11,2,13,The rewrite omitted urinary frequency/urgency and the failure of OTC treatment while hallucinating past medical history.
+llama32_3b,MQ_0221,gamma,True,False,14,2,16,Key lower urinary tract symptoms of dysuria and frequency were omitted from the extraction.
+llama32_3b,MQ_0782,alpha,True,False,14,4,18,"Smoking history, ICU setting, headache severity, and post-treatment diastolic BP were omitted."
+llama32_3b,MQ_0782,beta,True,False,11,6,17,"Multiple clinical facts including medication history, acute timeline, and paradoxical hypertension were omitted."
+llama32_3b,MQ_0782,gamma,True,False,10,7,17,"Multiple vital signs, acute visual symptoms, and ED treatments were omitted from the extraction."
+llama32_3b,MQ_0345,alpha,True,False,19,6,25,"Social history, last menses timing, differential, and smear findings were omitted."
+llama32_3b,MQ_0345,beta,True,False,15,5,20,Rewritten misidentifies sex and omits dyspnea on exertion alongside specific history details.
+llama32_3b,MQ_0345,gamma,True,False,22,5,27,"Multiple clinical details including smear findings, differential, and social/gynecologic history details were omitted."
+llama32_3b,MQ_0991,alpha,True,False,8,10,18,"Multiple neonatal exam, delivery details, and maternal timeline facts are missing, and weight loss was incorrectly marked absent."
+llama32_3b,MQ_0991,beta,True,False,5,7,12,"Key neonatal findings, birth trauma negation, and maternal medication history were omitted."
+llama32_3b,MQ_0991,gamma,True,False,9,9,18,"Multiple clinical facts regarding neonatal Apgar scores, lesion location, delivery details, and maternal history were omitted."
+llama32_3b,MQ_0095,alpha,True,False,30,4,34,Multiple negative physical exam findings and ECG details were omitted from the extraction.
+llama32_3b,MQ_0095,beta,True,False,14,8,22,"Multiple exam findings, ECG details, and medical history elements were omitted."
+llama32_3b,MQ_0095,gamma,True,False,16,9,25,"Multiple pulmonary exam findings, medical history items, and critical ECG characteristics were omitted from the extraction."
+llama32_3b,MQ_0390,alpha,True,False,7,3,10,Key clinical details including school avoidance and allegations of inappropriate contact were omitted.
+llama32_3b,MQ_0390,beta,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+llama32_3b,MQ_0390,gamma,True,False,5,3,8,Critical allegations of abuse and school truancy were omitted from the extraction.
+llama32_3b,MQ_0100,alpha,True,False,8,8,16,"Multiple clinical details including pressured speech, public nudity, and psychiatric history were omitted from the extraction."
+llama32_3b,MQ_0100,beta,True,False,11,4,15,Key negative findings including absence of suicidal or homicidal ideations and prior episodes were omitted.
+llama32_3b,MQ_0100,gamma,True,False,11,4,15,Key manic symptoms including disinhibition and specific sleep duration were omitted.
+llama32_3b,MQ_0368,alpha,True,False,10,4,14,Key exam and timeline details were omitted from the JSON extraction.
+llama32_3b,MQ_0368,beta,True,False,7,4,11,The rewritten JSON omits specific quantification of smoking history and pupillometry details in dim light.
+llama32_3b,MQ_0368,gamma,True,False,5,4,9,"Multiple clinical details including duration, pupillary light reflex, and pack-per-day smoking quantity were omitted."
+llama32_3b,MQ_0868,alpha,True,False,15,2,17,Fundoscopy finding of cherry-red spots and patient expiration were omitted.
+llama32_3b,MQ_0868,beta,True,False,12,7,19,"Key developmental delays, specific organomegaly findings, and patient mortality were omitted."
+llama32_3b,MQ_0868,gamma,True,False,10,7,17,"Multiple vital clinical details including patient sex, growth percentiles, and death were omitted."
+llama32_3b,MQ_0353,alpha,True,False,20,5,25,"Social history, functional status, continence, and orientation status were omitted."
+llama32_3b,MQ_0353,beta,True,False,17,7,24,Key neurological symptoms like transient monocular blindness and hyperreflexia were omitted or contradicted.
+llama32_3b,MQ_0353,gamma,True,False,15,7,22,"The JSON omits critical transient visual symptoms, diabetes history, intact functional status, and examination details."
+llama32_3b,MQ_0619,alpha,True,False,11,2,13,History of suicide attempts and individual ABG lab identities are missing.
+llama32_3b,MQ_0619,beta,True,False,8,3,11,The rewritten JSON omits patient unconsciousness and fails to identify the specific blood gas analytes.
+llama32_3b,MQ_0619,gamma,True,False,7,8,15,Multiple clinical history elements and symptoms were omitted from the JSON extraction.
+llama32_3b,MQ_0271,alpha,True,False,16,3,19,"Stool character, frequency, and dry mucous membranes were omitted from the extraction."
+llama32_3b,MQ_0271,beta,True,False,14,5,19,Multiple specific lab and vital findings were omitted from the extraction.
+llama32_3b,MQ_0271,gamma,True,False,10,6,16,"Multiple clinical symptoms, travel history, and pending lab status were omitted from the extraction."
+llama32_3b,MQ_0827,alpha,True,False,16,4,20,"Key clinical details including onset during kickboxing, sharp pain, LMP timing, and pelvic discharge were omitted."
+llama32_3b,MQ_0827,beta,True,False,11,7,18,"Key gynecological, onset, and physical examination details were omitted from the structured extraction."
+llama32_3b,MQ_0827,gamma,True,False,12,5,17,"The rewrite omits respiratory rate, sexual/contraceptive history, recent menses timing, and onset circumstances."
+llama32_3b,MQ_0045,alpha,True,False,11,3,14,"Symptom duration, family history, and platelet count were omitted."
+llama32_3b,MQ_0045,beta,True,False,14,2,16,The rewrite omits the six-month duration of symptoms/supplement use and negative family history.
+llama32_3b,MQ_0045,gamma,True,False,14,4,18,"Key clinical facts including medications, glycemic control, herbal remedies, and normal thyroid labs were omitted."
+llama32_3b,MQ_0748,alpha,True,False,9,3,12,Growth percentiles and laboratory reference range were omitted from the extraction.
+llama32_3b,MQ_0748,beta,True,False,10,2,12,Rewritten JSON misses family history and growth acceleration relative to peers.
+llama32_3b,MQ_0748,gamma,True,False,11,5,16,"Multiple clinical examination details, history, and lab reference values were omitted."
+llama32_3b,MQ_0471,alpha,True,False,32,5,37,"The extraction omitted sexual history, specific return timing, college graduation, and the negative tourniquet test."
+llama32_3b,MQ_0471,beta,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+llama32_3b,MQ_0471,gamma,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+llama32_3b,MQ_0550,alpha,True,False,20,6,26,"Key lab findings, microscopic morphology, and smoking history were omitted."
+llama32_3b,MQ_0550,beta,True,False,16,8,24,"Multiple laboratory findings, smear results, and genetic mutation details were omitted."
+llama32_3b,MQ_0550,gamma,True,False,13,9,22,"Multiple clinical findings, labs, marrow/genetic results, and vitals were omitted or incorrectly recorded."
+llama32_3b,MQ_0128,alpha,True,False,14,7,21,"Key pain locations, alleviating/aggravating factors, duration, and alcohol consumption were omitted."
+llama32_3b,MQ_0128,beta,True,False,10,8,18,"Multiple lifestyle factors, symptom modifiers, and chronicity details were omitted."
+llama32_3b,MQ_0128,gamma,True,False,12,8,20,"Multiple clinical facts including risk exposures, symptom triggers, chronicity, and pertinent negatives are omitted."
+llama32_3b,MQ_0388,alpha,True,False,12,9,21,"Multiple social history details, initial URI symptoms, and normal laboratory findings were omitted."
+llama32_3b,MQ_0388,beta,True,False,10,6,16,"The JSON missed sputum absence, exposures, alcohol history, and normal labs and imaging results."
+llama32_3b,MQ_0388,gamma,True,False,15,5,20,Several antecedent symptoms and clinical history details were omitted from the structured extraction.
+llama32_3b,MQ_0081,alpha,True,False,23,4,27,Pain descriptors and 24-hour acute duration were omitted or incorrectly recorded.
+llama32_3b,MQ_0081,beta,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+llama32_3b,MQ_0081,gamma,True,False,21,3,24,Respiratory rate was omitted and onset duration was incorrectly captured as 24 days instead of hours.
+llama32_3b,MQ_0566,alpha,True,False,16,9,25,"Multiple anthropometric measurements, history details, and urinalysis negative findings were omitted in the JSON extraction."
+llama32_3b,MQ_0566,beta,True,False,10,10,20,"Multiple vital measurements, urinalysis findings, home medications, and history details were omitted or inaccurate."
+llama32_3b,MQ_0566,gamma,True,False,16,8,24,"Multiple biometric, lab, and treatment details were omitted."
+llama32_3b,MQ_0301,alpha,True,False,25,3,28,"The JSON omits diarrhea duration, antibiotic completion timing, and oxygen delivery details."
+llama32_3b,MQ_0301,beta,True,False,14,11,25,"Lab analyte names were omitted and replaced with generic labels, and antacid use was omitted."
+llama32_3b,MQ_0301,gamma,True,False,21,3,24,Key clinical facts including absence of flank pain and antibiotic timing were omitted.
+llama32_3b,MQ_0850,alpha,True,False,10,3,13,"Key timeline details including the 6-month duration, weight gain quantity, and LMP were omitted."
+llama32_3b,MQ_0850,beta,True,False,8,4,12,"Key clinical durations, specific weight gain, and muscle pain were omitted or mischaracterized."
+llama32_3b,MQ_0850,gamma,True,False,13,1,14,The herbal decoction of bitter melon and ginger was omitted from medications.
+llama32_3b,MQ_0644,alpha,True,False,23,9,32,"Multiple clinical durations, prior transient episodes, and physical exam findings were omitted."
+llama32_3b,MQ_0644,beta,True,False,18,12,30,"Multiple vital details including visual acuities, central vision loss duration, and normal exam findings were omitted."
+llama32_3b,MQ_0644,gamma,True,False,24,8,32,"The rewrite omitted several key symptom timelines, negative findings, and fundoscopic retinal plaques."
+llama32_3b,MQ_0634,alpha,True,False,14,9,23,"Key semiology details, room air baseline, and post-treatment clinical recovery were omitted."
+llama32_3b,MQ_0634,beta,True,False,16,4,20,Several key clinical details including seizure duration and return to baseline were omitted.
+llama32_3b,MQ_0634,gamma,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+llama32_3b,MQ_0907,alpha,True,False,19,7,26,"Several anthropometrics, obstetric status, appetite changes, weight loss, and family history are omitted."
+llama32_3b,MQ_0907,beta,True,False,19,6,25,"Multiple clinical details including proptosis, increased appetite, and physical measurements were omitted."
+llama32_3b,MQ_0907,gamma,True,False,15,12,27,"Multiple vital physical measurements, clinical symptoms, and medications were omitted in the extraction."
+llama32_3b,MQ_0883,alpha,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+llama32_3b,MQ_0883,beta,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+llama32_3b,MQ_0883,gamma,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+llama32_3b,MQ_0371,alpha,True,False,3,3,6,"Key partner lab results, duration/context of intercourse, and negative chronic history are omitted."
+llama32_3b,MQ_0371,beta,True,False,4,7,11,"Key reproductive history, partner testing, duration, and negatives were omitted."
+llama32_3b,MQ_0371,gamma,True,False,7,3,10,Male partner evaluation and daily herbal consumption were omitted from the structured extraction.
+llama32_3b,MQ_0592,alpha,True,False,15,5,20,"The rewritten JSON omits several qualitative lab results, context, and symptom durations."
+llama32_3b,MQ_0592,beta,True,False,17,8,25,The rewritten JSON omits several specific clinical details including the directional abnormality of the hormone labs and optic nerve compression.
+llama32_3b,MQ_0592,gamma,True,False,18,6,24,"The structured extraction omitted symptom duration, weight loss, fenugreek intake, visual field cuts, and hormone test directions."
+llama32_3b,MQ_0197,alpha,True,False,13,6,19,"Multiple symptom durations, family history, and procedural details were omitted from the extraction."
+llama32_3b,MQ_0197,beta,True,False,10,4,14,"The JSON captures primary findings and vitals but omits voice change duration, specific substance use quantities, and family history."
+llama32_3b,MQ_0197,gamma,True,False,10,6,16,"Multiple clinical durations, alcohol history, and negative findings were omitted."
+llama32_3b,MQ_0722,alpha,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+llama32_3b,MQ_0722,beta,True,False,25,13,38,"The rewritten JSON omits all day 5 laboratory values, respiratory rate, urinalysis results, and key exam and progression findings."
+llama32_3b,MQ_0722,gamma,True,False,18,10,28,"The JSON missed baseline labs, acute kidney injury symptoms, alcohol history, and vital signs."
+llama32_3b,MQ_0072,alpha,True,False,18,7,25,"Multiple contextual, historical, and symptom-modifying details were omitted."
+llama32_3b,MQ_0072,beta,True,False,12,8,20,"Key clinical elements including erectile dysfunction, claudication specifics, and body measurements were omitted."
+llama32_3b,MQ_0072,gamma,True,False,10,11,21,"Key clinical facts including smoking history, true symptom duration, anthropometrics, and sexual history were omitted or misassigned."
+llama32_3b,MQ_0047,alpha,True,False,16,1,17,The baseline health status was omitted from the structured extraction.
+llama32_3b,MQ_0047,beta,True,False,16,2,18,Missed absence of neck swelling and the negative result for rapid strep.
+llama32_3b,MQ_0047,gamma,True,False,15,3,18,"Rewritten JSON misses absent rhinorrhea and hoarseness, and inverts systolic and diastolic blood pressure."
+llama32_3b,MQ_0678,alpha,True,False,29,1,30,Symptom onset duration of one hour was incorrectly converted to 1.0 days.
+llama32_3b,MQ_0678,beta,True,False,24,6,30,"Rewritten JSON misstates age and onset duration, and omits several intact neurological exam findings."
+llama32_3b,MQ_0678,gamma,True,False,20,8,28,"Multiple exam findings, timeline details, and smoking history were omitted from the extraction."
+llama32_3b,MQ_0234,alpha,True,False,23,7,30,"Multiple clinical facts including social history, family history, and paracentesis WBC were omitted."
+llama32_3b,MQ_0234,beta,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+llama32_3b,MQ_0234,gamma,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+llama32_3b,MQ_0792,alpha,True,False,25,7,32,"Multiple exam findings, body measurements, and emesis were omitted from the extraction."
+llama32_3b,MQ_0792,beta,True,False,21,9,30,"Multiple exam findings, negative symptoms, onset duration, and patient anthropometrics were omitted."
+llama32_3b,MQ_0792,gamma,True,False,22,6,28,"Key anthropometric data, urinary review of systems, vomiting frequency, and correct onset duration were omitted."
+llama32_3b,MQ_0297,alpha,True,False,15,6,21,Multiple clinical history and procedural outcome details were omitted from the structured extraction.
+llama32_3b,MQ_0297,beta,True,False,13,6,19,Multiple clinical history and urinalysis details were omitted from the extraction.
+llama32_3b,MQ_0297,gamma,True,False,14,4,18,"Key historical details including sexual history, onset timing, and stool disimpaction were omitted."
+llama32_3b,MQ_0082,alpha,True,False,14,1,15,The patient's country of origin (Nepal) was omitted from the extraction.
+llama32_3b,MQ_0082,beta,True,False,8,5,13,Multiple clinical context facts and history details are missing from the JSON extraction.
+llama32_3b,MQ_0082,gamma,True,False,8,4,12,"The JSON missed key clinical findings including fever, testicular pain, and negative genitourinary symptoms."
+llama32_3b,MQ_0876,alpha,True,False,24,4,28,"Negated travel history, general appearance, liver measurement, and WBC differential were omitted."
+llama32_3b,MQ_0876,beta,True,False,25,6,31,"Omitted hepatomegaly, travel history, and the complete WBC differential breakdown."
+llama32_3b,MQ_0876,gamma,True,False,25,4,29,"The JSON omits nausea/anorexia, negative travel history, contraceptive indication, and absent flank pain."
+llama32_3b,MQ_0979,alpha,True,False,12,2,14,Duration of chest pain and specific agitation behaviors were omitted.
+llama32_3b,MQ_0979,beta,True,False,12,2,14,Symptom onset time was incorrectly converted to days and combativeness was omitted.
+llama32_3b,MQ_0979,gamma,True,False,10,6,16,"Key toxidrome signs including mydriasis, diaphoresis, and pill ingestion history were omitted."
+llama32_3b,MQ_0888,alpha,True,False,10,5,15,"Key surgical findings, interventions, and patient death were omitted from the extraction."
+llama32_3b,MQ_0888,beta,True,False,8,6,14,"Multiple critical clinical facts including chronic diarrhea, surgery, perforation, and death were omitted."
+llama32_3b,MQ_0888,gamma,True,False,5,10,15,"The JSON omits critical clinical events including perforation, shock, surgery, and death."
+llama32_3b,MQ_0104,alpha,True,False,12,2,14,The JSON omits the one-month duration of emesis and subsequent histopathologic evaluation.
+llama32_3b,MQ_0104,beta,True,False,7,4,11,"Key temporal details, family history specificity, and histopathology evidence were omitted or misattributed."
+llama32_3b,MQ_0104,gamma,True,False,11,4,15,"Multiple durations, home treatments, and specific family history details were omitted or inaccurate."
+llama32_3b,MQ_0948,alpha,True,False,18,10,28,"Key lab values, qualitative lab interpretations, and obstetric history are missing from the extraction."
+llama32_3b,MQ_0948,beta,True,False,18,10,28,"Multiple lab results, obstetric history details, and substance use negations were omitted."
+llama32_3b,MQ_0948,gamma,True,False,18,8,26,"Key lab values, vitals, and social history were omitted in the JSON extraction."
+llama32_3b,MQ_0955,alpha,True,False,13,1,14,The recent onset of symptoms was omitted from the structured extraction.
+llama32_3b,MQ_0955,beta,True,False,9,6,15,"Multiple clinical details including duration, implant type, intact implant status, and pertinent negatives were omitted."
+llama32_3b,MQ_0955,gamma,True,True,10,0,10,All clinical facts from the original narrative are accurately preserved in the JSON extraction.
+llama32_3b,MQ_0465,alpha,True,False,17,7,24,"Multiple lifestyle factors, anthropometrics, and symptom qualifiers were omitted in the JSON extraction."
+llama32_3b,MQ_0465,beta,True,False,8,13,21,"Multiple medications, social history items, and accurate timeline details were omitted or corrupted."
+llama32_3b,MQ_0465,gamma,True,False,13,13,26,"Multiple lifestyle, duration, social history, and anthropometric facts were omitted in the JSON extraction."
+llama32_3b,MQ_0651,alpha,True,False,13,1,14,Peripheral blood smear finding of schistocytes was omitted from the extraction.
+llama32_3b,MQ_0651,beta,True,False,12,1,13,The clinical fact of pallor was omitted from the structured extraction.
+llama32_3b,MQ_0651,gamma,True,False,12,3,15,"Key timeline, family history attribution, and murmur location details were omitted."
+llama32_3b,MQ_0855,alpha,True,False,12,1,13,The specific timing and prophylactic initiation of chloroquine prior to departure was omitted.
+llama32_3b,MQ_0855,beta,True,False,11,4,15,Key travel history details and Tylenol use were omitted.
+llama32_3b,MQ_0855,gamma,True,False,9,5,14,"Key clinical facts including jaundice, pallor, and travel destinations were omitted."
+llama32_3b,MQ_0374,alpha,True,False,7,3,10,Rewritten text mistranscribes duration as 48 days and omits specific rash distribution patterns.
+llama32_3b,MQ_0374,beta,True,False,9,3,12,The structured extraction omits the anatomical distribution and progression of the rash.
+llama32_3b,MQ_0374,gamma,True,False,11,2,13,Home remedy of neem leaf baths and photograph provision were omitted.
+llama32_3b,MQ_0167,alpha,True,False,14,5,19,"Body measurements, bowel sounds, and imaging modalities are missing from the extraction."
+llama32_3b,MQ_0167,beta,True,False,16,3,19,Key anthropometrics and physical exam findings regarding bowel sounds were omitted.
+llama32_3b,MQ_0167,gamma,True,False,13,5,18,Multiple exam findings and anthropometric measurements were omitted from the extraction.
+llama32_3b,MQ_0380,alpha,True,True,8,0,8,All clinical facts from the original narrative are preserved.
+llama32_3b,MQ_0380,beta,True,False,8,1,9,The rewritten JSON omits the patient's trial of over-the-counter eye drops.
+llama32_3b,MQ_0380,gamma,True,False,6,4,10,"Key clinical features including duration, halos, glare, and home remedies were omitted."
+llama32_3b,MQ_0364,alpha,True,False,7,4,11,"Symptom duration was miscoded as eight days, and behavioral observations were omitted."
+llama32_3b,MQ_0364,beta,True,False,7,5,12,Key psychiatric symptoms and physical appearance were omitted from the extraction.
+llama32_3b,MQ_0364,gamma,True,False,8,4,12,Duration was miscalculated as eight days and social history details were omitted.
+llama32_3b,MQ_0215,alpha,True,False,19,3,22,"Key symptom duration, prior conservative treatment response, and fasting state were omitted."
+llama32_3b,MQ_0215,beta,True,False,19,3,22,"Rewritten JSON omits symptom duration, brace inefficacy, and body temperature."
+llama32_3b,MQ_0215,gamma,True,False,14,4,18,"Key clinical facts including symptom duration, splinting history, decreased grip, and disproportionate hand enlargement were omitted or altered."
+llama32_3b,MQ_0687,alpha,True,False,14,6,20,"Multiple clinical history details, symptom characteristics, and durations were omitted or distorted."
+llama32_3b,MQ_0687,beta,True,False,11,5,16,Multiple clinical history and physical examination details were omitted from the extraction.
+llama32_3b,MQ_0687,gamma,True,False,11,7,18,"Multiple clinical history details including symptom duration, relieving factors, exercise therapy, and social history were omitted."

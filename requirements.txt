@@ -1,6 +1,19 @@
+# Environment used for the GPU runs: single NVIDIA GH200 (aarch64) node.
+# TODO before release: fill in the exact Python / CUDA versions and replace the
+# unpinned entries below with `pip freeze` output from the environment that
+# produced the results (versions are not recorded in this repository).
+# Python: <fill in>    CUDA: <fill in>    torch: <fill in>
+
 # Inference dependencies
 torch
-transformers
+# transformers>=4.51.3 is required for this revision's model lineup:
+# Gemma3ForConditionalGeneration (gemma3_12b, medgemma_4b) needs >=4.49.0,
+# and Qwen3 (qwen3_8b) needs >=4.51.3 — pin to the higher floor so both
+# load correctly. A transformers version older than this (e.g. the 4.45.x
+# commonly still installed from older environments) will fail with
+# "ImportError: cannot import name 'Gemma3ForConditionalGeneration'" at
+# run_b1.py/run_ns.py's import time, before any model even loads.
+transformers>=4.51.3
 accelerate
 datasets
 huggingface_hub
@@ -12,6 +25,7 @@ tqdm
 sentence-transformers
 scikit-learn
 statsmodels
+scipy
 
 # Dataset generation (Gemini)
 google-generativeai

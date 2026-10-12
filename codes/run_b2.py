@@ -5,25 +5,36 @@ One script, one model per SLURM job.
 
 Usage
 -----
-  python run_b2.py --model llama31
+  python run_b2.py --model llama32_3b
+  python run_b2.py --model medgemma_4b
+  python run_b2.py --model phi4_mini
+  python run_b2.py --model qwen25_7b
   python run_b2.py --model mistral7b
-  python run_b2.py --model qwen25
+  python run_b2.py --model qwen3_8b
+  python run_b2.py --model ministral8b
+  python run_b2.py --model llama31_8b
+  python run_b2.py --model openbiollm_8b
   python run_b2.py --model gemma3_12b
-  python run_b2.py --model gemma4_e4b
-  python run_b2.py --model biomistral
-  python run_b2.py --model llama32
+  python run_b2.py --model qwen25_14b
+  python run_b2.py --model mistral_small_24b
+  python run_b2.py --model llama31_8b_base
 
 Prompt strategy
 ---------------
-Instruct models (all except biomistral):
+Instruct models (all except llama31_8b_base):
   Standard CoT suffix appended to the B1 prompt —
   "Think step by step. Consider each option carefully based only on the
    clinical facts presented. Then state your final answer as: Answer: [letter]"
 
-BioMistral (base/pretrained, no chat template):
+llama31_8b_base (meta-llama/Llama-3.1-8B — base/pretrained, no chat template):
   2-shot completion prompting. Two fully solved examples are prepended
   showing the CoT reasoning pattern AND the "Answer: X" terminal token.
   The model sees the format from context instead of from instruction-following.
+  (This mechanism was originally built for BioMistral, which had no chat
+  template; BioMistral is dropped from the registry, and the same
+  completion-prompting path is reused here for the new base-model
+  stress-test condition — instruction-tuning isolated as the sole variable
+  vs. llama31_8b.)
 
 Parser
 ------
@@ -44,8 +55,17 @@ Output
 # CACHE REDIRECT — before any HuggingFace import
 # ─────────────────────────────────────────────────────────────────────────────
 import os
+import shutil
 
-SCRATCH_BASE = "/scratch/10778/prabhjotschugh"
+# HPC (aarch64 GH nodes) defaults CC to NVIDIA's `nvc`, which Triton then uses
+# to JIT-compile helpers and chokes on gcc-only flags (-Wno-psabi), crashing
+# generate(). Force gcc before torch/transformers are imported.
+_gcc = shutil.which("gcc")
+if _gcc:
+    os.environ["CC"] = _gcc
+    os.environ["CXX"] = shutil.which("g++") or _gcc
+
+SCRATCH_BASE = "/path/to/scratch"
 HF_CACHE_DIR = f"{SCRATCH_BASE}/hf_cache"
 OUTPUT_DIR   = f"{SCRATCH_BASE}/b2_results"
 os.makedirs(HF_CACHE_DIR, exist_ok=True)
@@ -78,7 +98,6 @@ from huggingface_hub import login, snapshot_download
 from torch.utils.data import DataLoader, Dataset
 from tqdm import tqdm
 from transformers import (
-    AutoModelForImageTextToText,
     AutoProcessor,
     AutoTokenizer,
     Gemma3ForConditionalGeneration,
@@ -93,8 +112,8 @@ torch.backends.cudnn.allow_tf32       = True
 # CONFIGURATION
 # ─────────────────────────────────────────────────────────────────────────────
 HF_TOKEN            = os.getenv("HF_TOKEN", "YOUR_HF_TOKEN_HERE")
-DATASET_NAME        = "Prabhjotschugh/narrativeshield-sdoh-medqa"
-MAX_NEW_TOKENS      = 512    # CoT needs more space than B1's 128
+DATASET_NAME        = os.environ.get("DATASET_NAME", os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "dataset", "medqa_1000.csv"))
+MAX_NEW_TOKENS      = 1280   # raised from 512: Qwen3/Gemma CoT answers were cut off before "Answer: X"
 QUESTIONS_PER_CHUNK = 8      # halved vs B1 because responses are ~4x longer
 NUM_WORKERS         = 4
 PERSONAS            = ["alpha", "beta", "gamma"]
@@ -103,58 +122,105 @@ PERSONAS            = ["alpha", "beta", "gamma"]
 # MODEL REGISTRY
 # ─────────────────────────────────────────────────────────────────────────────
 MODEL_REGISTRY = {
-    "llama31":    (
-        "meta-llama/Llama-3.1-8B-Instruct",
-        f"{OUTPUT_DIR}/results_B2_llama31.jsonl",
-        "pipeline_text",
-        "instruct",
-    ),
-    "llama32":    (
+    "llama32_3b":         (
         "meta-llama/Llama-3.2-3B-Instruct",
-        f"{OUTPUT_DIR}/results_B2_llama32.jsonl",
+        f"{OUTPUT_DIR}/results_B2_llama32_3b.jsonl",
         "pipeline_text",
         "instruct",
     ),
-    "mistral7b":  (
+    "medgemma_4b":        (
+        "google/medgemma-4b-it",
+        f"{OUTPUT_DIR}/results_B2_medgemma_4b.jsonl",
+        "medgemma_manual",
+        "instruct",
+    ),
+    "phi4_mini":          (
+        "microsoft/Phi-4-mini-instruct",
+        f"{OUTPUT_DIR}/results_B2_phi4_mini.jsonl",
+        "pipeline_text",
+        "instruct",
+    ),
+    "qwen25_7b":          (
+        "Qwen/Qwen2.5-7B-Instruct",
+        f"{OUTPUT_DIR}/results_B2_qwen25_7b.jsonl",
+        "pipeline_text",
+        "instruct",
+    ),
+    "mistral7b":          (
         "mistralai/Mistral-7B-Instruct-v0.3",
         f"{OUTPUT_DIR}/results_B2_mistral7b.jsonl",
         "pipeline_text",
         "instruct",
     ),
-    "qwen25":     (
-        "Qwen/Qwen2.5-7B-Instruct",
-        f"{OUTPUT_DIR}/results_B2_qwen25.jsonl",
+    "qwen3_8b":           (
+        "Qwen/Qwen3-8B",
+        f"{OUTPUT_DIR}/results_B2_qwen3_8b.jsonl",
         "pipeline_text",
         "instruct",
     ),
-    "gemma3_12b": (
+    "ministral8b":        (
+        "mistralai/Ministral-8B-Instruct-2410",
+        f"{OUTPUT_DIR}/results_B2_ministral8b.jsonl",
+        "pipeline_text",
+        "instruct",
+    ),
+    "llama31_8b":         (
+        "meta-llama/Llama-3.1-8B-Instruct",
+        f"{OUTPUT_DIR}/results_B2_llama31_8b.jsonl",
+        "pipeline_text",
+        "instruct",
+    ),
+    "openbiollm_8b":      (
+        "aaditya/Llama3-OpenBioLLM-8B",
+        f"{OUTPUT_DIR}/results_B2_openbiollm_8b.jsonl",
+        "pipeline_text",
+        "instruct",
+    ),
+    "gemma3_12b":         (
         "google/gemma-3-12b-it",
         f"{OUTPUT_DIR}/results_B2_gemma3_12b.jsonl",
         "gemma3_manual",
         "instruct",
     ),
-    "gemma4_e4b": (
-        "google/gemma-4-E4B-it",
-        f"{OUTPUT_DIR}/results_B2_gemma4_e4b.jsonl",
-        "gemma4_manual",
+    "qwen25_14b":         (
+        "Qwen/Qwen2.5-14B-Instruct",
+        f"{OUTPUT_DIR}/results_B2_qwen25_14b.jsonl",
+        "pipeline_text",
         "instruct",
     ),
-    "biomistral": (
-        "BioMistral/BioMistral-7B",
-        f"{OUTPUT_DIR}/results_B2_biomistral.jsonl",
+    "mistral_small_24b":  (
+        "mistralai/Mistral-Small-24B-Instruct-2501",
+        f"{OUTPUT_DIR}/results_B2_mistral_small_24b.jsonl",
         "pipeline_text",
-        "base",          # ← triggers few-shot completion path
+        "instruct",
+    ),
+    "llama31_8b_base":    (
+        "meta-llama/Llama-3.1-8B",
+        f"{OUTPUT_DIR}/results_B2_llama31_8b_base.jsonl",
+        "pipeline_text",   # same loader as instruct models — the "base"
+                           # model_type flag below is what routes it to the
+                           # completion (not chat) inference path at runtime
+        "base",            # ← triggers few-shot completion path
     ),
 }
 
+# Models that require content-block message format ([{"type": "text", ...}])
+# instead of plain string content — both are manually-loaded Gemma-family
+# checkpoints (gemma3_manual / medgemma_manual loader strategies).
+CONTENT_BLOCK_MODELS = {"gemma3_12b", "medgemma_4b"}
+
 # ─────────────────────────────────────────────────────────────────────────────
-# FEW-SHOT EXAMPLES FOR BIOMISTRAL
+# FEW-SHOT EXAMPLES FOR THE BASE (NON-INSTRUCT) MODEL
+# Originally built for BioMistral (dropped from the registry — no chat
+# template, near-zero JSON parse rate). Repurposed here for
+# llama31_8b_base (meta-llama/Llama-3.1-8B), the new base-model stress-test
+# condition, which needs the same completion-prompting treatment.
 # Two fully worked examples that demonstrate:
 #   (a) step-by-step clinical reasoning
 #   (b) the "Answer: X" terminal token the parser looks for
 # These are generic enough not to overlap with MedQA topics.
 # ─────────────────────────────────────────────────────────────────────────────
-BIOMISTRAL_FEW_SHOT_EXAMPLES = """The following are medical multiple-choice questions. For each question, reason step by step through the clinical options, then state the final answer.
+BASE_MODEL_FEW_SHOT_EXAMPLES = """The following are medical multiple-choice questions. For each question, reason step by step through the clinical options, then state the final answer.
 
 Question: A 45-year-old man presents with severe chest pain radiating to the left arm, diaphoresis, and nausea for the past 30 minutes. ECG shows ST-segment elevation in leads II, III, and aVF. What is the most appropriate immediate management?
 
@@ -205,14 +271,14 @@ def build_instruct_cot_prompt(narrative: str, options: dict) -> str:
     return body
 
 
-def build_biomistral_completion_prompt(narrative: str, options: dict) -> str:
+def build_base_model_completion_prompt(narrative: str, options: dict) -> str:
     """
-    B2 prompt for BioMistral (base model, no chat template).
+    B2 prompt for llama31_8b_base (base model, no chat template).
     Prepends two worked few-shot examples that establish the CoT format
     and the Answer: X terminal token via in-context learning.
     The test case is appended as a raw completion target.
     """
-    body  = BIOMISTRAL_FEW_SHOT_EXAMPLES
+    body  = BASE_MODEL_FEW_SHOT_EXAMPLES
     body += "Question: " + narrative + "\n\nOptions:\n"
     for k, v in options.items():
         body += f"{k}: {v}\n"
@@ -223,7 +289,7 @@ def build_biomistral_completion_prompt(narrative: str, options: dict) -> str:
 def build_messages(model_key: str, model_type: str, prompt_text: str) -> list:
     """
     Returns correct message structure.
-    BioMistral uses raw string completion (no messages wrapper).
+    llama31_8b_base uses raw string completion (no messages wrapper).
     """
     if model_type == "base":
         # Raw string — passed directly to pipeline as text, not messages
@@ -234,7 +300,7 @@ def build_messages(model_key: str, model_type: str, prompt_text: str) -> list:
             {"role": "system", "content": ""},
             {"role": "user",   "content": prompt_text},
         ]
-    elif model_key in ("gemma3_12b", "gemma4_e4b"):
+    elif model_key in CONTENT_BLOCK_MODELS:
         return [
             {
                 "role": "user",
@@ -316,7 +382,7 @@ class PersonaDataset(Dataset):
                 narrative = row[f"persona_{persona}"]
 
                 if model_type == "base":
-                    prompt_text = build_biomistral_completion_prompt(narrative, options)
+                    prompt_text = build_base_model_completion_prompt(narrative, options)
                 else:
                     prompt_text = build_instruct_cot_prompt(narrative, options)
 
@@ -360,34 +426,77 @@ def load_processed_ids(output_file: str) -> set:
 
 
 # ─────────────────────────────────────────────────────────────────────────────
-# SCRATCH DOWNLOAD (TACC Lustre — no symlinks)
+# SCRATCH DOWNLOAD (HPC Lustre — no symlinks)
 # ─────────────────────────────────────────────────────────────────────────────
 def _download_to_scratch(repo_id: str, subdir: str) -> str:
     local = f"{HF_CACHE_DIR}/{subdir}"
-    if not os.path.isdir(local):
-        print(f"  Downloading {repo_id} → {local}  (runs once)")
+    # Always call snapshot_download: it resumes partial downloads and is a
+    # near-instant no-op when complete. (Checking only isdir() was a bug - a
+    # failed/gated download leaves an empty folder that looked "cached".)
+    print(f"  Syncing {repo_id} -> {local}")
+    try:
         snapshot_download(
             repo_id=repo_id,
             token=HF_TOKEN,
             local_dir=local,
             local_dir_use_symlinks=False,
         )
-    else:
-        print(f"  Using cached download: {local}")
+    except Exception as e:
+        if os.path.isfile(os.path.join(local, "config.json")):
+            print(f"  [warn] sync failed ({type(e).__name__}); using existing files in {local}")
+        else:
+            raise
     return local
+
+
+LLAMA3_CHAT_TEMPLATE = (
+    "{% set loop_messages = messages %}{% for message in loop_messages %}"
+    "{% set content = '<|start_header_id|>' + message['role'] + '<|end_header_id|>\n\n'"
+    " + message['content'] | trim + '<|eot_id|>' %}"
+    "{% if loop.index0 == 0 %}{% set content = bos_token + content %}{% endif %}"
+    "{{ content }}{% endfor %}"
+    "{% if add_generation_prompt %}{{ '<|start_header_id|>assistant<|end_header_id|>\n\n' }}{% endif %}"
+)
+
+
+def _build_text_pipeline(repo_id: str):
+    """
+    Text-generation pipeline with three model-specific fixes found in the
+    HPC smoke test (transformers v5):
+      1. Mistral tekken-tokenizer repos (Ministral-8B, Mistral-Small-24B):
+         pipeline() forwards device_map/_from_pipeline kwargs into
+         MistralCommonBackend.from_pretrained, which rejects them. Fall back
+         to loading tokenizer and model separately.
+      2. OpenBioLLM ships no chat template -> use the Llama-3 template.
+      3. Qwen3 defaults to "thinking" mode, which burns the whole token
+         budget on <think> text before answering -> disable thinking.
+    """
+    try:
+        pipe = pipeline("text-generation", model=repo_id, device_map="auto",
+                        torch_dtype=torch.bfloat16, token=HF_TOKEN)
+    except ValueError as e:
+        if "MistralCommonBackend" not in str(e):
+            raise
+        from transformers import AutoModelForCausalLM, AutoTokenizer
+        tok = AutoTokenizer.from_pretrained(repo_id, token=HF_TOKEN)
+        mdl = AutoModelForCausalLM.from_pretrained(
+            repo_id, device_map="auto", torch_dtype=torch.bfloat16, token=HF_TOKEN)
+        pipe = pipeline("text-generation", model=mdl, tokenizer=tok)
+
+    if "OpenBioLLM" in repo_id and not getattr(pipe.tokenizer, "chat_template", None):
+        pipe.tokenizer.chat_template = LLAMA3_CHAT_TEMPLATE
+    if "Qwen3" in repo_id:
+        import functools
+        pipe.tokenizer.apply_chat_template = functools.partial(
+            pipe.tokenizer.apply_chat_template, enable_thinking=False)
+    return pipe
 
 
 # ─────────────────────────────────────────────────────────────────────────────
 # MODEL LOADERS
 # ─────────────────────────────────────────────────────────────────────────────
 def load_pipeline_text(repo_id: str):
-    pipe = pipeline(
-        "text-generation",
-        model=repo_id,
-        device_map="auto",
-        torch_dtype=torch.bfloat16,
-        token=HF_TOKEN,
-    )
+    pipe = _build_text_pipeline(repo_id)
     if pipe.tokenizer.pad_token_id is None:
         pipe.tokenizer.pad_token_id = pipe.tokenizer.eos_token_id
     return "pipeline", pipe
@@ -405,10 +514,16 @@ def load_gemma3_manual(repo_id: str):
     return "processor_model", (proc, model)
 
 
-def load_gemma4_manual(repo_id: str):
-    local = _download_to_scratch(repo_id, "gemma-4-E4B-it")
+def load_medgemma_manual(repo_id: str):
+    """
+    MedGemma-4B-it — manual download + Gemma3ForConditionalGeneration.
+    Same HPC Lustre pattern as Gemma 3 (MedGemma is Gemma-3-architecture).
+    Confirmed: google/medgemma-4b-it's config.json lists
+    architectures=["Gemma3ForConditionalGeneration"], model_type="gemma3".
+    """
+    local = _download_to_scratch(repo_id, "medgemma-4b-it")
     proc  = AutoProcessor.from_pretrained(local, token=HF_TOKEN)
-    model = AutoModelForImageTextToText.from_pretrained(
+    model = Gemma3ForConditionalGeneration.from_pretrained(
         local,
         device_map="auto",
         torch_dtype=torch.bfloat16,
@@ -420,9 +535,9 @@ def load_gemma4_manual(repo_id: str):
 def load_model(model_key: str, repo_id: str, strategy: str):
     print(f"  Loading {model_key}  ({repo_id}) …")
     t0 = time.time()
-    if   strategy == "pipeline_text": loader_type, obj = load_pipeline_text(repo_id)
-    elif strategy == "gemma3_manual": loader_type, obj = load_gemma3_manual(repo_id)
-    elif strategy == "gemma4_manual": loader_type, obj = load_gemma4_manual(repo_id)
+    if   strategy == "pipeline_text":    loader_type, obj = load_pipeline_text(repo_id)
+    elif strategy == "gemma3_manual":    loader_type, obj = load_gemma3_manual(repo_id)
+    elif strategy == "medgemma_manual":  loader_type, obj = load_medgemma_manual(repo_id)
     else:
         raise ValueError(f"Unknown strategy: {strategy!r}")
     print(f"  Loaded in {time.time() - t0:.1f}s")
@@ -436,7 +551,7 @@ def run_inference_batch(loader_type: str, obj, batch: list) -> list:
     """
     Two paths:
       - instruct models: messages list → pipeline / processor
-      - BioMistral (base): raw completion string → pipeline with text_inputs
+      - llama31_8b_base (base): raw completion string → pipeline with text_inputs
     """
     model_type    = batch[0]["model_type"]
     messages_list = [item["messages"] for item in batch]
@@ -445,7 +560,7 @@ def run_inference_batch(loader_type: str, obj, batch: list) -> list:
         pipe = obj
 
         if model_type == "base":
-            # BioMistral: raw text completion, not chat
+            # llama31_8b_base: raw text completion, not chat
             # pipeline() accepts plain strings when passed as positional arg
             outputs = pipe(
                 messages_list,          # list of raw strings
@@ -475,7 +590,7 @@ def run_inference_batch(loader_type: str, obj, batch: list) -> list:
             return results
 
     elif loader_type == "processor_model":
-        # Gemma 3 and Gemma 4 — both instruct, same path
+        # gemma3_12b and medgemma_4b — both instruct, same path
         proc, model = obj
         results     = []
         for messages in messages_list:
@@ -646,11 +761,13 @@ def main():
     print(f"  Output : {OUTPUT_DIR}")
     print("=" * 65)
 
-    login(token=HF_TOKEN, add_to_git_credential=False)
+    # No login() call: HF_TOKEN is read from the environment and passed as token=...
+    # everywhere. login() writes a shared stored_tokens file in the HF cache,
+    # which concurrent jobs corrupt (race) and crash on.
     print("  HuggingFace auth OK")
 
     print(f"\n  Loading dataset: {DATASET_NAME} …")
-    raw_ds   = load_dataset(DATASET_NAME, split="train")
+    raw_ds   = load_dataset("csv", data_files=DATASET_NAME, split="train")
     all_rows = list(raw_ds)
     print(f"  Total questions: {len(all_rows)}")
 

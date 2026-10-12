@@ -1,7 +1,7 @@
 """
 NarrativeShield — SDoH Persona Generation Pipeline v2.0
 =========================================================
-EACL | NarrativeShield: Adversarial Intake Against Narrative Anchoring
+NarrativeShield: Adversarial Intake Against Narrative Anchoring
 
 WHAT CHANGED FROM v1
 ---------------------

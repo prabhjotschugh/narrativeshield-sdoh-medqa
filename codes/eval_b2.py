@@ -1,12 +1,49 @@
 """
 NarrativeShield — B2 Evaluation Suite
-======================================
-Identical metric structure to eval_b1.py for direct comparison.
-Reads results_B2_<model>.jsonl and produces:
+========================================================
+Reads results_B2_<model>.jsonl files produced by run_b2.py (Chain-of-Thought
+condition: models are prompted for step-by-step reasoning ending in an
+"Answer: [letter]" line) and produces:
 
-  b2_evaluation_primary.csv    — OMR + Wilson CI + NAG + DSS
-  b2_evaluation_secondary.csv  — Kappa + McNemar + parse rate
-  b2_evaluation_bias_cases.csv — per-question DSS < 0.80 flags
+  1. Per-model x per-persona OMR with 95% Wilson score CIs (alpha/beta/gamma)
+  2. Overall OMR (macro across personas)
+  3. Diagnostic Stability Score (DSS) — mean pairwise cosine similarity
+     of answer embeddings across all present persona presentations, plus a
+     format-controlled ("stripped") variant
+  4. Fraction of cases with DSS < 0.80 (bias-flagged cases)
+  5. Cohen's Kappa (chance-corrected inter-persona agreement) for all pairs
+  6. McNemar's test (continuity-corrected), reported against BOTH raw 0.05
+     and Bonferroni-corrected thresholds (fixes the same unapplied-Bonferroni
+     bug identified and fixed in eval_b1.py — this file inherited the same
+     drift since it copy-pasted b1's pre-revision statistical helpers)
+  7. Narrative Anchoring Gap (NAG) — OMR_alpha minus min(OMR_marked) — always
+     reported alongside every individual component gap and a paired
+     bootstrap 95% CI on NAG itself, never as a bare scalar
+  8. Parse Rate — fraction of responses from which the CoT "Answer: [letter]"
+     line yielded an extracted letter (preserved from the original file;
+     the extraction itself happens in run_b2.py, this script only reports
+     on the resulting `extracted_answer` field)
+  9. B2 vs B1 delta table — signed per-metric deltas answering the paper's
+     framing question: "did CoT reduce narrative anchoring relative to the
+     no-intervention baseline?"
+
+All statistics are computed via codes/metrics_common.py, the single source
+of truth shared with eval_b1.py, eval_b3.py, and eval_ns.py — this removes
+the model-registry drift bug class (this file's pre-revision MODEL_KEYS list
+did not match run_b2.py's MODEL_REGISTRY keys at all: it listed short-form
+names such as "llama31"/"llama32"/"biomistral" while metrics_common.py's
+canonical MODEL_KEYS uses the full 12-model sweep naming, e.g. "llama31_8b".
+Per instructions this file now imports mc.MODEL_KEYS directly rather than
+hand-listing; run_b2.py is being revised in parallel to emit results under
+the canonical model keys, so this eval script assumes that registry once
+that revision lands — see the flagged assumption in the handback report).
+
+Outputs
+-------
+  b2_evaluation_primary.csv    — main results table (OMR, NAG, DSS per model)
+  b2_evaluation_secondary.csv  — Kappa, McNemar (raw + Bonferroni), DSS detail,
+                                  parse rate
+  b2_evaluation_bias_cases.csv — per-question bias flags (DSS < 0.80)
   b2_vs_b1_delta.csv           — B2 minus B1 for every metric (requires B1 CSVs)
 
 The delta table is the key table for the paper:
@@ -16,11 +53,14 @@ Usage
 -----
   python eval_b2.py
 
-  Set RESULT_DIR_B2 and RESULT_DIR_B1 if not running on TACC scratch.
+  Set RESULT_DIR_B2 and RESULT_DIR_B1 if not running on HPC scratch.
   e.g.  RESULT_DIR_B2=./b2_results RESULT_DIR_B1=./b1_results python eval_b2.py
+
+Dependencies
+------------
+  pip install sentence-transformers scikit-learn statsmodels pandas numpy tqdm
 """
 
-import json
 import os
 import sys
 import warnings
@@ -28,285 +68,216 @@ from pathlib import Path
 
 import numpy as np
 import pandas as pd
-from tqdm import tqdm
 
 warnings.filterwarnings("ignore", category=UserWarning)
 
-# ─────────────────────────────────────────────────────────────────────────────
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import metrics_common as mc
+
+try:
+    from sentence_transformers import SentenceTransformer
+except ImportError as exc:
+    print(f"Missing dependency: {exc}")
+    print("Install with:  pip install sentence-transformers scikit-learn statsmodels")
+    sys.exit(1)
+
+# ─────────────────────────────────────────────────────────────
 # CONFIGURATION
-# ─────────────────────────────────────────────────────────────────────────────
-SCRATCH_BASE    = "/scratch/10778/prabhjotschugh"
-RESULT_DIR_B2   = os.environ.get("RESULT_DIR_B2", f"{SCRATCH_BASE}/b2_results")
-RESULT_DIR_B1   = os.environ.get("RESULT_DIR_B1", f"{SCRATCH_BASE}/b1_results")
-OUTPUT_DIR      = os.environ.get("OUTPUT_DIR",    RESULT_DIR_B2)
+# ─────────────────────────────────────────────────────────────
+SCRATCH_BASE  = "/path/to/scratch"
+RESULT_DIR_B2 = os.environ.get("RESULT_DIR_B2", f"{SCRATCH_BASE}/b2_results")
+RESULT_DIR_B1 = os.environ.get("RESULT_DIR_B1", f"{SCRATCH_BASE}/b1_results")
+OUTPUT_DIR    = os.environ.get("OUTPUT_DIR", RESULT_DIR_B2)
 
-MODEL_KEYS = [
-    "llama31",
-    "llama32",
-    "mistral7b",
-    "qwen25",
-    "gemma3_12b",
-    "gemma4_e4b",
-    "biomistral",
-]
-
-ST_MODEL_NAME      = "all-MiniLM-L6-v2"
-DSS_BIAS_THRESHOLD = 0.80
+MODEL_KEYS = mc.MODEL_KEYS + [mc.BASE_MODEL_KEY]  # 12 chat models + the llama31_8b_base stress test (B2-B4 only; skipped if no file)
+PERSONAS = mc.PERSONAS
+ST_MODEL_NAME = "all-MiniLM-L6-v2"
+DSS_BIAS_THRESHOLD = mc.DSS_BIAS_THRESHOLD
 
 PRIMARY_OUTPUT    = f"{OUTPUT_DIR}/b2_evaluation_primary.csv"
 SECONDARY_OUTPUT  = f"{OUTPUT_DIR}/b2_evaluation_secondary.csv"
 BIAS_OUTPUT       = f"{OUTPUT_DIR}/b2_evaluation_bias_cases.csv"
 DELTA_OUTPUT      = f"{OUTPUT_DIR}/b2_vs_b1_delta.csv"
 
-PERSONAS = ["alpha", "beta", "gamma"]
 
-# ─────────────────────────────────────────────────────────────────────────────
-# DEPENDENCIES
-# ─────────────────────────────────────────────────────────────────────────────
-try:
-    from statsmodels.stats.proportion import proportion_confint
-    from statsmodels.stats.contingency_tables import mcnemar as statsmodels_mcnemar
-    from sklearn.metrics import cohen_kappa_score
-    from sentence_transformers import SentenceTransformer
-except ImportError as exc:
-    print(f"Missing dependency: {exc}")
-    print("pip install sentence-transformers scikit-learn statsmodels")
-    sys.exit(1)
+def load_model_results(model_key: str) -> list:
+    return mc.load_jsonl_results(RESULT_DIR_B2, "results_B2_{model}.jsonl", model_key)
 
 
-# ─────────────────────────────────────────────────────────────────────────────
-# STATISTICAL HELPERS  (identical to eval_b1.py)
-# ─────────────────────────────────────────────────────────────────────────────
-def omr_with_wilson_ci(correct_list: list, alpha: float = 0.05):
-    n   = len(correct_list)
-    k   = sum(correct_list)
-    if n == 0:
-        return 0.0, 0.0, 0.0
-    omr = k / n
-    lo, hi = proportion_confint(k, n, alpha=alpha, method="wilson")
-    return omr, lo, hi
-
-
-def cohen_kappa_pair(a: list, b: list) -> float:
-    if len(set(a)) == 1 and len(set(b)) == 1:
-        return float("nan")
-    try:
-        return cohen_kappa_score(a, b)
-    except Exception:
-        return float("nan")
-
-
-def mcnemar_pvalue(a: list, b: list) -> float:
-    both    = sum(x and y     for x, y in zip(a, b))
-    a_only  = sum(x and not y for x, y in zip(a, b))
-    b_only  = sum(not x and y for x, y in zip(a, b))
-    neither = sum(not x and not y for x, y in zip(a, b))
-    table   = [[both, a_only], [b_only, neither]]
-    try:
-        result = statsmodels_mcnemar(table, exact=False, correction=True)
-        return result.pvalue
-    except Exception:
-        return float("nan")
-
-
-def compute_dss(resp_a, resp_b, resp_g, st_model):
-    print("  Encoding alpha …")
-    ea = st_model.encode(resp_a, batch_size=256, show_progress_bar=False,
-                          convert_to_numpy=True, normalize_embeddings=True)
-    print("  Encoding beta …")
-    eb = st_model.encode(resp_b, batch_size=256, show_progress_bar=False,
-                          convert_to_numpy=True, normalize_embeddings=True)
-    print("  Encoding gamma …")
-    eg = st_model.encode(resp_g, batch_size=256, show_progress_bar=False,
-                          convert_to_numpy=True, normalize_embeddings=True)
-
-    sim_ab   = np.einsum("ij,ij->i", ea, eb)
-    sim_ag   = np.einsum("ij,ij->i", ea, eg)
-    sim_bg   = np.einsum("ij,ij->i", eb, eg)
-    per_q    = (sim_ab + sim_ag + sim_bg) / 3.0
-    mean     = float(np.mean(per_q))
-    frac_lo  = float(np.mean(per_q < DSS_BIAS_THRESHOLD))
-    return mean, per_q, frac_lo
-
-
-# ─────────────────────────────────────────────────────────────────────────────
-# DATA LOADER
-# ─────────────────────────────────────────────────────────────────────────────
-def load_results(model_key: str, result_dir: str, prefix: str) -> list:
-    candidates = [
-        f"{result_dir}/{prefix}{model_key}.jsonl",
-        f"./{prefix}{model_key}.jsonl",
-    ]
-    for path in candidates:
-        p = Path(path)
-        if p.exists():
-            rows = []
-            with p.open("r", encoding="utf-8") as f:
-                for line in f:
-                    line = line.strip()
-                    if line:
-                        try:
-                            rows.append(json.loads(line))
-                        except json.JSONDecodeError:
-                            pass
-            return rows
-    return []
-
-
-# ─────────────────────────────────────────────────────────────────────────────
-# MAIN
-# ─────────────────────────────────────────────────────────────────────────────
 def main():
     os.makedirs(OUTPUT_DIR, exist_ok=True)
 
     print("=" * 70)
-    print("  NarrativeShield B2 — Full Evaluation Suite")
+    print("  NarrativeShield B2 (Chain-of-Thought) - Full Evaluation Suite")
     print("=" * 70)
 
-    print(f"\nLoading sentence encoder: {ST_MODEL_NAME} …")
+    print(f"\nLoading sentence encoder: {ST_MODEL_NAME} ...")
     st_model = SentenceTransformer(ST_MODEL_NAME)
     print("  Encoder ready.")
 
-    primary_rows   = []
-    secondary_rows = []
-    bias_rows      = []
+    primary_rows, secondary_rows, bias_case_rows = [], [], []
 
     for model_key in MODEL_KEYS:
-        print(f"\n{'─'*65}")
+        print(f"\n{'-'*65}")
         print(f"  Processing B2: {model_key}")
 
-        data = load_results(model_key, RESULT_DIR_B2, "results_B2_")
+        data = load_model_results(model_key)
         if not data:
-            print(f"  ⚠ No B2 results for {model_key}. Skipping.")
+            print(f"  [skip] No B2 results file found for {model_key}.")
             continue
 
         n = len(data)
-        print(f"  Questions: {n}")
+        print(f"  Questions loaded: {n}")
 
-        def safe_correct(item, p):
-            try:
-                return bool(item["personas_eval"][p]["is_correct"])
-            except KeyError:
-                return False
+        # Only evaluate personas that actually have data in this file — lets
+        # this script run robustly against partial/legacy result files
+        # without special-casing which personas are present.
+        present_personas = [
+            p for p in PERSONAS
+            if any(mc.safe_get(r, "personas_eval", p) is not None for r in data[:5])
+        ]
+        if len(present_personas) < 2:
+            print(f"  [skip] Fewer than 2 personas present for {model_key}.")
+            continue
 
-        def safe_response(item, p):
-            try:
-                return str(item["personas_eval"][p]["raw_response"] or "")
-            except KeyError:
-                return ""
+        correctness = {
+            p: [bool(mc.safe_get(r, "personas_eval", p, "is_correct", default=False)) for r in data]
+            for p in present_personas
+        }
+        responses = {
+            p: [str(mc.safe_get(r, "personas_eval", p, "raw_response", default="") or "") for r in data]
+            for p in present_personas
+        }
 
-        def safe_extracted(item, p):
-            try:
-                return item["personas_eval"][p]["extracted_answer"]
-            except KeyError:
-                return None
-
-        c_alpha = [safe_correct(r, "alpha") for r in data]
-        c_beta  = [safe_correct(r, "beta")  for r in data]
-        c_gamma = [safe_correct(r, "gamma") for r in data]
-
-        r_alpha = [safe_response(r, "alpha") for r in data]
-        r_beta  = [safe_response(r, "beta")  for r in data]
-        r_gamma = [safe_response(r, "gamma") for r in data]
-
-        # Parse rate — fraction of responses that yielded a letter
-        all_extracted = (
-            [safe_extracted(r, p) for r in data for p in PERSONAS]
-        )
+        # CoT-specific: the "Answer: [letter]" extraction happens in
+        # run_b2.py and is stored per-persona as `extracted_answer`. Parse
+        # rate = fraction of (question, persona) pairs where extraction
+        # succeeded (non-None). Preserved exactly from the original file —
+        # this is the one B2-specific metric that differs from B1.
+        all_extracted = [
+            mc.safe_get(r, "personas_eval", p, "extracted_answer", default=None)
+            for r in data for p in present_personas
+        ]
         parse_rate = sum(1 for x in all_extracted if x is not None) / max(len(all_extracted), 1)
 
-        # ── OMR + Wilson CI ─────────────────────────────────────────────────
-        omr_a,  ci_a_lo,  ci_a_hi  = omr_with_wilson_ci(c_alpha)
-        omr_b,  ci_b_lo,  ci_b_hi  = omr_with_wilson_ci(c_beta)
-        omr_g,  ci_g_lo,  ci_g_hi  = omr_with_wilson_ci(c_gamma)
-        omr_ov, ci_ov_lo, ci_ov_hi = omr_with_wilson_ci(c_alpha + c_beta + c_gamma)
+        # ── OMR + Wilson CI ──────────────────────────────────────
+        omr_ci = {p: mc.omr_with_wilson_ci(correctness[p]) for p in present_personas}
+        omr_point = {p: omr_ci[p][0] for p in present_personas}
+        all_correct = [c for p in present_personas for c in correctness[p]]
+        omr_ov, ci_ov_lo, ci_ov_hi = mc.omr_with_wilson_ci(all_correct)
 
-        nag = omr_a - min(omr_b, omr_g)
+        # ── NAG: headline + components + bootstrap CI ────────────
+        nag_info = mc.nag_components(omr_point)
+        nag_pt, nag_lo, nag_hi = mc.nag_bootstrap_ci(correctness)
 
-        # ── DSS ─────────────────────────────────────────────────────────────
-        print("  Computing DSS …")
-        mean_dss, per_q_dss, frac_below = compute_dss(r_alpha, r_beta, r_gamma, st_model)
+        # ── DSS: raw + format-controlled ──────────────────────────
+        print("  Computing DSS (raw) ...")
+        mean_dss, per_q_dss, frac_below = mc.compute_dss(responses, st_model, DSS_BIAS_THRESHOLD)
+        print("  Computing DSS (format-controlled / stripped) ...")
+        mean_dss_stripped, per_q_dss_stripped, frac_below_stripped = mc.compute_dss_stripped(
+            responses, st_model, DSS_BIAS_THRESHOLD
+        )
 
-        # ── Kappa + McNemar ─────────────────────────────────────────────────
-        kappa_ab = cohen_kappa_pair(c_alpha, c_beta)
-        kappa_ag = cohen_kappa_pair(c_alpha, c_gamma)
-        kappa_bg = cohen_kappa_pair(c_beta,  c_gamma)
+        # ── Cohen's Kappa (all pairs) ──────────────────────────────
+        kappa = {
+            pair: mc.cohen_kappa_pair(correctness[pair[0]], correctness[pair[1]])
+            for pair in mc.PERSONA_PAIRS
+            if pair[0] in correctness and pair[1] in correctness
+        }
 
-        p_ab = mcnemar_pvalue(c_alpha, c_beta)
-        p_ag = mcnemar_pvalue(c_alpha, c_gamma)
-        p_bg = mcnemar_pvalue(c_beta,  c_gamma)
+        # ── McNemar, raw + Bonferroni-corrected ─────────────────────
+        mcnemar = mc.all_pairwise_mcnemar(correctness)
+        n_tests = mcnemar.pop("n_tests")
+        bonf_alpha = mc.bonferroni_alpha(n_tests)
 
-        # ── Bias-flagged cases ───────────────────────────────────────────────
+        # ── Per-question bias flags ──────────────────────────────
         for i, (row, dss_val) in enumerate(zip(data, per_q_dss)):
             if dss_val < DSS_BIAS_THRESHOLD:
-                bias_rows.append({
-                    "model":         model_key,
-                    "question_id":   row.get("question_id", i),
-                    "dss":           round(float(dss_val), 4),
-                    "correct_alpha": c_alpha[i],
-                    "correct_beta":  c_beta[i],
-                    "correct_gamma": c_gamma[i],
+                bias_case_rows.append({
+                    "model":       model_key,
+                    "question_id": row.get("question_id", i),
+                    "dss":         round(float(dss_val), 4),
+                    **{f"correct_{p}": correctness[p][i] for p in present_personas},
                     "correct_answer": row.get("correct_answer_idx", "?"),
                 })
 
-        def fmt(omr, lo, hi):
+        def fmt_ci(omr, lo, hi):
             return f"{omr:.4f} [{lo:.4f}, {hi:.4f}]"
 
-        def sig(p):
-            if np.isnan(p): return "NaN"
-            return "SIG" if p < 0.05 else "ns"
+        primary_row = {
+            "Model": model_key,
+            "N": n,
+            "Personas": "+".join(present_personas),
+            "OMR Overall": fmt_ci(omr_ov, ci_ov_lo, ci_ov_hi),
+        }
+        for p in present_personas:
+            primary_row[f"OMR {mc.PERSONA_LABELS[p]}"] = fmt_ci(*omr_ci[p])
+        primary_row["NAG (headline)"] = f"{nag_info['nag']:.4f}"
+        primary_row["NAG 95% Bootstrap CI"] = f"[{nag_lo:.4f}, {nag_hi:.4f}]"
+        primary_row["NAG worst persona"] = nag_info["nag_worst_persona"]
+        for k, v in nag_info.items():
+            if k.startswith("gap_alpha_"):
+                primary_row[k] = f"{v:.4f}"
+        primary_row["Mean DSS (raw)"] = f"{mean_dss:.4f}"
+        primary_row["Mean DSS (stripped)"] = f"{mean_dss_stripped:.4f}"
+        primary_row[f"DSS<{DSS_BIAS_THRESHOLD} (%)"] = f"{frac_below*100:.2f}%"
+        primary_rows.append(primary_row)
 
-        primary_rows.append({
-            "Model":                  model_key,
-            "N":                      n,
-            "OMR Overall":            fmt(omr_ov, ci_ov_lo, ci_ov_hi),
-            "OMR Pα Control":         fmt(omr_a,  ci_a_lo,  ci_a_hi),
-            "OMR Pβ Socioeconomic":   fmt(omr_b,  ci_b_lo,  ci_b_hi),
-            "OMR Pγ Cultural":        fmt(omr_g,  ci_g_lo,  ci_g_hi),
-            "NAG (α−min(β,γ))":       f"{nag:.4f}",
-            "Mean DSS":               f"{mean_dss:.4f}",
-            f"DSS<{DSS_BIAS_THRESHOLD} (%)": f"{frac_below*100:.2f}%",
-        })
+        secondary_row = {
+            "Model": model_key, "N": n,
+            "Parse Rate": f"{parse_rate*100:.2f}%",
+            "Bonferroni alpha": f"{bonf_alpha:.5f} (n_tests={n_tests})",
+        }
+        for pair, k in kappa.items():
+            secondary_row[f"kappa {pair[0][0]}{pair[1][0]}"] = f"{k:.4f}" if not np.isnan(k) else "NaN"
+        for pair, p in mcnemar.items():
+            label = f"McNemar p ({pair[0][0]},{pair[1][0]})"
+            secondary_row[label] = f"{p:.4f}"
+            secondary_row[label + " [raw 0.05]"] = mc.significance_label(p, 1)
+            secondary_row[label + " [Bonferroni]"] = mc.significance_label(p, n_tests)
+        secondary_row["DSS mean (raw)"] = f"{mean_dss:.4f}"
+        secondary_row["DSS mean (stripped)"] = f"{mean_dss_stripped:.4f}"
+        secondary_row[f"DSS<{DSS_BIAS_THRESHOLD} cases"] = int(np.sum(per_q_dss < DSS_BIAS_THRESHOLD))
+        secondary_row[f"DSS<{DSS_BIAS_THRESHOLD} (%)"] = f"{frac_below*100:.2f}%"
+        secondary_rows.append(secondary_row)
 
-        secondary_rows.append({
-            "Model":               model_key,
-            "N":                   n,
-            "Parse Rate":          f"{parse_rate*100:.2f}%",
-            "κ (α,β)":             f"{kappa_ab:.4f}" if not np.isnan(kappa_ab) else "NaN",
-            "κ (α,γ)":             f"{kappa_ag:.4f}" if not np.isnan(kappa_ag) else "NaN",
-            "κ (β,γ)":             f"{kappa_bg:.4f}" if not np.isnan(kappa_bg) else "NaN",
-            "McNemar p (α,β)":     f"{p_ab:.4f} [{sig(p_ab)}]",
-            "McNemar p (α,γ)":     f"{p_ag:.4f} [{sig(p_ag)}]",
-            "McNemar p (β,γ)":     f"{p_bg:.4f} [{sig(p_bg)}]",
-            "DSS mean":            f"{mean_dss:.4f}",
-            f"DSS<{DSS_BIAS_THRESHOLD} cases": int(sum(per_q_dss < DSS_BIAS_THRESHOLD)),
-        })
+        # ── Console summary ───────────────────────────────────────
+        print(f"\n  +- {model_key} B2 Results {'-'*40}")
+        print(f"  |  Parse rate  : {parse_rate*100:.1f}%")
+        print(f"  |  OMR Overall : {omr_ov:.4f} [{ci_ov_lo:.4f}, {ci_ov_hi:.4f}]")
+        for p in present_personas:
+            omr, lo, hi = omr_ci[p]
+            print(f"  |  OMR {p:6s}: {omr:.4f} [{lo:.4f}, {hi:.4f}]")
+        print(f"  |  NAG (headline)  : {nag_info['nag']:.4f}  95% CI [{nag_lo:.4f}, {nag_hi:.4f}]"
+              f"  (worst persona: {nag_info['nag_worst_persona']})")
+        print(f"  |  Mean DSS (raw/stripped) : {mean_dss:.4f} / {mean_dss_stripped:.4f}")
+        print(f"  |  DSS<{DSS_BIAS_THRESHOLD}   : {frac_below*100:.2f}% of questions flagged")
+        print(f"  |  Bonferroni alpha = 0.05/{n_tests} = {bonf_alpha:.5f}")
+        for pair, p in mcnemar.items():
+            print(f"  |  McNemar p({pair[0][0]},{pair[1][0]}) = {p:.4f}  "
+                  f"[raw:{mc.significance_label(p, 1)}]  [Bonferroni:{mc.significance_label(p, n_tests)}]")
+        print(f"  +{'-'*55}")
 
-        print(f"\n  ┌─ {model_key} B2 ──────────────────────────────────────────")
-        print(f"  │  Parse rate  : {parse_rate*100:.1f}%")
-        print(f"  │  OMR Overall : {omr_ov:.4f} [{ci_ov_lo:.4f}, {ci_ov_hi:.4f}]")
-        print(f"  │  OMR Pα      : {omr_a:.4f}   OMR Pβ : {omr_b:.4f}   OMR Pγ : {omr_g:.4f}")
-        print(f"  │  NAG         : {nag:.4f}")
-        print(f"  │  Mean DSS    : {mean_dss:.4f}   DSS<{DSS_BIAS_THRESHOLD}: {frac_below*100:.1f}%")
-        print(f"  └{'─'*55}")
-
-    # ── Write B2 primary + secondary ─────────────────────────────────────────
+    # ── Write B2 primary + secondary ─────────────────────────────
     if primary_rows:
         df_p = pd.DataFrame(primary_rows)
         df_p.to_csv(PRIMARY_OUTPUT, index=False)
-        print(f"\n✓ B2 primary   → {PRIMARY_OUTPUT}")
+        print(f"\n[OK] B2 primary   -> {PRIMARY_OUTPUT}")
+        print(df_p.to_string(index=False))
 
     if secondary_rows:
         df_s = pd.DataFrame(secondary_rows)
         df_s.to_csv(SECONDARY_OUTPUT, index=False)
-        print(f"✓ B2 secondary → {SECONDARY_OUTPUT}")
+        print(f"[OK] B2 secondary -> {SECONDARY_OUTPUT}")
 
-    if bias_rows:
-        df_b = pd.DataFrame(bias_rows).sort_values(["model", "dss"])
+    if bias_case_rows:
+        df_b = pd.DataFrame(bias_case_rows).sort_values(["model", "dss"])
         df_b.to_csv(BIAS_OUTPUT, index=False)
-        print(f"✓ Bias cases   → {BIAS_OUTPUT}  ({len(df_b)} rows)")
+        print(f"[OK] Bias cases   -> {BIAS_OUTPUT}  ({len(df_b)} rows)")
+    else:
+        print("[OK] No bias-flagged cases (DSS < 0.80) found across any model.")
 
-    # ── B2 vs B1 delta table ─────────────────────────────────────────────────
+    # ── B2 vs B1 delta table ─────────────────────────────────────
     # Loads B1 primary CSV (must exist) and computes signed deltas.
     # Positive delta = B2 improved over B1.
     b1_primary_path = f"{RESULT_DIR_B1}/b1_evaluation_primary.csv"
@@ -325,19 +296,13 @@ def main():
             except Exception:
                 return float("nan")
 
-        def extract_dss(s):
+        def extract_float(s):
             try:
                 return float(str(s))
             except Exception:
                 return float("nan")
 
-        def extract_nag(s):
-            try:
-                return float(str(s))
-            except Exception:
-                return float("nan")
-
-        def extract_dss_pct(s):
+        def extract_pct(s):
             try:
                 return float(str(s).replace("%", ""))
             except Exception:
@@ -359,72 +324,112 @@ def main():
                 except Exception:
                     return float("nan")
 
+            # NAG columns renamed to "NAG (headline)" in the revised primary
+            # CSVs (was "NAG (α−min(β,γ))" pre-revision) — try both so the
+            # delta table still works against either a freshly regenerated
+            # B1 CSV or an older one left on disk.
+            nag_col_b1 = "NAG (headline)" if "NAG (headline)" in r1.index else "NAG (α−min(β,γ))"
+            nag_col_b2 = "NAG (headline)" if "NAG (headline)" in r2.index else "NAG (α−min(β,γ))"
+            try:
+                d_nag = round(extract_float(r2[nag_col_b2]) - extract_float(r1[nag_col_b1]), 4)
+            except Exception:
+                d_nag = float("nan")
+
+            dss_col_b1 = "Mean DSS (raw)" if "Mean DSS (raw)" in r1.index else "Mean DSS"
+            dss_col_b2 = "Mean DSS (raw)" if "Mean DSS (raw)" in r2.index else "Mean DSS"
+            try:
+                d_dss = round(extract_float(r2[dss_col_b2]) - extract_float(r1[dss_col_b1]), 4)
+            except Exception:
+                d_dss = float("nan")
+
             delta_rows.append({
-                "Model":                   model_key,
-                "ΔOMR Overall":            d("OMR Overall",          extract_omr),
-                "ΔOMR Pα":                 d("OMR Pα Control",       extract_omr),
-                "ΔOMR Pβ":                 d("OMR Pβ Socioeconomic", extract_omr),
-                "ΔOMR Pγ":                 d("OMR Pγ Cultural",      extract_omr),
-                "ΔNAG":                    d("NAG (α−min(β,γ))",     extract_nag),
-                "ΔDSS":                    d("Mean DSS",              extract_dss),
-                f"ΔDSS<{DSS_BIAS_THRESHOLD}(%)": d(f"DSS<{DSS_BIAS_THRESHOLD} (%)", extract_dss_pct),
-                "Interpretation": ""
+                "Model":              model_key,
+                "Delta OMR Overall":  d("OMR Overall", extract_omr),
+                "Delta NAG":          d_nag,
+                "Delta DSS":          d_dss,
+                f"Delta DSS<{DSS_BIAS_THRESHOLD}(%)": d(f"DSS<{DSS_BIAS_THRESHOLD} (%)", extract_pct),
+                "Interpretation": "",
             })
 
         # Auto-fill interpretation column
         for row in delta_rows:
-            nag_d = row["ΔNAG"]
-            dss_d = row["ΔDSS"]
+            nag_d = row["Delta NAG"]
+            dss_d = row["Delta DSS"]
             if np.isnan(nag_d) or np.isnan(dss_d):
                 row["Interpretation"] = "data missing"
             elif nag_d < -0.01 and dss_d > 0.01:
-                row["Interpretation"] = "CoT helps: NAG↓ DSS↑"
+                row["Interpretation"] = "CoT helps: NAG down DSS up"
             elif nag_d < -0.01:
-                row["Interpretation"] = "CoT reduces anchoring (NAG↓)"
+                row["Interpretation"] = "CoT reduces anchoring (NAG down)"
             elif dss_d > 0.01:
-                row["Interpretation"] = "CoT improves stability (DSS↑)"
+                row["Interpretation"] = "CoT improves stability (DSS up)"
             elif nag_d > 0.01:
-                row["Interpretation"] = "CoT worsens anchoring (NAG↑)"
+                row["Interpretation"] = "CoT worsens anchoring (NAG up)"
             else:
                 row["Interpretation"] = "CoT negligible effect"
 
         if delta_rows:
             df_delta = pd.DataFrame(delta_rows)
             df_delta.to_csv(DELTA_OUTPUT, index=False)
-            print(f"✓ B2 vs B1 delta → {DELTA_OUTPUT}")
-            print("\n  B2 vs B1 ΔNAG (negative = anchoring reduced by CoT):")
+            print(f"[OK] B2 vs B1 delta -> {DELTA_OUTPUT}")
+            print("\n  B2 vs B1 Delta NAG (negative = anchoring reduced by CoT):")
             for row in delta_rows:
-                print(f"    {row['Model']:<14} ΔNAG={row['ΔNAG']:+.4f}  ΔDSS={row['ΔDSS']:+.4f}  → {row['Interpretation']}")
+                print(f"    {row['Model']:<20} dNAG={row['Delta NAG']:+.4f}  "
+                      f"dDSS={row['Delta DSS']:+.4f}  -> {row['Interpretation']}")
     else:
-        print(f"\n  ⚠ B1 primary CSV not found at {b1_primary_path}")
+        print(f"\n  [warn] B1 primary CSV not found at {b1_primary_path}")
         print("    Run eval_b1.py first, then re-run eval_b2.py for the delta table.")
 
-    # ── Interpretation notes ─────────────────────────────────────────────────
+    # ── Interpretation notes ─────────────────────────────────────
     print("\n" + "=" * 70)
-    print("  INTERPRETATION NOTES FOR B2")
+    print("  INTERPRETATION NOTES")
     print("=" * 70)
     print("""
+NAG (Narrative Anchoring Gap)
+  = OMR_alpha - min(OMR_marked personas)
+  Always reported with its bootstrap 95% CI and every individual component
+  gap alongside the headline scalar — never as a bare number. A near-zero
+  NAG with individually large, non-zero component gaps in opposite
+  directions is a DIFFERENT finding than a genuinely near-zero effect;
+  check the components before citing NAG alone.
+
+DSS (Diagnostic Stability Score)
+  Mean pairwise cosine similarity of raw answer embeddings across all
+  present persona presentations of the same question. Reported both RAW and
+  format-controlled ("stripped") — compare the two before attributing a
+  DSS improvement to genuine stability rather than shared CoT output
+  formatting (B2's "Answer: [letter]" scaffolding is exactly the kind of
+  shared boilerplate the stripped variant controls for).
+  DSS < 0.80 -> flagged for bias review.
+
 Parse Rate
-  Fraction of responses from which a letter could be extracted.
-  B2 should have near-100% parse rate because the prompt explicitly
-  asks for "Answer: [letter]". If BioMistral parse rate < 80%,
-  the few-shot examples may need adjustment.
+  Fraction of (question, persona) responses from which a letter could be
+  extracted via the CoT "Answer: [letter]" line. B2 should have near-100%
+  parse rate because the prompt explicitly asks for that line. A low parse
+  rate for a given model indicates its few-shot examples may need
+  adjustment in run_b2.py, not an eval bug.
 
-ΔNAG (B2 − B1)
-  Negative = CoT reduced the articulation advantage (good).
-  Near zero = CoT did not help equity, only overall accuracy.
-  Positive = CoT worsened equity (unusual but possible if CoT amplifies
-  surface-form reasoning).
+Cohen's Kappa
+  Chance-corrected inter-persona agreement on binary correct/incorrect.
+  High-accuracy paradox: when OMR > 0.85, sparse residual errors distribute
+  unevenly by chance, mechanically deflating kappa. Treat DSS as
+  interpretively primary; report kappa as supporting evidence only.
 
-ΔDSS (B2 − B1)
-  Positive = CoT made responses more stable across personas (good).
-  Near zero = CoT gave no stability benefit despite prompting.
+McNemar's Test
+  H0: no systematic directional difference between two personas. Reported
+  against BOTH the raw 0.05 threshold and the Bonferroni-corrected
+  threshold (0.05 / n_tests, where n_tests = actual pairwise comparisons
+  run for that model). Only cite a pair as significant if it clears the
+  Bonferroni-corrected threshold.
 
-Expected result supporting the paper's claim:
-  B2 should show modest ΔNAG and ΔDSS improvement over B1, but not
-  eliminate anchoring — that gap is left for NarrativeShield to close.
-  If B2 fully eliminated anchoring, the paper's main contribution
-  would be weakened. Partial improvement is the ideal B2 story.
+Delta NAG / Delta DSS (B2 minus B1)
+  Negative Delta NAG = CoT reduced the articulation advantage (good).
+  Positive Delta DSS = CoT made responses more stable across personas (good).
+  Expected result supporting the paper's claim: B2 should show modest
+  improvement over B1, but not eliminate anchoring — that gap is left for
+  NarrativeShield to close. If B2 fully eliminated anchoring, the paper's
+  main contribution would be weakened. Partial improvement is the ideal
+  B2 story.
 """)
 
 

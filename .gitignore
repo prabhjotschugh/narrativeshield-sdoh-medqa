@@ -176,3 +176,6 @@ Thumbs.db
 *.bak
 *.swp
 *~
+
+# Keep the per-model evaluation logs
+!results/eval_logs/*.log

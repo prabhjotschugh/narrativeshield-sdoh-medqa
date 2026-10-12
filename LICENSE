@@ -1,0 +1,20 @@
+NarrativeShield-SDoH: licensing
+
+1. Retellings, annotations and derived data (dataset/, Annotations/, results/)
+   Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)
+   https://creativecommons.org/licenses/by-nc/4.0/legalcode
+   You may share and adapt this material for NON-COMMERCIAL research purposes
+   only, with attribution. The underlying questions come from MedQA-USMLE
+   (Jin et al., 2020, https://github.com/jind11/MedQA); users must also
+   comply with the MedQA terms. The retellings were generated with a Gemini
+   model via a hosted API; users should check that provider's terms of use.
+
+2. Code (codes/, slurm/, results/analysis/*.py)
+   Released for NON-COMMERCIAL research use only, with attribution to this
+   work and to MedQA (Jin et al., 2020). Provided "as is", without warranty
+   of any kind.
+
+3. Not for clinical use. The data are synthetic and the models and pipelines
+   evaluated here are not intended for unsupervised clinical use.
+
+Third-party models (Hugging Face checkpoints) keep their own licenses.

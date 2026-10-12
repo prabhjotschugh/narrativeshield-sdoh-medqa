@@ -1,0 +1,301 @@
+model,question_id,persona,agent1_parse_success,audit_pass,facts_present,facts_missing,total_facts_extracted,audit_note
+phi4_mini,MQ_0115,alpha,True,True,21,0,21,All clinical facts from the original narrative are preserved.
+phi4_mini,MQ_0115,beta,True,False,14,4,18,"Key clinical facts including exacerbation with sneezing, ibuprofen use, and symptom timelines were omitted."
+phi4_mini,MQ_0115,gamma,True,False,12,4,16,Key clinical details including cervical radicular symptoms and reflex specifics were omitted or misclassified.
+phi4_mini,MQ_0301,alpha,True,False,27,2,29,Fluoxetine and symptom duration of several weeks were omitted from the extracted JSON.
+phi4_mini,MQ_0301,beta,True,False,23,3,26,"The rewritten JSON omits symptom duration, fatigue, and antacid use."
+phi4_mini,MQ_0301,gamma,True,False,21,4,25,"Rewritten narrative completely omitted watery diarrhea, substituting hallucinated excessive urination, and missed depression history."
+phi4_mini,MQ_0446,alpha,True,False,19,2,21,The JSON omits morning cough predominance and persistence between exacerbations.
+phi4_mini,MQ_0446,beta,True,False,17,8,25,"Multiple key facts including occupational exposure, smoking history, sex, and post-bronchodilator values were omitted."
+phi4_mini,MQ_0446,gamma,True,False,14,7,21,"Multiple clinical history elements, occupational exposure, and post-bronchodilator PFT values were omitted."
+phi4_mini,MQ_0162,alpha,True,False,22,6,28,Key diagnostic lab findings including eosinophilia and urinalysis abnormalities were omitted.
+phi4_mini,MQ_0162,beta,True,False,26,8,34,"WBC differential findings, urinalysis results, and prior cold were omitted from the extraction."
+phi4_mini,MQ_0162,gamma,True,False,21,7,28,Multiple key clinical facts including urinalysis findings and medication use were omitted.
+phi4_mini,MQ_0465,alpha,True,False,17,7,24,"Multiple clinical details including aggravating factors, negative history, social history, and anthropometrics are missing."
+phi4_mini,MQ_0465,beta,True,False,12,8,20,"Multiple clinical details including trauma history, family and social history, and anthropometrics were omitted."
+phi4_mini,MQ_0465,gamma,True,False,17,8,25,"Rewritten JSON omits anthropometrics, social/family history, specific joint tenderness, and medication duration."
+phi4_mini,MQ_0004,alpha,True,False,16,4,20,"Key behavioral details such as profanity, tactile impulsivity, and symptom duration were omitted."
+phi4_mini,MQ_0004,beta,True,False,8,7,15,"Multiple clinical facts including medications, sex, duration, and specific cognitive/behavioral signs were omitted."
+phi4_mini,MQ_0004,gamma,True,False,16,3,19,"Key clinical details including unbidden laughter, impaired self-care, and herbal remedy were omitted."
+phi4_mini,MQ_0977,alpha,True,False,8,14,22,The JSON extraction omitted current psychiatric medications and critical intraoperative malignant hyperthermia signs.
+phi4_mini,MQ_0977,beta,True,False,14,8,22,"Intraoperative vital values, hypercapnia reading, and diaphoresis were omitted from the extraction."
+phi4_mini,MQ_0977,gamma,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+phi4_mini,MQ_0740,alpha,True,False,22,6,28,"Multiple vital signs, exam findings, and history details were omitted from the JSON extraction."
+phi4_mini,MQ_0740,beta,True,False,22,9,31,"The JSON extraction omitted patient demographics, CSF analysis results, and several clinical history details."
+phi4_mini,MQ_0740,gamma,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+phi4_mini,MQ_0897,alpha,True,False,7,4,11,"Key clinical details including specific weight gain amount, refractory status, and CT indication are missing."
+phi4_mini,MQ_0897,beta,True,False,6,4,10,"Rewritten JSON omits several active medications, scan details, and specific weight gain metrics."
+phi4_mini,MQ_0897,gamma,True,False,10,4,14,"Key negatives, specific sensation, and medication-refractory status were omitted."
+phi4_mini,MQ_0737,alpha,True,False,12,6,18,"Multiple clinical details regarding repeat assessment, obstetric history, and interventions were omitted."
+phi4_mini,MQ_0737,beta,True,False,6,8,14,"Multiple clinical history, exam, and intervention details were omitted or incorrectly recorded."
+phi4_mini,MQ_0737,gamma,True,False,8,10,18,"Multiple clinical details including resuscitation interventions, effacement, station, and contraction frequency were omitted."
+phi4_mini,MQ_0270,alpha,True,False,10,6,16,Multiple clinical history details and relevant negations were omitted from the extraction.
+phi4_mini,MQ_0270,beta,True,False,7,10,17,Multiple clinical history details and specific past withdrawal symptoms were omitted from the extraction.
+phi4_mini,MQ_0270,gamma,True,False,10,4,14,The JSON omits several clinical history elements including needle sharing denial and prior Percocet misuse.
+phi4_mini,MQ_0513,alpha,True,False,14,5,19,"Physical stature measurements, mental orientation, and timeline details were omitted from the extraction."
+phi4_mini,MQ_0513,beta,True,False,10,4,14,"The rewritten JSON omits patient anthropometrics, fatigue, and arrival timeline."
+phi4_mini,MQ_0513,gamma,True,False,11,7,18,"Key anthropometric measurements, symptom duration, and behavioral observations are omitted."
+phi4_mini,MQ_0781,alpha,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+phi4_mini,MQ_0781,beta,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+phi4_mini,MQ_0781,gamma,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+phi4_mini,MQ_0183,alpha,True,False,28,2,30,The symptom duration and BMI were omitted from the extraction.
+phi4_mini,MQ_0183,beta,True,False,17,8,25,"Key clinical symptoms, metabolic physical findings, and urinalysis results were omitted from the extraction."
+phi4_mini,MQ_0183,gamma,True,False,22,6,28,"Multiple exam findings, negative findings, BMI, and specific duration were omitted."
+phi4_mini,MQ_0520,alpha,True,False,13,1,14,The presentation setting of the emergency department was omitted from the structured extraction.
+phi4_mini,MQ_0520,beta,True,False,7,4,11,Key demographic data and immersion scald exam findings were omitted from the extraction.
+phi4_mini,MQ_0520,gamma,True,False,13,1,14,The specific anatomical extent to the elbow flexure was omitted.
+phi4_mini,MQ_0935,alpha,True,False,13,1,14,The trigger context of onset while ambulating was omitted from the extraction.
+phi4_mini,MQ_0935,beta,True,False,9,2,11,Reticulocyte count was misidentified as ANC and presyncope was omitted.
+phi4_mini,MQ_0935,gamma,True,False,12,2,14,The JSON omits the patient's persistent exhaustion and the home remedy of fenugreek and honey.
+phi4_mini,MQ_0109,alpha,True,False,8,3,11,"The rewrite omits the 4-hour symptom duration, the specific count of affected attendees, and the ED setting."
+phi4_mini,MQ_0109,beta,True,False,7,7,14,"Key clinical symptoms including weakness, near-syncope, and prior medication use were omitted."
+phi4_mini,MQ_0109,gamma,True,False,8,4,12,"Key exposures, symptom duration, and watery diarrhea (incorrectly marked absent) were omitted."
+phi4_mini,MQ_0892,alpha,True,False,24,2,26,Missing prenatal visit timing and pending blood/urine cultures.
+phi4_mini,MQ_0892,beta,True,False,18,8,26,Key clinical facts including fetal heart rate and negative contractions were omitted.
+phi4_mini,MQ_0892,gamma,True,False,23,4,27,"Key clinical facts including dysuria, symptom duration, and obstetric history were omitted."
+phi4_mini,MQ_0641,alpha,True,False,10,7,17,"Several clinical context details, vitals normalcy, and counseling history are missing."
+phi4_mini,MQ_0641,beta,True,False,10,5,15,Key physical exam findings and history elements were omitted from the extraction.
+phi4_mini,MQ_0641,gamma,True,False,6,10,16,"Multiple exam findings, timeline details, and psychosocial context were omitted."
+phi4_mini,MQ_0306,alpha,True,False,11,5,16,"Multiple clinical details including symptom duration, immunization status, and normal urinalysis findings were omitted."
+phi4_mini,MQ_0306,beta,True,False,15,3,18,"Omitted headache duration, vaccination status, and primigravida history."
+phi4_mini,MQ_0306,gamma,True,False,15,2,17,Key negative symptom of dysuria and immunization status were omitted.
+phi4_mini,MQ_0862,alpha,True,False,6,2,8,The colonoscopy procedure and multi-year duration were omitted from the extracted JSON.
+phi4_mini,MQ_0862,beta,True,False,5,6,11,"Multiple clinical facts including duration, medication trial, and endoscopy were omitted."
+phi4_mini,MQ_0862,gamma,True,False,4,3,7,"Failed to record several years duration, fatigue, and negated back pain."
+phi4_mini,MQ_0655,alpha,True,False,14,3,17,Key medication and historical timing details are omitted from the extraction.
+phi4_mini,MQ_0655,beta,True,False,10,5,15,Multiple exam findings and medications were omitted from the extracted JSON.
+phi4_mini,MQ_0655,gamma,True,False,12,4,16,"Key clinical facts including symptom duration, absence of flank pain, and contraceptive history were omitted."
+phi4_mini,MQ_0986,alpha,True,False,15,3,18,The rewritten version omitted social history negations and injury context.
+phi4_mini,MQ_0986,beta,True,False,8,3,11,Social history including acute alcohol intake and smoking status was omitted from the structured extraction.
+phi4_mini,MQ_0986,gamma,True,False,12,7,19,Multiple pertinent negative review of systems and recent sharp metal puncture injury were omitted.
+phi4_mini,MQ_0624,alpha,True,False,9,2,11,Absence of systemic symptoms and positive lab result value were omitted.
+phi4_mini,MQ_0624,beta,True,False,9,3,12,"Key clinical details including symptom duration, absence of other symptoms, and ANA positivity were omitted."
+phi4_mini,MQ_0624,gamma,True,False,4,5,9,"The JSON missed multiple critical diagnostic facts including duration, cyclical course, autoimmune lab results, and symptom absence."
+phi4_mini,MQ_0204,alpha,True,False,7,4,11,Key clinical details including obstetric parity and confirmatory repeat scan are missing from the structured extraction.
+phi4_mini,MQ_0204,beta,True,False,9,4,13,"The rewrite omitted parity, symptom duration, and ordered laboratory tests."
+phi4_mini,MQ_0204,gamma,True,False,12,1,13,Herbal compress application was omitted from the structured extraction.
+phi4_mini,MQ_0157,alpha,True,True,22,0,22,All clinical facts from the original narrative are successfully preserved in the JSON.
+phi4_mini,MQ_0157,beta,True,False,18,4,22,Key clinical facts including heart rate and medication use were omitted from the JSON extraction.
+phi4_mini,MQ_0157,gamma,True,False,21,6,27,"Key clinical facts including symptom duration, social history, and exam findings were omitted."
+phi4_mini,MQ_0383,alpha,True,False,12,3,15,Key history details and specific nail finding were omitted or altered.
+phi4_mini,MQ_0383,beta,True,False,9,4,13,"Multiple clinical details including pallor, antacid use, and family history were omitted."
+phi4_mini,MQ_0383,gamma,True,False,13,3,16,"Key clinical facts including fatigue, negative family history, and home remedies were omitted."
+phi4_mini,MQ_0988,alpha,True,False,9,2,11,The 3-month duration and mother's age at breast cancer diagnosis were omitted.
+phi4_mini,MQ_0988,beta,True,False,9,1,10,The negative mammogram from six months ago was omitted.
+phi4_mini,MQ_0988,gamma,True,False,8,2,10,Key negative physical examination findings were omitted from the extraction.
+phi4_mini,MQ_0166,alpha,True,False,14,6,20,"Key clinical details including toe edema, coldness, and oxygen support were omitted."
+phi4_mini,MQ_0166,beta,True,False,17,2,19,Compartment pressure measurement and supplemental oxygen flow rate were omitted from the extraction.
+phi4_mini,MQ_0166,gamma,True,False,14,6,20,Key clinical facts including the leg burn injury and weight were omitted from the extraction.
+phi4_mini,MQ_0553,alpha,True,False,11,1,12,The presentation setting to primary care was omitted.
+phi4_mini,MQ_0553,beta,True,False,5,7,12,Multiple pertinent negatives and psychiatric symptoms were omitted or misrepresented.
+phi4_mini,MQ_0553,gamma,True,False,6,6,12,"The JSON missed symptom duration, psychomotor slowing, and critical psychiatric rule-outs including suicidality and mania."
+phi4_mini,MQ_0798,alpha,True,False,23,5,28,"Key symptom durations, weight loss quantification, and disease stability details were omitted."
+phi4_mini,MQ_0798,beta,True,False,15,10,25,"Multiple specific clinical details, durations, quantifications, and urine sodium were omitted."
+phi4_mini,MQ_0798,gamma,True,False,14,7,21,"Multiple clinical durations, quantitative history details, and chronic lung symptoms are omitted."
+phi4_mini,MQ_0945,alpha,True,False,14,8,22,"Multiple exam negations, urinalysis findings, and family history details were omitted."
+phi4_mini,MQ_0945,beta,True,False,17,6,23,"Multiple clinical details including vomiting, medication trial, and negative exam findings were omitted."
+phi4_mini,MQ_0945,gamma,True,False,16,5,21,Several urinalysis and exam findings were omitted from the JSON extraction.
+phi4_mini,MQ_0544,alpha,True,False,23,5,28,Key emesis characteristics and weight details were omitted in the JSON extraction.
+phi4_mini,MQ_0544,beta,True,False,21,7,28,Multiple key clinical history and exam details were omitted in the structured extraction.
+phi4_mini,MQ_0544,gamma,True,False,20,8,28,"Multiple clinical history and exam details including sex, weights, and vomit characteristics were omitted."
+phi4_mini,MQ_0941,alpha,True,False,17,8,25,"Several physical exam findings, substance history details, and ICU admission were omitted."
+phi4_mini,MQ_0941,beta,True,False,15,5,20,"Multiple exam findings, social history, and disposition details were omitted."
+phi4_mini,MQ_0941,gamma,True,False,10,8,18,"Multiple negative history findings, timeframes, and normal exam findings were omitted or contradicted."
+phi4_mini,MQ_0001,alpha,True,False,18,4,22,Key patient requests and epidemiological context regarding colleagues were omitted.
+phi4_mini,MQ_0001,beta,True,False,18,2,20,Rewritten JSON omits the patient's request for antibiotics and self-treatment with Tylenol.
+phi4_mini,MQ_0001,gamma,True,False,11,5,16,"Key historical details, onset timing, and vomiting were omitted from the structured extraction."
+phi4_mini,MQ_0614,alpha,True,False,15,3,18,Symptom duration and timing of warfarin initiation were omitted.
+phi4_mini,MQ_0614,beta,True,False,8,6,14,"Key vitals, medication details, symptom onset, and CT findings were omitted."
+phi4_mini,MQ_0614,gamma,True,False,8,7,15,"Multiple clinical facts including vitals, symptom duration, pain radiation, and medication details are missing."
+phi4_mini,MQ_0332,alpha,True,False,13,2,15,Normal vitals and unremarkable metabolic/hematologic laboratory findings were omitted from the extraction.
+phi4_mini,MQ_0332,beta,True,False,9,3,12,Rewritten JSON misidentified unconjugated bilirubin as conjugated and omitted normal vitals and labs.
+phi4_mini,MQ_0332,gamma,True,False,5,9,14,"Multiple pertinent negative symptoms, normal vitals, and laboratory specifics were omitted."
+phi4_mini,MQ_0501,alpha,True,False,14,4,18,Key exam findings including orientation status and dry mucous membranes were omitted.
+phi4_mini,MQ_0501,beta,True,False,16,4,20,Key demographic and historical timeline details were omitted from the extraction.
+phi4_mini,MQ_0501,gamma,True,False,12,6,18,"Rewritten JSON omits the prior cough, several clinical timelines, orientation status, and negative flank exam."
+phi4_mini,MQ_0020,alpha,True,False,13,6,19,"Multiple lab details, geographic residence, and timeline elements were omitted."
+phi4_mini,MQ_0020,beta,True,False,10,4,14,"Key occupational exposure, over-the-counter medication use, and negative microscopy findings were omitted."
+phi4_mini,MQ_0020,gamma,True,False,9,6,15,"Key epidemiological exposure, migratory joint timeline, fatigue, and negative synovial stain were omitted."
+phi4_mini,MQ_1000,alpha,True,False,18,6,24,Multiple clinical history and physical examination findings were omitted from the extraction.
+phi4_mini,MQ_1000,beta,True,False,15,9,24,"Multiple clinical details including patient sex, symptom duration, developmental history, and growth parameters were omitted."
+phi4_mini,MQ_1000,gamma,True,False,18,6,24,Key dietary and developmental history facts were omitted in the JSON extraction.
+phi4_mini,MQ_0952,alpha,True,False,18,5,23,Several contextual history details and prior treatments were omitted from the extraction.
+phi4_mini,MQ_0952,beta,True,False,12,4,16,Multiple clinical findings including heart rate and negative test results were omitted.
+phi4_mini,MQ_0952,gamma,True,False,18,3,21,"Key injury mechanism, laterality, and prior treatment were omitted."
+phi4_mini,MQ_0372,alpha,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+phi4_mini,MQ_0372,beta,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+phi4_mini,MQ_0372,gamma,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+phi4_mini,MQ_0900,alpha,True,False,21,2,23,Nursing home context and room air specification were omitted from the extraction.
+phi4_mini,MQ_0900,beta,True,False,19,4,23,Key contextual and clinical details including nursing home residence and fatigue were omitted.
+phi4_mini,MQ_0900,gamma,True,False,19,2,21,The S4 gallop and generalized fatigue were omitted from the extraction.
+phi4_mini,MQ_0852,alpha,True,False,17,5,22,"Social history, functional status, and pain qualities were omitted from the extraction."
+phi4_mini,MQ_0852,beta,True,False,13,8,21,"Rewritten JSON omitted upper respiratory prodrome, social history, functional status, and specific sputum characteristics."
+phi4_mini,MQ_0852,gamma,True,False,14,7,21,"The rewritten JSON omits upper respiratory symptoms, wheelchair dependence, social history details, and exam findings."
+phi4_mini,MQ_0827,alpha,True,False,15,4,19,"Key clinical history details including sexual activity, contraception status, and onset circumstances were omitted."
+phi4_mini,MQ_0827,beta,True,False,13,3,16,"Key clinical details including onset context, medication trial, and pain character were omitted."
+phi4_mini,MQ_0827,gamma,True,False,13,4,17,Key sexual and reproductive history details along with acute onset context were omitted.
+phi4_mini,MQ_0315,alpha,True,False,17,3,20,The extracted JSON omits the 4-month overall symptom duration and specific weight loss quantification details.
+phi4_mini,MQ_0315,beta,True,False,12,3,15,"The rewritten JSON missed past laxative use, self-treatment with Pepto-Bismol, and tenesmus."
+phi4_mini,MQ_0315,gamma,True,False,8,7,15,"Key clinical features including hematochezia, tenesmus, symptom duration, and endoscopic extent were omitted."
+phi4_mini,MQ_0246,alpha,True,False,15,3,18,The JSON missed symptom/history durations and specific anatomical extent of the swelling.
+phi4_mini,MQ_0246,beta,True,False,15,3,18,"The JSON omits fatigue, nausea, and the stated cellulitis diagnosis."
+phi4_mini,MQ_0246,gamma,True,False,18,3,21,The JSON omits the cellulitis diagnosis and specific symptom/disease duration timelines.
+phi4_mini,MQ_0060,alpha,True,False,20,5,25,The rewritten extraction completely omitted the urinalysis results and symptom chronicity.
+phi4_mini,MQ_0060,beta,True,False,16,6,22,"Rewritten JSON omitted urinalysis findings, prior symptom episodes, cough syrup trial, and housing status."
+phi4_mini,MQ_0060,gamma,True,False,21,6,27,"The rewritten JSON omitted bilateral crackles on lung exam, all urinalysis findings, and several history details."
+phi4_mini,MQ_0247,alpha,True,False,8,2,10,Key details regarding obstetric history specifics and normal vitals were omitted.
+phi4_mini,MQ_0247,beta,True,False,6,3,9,Key details regarding miscarriage history and normal vitals were omitted from the structured extraction.
+phi4_mini,MQ_0247,gamma,True,False,5,8,13,"Multiple clinical history details, pertinent negative symptoms, and current herbal intake were omitted."
+phi4_mini,MQ_0958,alpha,True,False,16,12,28,"The rewrite completely omitted the hospitalization course, discharge details, and follow-up exercise tolerance test findings."
+phi4_mini,MQ_0958,beta,True,False,16,15,31,"The JSON omits emergency and stress test vitals, ECG findings, and several historical details."
+phi4_mini,MQ_0958,gamma,True,False,15,11,26,The rewritten JSON completely omits the one-month follow-up stress test and several clinical history details.
+phi4_mini,MQ_0581,alpha,True,False,14,3,17,Rewritten JSON omits several pertinent negative findings and wrist tenderness.
+phi4_mini,MQ_0581,beta,True,False,16,4,20,"Omitted subjective fever, absence of weight loss, morning stiffness prominence, and MCP joint swelling."
+phi4_mini,MQ_0581,gamma,True,False,14,3,17,"Omitted symptom duration, preceding respiratory infection, and swollen tender finger joints."
+phi4_mini,MQ_0081,alpha,True,False,20,4,24,Key pain qualities and lab timing were omitted from the extraction.
+phi4_mini,MQ_0081,beta,True,False,20,5,25,"Key pain characteristics, onset duration, nausea, and recent antacid use were omitted."
+phi4_mini,MQ_0081,gamma,True,False,18,3,21,Key symptom characteristics and duration were omitted from the extraction.
+phi4_mini,MQ_0088,alpha,True,False,20,5,25,"Multiple clinical examination findings, negative findings, and a symptom duration were omitted."
+phi4_mini,MQ_0088,beta,True,False,16,4,20,"Key clinical details including amenorrhea, negative eye movement pain, visual acuity, and sex were omitted."
+phi4_mini,MQ_0088,gamma,True,False,15,5,20,Multiple clinical facts including amenorrhea and negated findings were omitted.
+phi4_mini,MQ_0750,alpha,True,False,13,7,20,"Social history, exam details, and family history specificities were omitted."
+phi4_mini,MQ_0750,beta,True,False,12,4,16,"Rewritten JSON omitted current antacid use, normal cardiopulmonary exam, and social history."
+phi4_mini,MQ_0750,gamma,True,False,16,6,22,Multiple clinical symptoms and exam findings were omitted from the extraction.
+phi4_mini,MQ_0498,alpha,True,False,20,4,24,Key ABG lab values and symptom duration/quantification were omitted.
+phi4_mini,MQ_0498,beta,True,False,21,5,26,Key vitals and lab findings including heart rate and blood gas results were omitted.
+phi4_mini,MQ_0498,gamma,True,False,20,6,26,"Key clinical history details including polydipsia, vomiting, and specific weight loss amount were omitted."
+phi4_mini,MQ_0836,alpha,True,False,15,1,16,The extracted JSON omits the functional impact on activities of daily living.
+phi4_mini,MQ_0836,beta,True,False,10,6,16,"Multiple clinical facts including symptom duration, OTC medication use, negative findings, and exam outcomes were omitted."
+phi4_mini,MQ_0836,gamma,True,False,15,3,18,"Key demographic, duration, and prior treatment details were omitted."
+phi4_mini,MQ_0071,alpha,True,False,9,5,14,"Key clinical details including symptom duration, specific olfactory description, and social history were omitted."
+phi4_mini,MQ_0071,beta,True,False,7,5,12,"Rewritten JSON omitted social history, family history, and laterality of nasal obstruction."
+phi4_mini,MQ_0071,gamma,True,False,6,5,11,Key clinical facts including phantosmia and social history were omitted from the extraction.
+phi4_mini,MQ_0779,alpha,True,False,6,3,9,Sexual history and specific duration of menstrual delay were omitted from extraction.
+phi4_mini,MQ_0779,beta,True,False,6,3,9,"Key history including symptom duration, soap washing, and unprotected intercourse was omitted."
+phi4_mini,MQ_0779,gamma,True,False,8,3,11,Key clinical facts including pregnancy test confirmation and prior home remedies were omitted.
+phi4_mini,MQ_0546,alpha,True,False,8,10,18,"Multiple exam findings, negative urinalysis components, and contextual history details were omitted from the JSON extraction."
+phi4_mini,MQ_0546,beta,True,False,8,8,16,"Multiple discrete lab results, normal vitals, and symptom characteristics were omitted."
+phi4_mini,MQ_0546,gamma,True,False,7,12,19,"Multiple negative urinalysis findings, normal exam and vital status, and relief with rest were omitted."
+phi4_mini,MQ_0785,alpha,True,False,11,11,22,"Multiple history items, lab results, vitals, and gynecomastia were omitted or contradicted."
+phi4_mini,MQ_0785,beta,True,False,11,10,21,"Key lab values, vitals, negated symptoms, and bilateral comparison findings were omitted."
+phi4_mini,MQ_0785,gamma,True,False,10,11,21,"Multiple vital clinical facts including lab results, gynecomastia, and duration were omitted."
+phi4_mini,MQ_0129,alpha,True,False,14,6,20,"Multiple clinical details including duration, specific delusion themes, and normal exam findings were omitted."
+phi4_mini,MQ_0129,beta,True,False,9,5,14,"Key substance history, objective exam findings, and thought process disorder were omitted from extraction."
+phi4_mini,MQ_0129,gamma,True,False,6,7,13,"The JSON extraction omits key psychotic symptoms including delusions and thought disorder, symptom duration, and negative history."
+phi4_mini,MQ_0132,alpha,True,False,16,2,18,Rewritten JSON omitted room air specification and sudden onset timing of chest pain.
+phi4_mini,MQ_0132,beta,True,False,8,7,15,"Multiple key clinical history items, medications, and specific auscultation findings were omitted."
+phi4_mini,MQ_0132,gamma,True,False,10,4,14,"Key clinical facts regarding altered mental status, chemical restraint, and bloody emesis were omitted."
+phi4_mini,MQ_0676,alpha,True,False,8,3,11,The JSON omits normal systemic exam/labs and the discharge plan for occlusion therapy.
+phi4_mini,MQ_0676,beta,True,False,5,5,10,"Multiple clinical facts including sex, lab results, and treatment plan were omitted from the extraction."
+phi4_mini,MQ_0676,gamma,True,False,4,3,7,Key clinical details including birth weight and patient sex were omitted.
+phi4_mini,MQ_0487,alpha,True,False,8,1,9,The structured extraction omits the mother's report of near-continuous scratching.
+phi4_mini,MQ_0487,beta,True,False,6,6,12,"Key demographic data, medication trials, nocturnal worsening, and lab staining details were omitted."
+phi4_mini,MQ_0487,gamma,True,False,5,4,9,"Key clinical details including symptom duration, perianal localization, nocturnal worsening, and microscopy stain are missing."
+phi4_mini,MQ_0563,alpha,True,False,9,3,12,"Key clinical details including bowel frequency specifics, pharmacological management, and exam status were omitted."
+phi4_mini,MQ_0563,beta,True,False,5,5,10,"Key clinical details including exam findings, stool frequency/straining, and OTC medication trial were omitted."
+phi4_mini,MQ_0563,gamma,True,False,9,1,10,The specific reduced bowel movement frequency of every four days was omitted.
+phi4_mini,MQ_0170,alpha,True,False,16,4,20,Social history and abnormal lab results were omitted from the extraction.
+phi4_mini,MQ_0170,beta,True,False,19,3,22,"Rewritten JSON misses prior Tylenol use, acute 3-day onset, and smoking quantification."
+phi4_mini,MQ_0170,gamma,True,False,18,9,27,"Multiple travel exposures, home treatments, negative exam findings, and cardiac symptoms were omitted."
+phi4_mini,MQ_0272,alpha,True,False,10,1,11,Hypercalciuria was omitted from the laboratory findings.
+phi4_mini,MQ_0272,beta,True,False,9,2,11,The rewritten version omitted patient male sex and administration of Pedialyte.
+phi4_mini,MQ_0272,gamma,True,False,8,2,10,The JSON missed the patient's male sex and excessive urinary calcium excretion.
+phi4_mini,MQ_0541,alpha,True,False,17,2,19,The JSON omits the timing of the prior hernia repair and onset time of emesis.
+phi4_mini,MQ_0541,beta,True,False,11,5,16,Key clinical details regarding emesis characteristics and pain localization were omitted.
+phi4_mini,MQ_0541,gamma,True,False,11,4,15,"Key clinical details including bilious vomiting, obstipation duration, and negative flank pain were omitted."
+phi4_mini,MQ_0894,alpha,True,False,13,3,16,The specific anatomical distribution and onset timeline for saddle anesthesia were omitted.
+phi4_mini,MQ_0894,beta,True,False,10,4,14,"Rewritten JSON misses progression timeline, self-treatment trial, and normal physical exam findings."
+phi4_mini,MQ_0894,gamma,True,False,9,6,15,"Key pain symptoms, timelines, and normal right-sided findings were omitted from the extraction."
+phi4_mini,MQ_0622,alpha,True,False,8,1,9,The JSON missed the detail regarding symptoms being refractory to over-the-counter analgesics.
+phi4_mini,MQ_0622,beta,True,False,8,1,9,The rewritten JSON omits the patient's trial and failure of OTC pain medications.
+phi4_mini,MQ_0622,gamma,True,False,4,5,9,Rewritten JSON misattributed neuroimaging findings to abdominal ultrasound and uterine artery dilation while omitting headache and vertigo.
+phi4_mini,MQ_0434,alpha,True,False,31,3,34,"Key clinical details including catheter presence, parity, and dry incision were omitted."
+phi4_mini,MQ_0434,beta,True,False,23,5,28,"Several clinical details including Tylenol use, delivery timing, prolonged labor, and retained tube were omitted."
+phi4_mini,MQ_0434,gamma,True,False,20,6,26,Multiple clinical details including urinary catheter and nipple trauma were omitted from the extraction.
+phi4_mini,MQ_0217,alpha,True,False,26,2,28,Timeline details for acute exacerbation and voice change were omitted.
+phi4_mini,MQ_0217,beta,True,False,20,7,27,"Key clinical indicators of peritonsillar abscess including uvular deviation, trismus, and home medication were omitted."
+phi4_mini,MQ_0217,gamma,True,False,24,4,28,Key demographic details and specific physical examination findings were omitted.
+phi4_mini,MQ_0971,alpha,True,False,17,5,22,Key exam observations and the low clinical suspicion modifier were omitted.
+phi4_mini,MQ_0971,beta,True,False,14,2,16,Omitted right-sided location of chest pain and trial of Tylenol.
+phi4_mini,MQ_0971,gamma,True,False,16,4,20,"Several clinical details including cough characteristics, ambient air context, and clinical test criteria were omitted."
+phi4_mini,MQ_0774,alpha,True,False,14,14,28,"Multiple clinical facts including medications, urinalysis results, BMI, and obstetric history are missing."
+phi4_mini,MQ_0774,beta,True,False,16,9,25,"Multiple clinical history details, lifestyle habits, and a normal urinalysis were omitted from the extraction."
+phi4_mini,MQ_0774,gamma,True,False,8,14,22,"The rewritten JSON omitted vital signs, medications, social history, specific exam findings, and key symptom details."
+phi4_mini,MQ_0748,alpha,True,False,7,4,11,Growth percentiles and negative medical/family history were omitted from the extraction.
+phi4_mini,MQ_0748,beta,True,False,7,7,14,"Key demographic data, baseline growth, and specific bone age findings were omitted from the extraction."
+phi4_mini,MQ_0748,gamma,True,False,16,1,17,The home intervention with turmeric and ginger compress was omitted from the JSON extraction.
+phi4_mini,MQ_0707,alpha,True,False,11,3,14,Key maternal obstetric and transfusion history details were omitted from the extraction.
+phi4_mini,MQ_0707,beta,True,False,7,6,13,"Key maternal history, medications, and newborn sex were omitted from the extraction."
+phi4_mini,MQ_0707,gamma,True,False,8,7,15,Multiple clinical history and neonatal physical exam findings were omitted.
+phi4_mini,MQ_0206,alpha,True,False,14,4,18,"Key details including sleep duration, lifelong course, and specific occupation were omitted from the structured extraction."
+phi4_mini,MQ_0206,beta,True,False,8,2,10,The extraction omitted hypnagogic hallucinations and the 10-hour daily sleep duration.
+phi4_mini,MQ_0206,gamma,True,False,10,5,15,"The JSON missed the patient's male sex, chronic fatigue, sleep duration, and sleep-related driving accident."
+phi4_mini,MQ_0731,alpha,True,False,22,3,25,Key baseline asthma control and PEFR objective measurement are omitted from the extraction.
+phi4_mini,MQ_0731,beta,True,False,18,4,22,"The rewritten JSON omits objective peak flow results, asthma onset age, baseline inhaler use, and OTC medication trials."
+phi4_mini,MQ_0731,gamma,True,False,14,6,20,Key clinical metrics including PEF rate and rescue inhaler escalation were omitted.
+phi4_mini,MQ_0320,alpha,True,False,10,3,13,"The rewrite omits symptom duration, normal physical exam, and normal ECG results."
+phi4_mini,MQ_0320,beta,True,False,11,5,16,Multiple clinical procedures and response to nitroglycerin were omitted from the extraction.
+phi4_mini,MQ_0320,gamma,True,False,15,3,18,Key timeline and response to sublingual medication were omitted.
+phi4_mini,MQ_0409,alpha,True,False,18,4,22,"Several quantitative details regarding BMI, weight loss, and emesis frequency are missing."
+phi4_mini,MQ_0409,beta,True,False,11,8,19,"Multiple specific history, medication, and quantitative vital facts were omitted from the extraction."
+phi4_mini,MQ_0409,gamma,True,False,10,8,18,"Multiple vital signs, specific symptoms like polyuria/polydipsia, and key history details were omitted."
+phi4_mini,MQ_0688,alpha,True,False,31,7,38,"Multiple clinical details including pain score, lifestyle history, and BMI were omitted."
+phi4_mini,MQ_0688,beta,True,False,23,8,31,"Multiple vital signs, social history elements, medications, and negative imaging results were omitted from the extraction."
+phi4_mini,MQ_0688,gamma,True,False,20,7,27,"Multiple clinical facts including pain severity, nausea/vomiting status, BMI, and social history were omitted."
+phi4_mini,MQ_0666,alpha,True,False,8,4,12,"The structured extraction omits symptom duration, current self-medication, functional impairment, and anxiety status."
+phi4_mini,MQ_0666,beta,True,False,5,3,8,Key clinical facts including duration and generalized twitching were omitted.
+phi4_mini,MQ_0666,gamma,True,False,4,4,8,"Key clinical details including symptom durations, gait disturbance, and family history were omitted."
+phi4_mini,MQ_0974,alpha,True,False,22,4,26,"Key functional decline details, ambulation limit, duration, and medication compliance were omitted."
+phi4_mini,MQ_0974,beta,True,False,18,3,21,"Rewritten JSON misses accessory muscle use, functional decline walking one block, and current medication compliance."
+phi4_mini,MQ_0974,gamma,True,False,15,5,20,"Key physical exam findings, arterial blood gas specifics, and symptom durations were omitted or mislabeled."
+phi4_mini,MQ_0449,alpha,True,False,23,3,26,"Normal cardiac, abdominal, and urinalysis findings were omitted."
+phi4_mini,MQ_0449,beta,True,False,17,8,25,"Multiple clinical facts including vitals, travel history, and medication history were omitted."
+phi4_mini,MQ_0449,gamma,True,False,21,4,25,Key epidemiological and clinical details including Middle East origin and quantitative weight loss were omitted.
+phi4_mini,MQ_0530,alpha,True,False,16,4,20,Key trauma details and specific tobacco quantification were omitted from the extraction.
+phi4_mini,MQ_0530,beta,True,False,13,6,19,"Multiple clinical facts including medications, bruising, and exam findings were omitted from the extraction."
+phi4_mini,MQ_0530,gamma,True,False,18,2,20,Missed home compress treatment attempt and specific timing of the fall.
+phi4_mini,MQ_0463,alpha,True,False,8,4,12,"Key negative history, contact lens use, and slit lamp exam were omitted."
+phi4_mini,MQ_0463,beta,True,False,8,4,12,Several key clinical details including contact lens use and corneal opacification were omitted.
+phi4_mini,MQ_0463,gamma,True,False,7,8,15,"Multiple clinical symptoms, exam findings, and history details are missing from the structured JSON."
+phi4_mini,MQ_0124,alpha,True,True,9,0,9,All clinical facts from the original narrative are preserved.
+phi4_mini,MQ_0124,beta,True,False,7,3,10,Key clinical context including absence of trauma and aggravating factors was omitted.
+phi4_mini,MQ_0124,gamma,True,False,6,4,10,Multiple clinical symptoms and home treatments were omitted from the extraction.
+phi4_mini,MQ_0254,alpha,True,False,11,2,13,Omitted initial otoscopy finding and stable vital signs.
+phi4_mini,MQ_0254,beta,True,False,9,6,15,"The JSON missed several negative history elements, normal vitals, and specific exam details."
+phi4_mini,MQ_0254,gamma,True,False,13,3,16,Key exam and clinical status details were omitted in the structured extraction.
+phi4_mini,MQ_0231,alpha,True,False,24,4,28,Key diagnostic results including urine tox and renal Doppler were omitted.
+phi4_mini,MQ_0231,beta,True,False,17,8,25,"Key findings including adrenal mass, elevated metanephrines, and tachycardia were omitted."
+phi4_mini,MQ_0231,gamma,True,False,24,4,28,"Rewritten JSON omitted initial workplace BP, ibuprofen use, urine THC screening, and symptom duration."
+phi4_mini,MQ_0066,alpha,True,False,17,5,22,Key exam findings including upper extremity sensory deficit and ED cardiopulmonary exam were omitted.
+phi4_mini,MQ_0066,beta,True,False,14,7,21,Multiple clinical exam specifics and trauma context details were omitted from the JSON.
+phi4_mini,MQ_0066,gamma,True,False,17,6,23,"The JSON missed timeline details, collision type, upper extremity motor score, intact leg sensation, and requested diagnostic tests."
+phi4_mini,MQ_0347,alpha,True,False,14,5,19,"Social history, stable vitals, and specific symptom quantifiers were omitted."
+phi4_mini,MQ_0347,beta,True,False,14,7,21,Key clinical facts including B-symptoms like night sweats and physical exam details were omitted.
+phi4_mini,MQ_0347,gamma,True,False,14,9,23,"Key biopsy findings, social history, and specific symptom characteristics were omitted."
+phi4_mini,MQ_0022,alpha,True,False,13,2,15,Negated cardiac auscultation findings were omitted from the extraction.
+phi4_mini,MQ_0022,beta,True,False,7,6,13,"Multiple specific clinical findings, durations, and negative findings were omitted in the JSON extraction."
+phi4_mini,MQ_0022,gamma,True,False,13,3,16,"The rewritten JSON omits the exertional nature of dyspnea, explicit absence of murmurs, and the ECG test."
+phi4_mini,MQ_0603,alpha,True,True,14,0,14,All clinical facts from the original narrative are preserved in the JSON.
+phi4_mini,MQ_0603,beta,True,False,11,4,15,"The JSON missed recent Tylenol use, pleuritic pain characteristics, and specific urinalysis dipstick results."
+phi4_mini,MQ_0603,gamma,True,False,10,5,15,"Key clinical symptoms including dysuria, rigors, symptom duration, and specific urinalysis findings were omitted."
+phi4_mini,MQ_0568,alpha,True,False,10,4,14,"Key joint locations, specific UV pain symptoms, and functional impairment were omitted from the extraction."
+phi4_mini,MQ_0568,beta,True,False,6,5,11,Key clinical details including photosensitivity and fatigue were omitted from the structured extraction.
+phi4_mini,MQ_0568,gamma,True,False,7,5,12,"Key clinical details including duration, photosensitivity, alopecia, and negated flank pain are missing."
+phi4_mini,MQ_0236,alpha,True,False,10,3,13,Social history negations and coarse voice quality were omitted from the structured extraction.
+phi4_mini,MQ_0236,beta,True,False,9,5,14,"Social history, home treatments, and specific liver measurement were omitted."
+phi4_mini,MQ_0236,gamma,True,False,8,5,13,"Multiple vital signs, negative social history items, and dyspnea were omitted from the extraction."
+phi4_mini,MQ_0908,alpha,True,False,29,9,38,All urinalysis and pending culture results were omitted from the extraction.
+phi4_mini,MQ_0908,beta,True,False,29,6,35,"Multiple clinical details including negated vomiting, smoking pack-years, and home Tylenol were omitted."
+phi4_mini,MQ_0908,gamma,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+phi4_mini,MQ_0226,alpha,True,False,9,4,13,"Multiple clinical details including symptom duration, medication use, and psychiatric/social history were omitted."
+phi4_mini,MQ_0226,beta,True,False,11,3,14,"Rewritten JSON omits stool softener use, family concern of depression, and negative medical history."
+phi4_mini,MQ_0226,gamma,True,False,10,3,13,"The rewritten JSON omits stool softener use, cold hands, and negative past medical history."
+phi4_mini,MQ_0008,alpha,True,False,18,10,28,Multiple specific intraoperative vital values and diagnostic details are missing from the extraction.
+phi4_mini,MQ_0008,beta,True,False,19,8,27,"Multiple clinical history details, self-medications, and critical intraoperative findings were omitted."
+phi4_mini,MQ_0008,gamma,True,False,19,6,25,"Key clinical facts including epidemiological exposure, diagnostic ELISA, and exam specifics were omitted."
+phi4_mini,MQ_0073,alpha,True,False,34,7,41,"Multiple physical exam findings, anthropometrics, and symptom intervals were omitted from the extraction."
+phi4_mini,MQ_0073,beta,True,False,23,12,35,"Multiple clinical details, key ultrasound findings, and surgical history were omitted or misclassified."
+phi4_mini,MQ_0073,gamma,True,False,20,8,28,"Multiple clinical facts including vomiting, anthropometrics, and specific ultrasound findings are missing."
+phi4_mini,MQ_0725,alpha,True,False,10,2,12,Urinalysis findings of hematuria and RBC casts were omitted from the extraction.
+phi4_mini,MQ_0725,beta,True,False,11,2,13,Biopsy finding of arterial inflammation was altered and hypertension history was omitted from PMH.
+phi4_mini,MQ_0725,gamma,True,False,10,4,14,"Key clinical facts including duration, hypertension history, urinary casts, and negative flank pain are omitted."

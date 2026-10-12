@@ -1,0 +1,301 @@
+model,question_id,persona,agent1_parse_success,audit_pass,facts_present,facts_missing,total_facts_extracted,audit_note
+qwen25_14b,MQ_0115,alpha,True,False,18,2,20,Rewritten JSON omitted the specific trigger of sneezing and the 8-month timeframe for bulbar symptoms.
+qwen25_14b,MQ_0115,beta,True,False,15,2,17,Missing over-the-counter ibuprofen use and symptom exacerbation with sneezing.
+qwen25_14b,MQ_0115,gamma,True,False,13,5,18,"Multiple clinical durations, fatigue, electric sensations on sneezing, and spasticity were omitted or inverted."
+qwen25_14b,MQ_0301,alpha,True,False,26,2,28,Symptom duration of several weeks and room air specification were omitted.
+qwen25_14b,MQ_0301,beta,True,False,22,1,23,The narrative omitted the patient's attempted self-treatment with antacids.
+qwen25_14b,MQ_0301,gamma,True,False,14,11,25,"Multiple lab values, chronic duration, negated flank pain, and psychiatric history were omitted."
+qwen25_14b,MQ_0446,alpha,True,False,17,4,21,"Key spirometry data, smoking status, and hospitalization details were omitted from the extraction."
+qwen25_14b,MQ_0446,beta,True,False,14,9,23,"Multiple key clinical facts including spirometry results, occupational exposure, smoking status, and patient sex were omitted."
+qwen25_14b,MQ_0446,gamma,True,False,17,5,22,"The rewritten JSON omits complete pulmonary function test results, smoking status, hospitalization history, and home remedies."
+qwen25_14b,MQ_0162,alpha,True,False,25,5,30,Key diagnostic lab findings including eosinophilia and urinalysis abnormalities were omitted.
+qwen25_14b,MQ_0162,beta,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+qwen25_14b,MQ_0162,gamma,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+qwen25_14b,MQ_0465,alpha,True,False,16,9,25,"Multiple clinical details including anthropometrics, social history, and symptom aggravators were omitted."
+qwen25_14b,MQ_0465,beta,True,False,18,9,27,"Multiple clinical history elements, negative findings, and anthropometrics were omitted from the extraction."
+qwen25_14b,MQ_0465,gamma,True,False,18,6,24,"The structured extraction omits aggravating factors, morning stiffness duration, trauma history, maternal cancer history, and specific height/weight measurements."
+qwen25_14b,MQ_0004,alpha,True,False,16,2,18,Specific behavioral manifestations of disinhibition were omitted from the structured extraction.
+qwen25_14b,MQ_0004,beta,True,False,15,3,18,Key behavioral symptoms characteristic of frontotemporal dementia were omitted from the extraction.
+qwen25_14b,MQ_0004,gamma,True,False,13,5,18,"Several clinical symptoms, functional decline, and onset duration were omitted from the extraction."
+qwen25_14b,MQ_0977,alpha,True,False,8,10,18,The JSON omits critical intraoperative presentation and life-threatening complications.
+qwen25_14b,MQ_0977,beta,True,False,10,10,20,"Multiple critical intraoperative findings, vital signs, and family history details were omitted."
+qwen25_14b,MQ_0977,gamma,True,False,10,9,19,"The JSON omits patient sex, initial vitals, operative findings, diaphoresis, pupillary exam, and end-tidal CO2."
+qwen25_14b,MQ_0740,alpha,True,False,24,4,28,"Omitted platelet count, WBC differential, pulmonary exam, and stable vital signs."
+qwen25_14b,MQ_0740,beta,True,False,20,7,27,Critical lumbar puncture findings and physical exam details were omitted.
+qwen25_14b,MQ_0740,gamma,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+qwen25_14b,MQ_0897,alpha,True,False,8,2,10,Omitted treatment refractoriness and that CT was otherwise unremarkable.
+qwen25_14b,MQ_0897,beta,True,False,8,3,11,"The rewrite omitted over-the-counter Pepto-Bismol use, normal bowel imaging findings, and poor control of chronic conditions."
+qwen25_14b,MQ_0897,gamma,True,False,10,2,12,The rewrite omits that the rest of the scan was clear and that hypertension and diabetes are treatment-resistant.
+qwen25_14b,MQ_0737,alpha,True,False,14,4,18,"Multiple clinical facts including obstetric history, reassessment timing, and uterine contraction frequency were omitted."
+qwen25_14b,MQ_0737,beta,True,False,7,7,14,Multiple key intrapartum exam findings and interventions were omitted from the extraction.
+qwen25_14b,MQ_0737,gamma,True,False,11,5,16,Key intrapartum monitoring and fetal station details were omitted from the extraction.
+qwen25_14b,MQ_0270,alpha,True,False,7,6,13,Multiple clinical and behavioral history details were omitted from the JSON extraction.
+qwen25_14b,MQ_0270,beta,True,False,11,3,14,Key withdrawal symptoms and injection risk details were omitted from the extraction.
+qwen25_14b,MQ_0270,gamma,True,False,9,4,13,"The JSON missed several clinical history details including tremors, Percocet use, needle history, and functional impairment."
+qwen25_14b,MQ_0513,alpha,True,False,14,4,18,Key anthropometric measurements and initial orientation status were omitted from the extraction.
+qwen25_14b,MQ_0513,beta,True,False,9,4,13,"Key anthropometric data, dry mouth, and fatigue were omitted from extraction."
+qwen25_14b,MQ_0513,gamma,True,False,12,4,16,Key anthropometric measurements and the presenting syncope event were omitted from the extraction.
+qwen25_14b,MQ_0781,alpha,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+qwen25_14b,MQ_0781,beta,True,False,26,9,35,"Multiple clinical exam findings, interventions, and social/medication history items were omitted."
+qwen25_14b,MQ_0781,gamma,True,False,17,11,28,"Multiple clinical facts including interventions, negated free air, social history, and exam findings were omitted or incorrectly inverted."
+qwen25_14b,MQ_0183,alpha,True,False,25,3,28,"Key exam details regarding fat distribution, symptom duration, and urinalysis bacteria were omitted."
+qwen25_14b,MQ_0183,beta,True,False,20,5,25,"Multiple lab findings, a physical finding, and pertinent negatives were omitted from the extraction."
+qwen25_14b,MQ_0183,gamma,True,False,21,7,28,"Multiple negative exam findings, BMI, and several laboratory results were omitted from the extraction."
+qwen25_14b,MQ_0520,alpha,True,False,11,1,12,The presentation setting of the emergency department was omitted from the structured extraction.
+qwen25_14b,MQ_0520,beta,True,False,7,3,10,"The rewritten version omitted patient sex, prior burn cream application, and palmar skin sparing."
+qwen25_14b,MQ_0520,gamma,True,False,12,2,14,The extraction omitted the patient's female sex and negative history of trauma.
+qwen25_14b,MQ_0935,alpha,True,False,11,3,14,"The rewritten JSON omits that symptoms occurred while ambulating, ED presentation, and that past history is unavailable."
+qwen25_14b,MQ_0935,beta,True,False,10,2,12,Near-syncope and exertional nature of symptoms were omitted from the extracted JSON.
+qwen25_14b,MQ_0935,gamma,True,False,12,2,14,Omitted home herbal remedy and initial facial pallor.
+qwen25_14b,MQ_0109,alpha,True,False,10,1,11,The 4-hour duration of the patient's acute symptoms was omitted.
+qwen25_14b,MQ_0109,beta,True,False,8,5,13,"Key clinical details including symptom duration, presyncope, and specific seafood exposure were omitted."
+qwen25_14b,MQ_0109,gamma,True,False,7,5,12,"Key exposure history, symptom duration, and negative findings were omitted."
+qwen25_14b,MQ_0892,alpha,True,False,24,1,25,Blood and urine cultures pending were omitted from the extracted JSON.
+qwen25_14b,MQ_0892,beta,True,False,16,11,27,"Multiple discrete urinalysis findings, home medication, and clinical details were omitted."
+qwen25_14b,MQ_0892,gamma,True,False,16,10,26,"The rewrite omits detailed urinalysis results, prior obstetric history, and absence of contractions."
+qwen25_14b,MQ_0641,alpha,True,False,11,7,18,Multiple contextual and ethical facts regarding consent and history were omitted.
+qwen25_14b,MQ_0641,beta,True,False,10,5,15,Multiple clinical history and context details were omitted from the extraction.
+qwen25_14b,MQ_0641,gamma,True,False,6,10,16,"The JSON omits mass dimensions, diagnostic identity, vitals, and ethical conflict regarding consent."
+qwen25_14b,MQ_0306,alpha,True,False,13,5,18,"Key clinical details including obstetric history, repeat BP confirmation, and urinalysis results were omitted."
+qwen25_14b,MQ_0306,beta,True,False,15,2,17,The JSON omits primigravida status and normal urinalysis results.
+qwen25_14b,MQ_0306,gamma,True,False,16,2,18,Extraction omitted primigravida status and absent dysuria.
+qwen25_14b,MQ_0862,alpha,True,False,5,2,7,The symptom chronicity and suspected condition context were omitted from the structured extraction.
+qwen25_14b,MQ_0862,beta,True,False,4,6,10,"Key joint locations, symptom duration, frequency, and specific diagnostic concern for Crohn's were omitted."
+qwen25_14b,MQ_0862,gamma,True,False,8,3,11,"Symptom chronicity, fatigue, and specific joint locations were omitted from the extraction."
+qwen25_14b,MQ_0655,alpha,True,True,15,0,15,All clinical facts from the original narrative are preserved in the JSON.
+qwen25_14b,MQ_0655,beta,True,False,12,4,16,"Key exam findings, timing, and sexual history details were omitted from the extraction."
+qwen25_14b,MQ_0655,gamma,True,False,13,4,17,Key physical exam findings and symptom onset duration were omitted from the structured extraction.
+qwen25_14b,MQ_0986,alpha,True,False,17,1,18,The context of the injury occurring during community service was omitted.
+qwen25_14b,MQ_0986,beta,True,False,12,0,15,Social history including alcohol consumption and smoking status was omitted from the extraction.
+qwen25_14b,MQ_0986,gamma,True,False,18,2,20,The rewritten JSON omits the patient's non-smoking status and absence of dyspnea.
+qwen25_14b,MQ_0624,alpha,True,False,10,1,11,Social history regarding consistent access to care was omitted.
+qwen25_14b,MQ_0624,beta,True,False,10,2,12,The rewrite omits the absence of other symptoms and does not specify that antinuclear antibodies were positive.
+qwen25_14b,MQ_0624,gamma,True,False,3,5,8,"Key exam details, laboratory findings, and symptom course were omitted from the extraction."
+qwen25_14b,MQ_0204,alpha,True,False,9,3,12,Key obstetric history and repeat confirmatory scan details were omitted from the extraction.
+qwen25_14b,MQ_0204,beta,True,False,7,3,10,"Rewritten JSON misses obstetric parity, ordered lab tests, and confirmatory repeat ultrasound."
+qwen25_14b,MQ_0204,gamma,True,False,10,2,12,The extraction omitted obstetric parity and confirmation via repeat ultrasound.
+qwen25_14b,MQ_0157,alpha,True,False,23,2,25,Smoking status and alcohol consumption were omitted from the extraction.
+qwen25_14b,MQ_0157,beta,True,False,18,4,22,Social history risk factors and physical exam muscle tenderness were omitted from the extraction.
+qwen25_14b,MQ_0157,gamma,True,False,14,10,24,"Multiple negative hepatitis serologies, symptoms, and exam findings were omitted."
+qwen25_14b,MQ_0383,alpha,True,False,11,2,13,Non-contributory family history and timing of prior laboratory confirmation were omitted.
+qwen25_14b,MQ_0383,beta,True,False,9,4,13,"Key clinical facts including early satiety, prior endoscopy, and family history were omitted from the extraction."
+qwen25_14b,MQ_0383,gamma,True,False,12,3,15,"The rewritten JSON omits home remedies, negative family history, and the absence of flank pain."
+qwen25_14b,MQ_0988,alpha,True,False,11,1,12,Omitted the age at which the patient's mother was diagnosed with breast cancer.
+qwen25_14b,MQ_0988,beta,True,False,7,1,8,The rewritten narrative omits expressible nipple discharge on physical exam.
+qwen25_14b,MQ_0988,gamma,True,False,9,1,10,The age at which the patient's mother died of breast cancer was omitted.
+qwen25_14b,MQ_0166,alpha,True,False,18,4,22,"Key clinical details including weight, burn etiology, edema, and oxygen delivery method were omitted."
+qwen25_14b,MQ_0166,beta,True,False,14,3,17,Key clinical findings including intracompartmental pressure and oxygen therapy were omitted.
+qwen25_14b,MQ_0166,gamma,True,False,16,5,21,"Multiple key clinical facts including weight, burn injury, mobility, and oxygen therapy are missing."
+qwen25_14b,MQ_0553,alpha,True,False,12,3,15,Key clinical qualifiers and presentation setting were omitted from the structured extraction.
+qwen25_14b,MQ_0553,beta,True,False,8,6,14,Multiple pertinent negatives and psychiatric symptoms were omitted from the extraction.
+qwen25_14b,MQ_0553,gamma,True,False,9,4,13,Several DSM-5 depression criteria and manic/homicidal screening negatives were omitted from the extraction.
+qwen25_14b,MQ_0798,alpha,True,False,24,3,27,Social alcohol history and temporal stability details of chronic conditions were omitted.
+qwen25_14b,MQ_0798,beta,True,False,19,6,25,"Key details regarding symptom duration, quantitative weight loss, and smoking pack history were omitted."
+qwen25_14b,MQ_0798,gamma,True,False,20,4,24,"Multiple clinical details including symptom onset, weight loss amount, and remitted history were omitted or mischaracterized."
+qwen25_14b,MQ_0945,alpha,True,False,15,6,21,Multiple negative physical exam and urinalysis findings were omitted.
+qwen25_14b,MQ_0945,beta,True,False,14,9,23,"Multiple exam findings, urinalysis results, maternal Crohn's history, and patient sex were omitted or misattributed."
+qwen25_14b,MQ_0945,gamma,True,False,15,7,22,Multiple exam and negative findings were omitted from the structured extraction.
+qwen25_14b,MQ_0544,alpha,True,False,26,5,31,Multiple clinical details regarding emesis characteristics and urinalysis findings were omitted.
+qwen25_14b,MQ_0544,beta,True,False,21,7,28,"Multiple clinical facts including sex, birth weight, emesis character, and hunger after vomiting were omitted."
+qwen25_14b,MQ_0544,gamma,True,False,20,8,28,"Multiple clinical details including birth weight, emesis characteristics, and urine findings were omitted."
+qwen25_14b,MQ_0941,alpha,True,False,11,7,18,"Multiple physical exam findings, social history, and disposition were omitted from the extraction."
+qwen25_14b,MQ_0941,beta,True,False,20,4,24,"The JSON omits orientation status, cardiac auscultation details, admission to ICU, and time of injury."
+qwen25_14b,MQ_0941,gamma,True,False,18,5,23,"The JSON extraction omitted social history negations, orientation status, and ICU admission."
+qwen25_14b,MQ_0001,alpha,True,False,17,5,22,Multiple clinical context facts regarding medication requests and workplace epidemiology were omitted.
+qwen25_14b,MQ_0001,beta,True,False,17,3,20,"Rewritten JSON omits patient's antibiotic request, prior Tylenol use, and coworker context."
+qwen25_14b,MQ_0001,gamma,True,False,14,3,17,Several contextual epidemiological details and recent prescription refills were omitted from the extraction.
+qwen25_14b,MQ_0614,alpha,True,False,13,2,15,The symptom duration and planned warfarin discontinuation were omitted from the extraction.
+qwen25_14b,MQ_0614,beta,True,False,13,5,18,"Key clinical descriptors, acute onset duration, CT features, and medication discontinuation were omitted."
+qwen25_14b,MQ_0614,gamma,True,False,9,4,13,"Key timeline details, negative back pain findings, and warfarin discontinuation were omitted."
+qwen25_14b,MQ_0332,alpha,True,False,14,2,16,Normal vitals and the elevated nature of unconjugated bilirubin were omitted.
+qwen25_14b,MQ_0332,beta,True,False,8,4,12,"The JSON omits recurrent episode history, vitamin use, normal vitals, and normal other labs."
+qwen25_14b,MQ_0332,gamma,True,False,11,6,17,"Multiple clinical negatives, recurrence history, and unconjugated specification of bilirubin were omitted."
+qwen25_14b,MQ_0501,alpha,True,False,22,4,26,Key historical durations and negative exam findings were omitted from the extraction.
+qwen25_14b,MQ_0501,beta,True,False,18,3,21,"The rewritten JSON omits nausea, OTC cold medications, and negative exam findings."
+qwen25_14b,MQ_0501,gamma,True,False,12,6,18,"Multiple clinical timelines, orientation status, and negative physical exam findings were omitted."
+qwen25_14b,MQ_0020,alpha,True,False,11,6,17,"Multiple clinical details including residence, rash timing/location, effusion history, and lab results were omitted."
+qwen25_14b,MQ_0020,beta,True,False,11,5,16,"Key epidemiological exposure, physical findings, current topical medication, and negative microscopic findings were omitted."
+qwen25_14b,MQ_0020,gamma,True,False,12,4,16,"Key epidemiological exposure, migratory joint pattern, and negative synovial microbiology were omitted."
+qwen25_14b,MQ_1000,alpha,True,False,20,5,25,"Several birth, developmental, and growth history facts were omitted from the extraction."
+qwen25_14b,MQ_1000,beta,True,False,18,7,25,Multiple clinical history and physical exam findings were omitted from the structured extraction.
+qwen25_14b,MQ_1000,gamma,True,False,16,5,21,"Key feeding history details, birth delivery mode, family history, and lead lab value were omitted."
+qwen25_14b,MQ_0952,alpha,True,False,22,3,25,Several medical history and treatment details were omitted from the extraction.
+qwen25_14b,MQ_0952,beta,True,False,13,5,18,Key physical exam findings including snuffbox tenderness and tendon testing were omitted.
+qwen25_14b,MQ_0952,gamma,True,False,12,6,18,"Multiple clinical examination findings, mechanism of injury, and history details are missing."
+qwen25_14b,MQ_0372,alpha,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+qwen25_14b,MQ_0372,beta,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+qwen25_14b,MQ_0372,gamma,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+qwen25_14b,MQ_0900,alpha,True,False,21,2,23,Nursing home context and room air status were omitted.
+qwen25_14b,MQ_0900,beta,True,False,17,3,20,"Failed to record temperature value 102 F, nursing home residence, and recent OTC medications."
+qwen25_14b,MQ_0900,gamma,True,False,16,4,20,"Key clinical facts including acute confusion, nursing home residence, and S4 gallop were omitted."
+qwen25_14b,MQ_0852,alpha,True,False,18,7,25,"Multiple clinical details including pain qualities, wheelchair use, alcohol history, and normal cardiac exam were omitted."
+qwen25_14b,MQ_0852,beta,True,False,13,7,20,Multiple clinical history details and specific sputum characteristics were omitted from the extraction.
+qwen25_14b,MQ_0852,gamma,True,False,17,5,22,Several upper respiratory symptoms and physical exam findings were omitted from the extraction.
+qwen25_14b,MQ_0827,alpha,True,False,14,2,16,Rewritten JSON omits the inciting activity and vaginal introitus examination findings.
+qwen25_14b,MQ_0827,beta,True,False,13,4,17,"The rewrite omits recent menses timing, tearing sensation, guarding, and bimanual exam tenderness."
+qwen25_14b,MQ_0827,gamma,True,False,14,4,18,Key exam findings including adnexal tenderness and guarding were omitted.
+qwen25_14b,MQ_0315,alpha,True,False,18,2,20,Symptom duration and specific weight loss quantification were omitted from the structured extraction.
+qwen25_14b,MQ_0315,beta,True,False,15,2,17,The JSON omits anorectal tenderness on examination and specific quantified weight loss over one month.
+qwen25_14b,MQ_0315,gamma,True,False,10,5,15,"The JSON omitted tenesmus, decreased appetite, specific duration and weight metrics, and mischaracterized the colonoscopy extent."
+qwen25_14b,MQ_0246,alpha,True,False,15,4,19,"Key clinical details including fever duration, diabetes chronicity, cellulitis diagnosis, and initiated antibiotics were omitted."
+qwen25_14b,MQ_0246,beta,True,False,17,5,22,Several clinical details including cellulitis diagnosis and medication history were omitted.
+qwen25_14b,MQ_0246,gamma,True,False,15,2,17,The clinical diagnosis of cellulitis and distinct 2-day fever onset are missing.
+qwen25_14b,MQ_0060,alpha,True,False,20,5,25,"The rewritten JSON omitted all urinalysis results, housing instability, and prior deferred evaluation."
+qwen25_14b,MQ_0060,beta,True,False,19,5,24,"Urinalysis findings, cough syrup use, and housing status were omitted from the extraction."
+qwen25_14b,MQ_0060,gamma,True,False,25,2,27,Sore throat and chest pressure were omitted from the extraction.
+qwen25_14b,MQ_0247,alpha,True,False,7,2,9,Normal vitals and patient request for prophylactic management were omitted.
+qwen25_14b,MQ_0247,beta,True,False,8,1,9,Normal vitals finding was omitted from the structured extraction.
+qwen25_14b,MQ_0247,gamma,True,False,8,4,12,"Key historical details including miscarriage count, autoimmune history, normal vitals, and herbal intake were omitted."
+qwen25_14b,MQ_0958,alpha,True,False,23,12,35,The rewritten JSON omits all clinical facts regarding hospital discharge and the follow-up exercise tolerance test.
+qwen25_14b,MQ_0958,beta,True,False,18,13,31,"Multiple vital signs, hospital course details, and stress test findings were omitted from the structured extraction."
+qwen25_14b,MQ_0958,gamma,True,False,15,10,25,"Multiple vital signs, acute presentation details, and stress test findings were omitted."
+qwen25_14b,MQ_0581,alpha,True,False,17,2,19,Omitted lack of documented hyperthermia and incomplete ibuprofen efficacy.
+qwen25_14b,MQ_0581,beta,True,False,17,1,18,The structured extraction captures nearly all findings but omits morning worsening of symptoms.
+qwen25_14b,MQ_0581,gamma,True,False,12,4,16,"Rewritten JSON omitted subjective fever, stable weight, wrist involvement, and poor ibuprofen response."
+qwen25_14b,MQ_0081,alpha,True,False,24,3,27,"The JSON missed pain characteristics including quality, radiation, and postprandial exacerbation."
+qwen25_14b,MQ_0081,beta,True,False,20,5,25,Key pain characteristics and ineffective medication trials were omitted from the structured extraction.
+qwen25_14b,MQ_0081,gamma,True,False,21,4,25,"The JSON omits vomiting, pain radiation to the spine, postprandial exacerbation, and prior episodes."
+qwen25_14b,MQ_0088,alpha,True,False,20,6,26,"Multiple exam findings, negations, and symptom durations were omitted from the extraction."
+qwen25_14b,MQ_0088,beta,True,False,14,6,20,"Key clinical facts including female sex, hand tremor, visual acuity, and negated pain with eye movement were omitted."
+qwen25_14b,MQ_0088,gamma,True,False,15,5,20,"Key negatives, heat intolerance, and convergence insufficiency were omitted from the extraction."
+qwen25_14b,MQ_0750,alpha,True,False,17,3,20,Social history details and subacute timing were omitted from the extraction.
+qwen25_14b,MQ_0750,beta,True,False,13,5,18,"Multiple clinical details including medication use, exam findings, and pain localization were omitted."
+qwen25_14b,MQ_0750,gamma,True,False,16,7,23,"Multiple social history details, negated symptoms, and exam findings were omitted."
+qwen25_14b,MQ_0498,alpha,True,False,27,3,30,Arterial blood gas values and polydipsia duration were omitted.
+qwen25_14b,MQ_0498,beta,True,False,26,2,28,The JSON missed the patient's male sex and previously healthy baseline history.
+qwen25_14b,MQ_0498,gamma,True,False,25,3,28,The rewritten JSON omits the arterial blood gas results and the grandmother's home remedy.
+qwen25_14b,MQ_0836,alpha,True,False,19,3,22,"Omitted functional impact on daily living, presentation setting, and general exam appearance."
+qwen25_14b,MQ_0836,beta,True,False,13,3,16,"Rewritten JSON misses pertinent negative symptoms, negative medical history, and alcohol use."
+qwen25_14b,MQ_0836,gamma,True,False,15,3,18,"Rewritten JSON misses symptom duration, throat symptoms, and prior home remedies."
+qwen25_14b,MQ_0071,alpha,True,False,9,5,14,"Several clinical details including duration, specific odor, stress management, and family history were omitted."
+qwen25_14b,MQ_0071,beta,True,False,9,3,12,"Symptom duration, absence of excess stress, and family history were omitted from the extraction."
+qwen25_14b,MQ_0071,gamma,True,False,9,3,12,Negated back pain and specific tobacco and alcohol history were omitted from the structured extraction.
+qwen25_14b,MQ_0779,alpha,True,False,9,2,11,Missed barrier protection history and specific duration of menstrual delay.
+qwen25_14b,MQ_0779,beta,True,False,5,2,7,Key behavioral and exposure history details were omitted from the extraction.
+qwen25_14b,MQ_0779,gamma,True,False,6,4,10,"Rewritten JSON misses key durations, unprotected intercourse history, and misidentifies Trichomonas organisms as spermatozoa."
+qwen25_14b,MQ_0546,alpha,True,False,12,6,18,"Key symptom triggers, timing, and normal vital signs were omitted from extraction."
+qwen25_14b,MQ_0546,beta,True,False,9,11,20,"Multiple vital signs, urinalysis findings, and historical details were omitted."
+qwen25_14b,MQ_0546,gamma,True,False,9,9,18,"Several negative exam findings, pertinent negatives, and symptom timelines were omitted from the structured extraction."
+qwen25_14b,MQ_0785,alpha,True,False,18,9,27,"The JSON omits several negative physical exam findings, normal ultrasound comparison, and lab result interpretations."
+qwen25_14b,MQ_0785,beta,True,False,15,4,19,Lab values and normal vital signs were omitted from the structured extraction.
+qwen25_14b,MQ_0785,gamma,True,False,18,6,24,Key tumor marker findings and demographic details were omitted.
+qwen25_14b,MQ_0129,alpha,True,False,12,7,19,Key clinical details including specific delusional content and normal vitals were omitted.
+qwen25_14b,MQ_0129,beta,True,False,9,3,12,"Omitted normal vital signs, thought disorder, and emergency department presentation."
+qwen25_14b,MQ_0129,gamma,True,False,9,5,14,"Key clinical features including symptom duration, thought extraction, and flat affect were omitted."
+qwen25_14b,MQ_0132,alpha,True,False,16,1,17,All major clinical facts are preserved except that oxygen saturation was measured on room air.
+qwen25_14b,MQ_0132,beta,True,False,12,3,15,Multiple clinical details including ED sedative administration and antacid use were omitted from the structured extraction.
+qwen25_14b,MQ_0132,gamma,True,False,13,2,15,Hematemesis and chemical restraint medication were omitted from the structured extraction.
+qwen25_14b,MQ_0676,alpha,True,False,6,4,10,"Key clinical details including birth weight, negative workup, and treatment plan were omitted."
+qwen25_14b,MQ_0676,beta,True,False,5,4,9,"Multiple clinical details including birth weight, prior trial, normal labs, and prescribed treatment plan were omitted."
+qwen25_14b,MQ_0676,gamma,True,False,4,3,7,"The extracted JSON omits the patient's sex, birth weight, and prescribed occlusion therapy."
+qwen25_14b,MQ_0487,alpha,True,False,8,1,9,The near-continuous scratching reported by the mother was omitted from the structured extraction.
+qwen25_14b,MQ_0487,beta,True,False,9,2,11,Key clinical features including nocturnal worsening and sleep disruption were omitted.
+qwen25_14b,MQ_0487,gamma,True,False,6,4,10,Diagnostic testing and key clinical characteristics including perianal site and nocturnal worsening were omitted.
+qwen25_14b,MQ_0563,alpha,True,False,11,3,14,"Omitted specific frequency shift, loss of interest in walks, and spouse collateral history."
+qwen25_14b,MQ_0563,beta,True,False,7,4,11,"Key clinical details including symptom duration, straining, and failed treatments were omitted."
+qwen25_14b,MQ_0563,gamma,True,False,7,2,9,Key timeline and bowel frequency details were omitted from the structured extraction.
+qwen25_14b,MQ_0170,alpha,True,False,20,2,22,Mild hyponatremia and ambient air specification were omitted from the structured extraction.
+qwen25_14b,MQ_0170,beta,True,False,18,6,24,"The JSON omitted key exposure details, social history, lab abnormalities, and bilateral nature of infiltrates."
+qwen25_14b,MQ_0170,gamma,True,False,13,5,18,Multiple exposure history details and negative back exam findings were omitted.
+qwen25_14b,MQ_0272,alpha,True,False,8,1,9,The finding of hypercalciuria was omitted from the structured laboratory results.
+qwen25_14b,MQ_0272,beta,True,False,9,2,11,The rewritten narrative marked sex as unknown and omitted excessive urine calcium excretion.
+qwen25_14b,MQ_0272,gamma,True,False,7,3,10,"Key clinical findings including male sex, growth failure, and hypercalciuria were omitted."
+qwen25_14b,MQ_0541,alpha,True,False,12,4,16,Key quantitative and negative gastrointestinal details were omitted from the extraction.
+qwen25_14b,MQ_0541,beta,True,False,13,5,18,"The JSON extraction omitted critical bowel obstruction indicators including obstipation, lack of flatus, and bilious emesis details."
+qwen25_14b,MQ_0541,gamma,True,False,10,5,15,"The JSON missed key specifics including pain location, emesis characteristics, surgical timing, and negative flank exam findings."
+qwen25_14b,MQ_0894,alpha,True,False,9,4,13,Key physical exam findings including intact resting anal tone and normal contralateral exam were omitted.
+qwen25_14b,MQ_0894,beta,True,False,10,5,15,"Multiple clinical details including pain quality, specific numbness distribution, and resting anal tone are omitted."
+qwen25_14b,MQ_0894,gamma,True,False,12,3,15,Key timeline details and negative/gait findings were omitted from the structured extraction.
+qwen25_14b,MQ_0622,alpha,True,False,8,2,10,Symptom duration and lack of response to OTC analgesics were omitted.
+qwen25_14b,MQ_0622,beta,True,False,8,2,10,The rewritten JSON missed store-brand medications and refractory pain response.
+qwen25_14b,MQ_0622,gamma,True,False,7,3,10,Key clinical facts including headache and failed treatments were omitted.
+qwen25_14b,MQ_0434,alpha,True,False,26,5,31,"Multiple clinical details including obstetric parity, exam appearance, catheter presence, and medication history are missing."
+qwen25_14b,MQ_0434,beta,True,False,14,6,20,"Multiple clinical details including measured fever, retained catheter, and medication history were omitted."
+qwen25_14b,MQ_0434,gamma,True,False,14,6,20,"Multiple clinical details including uterine tenderness, catheterization, and obstetric history were omitted."
+qwen25_14b,MQ_0217,alpha,True,False,26,2,28,Symptom progression and the 24-hour timeframe for vocal changes were omitted from the extraction.
+qwen25_14b,MQ_0217,beta,True,False,21,4,25,"Key clinical facts including female sex, trismus, tonsillar erythema, and recent worsening were omitted."
+qwen25_14b,MQ_0217,gamma,True,False,21,4,25,"Key clinical features including trismus, voice change, and female sex were omitted."
+qwen25_14b,MQ_0971,alpha,True,False,17,2,19,Key clinical context including ambient air oxygenation and low PE suspicion were omitted.
+qwen25_14b,MQ_0971,beta,True,False,12,2,14,The rewritten JSON omits chest pain laterality and that oxygen saturation was on room air.
+qwen25_14b,MQ_0971,gamma,True,False,14,3,17,"Omitted non-productive cough, lack of respiratory distress, and home remedy."
+qwen25_14b,MQ_0774,alpha,True,False,24,7,31,"Multiple clinical details regarding symptom progression, surgical timing, social history, and exam specifics are omitted."
+qwen25_14b,MQ_0774,beta,True,False,16,8,24,Key clinical exam and history details including vaginal urine pooling and menstrual history were omitted.
+qwen25_14b,MQ_0774,gamma,True,False,15,5,20,Multiple clinical details including exam pooling and negative urinalysis results were omitted.
+qwen25_14b,MQ_0748,alpha,True,False,10,4,14,Growth percentiles and LH reference range were omitted from the extraction.
+qwen25_14b,MQ_0748,beta,True,False,9,3,12,"Missing family history, historically high height/weight, and absence of leg hair."
+qwen25_14b,MQ_0748,gamma,True,False,12,2,14,Growth percentiles for height and weight were omitted from the extraction.
+qwen25_14b,MQ_0707,alpha,True,False,7,5,12,Key immunologic labs and obstetric history elements are missing from the extraction.
+qwen25_14b,MQ_0707,beta,True,False,8,5,13,Key immunohematology lab results and transfusion history were omitted from the extraction.
+qwen25_14b,MQ_0707,gamma,True,False,7,7,14,"Key clinical facts including maternal age, prenatal care status, and positive direct/indirect Coombs test results were omitted."
+qwen25_14b,MQ_0206,alpha,True,False,13,2,15,Omitted lifelong symptom chronicity and average daily sleep duration.
+qwen25_14b,MQ_0206,beta,True,False,10,2,12,The rewritten extraction omits the patient's daily sleep duration and specific car crash history.
+qwen25_14b,MQ_0206,gamma,True,False,14,4,18,Several negated symptoms and sleep habits from the original narrative were omitted from the extraction.
+qwen25_14b,MQ_0731,alpha,True,False,22,4,26,Key asthma severity classification details regarding baseline and current medication frequency were omitted.
+qwen25_14b,MQ_0731,beta,True,False,14,6,20,Key clinical metrics including peak flow and nighttime awakenings were omitted from the extraction.
+qwen25_14b,MQ_0731,gamma,True,False,17,3,20,"The JSON captures primary findings but omits nocturnal dyspnea, reflux symptoms, and vomiting."
+qwen25_14b,MQ_0320,alpha,True,False,13,2,15,The JSON missed the normal ECG and the exacerbation of pain from nitroglycerin.
+qwen25_14b,MQ_0320,beta,True,False,8,6,14,"Multiple clinical tests, procedures, and response to nitroglycerin were omitted."
+qwen25_14b,MQ_0320,gamma,True,False,13,2,15,The JSON missed the 1-year symptom duration and the worsening of chest pain after sublingual medication.
+qwen25_14b,MQ_0409,alpha,True,False,18,3,21,Several clinical details including BMI and emesis frequency were omitted from the extraction.
+qwen25_14b,MQ_0409,beta,True,False,12,6,18,"Multiple clinical facts including sex, medication trial, and specific exam findings were omitted."
+qwen25_14b,MQ_0409,gamma,True,False,11,7,18,"Multiple clinical facts including male sex, polydipsia, vomiting, and respirations were omitted."
+qwen25_14b,MQ_0688,alpha,True,False,27,7,34,"Key clinical details including imaging findings, BMI, social history, and pain characteristics were omitted."
+qwen25_14b,MQ_0688,beta,True,False,21,7,28,"Multiple clinical facts including social history, BMI, and pain severity were omitted from the extraction."
+qwen25_14b,MQ_0688,gamma,True,False,22,4,26,"Social history, BMI, and absence of vomiting were omitted from the extraction."
+qwen25_14b,MQ_0666,alpha,True,False,8,4,12,Key medication and functional impairment details were omitted from the structured extraction.
+qwen25_14b,MQ_0666,beta,True,False,6,3,9,Key clinical chronology and family history details were omitted from the extraction.
+qwen25_14b,MQ_0666,gamma,True,False,7,3,10,"The JSON omits family history status, cognitive history, and functional impairment."
+qwen25_14b,MQ_0974,alpha,True,False,22,4,26,Key functional decline and medication compliance details were omitted from the extraction.
+qwen25_14b,MQ_0974,beta,True,False,20,2,22,Rewritten extraction missed accessory muscle use and smoking cessation timeframe.
+qwen25_14b,MQ_0974,gamma,True,False,20,3,23,"Rewritten JSON omits hypertension, recent duration of symptoms, and absence of back pain."
+qwen25_14b,MQ_0449,alpha,True,False,21,5,26,"Sputum description, exact weight loss amount, normal exam findings, and urinalysis were omitted."
+qwen25_14b,MQ_0449,beta,True,False,20,6,26,Key clinical history details including travel/immigration and urinalysis were omitted from the extraction.
+qwen25_14b,MQ_0449,gamma,True,False,20,5,25,"Omitted immigration history, specific weight loss amount, cardiac and flank exam findings, and normal urinalysis."
+qwen25_14b,MQ_0530,alpha,True,False,17,4,21,Multiple clinical details including ecchymosis and negative Homan's sign were omitted from the extraction.
+qwen25_14b,MQ_0530,beta,True,False,16,4,20,"Rewritten JSON misses initial bruising, hot soaks, tenderness to palpation, and sedentary lifestyle."
+qwen25_14b,MQ_0530,gamma,True,False,19,2,21,The structured extraction omitted the patient's sedentary lifestyle and home treatment attempt.
+qwen25_14b,MQ_0463,alpha,True,False,9,6,15,"Key clinical details including contact lens use, slit lamp exam, and negative findings were omitted."
+qwen25_14b,MQ_0463,beta,True,False,10,6,16,Multiple clinical facts including contact lens wear and exam details were omitted.
+qwen25_14b,MQ_0463,gamma,True,False,10,6,16,"Multiple clinical details including contact lens use, photophobia, and normal vitals are omitted."
+qwen25_14b,MQ_0124,alpha,True,False,8,1,9,The imaging modality of lumbar spine MRI was omitted from the extraction.
+qwen25_14b,MQ_0124,beta,True,False,11,2,13,Key clinical details including absence of trauma and exacerbation with standing were omitted.
+qwen25_14b,MQ_0124,gamma,True,False,6,4,10,"Multiple clinical facts including absence of trauma, absence of dysuria, and specific imaging findings were omitted or altered."
+qwen25_14b,MQ_0254,alpha,True,False,12,3,15,"Key prior exam finding, vital sign stability, and symptom laterality were omitted."
+qwen25_14b,MQ_0254,beta,True,False,8,7,15,"The JSON extraction misidentified patient sex and omitted several exam, history, and medication details."
+qwen25_14b,MQ_0254,gamma,True,False,8,4,12,"The JSON missed female sex, middle ear effusion, vital sign stability, and negative history of chronic congestion."
+qwen25_14b,MQ_0231,alpha,True,False,26,5,31,"Multiple clinical details including prior screening BP, drug responsiveness, urine tox, and Doppler results were omitted."
+qwen25_14b,MQ_0231,beta,True,False,22,5,27,"The rewritten JSON omits prior blood pressure, substance use details, and normal renal ultrasound findings."
+qwen25_14b,MQ_0231,gamma,True,False,27,4,31,"The JSON omitted the initial screening blood pressure, alcohol history, smoking quantity, and symptom duration."
+qwen25_14b,MQ_0066,alpha,True,False,12,6,18,"ED vitals, exam details, and ordered diagnostic tests were omitted."
+qwen25_14b,MQ_0066,beta,True,False,18,4,22,Several physical exam findings and workup orders were omitted.
+qwen25_14b,MQ_0066,gamma,True,False,16,4,20,Key psychiatric history and ordered workup details were omitted from the structured extraction.
+qwen25_14b,MQ_0347,alpha,True,False,16,6,22,"Key histopathology findings, symptom durations, and vitals status were omitted from the extraction."
+qwen25_14b,MQ_0347,beta,True,False,13,7,20,"Multiple clinical details including exam characteristics, social history, and medications were omitted."
+qwen25_14b,MQ_0347,gamma,True,False,17,5,22,"Key pathology findings, CD20 positivity, and specific symptom durations were omitted."
+qwen25_14b,MQ_0022,alpha,True,False,13,2,15,Cardiac auscultation findings showing absent murmurs and bruits were omitted.
+qwen25_14b,MQ_0022,beta,True,False,7,5,12,"Key echocardiogram findings, fatigue, and negative exam details were omitted."
+qwen25_14b,MQ_0022,gamma,True,False,8,4,12,"Key clinical details including symptom duration, pulmonary edema, left ventricular dilation, and absent back pain were omitted."
+qwen25_14b,MQ_0603,alpha,True,True,15,0,15,All clinical facts from the original narrative are successfully captured.
+qwen25_14b,MQ_0603,beta,True,False,13,4,17,"The rewritten JSON omits recent Tylenol use, respiratory pain exacerbation, posturing, and positive urine nitrites."
+qwen25_14b,MQ_0603,gamma,True,False,14,2,16,The rewrite omits the two-day symptom duration and dysuria.
+qwen25_14b,MQ_0568,alpha,True,False,10,4,14,"Specific joint locations, UV-induced pain, and functional impairment were omitted."
+qwen25_14b,MQ_0568,beta,True,False,9,2,11,Omitted systemic fatigue and rash worsening with sun exposure.
+qwen25_14b,MQ_0568,gamma,True,False,9,3,12,Key clinical details including photosensitivity and symptom duration were omitted.
+qwen25_14b,MQ_0236,alpha,True,False,11,2,13,The 5-month duration and irregularly irregular rhythm were omitted from the structured extraction.
+qwen25_14b,MQ_0236,beta,True,False,9,3,12,"Key clinical details including irregular rhythm, specific liver measurement, and failed home remedies were omitted."
+qwen25_14b,MQ_0236,gamma,True,False,12,1,13,Home remedy of turmeric and ghee compresses was omitted from the extraction.
+qwen25_14b,MQ_0908,alpha,True,False,31,7,38,Key urinalysis findings and pending culture orders were omitted from the extraction.
+qwen25_14b,MQ_0908,beta,True,False,26,10,36,Multiple discrete clinical facts including complete urinalysis findings and exam details were omitted.
+qwen25_14b,MQ_0908,gamma,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+qwen25_14b,MQ_0226,alpha,True,False,12,2,14,Key symptom duration and neuropsychiatric changes were omitted from the extraction.
+qwen25_14b,MQ_0226,beta,True,False,11,2,13,Rewritten JSON omits negative medical history and family concern for depression.
+qwen25_14b,MQ_0226,gamma,True,False,11,3,14,"Rewritten JSON omits cold hands, bone pain, and non-tender left back."
+qwen25_14b,MQ_0008,alpha,True,False,23,9,32,"Multiple procedural details, intraoperative events, and diagnostic findings were omitted."
+qwen25_14b,MQ_0008,beta,True,False,15,7,22,"Key clinical details including blood pressure readings, medication attempts, dog exposure, and intraoperative breath sounds were omitted."
+qwen25_14b,MQ_0008,gamma,True,False,17,8,25,"Key clinical facts including hydatid exposure risk, serology, and bronchospasm signs were omitted."
+qwen25_14b,MQ_0073,alpha,True,False,26,10,36,"Multiple physical exam findings, negative ultrasound signs, and timing details were omitted."
+qwen25_14b,MQ_0073,beta,True,False,26,8,34,"Multiple exam, history, and ultrasound findings were omitted from the structured extraction."
+qwen25_14b,MQ_0073,gamma,True,False,24,11,35,"Multiple anthropometric, physical exam, stool test, and imaging details were omitted."
+qwen25_14b,MQ_0725,alpha,True,False,9,3,12,Key urinalysis findings and cANCA positivity were omitted.
+qwen25_14b,MQ_0725,beta,True,False,11,2,13,The rewritten JSON missed ineffective OTC trials and subjective chest heaviness.
+qwen25_14b,MQ_0725,gamma,True,False,11,4,15,"Key details including cough duration, urinary casts, and negated flank pain were omitted from the extraction."

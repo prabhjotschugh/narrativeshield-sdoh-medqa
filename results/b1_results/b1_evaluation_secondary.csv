@@ -1,0 +1,13 @@
+Model,N,Bonferroni alpha,kappa ab,kappa ag,kappa bg,"McNemar p (a,b)","McNemar p (a,b) [raw 0.05]","McNemar p (a,b) [Bonferroni]","McNemar p (a,g)","McNemar p (a,g) [raw 0.05]","McNemar p (a,g) [Bonferroni]","McNemar p (b,g)","McNemar p (b,g) [raw 0.05]","McNemar p (b,g) [Bonferroni]",DSS mean (raw),DSS mean (stripped),DSS<0.8 cases,DSS<0.8 (%)
+llama32_3b,1000,0.01667 (n_tests=3),0.3944,0.4617,0.5497,0.0000,SIG,SIG,0.0000,SIG,SIG,0.0077,SIG,SIG,0.8157,0.8157,434,43.40%
+medgemma_4b,1000,0.01667 (n_tests=3),0.4336,0.3883,0.4704,0.0000,SIG,SIG,0.0000,SIG,SIG,0.0164,SIG,SIG,0.8475,0.8475,454,45.40%
+phi4_mini,1000,0.01667 (n_tests=3),0.4890,0.4815,0.5376,0.0000,SIG,SIG,0.0000,SIG,SIG,0.2363,ns,ns,0.7476,0.7476,497,49.70%
+qwen25_7b,1000,0.01667 (n_tests=3),0.4998,0.5088,0.5766,0.0000,SIG,SIG,0.0000,SIG,SIG,0.4087,ns,ns,0.8893,0.8893,373,37.30%
+mistral7b,1000,0.01667 (n_tests=3),0.4918,0.5083,0.5500,0.0003,SIG,SIG,0.0000,SIG,SIG,0.5476,ns,ns,0.7577,0.7577,491,49.10%
+qwen3_8b,1000,0.01667 (n_tests=3),0.4461,0.4579,0.5575,0.0000,SIG,SIG,0.0000,SIG,SIG,0.3786,ns,ns,0.6195,0.6195,809,80.90%
+ministral8b,1000,0.01667 (n_tests=3),0.5008,0.5180,0.5597,0.0000,SIG,SIG,0.0000,SIG,SIG,0.7360,ns,ns,0.6472,0.6472,810,81.00%
+llama31_8b,1000,0.01667 (n_tests=3),0.4327,0.3904,0.5349,0.0000,SIG,SIG,0.0000,SIG,SIG,0.0092,SIG,SIG,0.8731,0.8731,408,40.80%
+openbiollm_8b,1000,0.01667 (n_tests=3),0.4792,0.4535,0.5363,0.0030,SIG,SIG,0.0000,SIG,SIG,0.0030,SIG,SIG,0.6966,0.6966,652,65.20%
+gemma3_12b,1000,0.01667 (n_tests=3),0.5032,0.4402,0.5218,0.0000,SIG,SIG,0.0000,SIG,SIG,0.1327,ns,ns,0.8894,0.8894,378,37.80%
+qwen25_14b,1000,0.01667 (n_tests=3),0.4999,0.5437,0.5748,0.0000,SIG,SIG,0.0000,SIG,SIG,0.5763,ns,ns,0.7116,0.7116,717,71.70%
+mistral_small_24b,1000,0.01667 (n_tests=3),0.4869,0.4734,0.5538,0.0000,SIG,SIG,0.0000,SIG,SIG,0.0181,SIG,ns,0.8973,0.8973,333,33.30%

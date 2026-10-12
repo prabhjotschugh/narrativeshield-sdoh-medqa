@@ -1,0 +1,79 @@
+=== Condition summary (OpenBioLLM excluded; full = 8 models with 1000 rows) ===
+              label  n_models     a  marked  overall   gap   nag  n_nag_sig  pooled  pooled_lo  pooled_hi  gap_red  n_gap_red_sig  d_acc  n_acc_better  n_acc_worse  d_alpha  d_marked  n_marked_better  n_marked_worse  kappa  recovered  broken  parse
+          B1 direct        11 0.645   0.547    0.579 0.098 0.110         11  -9.841    -11.264     -8.417      NaN            NaN    NaN           NaN          NaN      NaN       NaN              NaN             NaN  0.566        NaN     NaN  0.993
+             B2 CoT        11 0.676   0.586    0.616 0.090 0.102         11  -8.959    -10.266     -7.652    0.009            0.0  0.037           8.0          0.0    0.031     0.040              7.0             0.0  0.546      0.409   0.174  0.994
+          B3 debias        11 0.632   0.547    0.576 0.085 0.093         11  -8.486     -9.862     -7.110    0.014            3.0 -0.004           2.0          2.0   -0.013     0.001              2.0             2.0  0.585      0.181   0.086  0.998
+      B4 CoT+debias        11 0.663   0.587    0.612 0.077 0.088         11  -7.668     -8.882     -6.454    0.022            3.0  0.033           8.0          1.0    0.018     0.040              8.0             0.0  0.557      0.442   0.184  0.998
+Extract-then-Reason        11 0.564   0.515    0.531 0.049 0.056         11  -4.891     -5.890     -3.892    0.050            7.0 -0.049           0.0          9.0   -0.082    -0.032              0.0             6.0  0.639      0.434   0.275  0.982
+      +Reason agent        11 0.554   0.513    0.527 0.041 0.047         10  -4.055     -5.037     -3.072    0.058           10.0 -0.053           0.0          8.0   -0.091    -0.034              0.0             5.0  0.578      0.438   0.312  1.000
+      +Tools (full)        11 0.535   0.495    0.508 0.040 0.047         10  -4.045     -5.009     -3.082    0.058            7.0 -0.071           0.0         11.0   -0.110    -0.052              0.0             8.0  0.577      0.417   0.342  1.000
+         Story+Form        11 0.626   0.561    0.583 0.065 0.076         11  -6.532     -7.718     -5.345    0.033            7.0  0.003           2.0          1.0   -0.019     0.014              4.0             0.0  0.635      0.354   0.151  1.000
+Rewrite-then-Reason        11 0.633   0.586    0.602 0.047 0.058         11  -4.745     -5.665     -3.826    0.051            8.0  0.022           6.0          1.0   -0.012     0.039              7.0             1.0  0.660      0.568   0.198  0.998
+
+B1, 12 models: a 0.635 b 0.546 g 0.531 NAG 0.109 sig 12/12; pooled -9.6 [-11.0,-8.2]
+  min p over alpha-vs-marked McNemar (12 models): max p = 0.0029; Bonferroni 0.0167
+
+=== Rewrite-then-Reason vs each condition (per-model paired bootstrap, 11 models) ===
+                ref  gap_red  gap_better  gap_worse  d_acc  acc_better  acc_worse  d_marked  marked_better  marked_worse
+          B1 direct    0.051           8          0  0.022           6          1     0.039              8             1
+             B2 CoT    0.042           7          0 -0.015           1          4    -0.001              2             2
+          B3 debias    0.037           7          0  0.026           6          0     0.038              8             0
+      B4 CoT+debias    0.029           4          0 -0.011           0          2    -0.001              1             1
+Extract-then-Reason    0.001           0          0  0.071          11          0     0.071             11             0
+      +Reason agent   -0.007           0          0  0.075          11          0     0.073             11             0
+         Story+Form    0.018           3          0  0.019           5          0     0.025              5             0
+
+=== Per model: B1 vs Rewrite-then-Reason ===
+            model  size  b1_a  b1_marked  b1_gap  b1_nag  rw_a  rw_marked  rw_gap  rw_nag  rw_nag_lo  rw_nag_hi  gap_red  gap_red_lo  d_acc  d_acc_lo  d_acc_hi  d_marked  rw_parse  b1_kappa  rw_kappa
+       llama32_3b     3 0.668      0.524   0.144   0.164 0.654      0.601   0.053   0.061      0.035      0.092    0.090       0.058  0.046     0.026     0.066     0.076     1.000     0.546     0.609
+      medgemma_4b     4 0.667      0.534   0.133   0.153 0.638      0.565   0.073   0.088      0.061      0.115    0.060       0.030  0.011    -0.008     0.029     0.031     1.000     0.529     0.632
+        phi4_mini     4 0.562      0.482   0.080   0.089 0.553      0.500   0.054   0.058      0.032      0.090    0.026      -0.009  0.008    -0.012     0.029     0.017     0.999     0.529     0.536
+        qwen25_7b     7 0.614      0.530   0.084   0.091 0.613      0.569   0.044   0.054      0.030      0.080    0.040       0.012  0.026     0.009     0.043     0.040     1.000     0.570     0.671
+        mistral7b     7 0.530      0.466   0.064   0.069 0.538      0.487   0.051   0.051      0.031      0.083    0.013      -0.020  0.017    -0.002     0.036     0.021     1.000     0.532     0.578
+         qwen3_8b     8 0.650      0.561   0.089   0.096 0.661      0.636   0.026   0.039      0.012      0.066    0.064       0.030  0.053     0.035     0.071     0.074     0.999     0.553     0.688
+      ministral8b     8 0.595      0.514   0.081   0.084 0.547      0.488   0.059   0.077      0.051      0.104    0.022      -0.009 -0.033    -0.054    -0.012    -0.026     0.980     0.573     0.654
+       llama31_8b     8 0.729      0.598   0.131   0.151 0.706      0.669   0.037   0.056      0.030      0.082    0.094       0.064  0.039     0.021     0.057     0.070     0.999     0.566     0.700
+    openbiollm_8b     8 0.522      0.450   0.072   0.095 0.109      0.088   0.021   0.022      0.004      0.048    0.051       0.016 -0.379    -0.403    -0.354    -0.362     0.234     0.476     0.333
+       gemma3_12b    12 0.657      0.574   0.083   0.095 0.633      0.598   0.035   0.053      0.029      0.078    0.048       0.022  0.008    -0.009     0.026     0.024     1.000     0.572     0.704
+       qwen25_14b    14 0.672      0.594   0.078   0.082 0.687      0.655   0.032   0.037      0.017      0.061    0.045       0.019  0.045     0.028     0.063     0.060     1.000     0.617     0.757
+mistral_small_24b    24 0.752      0.636   0.117   0.134 0.735      0.677   0.058   0.063      0.043      0.087    0.058       0.029  0.022     0.004     0.040     0.042     0.999     0.636     0.737
+corr(size, gap reduction) = -0.01; corr(size, acc change) = 0.04
+corr(B1 gap, gap reduction) = 0.86  (bigger bias -> bigger fix?)
+share of B1 gap removed, per model: mean 0.50, range 0.20 to 0.71
+Rewrite-then-Reason    change vs B1: beta +4.2  gamma +3.6 points
+Story+Form             change vs B1: beta +1.9  gamma +1.0 points
+Extract-then-Reason    change vs B1: beta -3.1  gamma -3.3 points
+B4 CoT+debias          change vs B1: beta +4.5  gamma +3.5 points
+
+=== Gap on controlled subsets (11 models) ===
+cond                        B1 direct  B4 CoT+debias  Extract-then-Reason  Rewrite-then-Reason  Story+Form
+subset                                                                                                    
+<=1 relevant addition           0.096          0.066                0.046                0.046       0.057
+age explicit both               0.089          0.074                0.042                0.042       0.061
+all                             0.098          0.077                0.049                0.047       0.065
+beta superset (alpha-beta)      0.070          0.031                0.029                0.031       0.060
+shorter half                    0.098          0.071                0.049                0.050       0.059
+strict clean                    0.072          0.063                0.038                0.052       0.054
+test split                      0.092          0.074                0.066                0.058       0.072
+
+=== Rewrite properties (all 12 models) ===
+           words    age  dx_leak  not_specified
+persona                                        
+alpha    119.188  1.000    0.088          0.088
+beta     174.181  0.937    0.096          0.101
+gamma    167.035  0.950    0.149          0.112
+source narrative words: {'alpha': 117, 'beta': 261, 'gamma': 301} original vignette: 137
+rewrite gap when the rewrites of both marked voices state the age: 0.046 (n=10103); when at least one omits it: 0.066 (n=897)
+  beta: rewrite states age in 0.937; when source states it 0.946, when source does not 0.928
+  gamma: rewrite states age in 0.950; when source states it 0.965, when source does not 0.933
+
+Oracle reference (reasoner saw JSON + original clinical vignette): a 0.619 marked 0.606 overall 0.610 gap 0.013
+
+=== Latency (s per question, 3 voices; mean over 11 models) ===
+  agent1only   0.7  (n models 11)
+  notool       35.3  (n models 11)
+  full         38.1  (n models 11)
+  storyform    0.7  (n models 11)
+  rewrite      28.3  (n models 11)
+
+Note: latency for agent1only/notool/full v2 excludes Agent-1 extraction (reused from the earlier run); add the earlier Agent-1 time when reporting.

@@ -5,13 +5,19 @@ One script, one model per SLURM job.
 
 Usage
 -----
-  python run_b3.py --model llama31
+  python run_b3.py --model llama32_3b
+  python run_b3.py --model medgemma_4b
+  python run_b3.py --model phi4_mini
+  python run_b3.py --model qwen25_7b
   python run_b3.py --model mistral7b
-  python run_b3.py --model qwen25
+  python run_b3.py --model qwen3_8b
+  python run_b3.py --model ministral8b
+  python run_b3.py --model llama31_8b
+  python run_b3.py --model openbiollm_8b
   python run_b3.py --model gemma3_12b
-  python run_b3.py --model gemma4_e4b
-  python run_b3.py --model biomistral
-  python run_b3.py --model llama32
+  python run_b3.py --model qwen25_14b
+  python run_b3.py --model mistral_small_24b
+  python run_b3.py --model llama31_8b_base
 
 Architecture
 ------------
@@ -34,10 +40,13 @@ Instruct models:
   User turn: identical to B1 (narrative + options + "Provide only the single
      correct letter.")
 
-BioMistral (base model — no chat template):
+llama31_8b_base (meta-llama/Llama-3.1-8B — base model, no chat template):
   The debiasing instruction is prepended as a strong directive line before
   the question in a raw completion format, using the same few-shot pattern
-  as B2 so the output format is consistent.
+  as B2 so the output format is consistent. (This mechanism was originally
+  built for BioMistral, which had no chat template; BioMistral is dropped
+  from the registry, and the same directive-prefix completion-prompting
+  path is reused here for the new base-model stress-test condition.)
 
 Parser
 ------
@@ -55,8 +64,17 @@ Output
 # CACHE REDIRECT — before any HuggingFace import
 # ─────────────────────────────────────────────────────────────────────────────
 import os
+import shutil
 
-SCRATCH_BASE = "/scratch/10778/prabhjotschugh"
+# HPC (aarch64 GH nodes) defaults CC to NVIDIA's `nvc`, which Triton then uses
+# to JIT-compile helpers and chokes on gcc-only flags (-Wno-psabi), crashing
+# generate(). Force gcc before torch/transformers are imported.
+_gcc = shutil.which("gcc")
+if _gcc:
+    os.environ["CC"] = _gcc
+    os.environ["CXX"] = shutil.which("g++") or _gcc
+
+SCRATCH_BASE = "/path/to/scratch"
 HF_CACHE_DIR = f"{SCRATCH_BASE}/hf_cache"
 OUTPUT_DIR   = f"{SCRATCH_BASE}/b3_results"
 os.makedirs(HF_CACHE_DIR, exist_ok=True)
@@ -89,7 +107,6 @@ from huggingface_hub import login, snapshot_download
 from torch.utils.data import DataLoader, Dataset
 from tqdm import tqdm
 from transformers import (
-    AutoModelForImageTextToText,
     AutoProcessor,
     Gemma3ForConditionalGeneration,
     pipeline,
@@ -103,7 +120,7 @@ torch.backends.cudnn.allow_tf32       = True
 # CONFIGURATION
 # ─────────────────────────────────────────────────────────────────────────────
 HF_TOKEN            = os.getenv("HF_TOKEN", "YOUR_HF_TOKEN_HERE")
-DATASET_NAME        = "Prabhjotschugh/narrativeshield-sdoh-medqa"
+DATASET_NAME        = os.environ.get("DATASET_NAME", os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "dataset", "medqa_1000.csv"))
 MAX_NEW_TOKENS      = 128    # same as B1 — no CoT, direct answer expected
 QUESTIONS_PER_CHUNK = 16
 NUM_WORKERS         = 4
@@ -123,62 +140,143 @@ DEBIASING_SYSTEM_PROMPT = (
     "influence your reasoning."
 )
 
-# For BioMistral (base model): prepended as a directive line in raw text
-BIOMISTRAL_DEBIASING_PREFIX = (
+# For llama31_8b_base (base model): prepended as a directive line in raw
+# text. Originally named BIOMISTRAL_DEBIASING_PREFIX — repurposed from
+# BioMistral (dropped from the registry) for the new base-model condition.
+BASE_MODEL_DEBIASING_PREFIX = (
     "INSTRUCTION: Ignore how the patient describes their symptoms. "
     "Focus exclusively on the objective clinical facts, test results, and "
     "medical history. Do not let the patient's language style, health "
     "literacy, or cultural framing influence your reasoning.\n\n"
 )
 
+# Worked examples for the base model. A base (non-instruct) model does not
+# follow "provide only the single correct letter"; without examples it just
+# continues the text (the first B3 run scored 0.5% with 2% parsed). Two short
+# direct-answer examples teach the format "Answer: X" (no reasoning, as in B3).
+BASE_MODEL_FEW_SHOT_B3 = (
+    "The following are medical multiple-choice questions. Give only the letter of the correct answer.\n\n"
+    "Question: A 45-year-old man presents with severe chest pain radiating to the left arm, diaphoresis, "
+    "and nausea for the past 30 minutes. ECG shows ST-segment elevation in leads II, III, and aVF. "
+    "What is the most appropriate immediate management?\n\n"
+    "Options:\n"
+    "A: Administer oral aspirin and arrange outpatient cardiology follow-up\n"
+    "B: Perform immediate percutaneous coronary intervention (PCI)\n"
+    "C: Start intravenous heparin and monitor\n"
+    "D: Prescribe nitrates and discharge\n"
+    "Answer: B\n\n"
+    "Question: A 7-year-old boy is brought in by his mother for a 3-day history of sore throat, fever of "
+    "38.9 C, and difficulty swallowing. Physical examination reveals tonsillar exudates and tender anterior "
+    "cervical lymphadenopathy. Rapid strep test is positive. What is the most appropriate treatment?\n\n"
+    "Options:\n"
+    "A: Supportive care with antipyretics only\n"
+    "B: Amoxicillin for 10 days\n"
+    "C: Azithromycin for 3 days\n"
+    "D: Watchful waiting with repeat culture in 48 hours\n"
+    "Answer: B\n\n"
+)
+
+
+def build_base_completion_prompt(narrative: str, options: dict) -> str:
+    """B3 prompt for llama31_8b_base: debiasing directive, two examples, then the test case."""
+    body = BASE_MODEL_DEBIASING_PREFIX + BASE_MODEL_FEW_SHOT_B3
+    body += "Question: " + narrative + "\n\nOptions:\n"
+    for k, v in options.items():
+        body += f"{k}: {v}\n"
+    body += "Answer:"
+    return body
+
 # ─────────────────────────────────────────────────────────────────────────────
 # MODEL REGISTRY
 # key → (repo_id, output_file, load_strategy, model_type)
 # ─────────────────────────────────────────────────────────────────────────────
 MODEL_REGISTRY = {
-    "llama31":    (
-        "meta-llama/Llama-3.1-8B-Instruct",
-        f"{OUTPUT_DIR}/results_B3_llama31.jsonl",
-        "pipeline_text",
-        "instruct",
-    ),
-    "llama32":    (
+    "llama32_3b":         (
         "meta-llama/Llama-3.2-3B-Instruct",
-        f"{OUTPUT_DIR}/results_B3_llama32.jsonl",
+        f"{OUTPUT_DIR}/results_B3_llama32_3b.jsonl",
         "pipeline_text",
         "instruct",
     ),
-    "mistral7b":  (
+    "medgemma_4b":        (
+        "google/medgemma-4b-it",
+        f"{OUTPUT_DIR}/results_B3_medgemma_4b.jsonl",
+        "medgemma_manual",
+        "instruct",
+    ),
+    "phi4_mini":          (
+        "microsoft/Phi-4-mini-instruct",
+        f"{OUTPUT_DIR}/results_B3_phi4_mini.jsonl",
+        "pipeline_text",
+        "instruct",
+    ),
+    "qwen25_7b":          (
+        "Qwen/Qwen2.5-7B-Instruct",
+        f"{OUTPUT_DIR}/results_B3_qwen25_7b.jsonl",
+        "pipeline_text",
+        "instruct",
+    ),
+    "mistral7b":          (
         "mistralai/Mistral-7B-Instruct-v0.3",
         f"{OUTPUT_DIR}/results_B3_mistral7b.jsonl",
         "pipeline_text",
         "instruct",
     ),
-    "qwen25":     (
-        "Qwen/Qwen2.5-7B-Instruct",
-        f"{OUTPUT_DIR}/results_B3_qwen25.jsonl",
+    "qwen3_8b":           (
+        "Qwen/Qwen3-8B",
+        f"{OUTPUT_DIR}/results_B3_qwen3_8b.jsonl",
         "pipeline_text",
         "instruct",
     ),
-    "gemma3_12b": (
+    "ministral8b":        (
+        "mistralai/Ministral-8B-Instruct-2410",
+        f"{OUTPUT_DIR}/results_B3_ministral8b.jsonl",
+        "pipeline_text",
+        "instruct",
+    ),
+    "llama31_8b":         (
+        "meta-llama/Llama-3.1-8B-Instruct",
+        f"{OUTPUT_DIR}/results_B3_llama31_8b.jsonl",
+        "pipeline_text",
+        "instruct",
+    ),
+    "openbiollm_8b":      (
+        "aaditya/Llama3-OpenBioLLM-8B",
+        f"{OUTPUT_DIR}/results_B3_openbiollm_8b.jsonl",
+        "pipeline_text",
+        "instruct",
+    ),
+    "gemma3_12b":         (
         "google/gemma-3-12b-it",
         f"{OUTPUT_DIR}/results_B3_gemma3_12b.jsonl",
         "gemma3_manual",
         "instruct",
     ),
-    "gemma4_e4b": (
-        "google/gemma-4-E4B-it",
-        f"{OUTPUT_DIR}/results_B3_gemma4_e4b.jsonl",
-        "gemma4_manual",
+    "qwen25_14b":         (
+        "Qwen/Qwen2.5-14B-Instruct",
+        f"{OUTPUT_DIR}/results_B3_qwen25_14b.jsonl",
+        "pipeline_text",
         "instruct",
     ),
-    "biomistral": (
-        "BioMistral/BioMistral-7B",
-        f"{OUTPUT_DIR}/results_B3_biomistral.jsonl",
+    "mistral_small_24b":  (
+        "mistralai/Mistral-Small-24B-Instruct-2501",
+        f"{OUTPUT_DIR}/results_B3_mistral_small_24b.jsonl",
         "pipeline_text",
+        "instruct",
+    ),
+    "llama31_8b_base":    (
+        "meta-llama/Llama-3.1-8B",
+        f"{OUTPUT_DIR}/results_B3_llama31_8b_base.jsonl",
+        "pipeline_text",   # same loader as instruct models — the "base"
+                           # model_type flag below routes it to the
+                           # completion (not chat) inference path at runtime
         "base",
     ),
 }
+
+# Models that require content-block message format ([{"type": "text", ...}])
+# instead of plain string content — both are manually-loaded Gemma-family
+# checkpoints (gemma3_manual / medgemma_manual loader strategies).
+CONTENT_BLOCK_MODELS = {"gemma3_12b", "medgemma_4b"}
 
 # ─────────────────────────────────────────────────────────────────────────────
 # PROMPT BUILDERS
@@ -197,24 +295,25 @@ def build_messages(model_key: str, model_type: str,
     """
     Instruct models: debiasing instruction in the system role.
       - Mistral: explicit system turn (required by its template)
-      - Gemma:   content-list format
+      - Gemma-family (content-block models): content-list format
       - Others:  standard system + user turns
 
-    BioMistral: raw completion string with INSTRUCTION prefix prepended.
+    llama31_8b_base: raw completion string with INSTRUCTION prefix prepended.
     """
     question = build_base_question(narrative, options)
 
     if model_type == "base":
         # Raw text completion — debiasing as a capitalised INSTRUCTION line
-        return BIOMISTRAL_DEBIASING_PREFIX + question
+        return build_base_completion_prompt(narrative, options)
 
     if model_key == "mistral7b":
         return [
             {"role": "system", "content": DEBIASING_SYSTEM_PROMPT},
             {"role": "user",   "content": question},
         ]
-    elif model_key in ("gemma3_12b", "gemma4_e4b"):
-        # Gemma system turn uses the same content-list format
+    elif model_key in CONTENT_BLOCK_MODELS:
+        # Manually-loaded Gemma-family models: system turn uses the same
+        # content-list format
         return [
             {
                 "role": "system",
@@ -226,7 +325,7 @@ def build_messages(model_key: str, model_type: str,
             },
         ]
     else:
-        # llama31, llama32, qwen25
+        # all other models — standard system + user turns
         return [
             {"role": "system", "content": DEBIASING_SYSTEM_PROMPT},
             {"role": "user",   "content": question},
@@ -318,34 +417,77 @@ def load_processed_ids(output_file: str) -> set:
 
 
 # ─────────────────────────────────────────────────────────────────────────────
-# SCRATCH DOWNLOAD (TACC Lustre — no symlinks)
+# SCRATCH DOWNLOAD (HPC Lustre — no symlinks)
 # ─────────────────────────────────────────────────────────────────────────────
 def _download_to_scratch(repo_id: str, subdir: str) -> str:
     local = f"{HF_CACHE_DIR}/{subdir}"
-    if not os.path.isdir(local):
-        print(f"  Downloading {repo_id} → {local}  (runs once)")
+    # Always call snapshot_download: it resumes partial downloads and is a
+    # near-instant no-op when complete. (Checking only isdir() was a bug - a
+    # failed/gated download leaves an empty folder that looked "cached".)
+    print(f"  Syncing {repo_id} -> {local}")
+    try:
         snapshot_download(
             repo_id=repo_id,
             token=HF_TOKEN,
             local_dir=local,
             local_dir_use_symlinks=False,
         )
-    else:
-        print(f"  Using cached download: {local}")
+    except Exception as e:
+        if os.path.isfile(os.path.join(local, "config.json")):
+            print(f"  [warn] sync failed ({type(e).__name__}); using existing files in {local}")
+        else:
+            raise
     return local
+
+
+LLAMA3_CHAT_TEMPLATE = (
+    "{% set loop_messages = messages %}{% for message in loop_messages %}"
+    "{% set content = '<|start_header_id|>' + message['role'] + '<|end_header_id|>\n\n'"
+    " + message['content'] | trim + '<|eot_id|>' %}"
+    "{% if loop.index0 == 0 %}{% set content = bos_token + content %}{% endif %}"
+    "{{ content }}{% endfor %}"
+    "{% if add_generation_prompt %}{{ '<|start_header_id|>assistant<|end_header_id|>\n\n' }}{% endif %}"
+)
+
+
+def _build_text_pipeline(repo_id: str):
+    """
+    Text-generation pipeline with three model-specific fixes found in the
+    HPC smoke test (transformers v5):
+      1. Mistral tekken-tokenizer repos (Ministral-8B, Mistral-Small-24B):
+         pipeline() forwards device_map/_from_pipeline kwargs into
+         MistralCommonBackend.from_pretrained, which rejects them. Fall back
+         to loading tokenizer and model separately.
+      2. OpenBioLLM ships no chat template -> use the Llama-3 template.
+      3. Qwen3 defaults to "thinking" mode, which burns the whole token
+         budget on <think> text before answering -> disable thinking.
+    """
+    try:
+        pipe = pipeline("text-generation", model=repo_id, device_map="auto",
+                        torch_dtype=torch.bfloat16, token=HF_TOKEN)
+    except ValueError as e:
+        if "MistralCommonBackend" not in str(e):
+            raise
+        from transformers import AutoModelForCausalLM, AutoTokenizer
+        tok = AutoTokenizer.from_pretrained(repo_id, token=HF_TOKEN)
+        mdl = AutoModelForCausalLM.from_pretrained(
+            repo_id, device_map="auto", torch_dtype=torch.bfloat16, token=HF_TOKEN)
+        pipe = pipeline("text-generation", model=mdl, tokenizer=tok)
+
+    if "OpenBioLLM" in repo_id and not getattr(pipe.tokenizer, "chat_template", None):
+        pipe.tokenizer.chat_template = LLAMA3_CHAT_TEMPLATE
+    if "Qwen3" in repo_id:
+        import functools
+        pipe.tokenizer.apply_chat_template = functools.partial(
+            pipe.tokenizer.apply_chat_template, enable_thinking=False)
+    return pipe
 
 
 # ─────────────────────────────────────────────────────────────────────────────
 # MODEL LOADERS
 # ─────────────────────────────────────────────────────────────────────────────
 def load_pipeline_text(repo_id: str):
-    pipe = pipeline(
-        "text-generation",
-        model=repo_id,
-        device_map="auto",
-        torch_dtype=torch.bfloat16,
-        token=HF_TOKEN,
-    )
+    pipe = _build_text_pipeline(repo_id)
     if pipe.tokenizer.pad_token_id is None:
         pipe.tokenizer.pad_token_id = pipe.tokenizer.eos_token_id
     return "pipeline", pipe
@@ -363,10 +505,16 @@ def load_gemma3_manual(repo_id: str):
     return "processor_model", (proc, model)
 
 
-def load_gemma4_manual(repo_id: str):
-    local = _download_to_scratch(repo_id, "gemma-4-E4B-it")
+def load_medgemma_manual(repo_id: str):
+    """
+    MedGemma-4B-it — manual download + Gemma3ForConditionalGeneration.
+    Same HPC Lustre pattern as Gemma 3 (MedGemma is Gemma-3-architecture).
+    Confirmed: google/medgemma-4b-it's config.json lists
+    architectures=["Gemma3ForConditionalGeneration"], model_type="gemma3".
+    """
+    local = _download_to_scratch(repo_id, "medgemma-4b-it")
     proc  = AutoProcessor.from_pretrained(local, token=HF_TOKEN)
-    model = AutoModelForImageTextToText.from_pretrained(
+    model = Gemma3ForConditionalGeneration.from_pretrained(
         local,
         device_map="auto",
         torch_dtype=torch.bfloat16,
@@ -378,9 +526,9 @@ def load_gemma4_manual(repo_id: str):
 def load_model(model_key: str, repo_id: str, strategy: str):
     print(f"  Loading {model_key}  ({repo_id}) …")
     t0 = time.time()
-    if   strategy == "pipeline_text": loader_type, obj = load_pipeline_text(repo_id)
-    elif strategy == "gemma3_manual": loader_type, obj = load_gemma3_manual(repo_id)
-    elif strategy == "gemma4_manual": loader_type, obj = load_gemma4_manual(repo_id)
+    if   strategy == "pipeline_text":    loader_type, obj = load_pipeline_text(repo_id)
+    elif strategy == "gemma3_manual":    loader_type, obj = load_gemma3_manual(repo_id)
+    elif strategy == "medgemma_manual":  loader_type, obj = load_medgemma_manual(repo_id)
     else:
         raise ValueError(f"Unknown strategy: {strategy!r}")
     print(f"  Loaded in {time.time() - t0:.1f}s")
@@ -398,7 +546,7 @@ def run_inference_batch(loader_type: str, obj, batch: list) -> list:
         pipe = obj
 
         if model_type == "base":
-            # BioMistral: raw completion, return only new tokens
+            # llama31_8b_base: raw completion, return only new tokens
             outputs = pipe(
                 messages_list,
                 max_new_tokens=MAX_NEW_TOKENS,
@@ -406,7 +554,9 @@ def run_inference_batch(loader_type: str, obj, batch: list) -> list:
                 batch_size=len(batch),
                 return_full_text=False,
             )
-            return [out[0]["generated_text"] for out in outputs]
+            # keep only the first answer: a base model keeps writing the next
+            # "Question: ..." after answering
+            return [out[0]["generated_text"].split("Question:")[0] for out in outputs]
 
         else:
             outputs = pipe(
@@ -597,11 +747,13 @@ def main():
     print("=" * 65)
     print(f"\n  Debiasing instruction:\n  \"{DEBIASING_SYSTEM_PROMPT}\"\n")
 
-    login(token=HF_TOKEN, add_to_git_credential=False)
+    # No login() call: HF_TOKEN is read from the environment and passed as token=...
+    # everywhere. login() writes a shared stored_tokens file in the HF cache,
+    # which concurrent jobs corrupt (race) and crash on.
     print("  HuggingFace auth OK")
 
     print(f"\n  Loading dataset: {DATASET_NAME} …")
-    raw_ds   = load_dataset(DATASET_NAME, split="train")
+    raw_ds   = load_dataset("csv", data_files=DATASET_NAME, split="train")
     all_rows = list(raw_ds)
     print(f"  Total questions: {len(all_rows)}")
 

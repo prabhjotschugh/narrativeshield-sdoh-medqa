@@ -1,42 +1,52 @@
 """
 NarrativeShield — B1 Direct Prompting Baseline (Final)
 =======================================================
-Runs 7 generative models sequentially. Each model is fully evaluated
+Runs 12 generative models sequentially. Each model is fully evaluated
 then unloaded before the next one loads — you never hold two models
 in VRAM at the same time.
 
-Run order (llama32 intentionally last — access approval pending):
-  1. llama31      meta-llama/Llama-3.1-8B-Instruct
-  2. mistral7b    mistralai/Mistral-7B-Instruct-v0.3
-  3. qwen25       Qwen/Qwen2.5-7B-Instruct
-  4. gemma3_12b   google/gemma-3-12b-it
-  5. gemma4_e4b   google/gemma-4-E4B-it
-  6. biomistral   BioMistral/BioMistral-7B
-  7. llama32      meta-llama/Llama-3.2-3B-Instruct   ← runs last
+Run order:
+  1.  llama32_3b          meta-llama/Llama-3.2-3B-Instruct
+  2.  medgemma_4b         google/medgemma-4b-it
+  3.  phi4_mini           microsoft/Phi-4-mini-instruct
+  4.  qwen25_7b           Qwen/Qwen2.5-7B-Instruct
+  5.  mistral7b           mistralai/Mistral-7B-Instruct-v0.3
+  6.  qwen3_8b            Qwen/Qwen3-8B
+  7.  ministral8b         mistralai/Ministral-8B-Instruct-2410
+  8.  llama31_8b          meta-llama/Llama-3.1-8B-Instruct
+  9.  openbiollm_8b       aaditya/Llama3-OpenBioLLM-8B
+  10. gemma3_12b          google/gemma-3-12b-it
+  11. qwen25_14b          Qwen/Qwen2.5-14B-Instruct
+  12. mistral_small_24b   mistralai/Mistral-Small-24B-Instruct-2501
 
 Resume-safe: each model writes to its own .jsonl file.
 Re-running after a preemption skips already-completed question_ids.
 
 Output files (written to OUTPUT_DIR):
-  results_B1_llama31.jsonl
-  results_B1_mistral7b.jsonl
-  results_B1_qwen25.jsonl
-  results_B1_gemma3_12b.jsonl
-  results_B1_gemma4_e4b.jsonl
-  results_B1_biomistral.jsonl
-  results_B1_llama32.jsonl
+  results_B1_{model_key}.jsonl   (one per MODEL_REGISTRY key)
 
 Usage
 -----
-  python run_b1.py
+  python run_b1.py                    # all 12 models, one process
+  python run_b1.py --model llama31_8b # one model (SLURM array-job friendly,
+                                       # matches run_b2.py/run_b3.py/run_ns.py)
 """
 
 # ─────────────────────────────────────────────────────────────────────────────
 # CACHE REDIRECT — must happen before any HuggingFace import
 # ─────────────────────────────────────────────────────────────────────────────
 import os
+import shutil
 
-SCRATCH_BASE = "/scratch/10778/prabhjotschugh"
+# HPC (aarch64 GH nodes) defaults CC to NVIDIA's `nvc`, which Triton then uses
+# to JIT-compile helpers and chokes on gcc-only flags (-Wno-psabi), crashing
+# generate(). Force gcc before torch/transformers are imported.
+_gcc = shutil.which("gcc")
+if _gcc:
+    os.environ["CC"] = _gcc
+    os.environ["CXX"] = shutil.which("g++") or _gcc
+
+SCRATCH_BASE = "/path/to/scratch"
 HF_CACHE_DIR = f"{SCRATCH_BASE}/hf_cache"
 OUTPUT_DIR   = f"{SCRATCH_BASE}/b1_results"
 os.makedirs(HF_CACHE_DIR, exist_ok=True)
@@ -54,6 +64,7 @@ for _var, _path in [
 # ─────────────────────────────────────────────────────────────────────────────
 # STANDARD IMPORTS
 # ─────────────────────────────────────────────────────────────────────────────
+import argparse
 import ast
 import gc
 import json
@@ -68,7 +79,6 @@ from huggingface_hub import login, snapshot_download
 from torch.utils.data import DataLoader, Dataset
 from tqdm import tqdm
 from transformers import (
-    AutoModelForImageTextToText,
     AutoProcessor,
     Gemma3ForConditionalGeneration,
     pipeline,
@@ -84,7 +94,7 @@ torch.backends.cudnn.allow_tf32       = True
 # CONFIGURATION
 # ─────────────────────────────────────────────────────────────────────────────
 HF_TOKEN            = os.getenv("HF_TOKEN", "YOUR_HF_TOKEN_HERE")
-DATASET_NAME        = "Prabhjotschugh/narrativeshield-sdoh-medqa"
+DATASET_NAME        = os.environ.get("DATASET_NAME", os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "dataset", "medqa_1000.csv"))
 MAX_NEW_TOKENS      = 128
 QUESTIONS_PER_CHUNK = 16   # lower to 8 if you hit CUDA OOM
 NUM_WORKERS         = 4    # CPU workers for parallel prompt prep
@@ -93,53 +103,82 @@ PERSONAS            = ["alpha", "beta", "gamma"]
 # ─────────────────────────────────────────────────────────────────────────────
 # MODEL REGISTRY
 # Ordered dict — execution order is exactly this sequence.
-# llama32 is intentionally last so HF access approval has time to arrive.
 # key → (hf_repo_id, output_jsonl_path, load_strategy)
 #
 # load_strategy options:
-#   "pipeline_text"  — standard pipeline("text-generation", ...)
-#   "gemma3_manual"  — Gemma3ForConditionalGeneration + AutoProcessor
-#                      (manual download required for TACC Lustre filesystem)
-#   "gemma4_manual"  — AutoModelForImageTextToText + AutoProcessor
-#                      (same manual download pattern)
+#   "pipeline_text"    — standard pipeline("text-generation", ...)
+#   "gemma3_manual"    — Gemma3ForConditionalGeneration + AutoProcessor
+#                        (manual download required for HPC Lustre filesystem)
+#   "medgemma_manual"  — same manual-load pattern as gemma3_manual
+#                        (MedGemma-4B-it is Gemma-3-architecture)
 # ─────────────────────────────────────────────────────────────────────────────
 MODEL_REGISTRY = {
-    "llama31":    (
-        "meta-llama/Llama-3.1-8B-Instruct",
-        f"{OUTPUT_DIR}/results_B1_llama31.jsonl",
+    "llama32_3b":        (
+        "meta-llama/Llama-3.2-3B-Instruct",
+        f"{OUTPUT_DIR}/results_B1_llama32_3b.jsonl",
         "pipeline_text",
     ),
-    "mistral7b":  (
+    "medgemma_4b":       (
+        "google/medgemma-4b-it",
+        f"{OUTPUT_DIR}/results_B1_medgemma_4b.jsonl",
+        "medgemma_manual",
+    ),
+    "phi4_mini":         (
+        "microsoft/Phi-4-mini-instruct",
+        f"{OUTPUT_DIR}/results_B1_phi4_mini.jsonl",
+        "pipeline_text",
+    ),
+    "qwen25_7b":         (
+        "Qwen/Qwen2.5-7B-Instruct",
+        f"{OUTPUT_DIR}/results_B1_qwen25_7b.jsonl",
+        "pipeline_text",
+    ),
+    "mistral7b":         (
         "mistralai/Mistral-7B-Instruct-v0.3",
         f"{OUTPUT_DIR}/results_B1_mistral7b.jsonl",
         "pipeline_text",
     ),
-    "qwen25":     (
-        "Qwen/Qwen2.5-7B-Instruct",
-        f"{OUTPUT_DIR}/results_B1_qwen25.jsonl",
+    "qwen3_8b":          (
+        "Qwen/Qwen3-8B",
+        f"{OUTPUT_DIR}/results_B1_qwen3_8b.jsonl",
         "pipeline_text",
     ),
-    "gemma3_12b": (
+    "ministral8b":       (
+        "mistralai/Ministral-8B-Instruct-2410",
+        f"{OUTPUT_DIR}/results_B1_ministral8b.jsonl",
+        "pipeline_text",
+    ),
+    "llama31_8b":        (
+        "meta-llama/Llama-3.1-8B-Instruct",
+        f"{OUTPUT_DIR}/results_B1_llama31_8b.jsonl",
+        "pipeline_text",
+    ),
+    "openbiollm_8b":     (
+        "aaditya/Llama3-OpenBioLLM-8B",
+        f"{OUTPUT_DIR}/results_B1_openbiollm_8b.jsonl",
+        "pipeline_text",
+    ),
+    "gemma3_12b":        (
         "google/gemma-3-12b-it",
         f"{OUTPUT_DIR}/results_B1_gemma3_12b.jsonl",
         "gemma3_manual",
     ),
-    "gemma4_e4b": (
-        "google/gemma-4-E4B-it",
-        f"{OUTPUT_DIR}/results_B1_gemma4_e4b.jsonl",
-        "gemma4_manual",
-    ),
-    "biomistral": (
-        "BioMistral/BioMistral-7B",
-        f"{OUTPUT_DIR}/results_B1_biomistral.jsonl",
+    "qwen25_14b":        (
+        "Qwen/Qwen2.5-14B-Instruct",
+        f"{OUTPUT_DIR}/results_B1_qwen25_14b.jsonl",
         "pipeline_text",
     ),
-    "llama32":    (
-        "meta-llama/Llama-3.2-3B-Instruct",
-        f"{OUTPUT_DIR}/results_B1_llama32.jsonl",
+    "mistral_small_24b": (
+        "mistralai/Mistral-Small-24B-Instruct-2501",
+        f"{OUTPUT_DIR}/results_B1_mistral_small_24b.jsonl",
         "pipeline_text",
     ),
 }
+
+# Models that require content-block message format ([{"type": "text", ...}])
+# instead of plain string content — both are manually-loaded Gemma-family
+# checkpoints (gemma3_manual / medgemma_manual loader strategies).
+CONTENT_BLOCK_MODELS = {"gemma3_12b", "medgemma_4b"}
 
 # ─────────────────────────────────────────────────────────────────────────────
 # PROMPT BUILDER — B1 is completely unmitigated zero-shot
@@ -160,8 +199,9 @@ def build_messages(model_key: str, prompt_text: str) -> list:
             {"role": "system", "content": ""},
             {"role": "user",   "content": prompt_text},
         ]
-    elif model_key in ("gemma3_12b", "gemma4_e4b"):
-        # Gemma processor expects content as a list of typed blocks
+    elif model_key in CONTENT_BLOCK_MODELS:
+        # Manually-loaded Gemma-family models (gemma3_12b, medgemma_4b):
+        # processor expects content as a list of typed blocks
         return [
             {
                 "role": "user",
@@ -169,7 +209,7 @@ def build_messages(model_key: str, prompt_text: str) -> list:
             }
         ]
     else:
-        # llama31, llama32, qwen25, biomistral — standard single-turn
+        # all other models — standard single-turn
         return [{"role": "user", "content": prompt_text}]
 
 
@@ -261,22 +301,71 @@ def load_processed_ids(output_file: str) -> set:
 
 # ─────────────────────────────────────────────────────────────────────────────
 # SCRATCH DOWNLOAD HELPER
-# snapshot_download with local_dir_use_symlinks=False is required on TACC
+# snapshot_download with local_dir_use_symlinks=False is required on HPC
 # because the Lustre scratch filesystem does not support symlinks.
 # ─────────────────────────────────────────────────────────────────────────────
 def _download_to_scratch(repo_id: str, subdir: str) -> str:
     local = f"{HF_CACHE_DIR}/{subdir}"
-    if not os.path.isdir(local):
-        print(f"  Downloading {repo_id} → {local}  (runs once, cached after)")
+    # Always call snapshot_download: it resumes partial downloads and is a
+    # near-instant no-op when complete. (Checking only isdir() was a bug - a
+    # failed/gated download leaves an empty folder that looked "cached".)
+    print(f"  Syncing {repo_id} -> {local}")
+    try:
         snapshot_download(
             repo_id=repo_id,
             token=HF_TOKEN,
             local_dir=local,
             local_dir_use_symlinks=False,
         )
-    else:
-        print(f"  Using cached download: {local}")
+    except Exception as e:
+        if os.path.isfile(os.path.join(local, "config.json")):
+            print(f"  [warn] sync failed ({type(e).__name__}); using existing files in {local}")
+        else:
+            raise
     return local
+
+
+LLAMA3_CHAT_TEMPLATE = (
+    "{% set loop_messages = messages %}{% for message in loop_messages %}"
+    "{% set content = '<|start_header_id|>' + message['role'] + '<|end_header_id|>\n\n'"
+    " + message['content'] | trim + '<|eot_id|>' %}"
+    "{% if loop.index0 == 0 %}{% set content = bos_token + content %}{% endif %}"
+    "{{ content }}{% endfor %}"
+    "{% if add_generation_prompt %}{{ '<|start_header_id|>assistant<|end_header_id|>\n\n' }}{% endif %}"
+)
+
+
+def _build_text_pipeline(repo_id: str):
+    """
+    Text-generation pipeline with three model-specific fixes found in the
+    HPC smoke test (transformers v5):
+      1. Mistral tekken-tokenizer repos (Ministral-8B, Mistral-Small-24B):
+         pipeline() forwards device_map/_from_pipeline kwargs into
+         MistralCommonBackend.from_pretrained, which rejects them. Fall back
+         to loading tokenizer and model separately.
+      2. OpenBioLLM ships no chat template -> use the Llama-3 template.
+      3. Qwen3 defaults to "thinking" mode, which burns the whole token
+         budget on <think> text before answering -> disable thinking.
+    """
+    try:
+        pipe = pipeline("text-generation", model=repo_id, device_map="auto",
+                        torch_dtype=torch.bfloat16, token=HF_TOKEN)
+    except ValueError as e:
+        if "MistralCommonBackend" not in str(e):
+            raise
+        from transformers import AutoModelForCausalLM, AutoTokenizer
+        tok = AutoTokenizer.from_pretrained(repo_id, token=HF_TOKEN)
+        mdl = AutoModelForCausalLM.from_pretrained(
+            repo_id, device_map="auto", torch_dtype=torch.bfloat16, token=HF_TOKEN)
+        pipe = pipeline("text-generation", model=mdl, tokenizer=tok)
+
+    if "OpenBioLLM" in repo_id and not getattr(pipe.tokenizer, "chat_template", None):
+        pipe.tokenizer.chat_template = LLAMA3_CHAT_TEMPLATE
+    if "Qwen3" in repo_id:
+        import functools
+        pipe.tokenizer.apply_chat_template = functools.partial(
+            pipe.tokenizer.apply_chat_template, enable_thinking=False)
+    return pipe
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -284,13 +373,7 @@ def _download_to_scratch(repo_id: str, subdir: str) -> str:
 # ─────────────────────────────────────────────────────────────────────────────
 def load_pipeline_text(repo_id: str):
     """Standard HF text-generation pipeline. Works for most models."""
-    pipe = pipeline(
-        "text-generation",
-        model=repo_id,
-        device_map="auto",
-        torch_dtype=torch.bfloat16,
-        token=HF_TOKEN,
-    )
+    pipe = _build_text_pipeline(repo_id)
     # Prevent padding warnings during batch inference
     if pipe.tokenizer.pad_token_id is None:
         pipe.tokenizer.pad_token_id = pipe.tokenizer.eos_token_id
@@ -301,7 +384,7 @@ def load_gemma3_manual(repo_id: str):
     """
     Gemma 3 12B — manual download + Gemma3ForConditionalGeneration.
     Required because the HF pipeline task is image-text-to-text and
-    TACC Lustre needs symlink-free downloads.
+    HPC Lustre needs symlink-free downloads.
     """
     local = _download_to_scratch(repo_id, "gemma-3-12b-it")
     proc  = AutoProcessor.from_pretrained(local, token=HF_TOKEN)
@@ -314,14 +397,16 @@ def load_gemma3_manual(repo_id: str):
     return "processor_model", (proc, model)
 
 
-def load_gemma4_manual(repo_id: str):
+def load_medgemma_manual(repo_id: str):
     """
-    Gemma 4 E4B — manual download + AutoModelForImageTextToText.
-    Same TACC Lustre pattern as Gemma 3.
+    MedGemma-4B-it — manual download + Gemma3ForConditionalGeneration.
+    Same HPC Lustre pattern as Gemma 3 (MedGemma is Gemma-3-architecture).
+    Confirmed: google/medgemma-4b-it's config.json lists
+    architectures=["Gemma3ForConditionalGeneration"], model_type="gemma3".
     """
-    local = _download_to_scratch(repo_id, "gemma-4-E4B-it")
+    local = _download_to_scratch(repo_id, "medgemma-4b-it")
     proc  = AutoProcessor.from_pretrained(local, token=HF_TOKEN)
-    model = AutoModelForImageTextToText.from_pretrained(
+    model = Gemma3ForConditionalGeneration.from_pretrained(
         local,
         device_map="auto",
         torch_dtype=torch.bfloat16,
@@ -333,9 +418,9 @@ def load_gemma4_manual(repo_id: str):
 def load_model(model_key: str, repo_id: str, strategy: str):
     print(f"  Loading {model_key}  ({repo_id}) …")
     t0 = time.time()
-    if   strategy == "pipeline_text": loader_type, obj = load_pipeline_text(repo_id)
-    elif strategy == "gemma3_manual": loader_type, obj = load_gemma3_manual(repo_id)
-    elif strategy == "gemma4_manual": loader_type, obj = load_gemma4_manual(repo_id)
+    if   strategy == "pipeline_text":    loader_type, obj = load_pipeline_text(repo_id)
+    elif strategy == "gemma3_manual":    loader_type, obj = load_gemma3_manual(repo_id)
+    elif strategy == "medgemma_manual":  loader_type, obj = load_medgemma_manual(repo_id)
     else:
         raise ValueError(f"Unknown load strategy: {strategy!r}")
     print(f"  Loaded in {time.time() - t0:.1f}s")
@@ -519,29 +604,45 @@ def evaluate_model(model_key: str, repo_id: str, strategy: str,
 # MAIN
 # ─────────────────────────────────────────────────────────────────────────────
 def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "--model", choices=list(MODEL_REGISTRY.keys()) + ["all"], default="all",
+        help="Run a single model (for one-model-per-SLURM-job submission, matching "
+             "run_b2.py/run_b3.py/run_ns.py's per-job design) or 'all' to run every "
+             "model sequentially in one process (the original single-script design). "
+             "Default 'all' preserves prior behavior for local/non-SLURM use.",
+    )
+    args = parser.parse_args()
+
+    registry = (
+        MODEL_REGISTRY if args.model == "all"
+        else {args.model: MODEL_REGISTRY[args.model]}
+    )
+
     print("=" * 65)
     print("  NarrativeShield — B1 Direct Prompting Baseline")
-    print("  7 models | greedy decoding | resume-safe")
+    print(f"  {len(registry)} model(s) this run | greedy decoding | resume-safe")
     print(f"  Output directory : {OUTPUT_DIR}")
     print("=" * 65)
     print()
     print("  Run order:")
-    for i, (key, (repo, _, _)) in enumerate(MODEL_REGISTRY.items(), 1):
-        tag = "  ← runs last (gated access)" if key == "llama32" else ""
-        print(f"    {i}. {key:<14} {repo}{tag}")
+    for i, (key, (repo, _, _)) in enumerate(registry.items(), 1):
+        print(f"    {i}. {key:<20} {repo}")
     print()
 
-    login(token=HF_TOKEN, add_to_git_credential=False)
+    # No login() call: HF_TOKEN is read from the environment and passed as token=...
+    # everywhere. login() writes a shared stored_tokens file in the HF cache,
+    # which concurrent jobs corrupt (race) and crash on.
     print("  HuggingFace auth OK\n")
 
     print(f"  Loading dataset: {DATASET_NAME} …")
-    raw_ds   = load_dataset(DATASET_NAME, split="train")
+    raw_ds   = load_dataset("csv", data_files=DATASET_NAME, split="train")
     all_rows = list(raw_ds)
     print(f"  Total questions : {len(all_rows)}\n")
 
     t_start = time.time()
 
-    for model_key, (repo_id, output_file, strategy) in MODEL_REGISTRY.items():
+    for model_key, (repo_id, output_file, strategy) in registry.items():
         evaluate_model(
             model_key=model_key,
             repo_id=repo_id,
@@ -554,7 +655,7 @@ def main():
     hrs, rem = divmod(int(elapsed), 3600)
     mins     = rem // 60
     print(f"\n{'='*65}")
-    print(f"  ALL MODELS COMPLETE.")
+    print(f"  {'ALL MODELS' if args.model == 'all' else args.model} COMPLETE.")
     print(f"  Total wall time : {hrs}h {mins}m")
     print(f"  Results in      : {OUTPUT_DIR}")
     print("=" * 65)

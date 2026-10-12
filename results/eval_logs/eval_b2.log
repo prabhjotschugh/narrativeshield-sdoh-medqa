@@ -1,0 +1,444 @@
+======================================================================
+  NarrativeShield B2 (Chain-of-Thought) - Full Evaluation Suite
+======================================================================
+
+Loading sentence encoder: all-MiniLM-L6-v2 ...
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 10689.17it/s]
+  Encoder ready.
+
+-----------------------------------------------------------------
+  Processing B2: llama32_3b
+  Questions loaded: 1000
+  Computing DSS (raw) ...
+  Encoding alpha responses …
+  Encoding beta responses …
+  Encoding gamma responses …
+  Computing DSS (format-controlled / stripped) ...
+  Encoding alpha responses …
+  Encoding beta responses …
+  Encoding gamma responses …
+
+  +- llama32_3b B2 Results ----------------------------------------
+  |  Parse rate  : 95.7%
+  |  OMR Overall : 0.5850 [0.5673, 0.6025]
+  |  OMR alpha : 0.6930 [0.6637, 0.7208]
+  |  OMR beta  : 0.5130 [0.4820, 0.5439]
+  |  OMR gamma : 0.5490 [0.5180, 0.5796]
+  |  NAG (headline)  : 0.1800  95% CI [0.1470, 0.2150]  (worst persona: beta)
+  |  Mean DSS (raw/stripped) : 0.6963 / 0.6963
+  |  DSS<0.8   : 82.70% of questions flagged
+  |  Bonferroni alpha = 0.05/3 = 0.01667
+  |  McNemar p(a,b) = 0.0000  [raw:SIG]  [Bonferroni:SIG]
+  |  McNemar p(a,g) = 0.0000  [raw:SIG]  [Bonferroni:SIG]
+  |  McNemar p(b,g) = 0.0426  [raw:SIG]  [Bonferroni:ns]
+  +-------------------------------------------------------
+
+-----------------------------------------------------------------
+  Processing B2: medgemma_4b
+  Questions loaded: 1000
+  Computing DSS (raw) ...
+  Encoding alpha responses …
+  Encoding beta responses …
+  Encoding gamma responses …
+  Computing DSS (format-controlled / stripped) ...
+  Encoding alpha responses …
+  Encoding beta responses …
+  Encoding gamma responses …
+
+  +- medgemma_4b B2 Results ----------------------------------------
+  |  Parse rate  : 99.9%
+  |  OMR Overall : 0.6547 [0.6375, 0.6715]
+  |  OMR alpha : 0.7240 [0.6955, 0.7508]
+  |  OMR beta  : 0.6510 [0.6209, 0.6799]
+  |  OMR gamma : 0.5890 [0.5582, 0.6191]
+  |  NAG (headline)  : 0.1350  95% CI [0.1030, 0.1670]  (worst persona: gamma)
+  |  Mean DSS (raw/stripped) : 0.7685 / 0.7685
+  |  DSS<0.8   : 61.50% of questions flagged
+  |  Bonferroni alpha = 0.05/3 = 0.01667
+  |  McNemar p(a,b) = 0.0000  [raw:SIG]  [Bonferroni:SIG]
+  |  McNemar p(a,g) = 0.0000  [raw:SIG]  [Bonferroni:SIG]
+  |  McNemar p(b,g) = 0.0001  [raw:SIG]  [Bonferroni:SIG]
+  +-------------------------------------------------------
+
+-----------------------------------------------------------------
+  Processing B2: phi4_mini
+  Questions loaded: 1000
+  Computing DSS (raw) ...
+  Encoding alpha responses …
+  Encoding beta responses …
+  Encoding gamma responses …
+  Computing DSS (format-controlled / stripped) ...
+  Encoding alpha responses …
+  Encoding beta responses …
+  Encoding gamma responses …
+
+  +- phi4_mini B2 Results ----------------------------------------
+  |  Parse rate  : 99.9%
+  |  OMR Overall : 0.5630 [0.5452, 0.5807]
+  |  OMR alpha : 0.6220 [0.5915, 0.6515]
+  |  OMR beta  : 0.5370 [0.5060, 0.5677]
+  |  OMR gamma : 0.5300 [0.4990, 0.5608]
+  |  NAG (headline)  : 0.0920  95% CI [0.0650, 0.1290]  (worst persona: gamma)
+  |  Mean DSS (raw/stripped) : 0.7876 / 0.7876
+  |  DSS<0.8   : 48.30% of questions flagged
+  |  Bonferroni alpha = 0.05/3 = 0.01667
+  |  McNemar p(a,b) = 0.0000  [raw:SIG]  [Bonferroni:SIG]
+  |  McNemar p(a,g) = 0.0000  [raw:SIG]  [Bonferroni:SIG]
+  |  McNemar p(b,g) = 0.7385  [raw:ns]  [Bonferroni:ns]
+  +-------------------------------------------------------
+
+-----------------------------------------------------------------
+  Processing B2: qwen25_7b
+  Questions loaded: 1000
+  Computing DSS (raw) ...
+  Encoding alpha responses …
+  Encoding beta responses …
+  Encoding gamma responses …
+  Computing DSS (format-controlled / stripped) ...
+  Encoding alpha responses …
+  Encoding beta responses …
+  Encoding gamma responses …
+
+  +- qwen25_7b B2 Results ----------------------------------------
+  |  Parse rate  : 100.0%
+  |  OMR Overall : 0.5787 [0.5609, 0.5962]
+  |  OMR alpha : 0.6350 [0.6047, 0.6643]
+  |  OMR beta  : 0.5590 [0.5281, 0.5895]
+  |  OMR gamma : 0.5420 [0.5110, 0.5727]
+  |  NAG (headline)  : 0.0930  95% CI [0.0630, 0.1250]  (worst persona: gamma)
+  |  Mean DSS (raw/stripped) : 0.7500 / 0.7500
+  |  DSS<0.8   : 69.60% of questions flagged
+  |  Bonferroni alpha = 0.05/3 = 0.01667
+  |  McNemar p(a,b) = 0.0000  [raw:SIG]  [Bonferroni:SIG]
+  |  McNemar p(a,g) = 0.0000  [raw:SIG]  [Bonferroni:SIG]
+  |  McNemar p(b,g) = 0.3007  [raw:ns]  [Bonferroni:ns]
+  +-------------------------------------------------------
+
+-----------------------------------------------------------------
+  Processing B2: mistral7b
+  Questions loaded: 1000
+  Computing DSS (raw) ...
+  Encoding alpha responses …
+  Encoding beta responses …
+  Encoding gamma responses …
+  Computing DSS (format-controlled / stripped) ...
+  Encoding alpha responses …
+  Encoding beta responses …
+  Encoding gamma responses …
+
+  +- mistral7b B2 Results ----------------------------------------
+  |  Parse rate  : 98.7%
+  |  OMR Overall : 0.4993 [0.4815, 0.5172]
+  |  OMR alpha : 0.5370 [0.5060, 0.5677]
+  |  OMR beta  : 0.4920 [0.4611, 0.5230]
+  |  OMR gamma : 0.4690 [0.4382, 0.5000]
+  |  NAG (headline)  : 0.0680  95% CI [0.0370, 0.0990]  (worst persona: gamma)
+  |  Mean DSS (raw/stripped) : 0.7297 / 0.7297
+  |  DSS<0.8   : 66.90% of questions flagged
+  |  Bonferroni alpha = 0.05/3 = 0.01667
+  |  McNemar p(a,b) = 0.0084  [raw:SIG]  [Bonferroni:SIG]
+  |  McNemar p(a,g) = 0.0001  [raw:SIG]  [Bonferroni:SIG]
+  |  McNemar p(b,g) = 0.1782  [raw:ns]  [Bonferroni:ns]
+  +-------------------------------------------------------
+
+-----------------------------------------------------------------
+  Processing B2: qwen3_8b
+  Questions loaded: 1000
+  Computing DSS (raw) ...
+  Encoding alpha responses …
+  Encoding beta responses …
+  Encoding gamma responses …
+  Computing DSS (format-controlled / stripped) ...
+  Encoding alpha responses …
+  Encoding beta responses …
+  Encoding gamma responses …
+
+  +- qwen3_8b B2 Results ----------------------------------------
+  |  Parse rate  : 100.0%
+  |  OMR Overall : 0.6797 [0.6627, 0.6961]
+  |  OMR alpha : 0.7240 [0.6955, 0.7508]
+  |  OMR beta  : 0.6700 [0.6403, 0.6984]
+  |  OMR gamma : 0.6450 [0.6148, 0.6741]
+  |  NAG (headline)  : 0.0790  95% CI [0.0500, 0.1100]  (worst persona: gamma)
+  |  Mean DSS (raw/stripped) : 0.7577 / 0.7577
+  |  DSS<0.8   : 75.10% of questions flagged
+  |  Bonferroni alpha = 0.05/3 = 0.01667
+  |  McNemar p(a,b) = 0.0005  [raw:SIG]  [Bonferroni:SIG]
+  |  McNemar p(a,g) = 0.0000  [raw:SIG]  [Bonferroni:SIG]
+  |  McNemar p(b,g) = 0.1206  [raw:ns]  [Bonferroni:ns]
+  +-------------------------------------------------------
+
+-----------------------------------------------------------------
+  Processing B2: ministral8b
+  Questions loaded: 1000
+  Computing DSS (raw) ...
+  Encoding alpha responses …
+  Encoding beta responses …
+  Encoding gamma responses …
+  Computing DSS (format-controlled / stripped) ...
+  Encoding alpha responses …
+  Encoding beta responses …
+  Encoding gamma responses …
+
+  +- ministral8b B2 Results ----------------------------------------
+  |  Parse rate  : 99.8%
+  |  OMR Overall : 0.5230 [0.5051, 0.5408]
+  |  OMR alpha : 0.5620 [0.5311, 0.5925]
+  |  OMR beta  : 0.5150 [0.4840, 0.5459]
+  |  OMR gamma : 0.4920 [0.4611, 0.5230]
+  |  NAG (headline)  : 0.0700  95% CI [0.0370, 0.1060]  (worst persona: gamma)
+  |  Mean DSS (raw/stripped) : 0.7755 / 0.7755
+  |  DSS<0.8   : 55.80% of questions flagged
+  |  Bonferroni alpha = 0.05/3 = 0.01667
+  |  McNemar p(a,b) = 0.0089  [raw:SIG]  [Bonferroni:SIG]
+  |  McNemar p(a,g) = 0.0002  [raw:SIG]  [Bonferroni:SIG]
+  |  McNemar p(b,g) = 0.2107  [raw:ns]  [Bonferroni:ns]
+  +-------------------------------------------------------
+
+-----------------------------------------------------------------
+  Processing B2: llama31_8b
+  Questions loaded: 1000
+  Computing DSS (raw) ...
+  Encoding alpha responses …
+  Encoding beta responses …
+  Encoding gamma responses …
+  Computing DSS (format-controlled / stripped) ...
+  Encoding alpha responses …
+  Encoding beta responses …
+  Encoding gamma responses …
+
+  +- llama31_8b B2 Results ----------------------------------------
+  |  Parse rate  : 99.7%
+  |  OMR Overall : 0.6763 [0.6594, 0.6928]
+  |  OMR alpha : 0.7560 [0.7284, 0.7816]
+  |  OMR beta  : 0.6400 [0.6098, 0.6692]
+  |  OMR gamma : 0.6330 [0.6027, 0.6623]
+  |  NAG (headline)  : 0.1230  95% CI [0.0980, 0.1570]  (worst persona: gamma)
+  |  Mean DSS (raw/stripped) : 0.7352 / 0.7352
+  |  DSS<0.8   : 76.80% of questions flagged
+  |  Bonferroni alpha = 0.05/3 = 0.01667
+  |  McNemar p(a,b) = 0.0000  [raw:SIG]  [Bonferroni:SIG]
+  |  McNemar p(a,g) = 0.0000  [raw:SIG]  [Bonferroni:SIG]
+  |  McNemar p(b,g) = 0.7124  [raw:ns]  [Bonferroni:ns]
+  +-------------------------------------------------------
+
+-----------------------------------------------------------------
+  Processing B2: openbiollm_8b
+  Questions loaded: 1000
+  Computing DSS (raw) ...
+  Encoding alpha responses …
+  Encoding beta responses …
+  Encoding gamma responses …
+  Computing DSS (format-controlled / stripped) ...
+  Encoding alpha responses …
+  Encoding beta responses …
+  Encoding gamma responses …
+
+  +- openbiollm_8b B2 Results ----------------------------------------
+  |  Parse rate  : 80.6%
+  |  OMR Overall : 0.3117 [0.2953, 0.3285]
+  |  OMR alpha : 0.3250 [0.2967, 0.3547]
+  |  OMR beta  : 0.2870 [0.2598, 0.3158]
+  |  OMR gamma : 0.3230 [0.2947, 0.3526]
+  |  NAG (headline)  : 0.0380  95% CI [0.0010, 0.0720]  (worst persona: beta)
+  |  Mean DSS (raw/stripped) : 0.5569 / 0.5569
+  |  DSS<0.8   : 91.60% of questions flagged
+  |  Bonferroni alpha = 0.05/3 = 0.01667
+  |  McNemar p(a,b) = 0.0442  [raw:SIG]  [Bonferroni:ns]
+  |  McNemar p(a,g) = 0.9556  [raw:ns]  [Bonferroni:ns]
+  |  McNemar p(b,g) = 0.0256  [raw:SIG]  [Bonferroni:ns]
+  +-------------------------------------------------------
+
+-----------------------------------------------------------------
+  Processing B2: gemma3_12b
+  Questions loaded: 1000
+  Computing DSS (raw) ...
+  Encoding alpha responses …
+  Encoding beta responses …
+  Encoding gamma responses …
+  Computing DSS (format-controlled / stripped) ...
+  Encoding alpha responses …
+  Encoding beta responses …
+  Encoding gamma responses …
+
+  +- gemma3_12b B2 Results ----------------------------------------
+  |  Parse rate  : 100.0%
+  |  OMR Overall : 0.6383 [0.6210, 0.6553]
+  |  OMR alpha : 0.6840 [0.6545, 0.7121]
+  |  OMR beta  : 0.6250 [0.5946, 0.6545]
+  |  OMR gamma : 0.6060 [0.5754, 0.6358]
+  |  NAG (headline)  : 0.0780  95% CI [0.0500, 0.1060]  (worst persona: gamma)
+  |  Mean DSS (raw/stripped) : 0.7513 / 0.7513
+  |  DSS<0.8   : 74.60% of questions flagged
+  |  Bonferroni alpha = 0.05/3 = 0.01667
+  |  McNemar p(a,b) = 0.0001  [raw:SIG]  [Bonferroni:SIG]
+  |  McNemar p(a,g) = 0.0000  [raw:SIG]  [Bonferroni:SIG]
+  |  McNemar p(b,g) = 0.2042  [raw:ns]  [Bonferroni:ns]
+  +-------------------------------------------------------
+
+-----------------------------------------------------------------
+  Processing B2: qwen25_14b
+  Questions loaded: 1000
+  Computing DSS (raw) ...
+  Encoding alpha responses …
+  Encoding beta responses …
+  Encoding gamma responses …
+  Computing DSS (format-controlled / stripped) ...
+  Encoding alpha responses …
+  Encoding beta responses …
+  Encoding gamma responses …
+
+  +- qwen25_14b B2 Results ----------------------------------------
+  |  Parse rate  : 100.0%
+  |  OMR Overall : 0.6707 [0.6536, 0.6873]
+  |  OMR alpha : 0.7190 [0.6903, 0.7460]
+  |  OMR beta  : 0.6560 [0.6260, 0.6848]
+  |  OMR gamma : 0.6370 [0.6067, 0.6662]
+  |  NAG (headline)  : 0.0820  95% CI [0.0550, 0.1100]  (worst persona: gamma)
+  |  Mean DSS (raw/stripped) : 0.7725 / 0.7725
+  |  DSS<0.8   : 60.10% of questions flagged
+  |  Bonferroni alpha = 0.05/3 = 0.01667
+  |  McNemar p(a,b) = 0.0000  [raw:SIG]  [Bonferroni:SIG]
+  |  McNemar p(a,g) = 0.0000  [raw:SIG]  [Bonferroni:SIG]
+  |  McNemar p(b,g) = 0.2109  [raw:ns]  [Bonferroni:ns]
+  +-------------------------------------------------------
+
+-----------------------------------------------------------------
+  Processing B2: mistral_small_24b
+  Questions loaded: 1000
+  Computing DSS (raw) ...
+  Encoding alpha responses …
+  Encoding beta responses …
+  Encoding gamma responses …
+  Computing DSS (format-controlled / stripped) ...
+  Encoding alpha responses …
+  Encoding beta responses …
+  Encoding gamma responses …
+
+  +- mistral_small_24b B2 Results ----------------------------------------
+  |  Parse rate  : 99.7%
+  |  OMR Overall : 0.7113 [0.6949, 0.7273]
+  |  OMR alpha : 0.7810 [0.7543, 0.8055]
+  |  OMR beta  : 0.6910 [0.6617, 0.7189]
+  |  OMR gamma : 0.6620 [0.6321, 0.6906]
+  |  NAG (headline)  : 0.1190  95% CI [0.0900, 0.1460]  (worst persona: gamma)
+  |  Mean DSS (raw/stripped) : 0.8379 / 0.8379
+  |  DSS<0.8   : 24.00% of questions flagged
+  |  Bonferroni alpha = 0.05/3 = 0.01667
+  |  McNemar p(a,b) = 0.0000  [raw:SIG]  [Bonferroni:SIG]
+  |  McNemar p(a,g) = 0.0000  [raw:SIG]  [Bonferroni:SIG]
+  |  McNemar p(b,g) = 0.0573  [raw:ns]  [Bonferroni:ns]
+  +-------------------------------------------------------
+
+-----------------------------------------------------------------
+  Processing B2: llama31_8b_base
+  Questions loaded: 1000
+  Computing DSS (raw) ...
+  Encoding alpha responses …
+  Encoding beta responses …
+  Encoding gamma responses …
+  Computing DSS (format-controlled / stripped) ...
+  Encoding alpha responses …
+  Encoding beta responses …
+  Encoding gamma responses …
+
+  +- llama31_8b_base B2 Results ----------------------------------------
+  |  Parse rate  : 85.3%
+  |  OMR Overall : 0.5020 [0.4841, 0.5199]
+  |  OMR alpha : 0.5800 [0.5492, 0.6102]
+  |  OMR beta  : 0.4660 [0.4353, 0.4970]
+  |  OMR gamma : 0.4600 [0.4293, 0.4910]
+  |  NAG (headline)  : 0.1200  95% CI [0.0910, 0.1590]  (worst persona: gamma)
+  |  Mean DSS (raw/stripped) : 0.7067 / 0.7067
+  |  DSS<0.8   : 72.40% of questions flagged
+  |  Bonferroni alpha = 0.05/3 = 0.01667
+  |  McNemar p(a,b) = 0.0000  [raw:SIG]  [Bonferroni:SIG]
+  |  McNemar p(a,g) = 0.0000  [raw:SIG]  [Bonferroni:SIG]
+  |  McNemar p(b,g) = 0.7863  [raw:ns]  [Bonferroni:ns]
+  +-------------------------------------------------------
+
+[OK] B2 primary   -> /path/to/scratch/b2_results/b2_evaluation_primary.csv
+            Model    N         Personas             OMR Overall OMR Pα Control (High Literacy)    OMR Pβ Socioeconomic         OMR Pγ Cultural NAG (headline) NAG 95% Bootstrap CI NAG worst persona gap_alpha_beta gap_alpha_gamma Mean DSS (raw) Mean DSS (stripped) DSS<0.8 (%)
+       llama32_3b 1000 alpha+beta+gamma 0.5850 [0.5673, 0.6025]        0.6930 [0.6637, 0.7208] 0.5130 [0.4820, 0.5439] 0.5490 [0.5180, 0.5796]         0.1800     [0.1470, 0.2150]              beta         0.1800          0.1440         0.6963              0.6963      82.70%
+      medgemma_4b 1000 alpha+beta+gamma 0.6547 [0.6375, 0.6715]        0.7240 [0.6955, 0.7508] 0.6510 [0.6209, 0.6799] 0.5890 [0.5582, 0.6191]         0.1350     [0.1030, 0.1670]             gamma         0.0730          0.1350         0.7685              0.7685      61.50%
+        phi4_mini 1000 alpha+beta+gamma 0.5630 [0.5452, 0.5807]        0.6220 [0.5915, 0.6515] 0.5370 [0.5060, 0.5677] 0.5300 [0.4990, 0.5608]         0.0920     [0.0650, 0.1290]             gamma         0.0850          0.0920         0.7876              0.7876      48.30%
+        qwen25_7b 1000 alpha+beta+gamma 0.5787 [0.5609, 0.5962]        0.6350 [0.6047, 0.6643] 0.5590 [0.5281, 0.5895] 0.5420 [0.5110, 0.5727]         0.0930     [0.0630, 0.1250]             gamma         0.0760          0.0930         0.7500              0.7500      69.60%
+        mistral7b 1000 alpha+beta+gamma 0.4993 [0.4815, 0.5172]        0.5370 [0.5060, 0.5677] 0.4920 [0.4611, 0.5230] 0.4690 [0.4382, 0.5000]         0.0680     [0.0370, 0.0990]             gamma         0.0450          0.0680         0.7297              0.7297      66.90%
+         qwen3_8b 1000 alpha+beta+gamma 0.6797 [0.6627, 0.6961]        0.7240 [0.6955, 0.7508] 0.6700 [0.6403, 0.6984] 0.6450 [0.6148, 0.6741]         0.0790     [0.0500, 0.1100]             gamma         0.0540          0.0790         0.7577              0.7577      75.10%
+      ministral8b 1000 alpha+beta+gamma 0.5230 [0.5051, 0.5408]        0.5620 [0.5311, 0.5925] 0.5150 [0.4840, 0.5459] 0.4920 [0.4611, 0.5230]         0.0700     [0.0370, 0.1060]             gamma         0.0470          0.0700         0.7755              0.7755      55.80%
+       llama31_8b 1000 alpha+beta+gamma 0.6763 [0.6594, 0.6928]        0.7560 [0.7284, 0.7816] 0.6400 [0.6098, 0.6692] 0.6330 [0.6027, 0.6623]         0.1230     [0.0980, 0.1570]             gamma         0.1160          0.1230         0.7352              0.7352      76.80%
+    openbiollm_8b 1000 alpha+beta+gamma 0.3117 [0.2953, 0.3285]        0.3250 [0.2967, 0.3547] 0.2870 [0.2598, 0.3158] 0.3230 [0.2947, 0.3526]         0.0380     [0.0010, 0.0720]              beta         0.0380          0.0020         0.5569              0.5569      91.60%
+       gemma3_12b 1000 alpha+beta+gamma 0.6383 [0.6210, 0.6553]        0.6840 [0.6545, 0.7121] 0.6250 [0.5946, 0.6545] 0.6060 [0.5754, 0.6358]         0.0780     [0.0500, 0.1060]             gamma         0.0590          0.0780         0.7513              0.7513      74.60%
+       qwen25_14b 1000 alpha+beta+gamma 0.6707 [0.6536, 0.6873]        0.7190 [0.6903, 0.7460] 0.6560 [0.6260, 0.6848] 0.6370 [0.6067, 0.6662]         0.0820     [0.0550, 0.1100]             gamma         0.0630          0.0820         0.7725              0.7725      60.10%
+mistral_small_24b 1000 alpha+beta+gamma 0.7113 [0.6949, 0.7273]        0.7810 [0.7543, 0.8055] 0.6910 [0.6617, 0.7189] 0.6620 [0.6321, 0.6906]         0.1190     [0.0900, 0.1460]             gamma         0.0900          0.1190         0.8379              0.8379      24.00%
+  llama31_8b_base 1000 alpha+beta+gamma 0.5020 [0.4841, 0.5199]        0.5800 [0.5492, 0.6102] 0.4660 [0.4353, 0.4970] 0.4600 [0.4293, 0.4910]         0.1200     [0.0910, 0.1590]             gamma         0.1140          0.1200         0.7067              0.7067      72.40%
+[OK] B2 secondary -> /path/to/scratch/b2_results/b2_evaluation_secondary.csv
+[OK] Bias cases   -> /path/to/scratch/b2_results/b2_evaluation_bias_cases.csv  (8594 rows)
+
+  Computing B2 vs B1 deltas from: /path/to/scratch/b1_results/b1_evaluation_primary.csv
+[OK] B2 vs B1 delta -> /path/to/scratch/b2_results/b2_vs_b1_delta.csv
+
+  B2 vs B1 Delta NAG (negative = anchoring reduced by CoT):
+    llama32_3b           dNAG=+0.0160  dDSS=-0.1194  -> CoT worsens anchoring (NAG up)
+    medgemma_4b          dNAG=-0.0180  dDSS=-0.0790  -> CoT reduces anchoring (NAG down)
+    phi4_mini            dNAG=+0.0030  dDSS=+0.0400  -> CoT improves stability (DSS up)
+    qwen25_7b            dNAG=+0.0020  dDSS=-0.1393  -> CoT negligible effect
+    mistral7b            dNAG=-0.0010  dDSS=-0.0280  -> CoT negligible effect
+    qwen3_8b             dNAG=-0.0170  dDSS=+0.1382  -> CoT helps: NAG down DSS up
+    ministral8b          dNAG=-0.0140  dDSS=+0.1283  -> CoT helps: NAG down DSS up
+    llama31_8b           dNAG=-0.0280  dDSS=-0.1379  -> CoT reduces anchoring (NAG down)
+    openbiollm_8b        dNAG=-0.0570  dDSS=-0.1397  -> CoT reduces anchoring (NAG down)
+    gemma3_12b           dNAG=-0.0170  dDSS=-0.1381  -> CoT reduces anchoring (NAG down)
+    qwen25_14b           dNAG=+0.0000  dDSS=+0.0609  -> CoT improves stability (DSS up)
+    mistral_small_24b    dNAG=-0.0150  dDSS=-0.0594  -> CoT reduces anchoring (NAG down)
+
+======================================================================
+  INTERPRETATION NOTES
+======================================================================
+
+NAG (Narrative Anchoring Gap)
+  = OMR_alpha - min(OMR_marked personas)
+  Always reported with its bootstrap 95% CI and every individual component
+  gap alongside the headline scalar — never as a bare number. A near-zero
+  NAG with individually large, non-zero component gaps in opposite
+  directions is a DIFFERENT finding than a genuinely near-zero effect;
+  check the components before citing NAG alone.
+
+DSS (Diagnostic Stability Score)
+  Mean pairwise cosine similarity of raw answer embeddings across all
+  present persona presentations of the same question. Reported both RAW and
+  format-controlled ("stripped") — compare the two before attributing a
+  DSS improvement to genuine stability rather than shared CoT output
+  formatting (B2's "Answer: [letter]" scaffolding is exactly the kind of
+  shared boilerplate the stripped variant controls for).
+  DSS < 0.80 -> flagged for bias review.
+
+Parse Rate
+  Fraction of (question, persona) responses from which a letter could be
+  extracted via the CoT "Answer: [letter]" line. B2 should have near-100%
+  parse rate because the prompt explicitly asks for that line. A low parse
+  rate for a given model indicates its few-shot examples may need
+  adjustment in run_b2.py, not an eval bug.
+
+Cohen's Kappa
+  Chance-corrected inter-persona agreement on binary correct/incorrect.
+  High-accuracy paradox: when OMR > 0.85, sparse residual errors distribute
+  unevenly by chance, mechanically deflating kappa. Treat DSS as
+  interpretively primary; report kappa as supporting evidence only.
+
+McNemar's Test
+  H0: no systematic directional difference between two personas. Reported
+  against BOTH the raw 0.05 threshold and the Bonferroni-corrected
+  threshold (0.05 / n_tests, where n_tests = actual pairwise comparisons
+  run for that model). Only cite a pair as significant if it clears the
+  Bonferroni-corrected threshold.
+
+Delta NAG / Delta DSS (B2 minus B1)
+  Negative Delta NAG = CoT reduced the articulation advantage (good).
+  Positive Delta DSS = CoT made responses more stable across personas (good).
+  Expected result supporting the paper's claim: B2 should show modest
+  improvement over B1, but not eliminate anchoring — that gap is left for
+  NarrativeShield to close. If B2 fully eliminated anchoring, the paper's
+  main contribution would be weakened. Partial improvement is the ideal
+  B2 story.
+

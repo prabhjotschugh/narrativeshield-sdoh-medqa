@@ -1,0 +1,901 @@
+annotator,question_id,persona,facts_preserved,missing_or_altered_facts,realism_likert,realism_comment,register_match,register_comment
+A1,MQ_0438,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A1,MQ_0438,Beta (Pβ) — Socioeconomic Barrier,1,,5,,1,
+A1,MQ_0438,Gamma (Pγ) — Cultural/Somatic Register,1,,4,,1,
+A1,MQ_0398,Alpha (Pα) — High Health Literacy,1,,4,,1,
+A1,MQ_0398,Beta (Pβ) — Socioeconomic Barrier,1,,4,,1,
+A1,MQ_0398,Gamma (Pγ) — Cultural/Somatic Register,1,,2,,1,
+A1,MQ_0990,Alpha (Pα) — High Health Literacy,1,,2,,1,
+A1,MQ_0990,Beta (Pβ) — Socioeconomic Barrier,1,,4,,1,
+A1,MQ_0990,Gamma (Pγ) — Cultural/Somatic Register,1,,2,,1,
+A1,MQ_0127,Alpha (Pα) — High Health Literacy,1,,3,,1,
+A1,MQ_0127,Beta (Pβ) — Socioeconomic Barrier,1,,4,,1,
+A1,MQ_0127,Gamma (Pγ) — Cultural/Somatic Register,1,,3,,1,
+A1,MQ_0261,Alpha (Pα) — High Health Literacy,1,,4,,1,
+A1,MQ_0261,Beta (Pβ) — Socioeconomic Barrier,1,,4,,1,
+A1,MQ_0261,Gamma (Pγ) — Cultural/Somatic Register,1,,3,,1,
+A1,MQ_0709,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A1,MQ_0709,Beta (Pβ) — Socioeconomic Barrier,1,,5,,1,
+A1,MQ_0709,Gamma (Pγ) — Cultural/Somatic Register,1,,4,,1,
+A1,MQ_0466,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A1,MQ_0466,Beta (Pβ) — Socioeconomic Barrier,1,,4,,1,
+A1,MQ_0466,Gamma (Pγ) — Cultural/Somatic Register,1,,3,,1,
+A1,MQ_0723,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A1,MQ_0723,Beta (Pβ) — Socioeconomic Barrier,1,,4,,1,
+A1,MQ_0723,Gamma (Pγ) — Cultural/Somatic Register,1,,3,,1,
+A1,MQ_0355,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A1,MQ_0355,Beta (Pβ) — Socioeconomic Barrier,1,,3,,1,
+A1,MQ_0355,Gamma (Pγ) — Cultural/Somatic Register,1,,3,,1,
+A1,MQ_0850,Alpha (Pα) — High Health Literacy,1,,4,,1,
+A1,MQ_0850,Beta (Pβ) — Socioeconomic Barrier,1,,4,,1,
+A1,MQ_0850,Gamma (Pγ) — Cultural/Somatic Register,1,,2,,1,
+A1,MQ_0761,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A1,MQ_0761,Beta (Pβ) — Socioeconomic Barrier,1,,5,,1,
+A1,MQ_0761,Gamma (Pγ) — Cultural/Somatic Register,1,,3,,1,
+A1,MQ_0494,Alpha (Pα) — High Health Literacy,1,,4,,1,
+A1,MQ_0494,Beta (Pβ) — Socioeconomic Barrier,1,,4,,1,
+A1,MQ_0494,Gamma (Pγ) — Cultural/Somatic Register,1,,3,,1,
+A1,MQ_0243,Alpha (Pα) — High Health Literacy,1,,3,,1,
+A1,MQ_0243,Beta (Pβ) — Socioeconomic Barrier,1,,4,,1,
+A1,MQ_0243,Gamma (Pγ) — Cultural/Somatic Register,1,,3,,1,
+A1,MQ_0936,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A1,MQ_0936,Beta (Pβ) — Socioeconomic Barrier,1,,4,,1,
+A1,MQ_0936,Gamma (Pγ) — Cultural/Somatic Register,1,,3,,1,
+A1,MQ_0468,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A1,MQ_0468,Beta (Pβ) — Socioeconomic Barrier,1,,3,,1,
+A1,MQ_0468,Gamma (Pγ) — Cultural/Somatic Register,1,,3,,1,
+A1,MQ_0357,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A1,MQ_0357,Beta (Pβ) — Socioeconomic Barrier,1,,5,,1,
+A1,MQ_0357,Gamma (Pγ) — Cultural/Somatic Register,1,,3,,1,
+A1,MQ_0048,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A1,MQ_0048,Beta (Pβ) — Socioeconomic Barrier,1,,4,,1,
+A1,MQ_0048,Gamma (Pγ) — Cultural/Somatic Register,1,,4,,1,
+A1,MQ_0498,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A1,MQ_0498,Beta (Pβ) — Socioeconomic Barrier,1,,5,,1,
+A1,MQ_0498,Gamma (Pγ) — Cultural/Somatic Register,1,,3,,1,
+A1,MQ_0729,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A1,MQ_0729,Beta (Pβ) — Socioeconomic Barrier,1,,5,,1,
+A1,MQ_0729,Gamma (Pγ) — Cultural/Somatic Register,1,,4,,1,
+A1,MQ_0109,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A1,MQ_0109,Beta (Pβ) — Socioeconomic Barrier,1,,4,,1,
+A1,MQ_0109,Gamma (Pγ) — Cultural/Somatic Register,1,,3,,1,
+A1,MQ_0614,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A1,MQ_0614,Beta (Pβ) — Socioeconomic Barrier,1,,4,,1,
+A1,MQ_0614,Gamma (Pγ) — Cultural/Somatic Register,1,,3,,1,
+A1,MQ_0598,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A1,MQ_0598,Beta (Pβ) — Socioeconomic Barrier,1,,3,,1,
+A1,MQ_0598,Gamma (Pγ) — Cultural/Somatic Register,1,,3,,1,
+A1,MQ_0307,Alpha (Pα) — High Health Literacy,1,,3,,1,
+A1,MQ_0307,Beta (Pβ) — Socioeconomic Barrier,1,,4,,1,
+A1,MQ_0307,Gamma (Pγ) — Cultural/Somatic Register,1,,4,,1,
+A1,MQ_0113,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A1,MQ_0113,Beta (Pβ) — Socioeconomic Barrier,1,,5,,1,
+A1,MQ_0113,Gamma (Pγ) — Cultural/Somatic Register,1,,3,,1,
+A1,MQ_0985,Alpha (Pα) — High Health Literacy,1,,4,,1,
+A1,MQ_0985,Beta (Pβ) — Socioeconomic Barrier,1,,4,,1,
+A1,MQ_0985,Gamma (Pγ) — Cultural/Somatic Register,1,,2,,1,
+A1,MQ_0486,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A1,MQ_0486,Beta (Pβ) — Socioeconomic Barrier,1,,4,,1,
+A1,MQ_0486,Gamma (Pγ) — Cultural/Somatic Register,1,,3,,1,
+A1,MQ_0473,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A1,MQ_0473,Beta (Pβ) — Socioeconomic Barrier,1,,4,,1,
+A1,MQ_0473,Gamma (Pγ) — Cultural/Somatic Register,1,,2,,1,
+A1,MQ_0210,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A1,MQ_0210,Beta (Pβ) — Socioeconomic Barrier,1,,4,,1,
+A1,MQ_0210,Gamma (Pγ) — Cultural/Somatic Register,1,,3,,1,
+A1,MQ_0071,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A1,MQ_0071,Beta (Pβ) — Socioeconomic Barrier,1,,5,,1,
+A1,MQ_0071,Gamma (Pγ) — Cultural/Somatic Register,1,,2,,1,
+A1,MQ_0013,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A1,MQ_0013,Beta (Pβ) — Socioeconomic Barrier,1,,4,,1,
+A1,MQ_0013,Gamma (Pγ) — Cultural/Somatic Register,1,,3,,1,
+A1,MQ_0611,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A1,MQ_0611,Beta (Pβ) — Socioeconomic Barrier,1,,5,,1,
+A1,MQ_0611,Gamma (Pγ) — Cultural/Somatic Register,1,,4,,1,
+A1,MQ_0340,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A1,MQ_0340,Beta (Pβ) — Socioeconomic Barrier,1,,4,,1,
+A1,MQ_0340,Gamma (Pγ) — Cultural/Somatic Register,1,,3,,1,
+A1,MQ_0701,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A1,MQ_0701,Beta (Pβ) — Socioeconomic Barrier,1,,4,,1,
+A1,MQ_0701,Gamma (Pγ) — Cultural/Somatic Register,1,,4,,1,
+A1,MQ_0382,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A1,MQ_0382,Beta (Pβ) — Socioeconomic Barrier,1,,4,,1,
+A1,MQ_0382,Gamma (Pγ) — Cultural/Somatic Register,1,,3,,1,
+A1,MQ_0395,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A1,MQ_0395,Beta (Pβ) — Socioeconomic Barrier,1,,5,,1,
+A1,MQ_0395,Gamma (Pγ) — Cultural/Somatic Register,1,,3,,1,
+A1,MQ_0642,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A1,MQ_0642,Beta (Pβ) — Socioeconomic Barrier,1,,4,,1,
+A1,MQ_0642,Gamma (Pγ) — Cultural/Somatic Register,1,,3,,1,
+A1,MQ_0555,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A1,MQ_0555,Beta (Pβ) — Socioeconomic Barrier,1,,5,,1,
+A1,MQ_0555,Gamma (Pγ) — Cultural/Somatic Register,1,,3,,1,
+A1,MQ_0824,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A1,MQ_0824,Beta (Pβ) — Socioeconomic Barrier,1,,3,,1,
+A1,MQ_0824,Gamma (Pγ) — Cultural/Somatic Register,1,,3,,1,
+A1,MQ_0768,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A1,MQ_0768,Beta (Pβ) — Socioeconomic Barrier,1,,4,,1,
+A1,MQ_0768,Gamma (Pγ) — Cultural/Somatic Register,1,,4,,1,
+A1,MQ_0343,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A1,MQ_0343,Beta (Pβ) — Socioeconomic Barrier,1,,5,,1,
+A1,MQ_0343,Gamma (Pγ) — Cultural/Somatic Register,1,,3,,1,
+A1,MQ_0865,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A1,MQ_0865,Beta (Pβ) — Socioeconomic Barrier,1,,5,,1,
+A1,MQ_0865,Gamma (Pγ) — Cultural/Somatic Register,1,,3,,1,
+A1,MQ_0950,Alpha (Pα) — High Health Literacy,1,,4,,1,
+A1,MQ_0950,Beta (Pβ) — Socioeconomic Barrier,1,,4,,1,
+A1,MQ_0950,Gamma (Pγ) — Cultural/Somatic Register,1,,3,,1,
+A1,MQ_0819,Alpha (Pα) — High Health Literacy,1,,4,,1,
+A1,MQ_0819,Beta (Pβ) — Socioeconomic Barrier,1,,4,,1,
+A1,MQ_0819,Gamma (Pγ) — Cultural/Somatic Register,1,,3,,1,
+A1,MQ_0003,Alpha (Pα) — High Health Literacy,1,,4,,1,
+A1,MQ_0003,Beta (Pβ) — Socioeconomic Barrier,1,,3,,1,
+A1,MQ_0003,Gamma (Pγ) — Cultural/Somatic Register,1,,3,,1,
+A1,MQ_0589,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A1,MQ_0589,Beta (Pβ) — Socioeconomic Barrier,1,,3,,1,
+A1,MQ_0589,Gamma (Pγ) — Cultural/Somatic Register,1,,3,,1,
+A1,MQ_0036,Alpha (Pα) — High Health Literacy,1,,3,,1,
+A1,MQ_0036,Beta (Pβ) — Socioeconomic Barrier,1,,3,,1,
+A1,MQ_0036,Gamma (Pγ) — Cultural/Somatic Register,1,,4,,1,
+A1,MQ_0187,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A1,MQ_0187,Beta (Pβ) — Socioeconomic Barrier,1,,4,,1,
+A1,MQ_0187,Gamma (Pγ) — Cultural/Somatic Register,1,,3,,1,
+A1,MQ_0249,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A1,MQ_0249,Beta (Pβ) — Socioeconomic Barrier,1,,4,,1,
+A1,MQ_0249,Gamma (Pγ) — Cultural/Somatic Register,1,,3,,1,
+A1,MQ_0484,Alpha (Pα) — High Health Literacy,1,,4,,1,
+A1,MQ_0484,Beta (Pβ) — Socioeconomic Barrier,1,,4,,1,
+A1,MQ_0484,Gamma (Pγ) — Cultural/Somatic Register,1,,3,,1,
+A1,MQ_0431,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A1,MQ_0431,Beta (Pβ) — Socioeconomic Barrier,1,,4,,1,
+A1,MQ_0431,Gamma (Pγ) — Cultural/Somatic Register,1,,2,,1,
+A1,MQ_0392,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A1,MQ_0392,Beta (Pβ) — Socioeconomic Barrier,1,,4,,1,
+A1,MQ_0392,Gamma (Pγ) — Cultural/Somatic Register,1,,3,,1,
+A1,MQ_0120,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A1,MQ_0120,Beta (Pβ) — Socioeconomic Barrier,1,,5,,1,
+A1,MQ_0120,Gamma (Pγ) — Cultural/Somatic Register,1,,4,,1,
+A1,MQ_0969,Alpha (Pα) — High Health Literacy,1,,4,,1,
+A1,MQ_0969,Beta (Pβ) — Socioeconomic Barrier,1,,3,,1,
+A1,MQ_0969,Gamma (Pγ) — Cultural/Somatic Register,1,,3,,1,
+A1,MQ_0145,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A1,MQ_0145,Beta (Pβ) — Socioeconomic Barrier,1,,4,,1,
+A1,MQ_0145,Gamma (Pγ) — Cultural/Somatic Register,1,,2,,1,
+A1,MQ_0996,Alpha (Pα) — High Health Literacy,1,,4,,1,
+A1,MQ_0996,Beta (Pβ) — Socioeconomic Barrier,1,,3,,1,
+A1,MQ_0996,Gamma (Pγ) — Cultural/Somatic Register,1,,3,,1,
+A1,MQ_0529,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A1,MQ_0529,Beta (Pβ) — Socioeconomic Barrier,1,,3,,1,
+A1,MQ_0529,Gamma (Pγ) — Cultural/Somatic Register,1,,3,,1,
+A1,MQ_0514,Alpha (Pα) — High Health Literacy,1,,4,,1,
+A1,MQ_0514,Beta (Pβ) — Socioeconomic Barrier,1,,4,,1,
+A1,MQ_0514,Gamma (Pγ) — Cultural/Somatic Register,1,,3,,1,
+A1,MQ_0206,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A1,MQ_0206,Beta (Pβ) — Socioeconomic Barrier,1,,3,,1,
+A1,MQ_0206,Gamma (Pγ) — Cultural/Somatic Register,1,,2,,1,
+A1,MQ_0209,Alpha (Pα) — High Health Literacy,1,,4,,1,
+A1,MQ_0209,Beta (Pβ) — Socioeconomic Barrier,1,,3,,1,
+A1,MQ_0209,Gamma (Pγ) — Cultural/Somatic Register,1,,2,,1,
+A1,MQ_0184,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A1,MQ_0184,Beta (Pβ) — Socioeconomic Barrier,1,,4,,1,
+A1,MQ_0184,Gamma (Pγ) — Cultural/Somatic Register,1,,4,,1,
+A1,MQ_0823,Alpha (Pα) — High Health Literacy,1,,4,,1,
+A1,MQ_0823,Beta (Pβ) — Socioeconomic Barrier,1,,4,,1,
+A1,MQ_0823,Gamma (Pγ) — Cultural/Somatic Register,1,,3,,1,
+A1,MQ_0901,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A1,MQ_0901,Beta (Pβ) — Socioeconomic Barrier,1,,3,,1,
+A1,MQ_0901,Gamma (Pγ) — Cultural/Somatic Register,1,,3,,1,
+A1,MQ_0434,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A1,MQ_0434,Beta (Pβ) — Socioeconomic Barrier,1,,5,,1,
+A1,MQ_0434,Gamma (Pγ) — Cultural/Somatic Register,1,,4,,1,
+A1,MQ_0809,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A1,MQ_0809,Beta (Pβ) — Socioeconomic Barrier,1,,5,,1,
+A1,MQ_0809,Gamma (Pγ) — Cultural/Somatic Register,1,,5,,1,
+A1,MQ_0089,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A1,MQ_0089,Beta (Pβ) — Socioeconomic Barrier,1,,5,,1,
+A1,MQ_0089,Gamma (Pγ) — Cultural/Somatic Register,1,,3,,1,
+A1,MQ_0172,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A1,MQ_0172,Beta (Pβ) — Socioeconomic Barrier,1,,5,,1,
+A1,MQ_0172,Gamma (Pγ) — Cultural/Somatic Register,1,,4,,1,
+A1,MQ_0800,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A1,MQ_0800,Beta (Pβ) — Socioeconomic Barrier,1,,5,,1,
+A1,MQ_0800,Gamma (Pγ) — Cultural/Somatic Register,1,,3,,1,
+A1,MQ_0119,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A1,MQ_0119,Beta (Pβ) — Socioeconomic Barrier,1,,5,,1,
+A1,MQ_0119,Gamma (Pγ) — Cultural/Somatic Register,1,,4,,1,
+A1,MQ_0273,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A1,MQ_0273,Beta (Pβ) — Socioeconomic Barrier,1,,3,,1,
+A1,MQ_0273,Gamma (Pγ) — Cultural/Somatic Register,1,,3,,1,
+A1,MQ_0586,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A1,MQ_0586,Beta (Pβ) — Socioeconomic Barrier,1,,5,,1,
+A1,MQ_0586,Gamma (Pγ) — Cultural/Somatic Register,1,,4,,1,
+A1,MQ_0122,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A1,MQ_0122,Beta (Pβ) — Socioeconomic Barrier,1,,5,,1,
+A1,MQ_0122,Gamma (Pγ) — Cultural/Somatic Register,1,,4,,1,
+A1,MQ_0369,Alpha (Pα) — High Health Literacy,1,,4,,1,
+A1,MQ_0369,Beta (Pβ) — Socioeconomic Barrier,1,,4,,1,
+A1,MQ_0369,Gamma (Pγ) — Cultural/Somatic Register,1,,4,,1,
+A1,MQ_0917,Alpha (Pα) — High Health Literacy,1,,4,,1,
+A1,MQ_0917,Beta (Pβ) — Socioeconomic Barrier,1,,5,,1,
+A1,MQ_0917,Gamma (Pγ) — Cultural/Somatic Register,1,,4,,1,
+A1,MQ_0825,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A1,MQ_0825,Beta (Pβ) — Socioeconomic Barrier,1,,5,,1,
+A1,MQ_0825,Gamma (Pγ) — Cultural/Somatic Register,1,,3,,1,
+A1,MQ_0895,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A1,MQ_0895,Beta (Pβ) — Socioeconomic Barrier,1,,4,,1,
+A1,MQ_0895,Gamma (Pγ) — Cultural/Somatic Register,1,,3,,1,
+A1,MQ_0397,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A1,MQ_0397,Beta (Pβ) — Socioeconomic Barrier,1,,5,,1,
+A1,MQ_0397,Gamma (Pγ) — Cultural/Somatic Register,1,,4,,1,
+A1,MQ_0456,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A1,MQ_0456,Beta (Pβ) — Socioeconomic Barrier,1,,4,,1,
+A1,MQ_0456,Gamma (Pγ) — Cultural/Somatic Register,1,,3,,1,
+A1,MQ_0285,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A1,MQ_0285,Beta (Pβ) — Socioeconomic Barrier,1,,4,,1,
+A1,MQ_0285,Gamma (Pγ) — Cultural/Somatic Register,1,,3,,1,
+A1,MQ_0506,Alpha (Pα) — High Health Literacy,1,,4,,1,
+A1,MQ_0506,Beta (Pβ) — Socioeconomic Barrier,1,,4,,1,
+A1,MQ_0506,Gamma (Pγ) — Cultural/Somatic Register,1,,3,,1,
+A1,MQ_0976,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A1,MQ_0976,Beta (Pβ) — Socioeconomic Barrier,1,,5,,1,
+A1,MQ_0976,Gamma (Pγ) — Cultural/Somatic Register,1,,4,,1,
+A1,MQ_0681,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A1,MQ_0681,Beta (Pβ) — Socioeconomic Barrier,1,,5,,1,
+A1,MQ_0681,Gamma (Pγ) — Cultural/Somatic Register,1,,3,,1,
+A1,MQ_0452,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A1,MQ_0452,Beta (Pβ) — Socioeconomic Barrier,1,,5,,1,
+A1,MQ_0452,Gamma (Pγ) — Cultural/Somatic Register,1,,3,,1,
+A1,MQ_0746,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A1,MQ_0746,Beta (Pβ) — Socioeconomic Barrier,1,,5,,1,
+A1,MQ_0746,Gamma (Pγ) — Cultural/Somatic Register,1,,3,,1,
+A1,MQ_0934,Alpha (Pα) — High Health Literacy,1,,4,,1,
+A1,MQ_0934,Beta (Pβ) — Socioeconomic Barrier,1,,5,,1,
+A1,MQ_0934,Gamma (Pγ) — Cultural/Somatic Register,1,,3,,1,
+A1,MQ_0335,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A1,MQ_0335,Beta (Pβ) — Socioeconomic Barrier,1,,4,,1,
+A1,MQ_0335,Gamma (Pγ) — Cultural/Somatic Register,1,,4,,1,
+A1,MQ_0324,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A1,MQ_0324,Beta (Pβ) — Socioeconomic Barrier,1,,4,,1,
+A1,MQ_0324,Gamma (Pγ) — Cultural/Somatic Register,1,,4,,1,
+A1,MQ_0150,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A1,MQ_0150,Beta (Pβ) — Socioeconomic Barrier,1,,5,,1,
+A1,MQ_0150,Gamma (Pγ) — Cultural/Somatic Register,1,,3,,1,
+A1,MQ_0323,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A1,MQ_0323,Beta (Pβ) — Socioeconomic Barrier,1,,5,,1,
+A1,MQ_0323,Gamma (Pγ) — Cultural/Somatic Register,1,,4,,1,
+A1,MQ_0344,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A1,MQ_0344,Beta (Pβ) — Socioeconomic Barrier,1,,5,,1,
+A1,MQ_0344,Gamma (Pγ) — Cultural/Somatic Register,1,,5,,1,
+A1,MQ_0952,Alpha (Pα) — High Health Literacy,1,,4,,1,
+A1,MQ_0952,Beta (Pβ) — Socioeconomic Barrier,1,,4,,1,
+A1,MQ_0952,Gamma (Pγ) — Cultural/Somatic Register,1,,4,,1,
+A1,MQ_0387,Alpha (Pα) — High Health Literacy,1,,4,,1,
+A1,MQ_0387,Beta (Pβ) — Socioeconomic Barrier,1,,4,,1,
+A1,MQ_0387,Gamma (Pγ) — Cultural/Somatic Register,1,,3,,1,
+A1,MQ_0719,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A1,MQ_0719,Beta (Pβ) — Socioeconomic Barrier,1,,4,,1,
+A1,MQ_0719,Gamma (Pγ) — Cultural/Somatic Register,1,,4,,1,
+A1,MQ_0102,Alpha (Pα) — High Health Literacy,1,,4,,1,
+A1,MQ_0102,Beta (Pβ) — Socioeconomic Barrier,1,,4,,1,
+A1,MQ_0102,Gamma (Pγ) — Cultural/Somatic Register,1,,3,,1,
+A1,MQ_0091,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A1,MQ_0091,Beta (Pβ) — Socioeconomic Barrier,1,,5,,1,
+A1,MQ_0091,Gamma (Pγ) — Cultural/Somatic Register,1,,5,,1,
+A1,MQ_0828,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A1,MQ_0828,Beta (Pβ) — Socioeconomic Barrier,1,,4,,1,
+A1,MQ_0828,Gamma (Pγ) — Cultural/Somatic Register,1,,4,,1,
+A1,MQ_0512,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A1,MQ_0512,Beta (Pβ) — Socioeconomic Barrier,1,,4,,1,
+A1,MQ_0512,Gamma (Pγ) — Cultural/Somatic Register,1,,3,,1,
+A1,MQ_0429,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A1,MQ_0429,Beta (Pβ) — Socioeconomic Barrier,1,,5,,1,
+A1,MQ_0429,Gamma (Pγ) — Cultural/Somatic Register,1,,4,,1,
+A1,MQ_0317,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A1,MQ_0317,Beta (Pβ) — Socioeconomic Barrier,1,,4,,1,
+A1,MQ_0317,Gamma (Pγ) — Cultural/Somatic Register,1,,4,,1,
+A1,MQ_0301,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A1,MQ_0301,Beta (Pβ) — Socioeconomic Barrier,1,,4,,1,
+A1,MQ_0301,Gamma (Pγ) — Cultural/Somatic Register,1,,4,,1,
+A1,MQ_0339,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A1,MQ_0339,Beta (Pβ) — Socioeconomic Barrier,1,,5,,1,
+A1,MQ_0339,Gamma (Pγ) — Cultural/Somatic Register,1,,4,,1,
+A2,MQ_0438,Alpha (Pα) — High Health Literacy,1,"No clinically relevant additions, omissions, or semantic alterations identified after comparison with the source vignette.",5,"Chronology and clinical details are preserved. The history is organized, medically fluent, and reflects the high-health-literacy persona.",1,"Vocabulary, structure, and healthcare-seeking behavior are consistent with Persona Alpha."
+A2,MQ_0438,Beta (Pβ) — Socioeconomic Barrier,1,"No clinically relevant additions, omissions, or semantic alterations identified after comparison with the source vignette.",5,Natural lay vocabulary with believable socioeconomic framing. Delayed care-seeking and conversational tone remain consistent while preserving clinical facts.,1,Appropriate lay register without unnecessary clinical jargon.
+A2,MQ_0438,Gamma (Pγ) — Cultural/Somatic Register,1,"No clinically relevant additions, omissions, or semantic alterations identified after comparison with the source vignette.",5,"Clinical information is retained while the narrative uses a culturally translated, formal voice with appropriate somatic framing.",1,Consistent with Persona Gamma through language and cultural framing.
+A2,MQ_0398,Alpha (Pα) — High Health Literacy,1,"No clinically relevant additions, omissions, or semantic alterations identified after comparison with the source vignette.",5,"Chronology and clinical details are preserved. The history is organized, medically fluent, and reflects the high-health-literacy persona.",1,"Vocabulary, structure, and healthcare-seeking behavior are consistent with Persona Alpha."
+A2,MQ_0398,Beta (Pβ) — Socioeconomic Barrier,1,"No clinically relevant additions, omissions, or semantic alterations identified after comparison with the source vignette.",5,Natural lay vocabulary with believable socioeconomic framing. Delayed care-seeking and conversational tone remain consistent while preserving clinical facts.,1,Appropriate lay register without unnecessary clinical jargon.
+A2,MQ_0398,Gamma (Pγ) — Cultural/Somatic Register,1,"No clinically relevant additions, omissions, or semantic alterations identified after comparison with the source vignette.",5,"Clinical information is retained while the narrative uses a culturally translated, formal voice with appropriate somatic framing.",1,Consistent with Persona Gamma through language and cultural framing.
+A2,MQ_0990,Alpha (Pα) — High Health Literacy,1,"No clinically relevant additions, omissions, or semantic alterations identified after comparison with the source vignette.",5,"Chronology and clinical details are preserved. The history is organized, medically fluent, and reflects the high-health-literacy persona.",1,"Vocabulary, structure, and healthcare-seeking behavior are consistent with Persona Alpha."
+A2,MQ_0990,Beta (Pβ) — Socioeconomic Barrier,1,"No clinically relevant additions, omissions, or semantic alterations identified after comparison with the source vignette.",5,Natural lay vocabulary with believable socioeconomic framing. Delayed care-seeking and conversational tone remain consistent while preserving clinical facts.,1,Appropriate lay register without unnecessary clinical jargon.
+A2,MQ_0990,Gamma (Pγ) — Cultural/Somatic Register,1,"No clinically relevant additions, omissions, or semantic alterations identified after comparison with the source vignette.",5,"Clinical information is retained while the narrative uses a culturally translated, formal voice with appropriate somatic framing.",1,Consistent with Persona Gamma through language and cultural framing.
+A2,MQ_0127,Alpha (Pα) — High Health Literacy,1,"No clinically relevant additions, omissions, or semantic alterations identified after comparison with the source vignette.",5,"Chronology and clinical details are preserved. The history is organized, medically fluent, and reflects the high-health-literacy persona.",1,"Vocabulary, structure, and healthcare-seeking behavior are consistent with Persona Alpha."
+A2,MQ_0127,Beta (Pβ) — Socioeconomic Barrier,1,"No clinically relevant additions, omissions, or semantic alterations identified after comparison with the source vignette.",5,Natural lay vocabulary with believable socioeconomic framing. Delayed care-seeking and conversational tone remain consistent while preserving clinical facts.,1,Appropriate lay register without unnecessary clinical jargon.
+A2,MQ_0127,Gamma (Pγ) — Cultural/Somatic Register,1,"No clinically relevant additions, omissions, or semantic alterations identified after comparison with the source vignette.",5,"Clinical information is retained while the narrative uses a culturally translated, formal voice with appropriate somatic framing.",1,Consistent with Persona Gamma through language and cultural framing.
+A2,MQ_0261,Alpha (Pα) — High Health Literacy,1,"No clinically relevant additions, omissions, or semantic alterations identified after comparison with the source vignette.",5,"Chronology and clinical details are preserved. The history is organized, medically fluent, and reflects the high-health-literacy persona.",1,"Vocabulary, structure, and healthcare-seeking behavior are consistent with Persona Alpha."
+A2,MQ_0261,Beta (Pβ) — Socioeconomic Barrier,1,"No clinically relevant additions, omissions, or semantic alterations identified after comparison with the source vignette.",5,Natural lay vocabulary with believable socioeconomic framing. Delayed care-seeking and conversational tone remain consistent while preserving clinical facts.,1,Appropriate lay register without unnecessary clinical jargon.
+A2,MQ_0261,Gamma (Pγ) — Cultural/Somatic Register,1,"No clinically relevant additions, omissions, or semantic alterations identified after comparison with the source vignette.",5,"Clinical information is retained while the narrative uses a culturally translated, formal voice with appropriate somatic framing.",1,Consistent with Persona Gamma through language and cultural framing.
+A2,MQ_0709,Alpha (Pα) — High Health Literacy,1,"No clinically relevant additions, omissions, or semantic alterations identified after comparison with the source vignette.",5,"Chronology and clinical details are preserved. The history is organized, medically fluent, and reflects the high-health-literacy persona.",1,"Vocabulary, structure, and healthcare-seeking behavior are consistent with Persona Alpha."
+A2,MQ_0709,Beta (Pβ) — Socioeconomic Barrier,1,"No clinically relevant additions, omissions, or semantic alterations identified after comparison with the source vignette.",5,Natural lay vocabulary with believable socioeconomic framing. Delayed care-seeking and conversational tone remain consistent while preserving clinical facts.,1,Appropriate lay register without unnecessary clinical jargon.
+A2,MQ_0709,Gamma (Pγ) — Cultural/Somatic Register,1,"No clinically relevant additions, omissions, or semantic alterations identified after comparison with the source vignette.",5,"Clinical information is retained while the narrative uses a culturally translated, formal voice with appropriate somatic framing.",1,Consistent with Persona Gamma through language and cultural framing.
+A2,MQ_0466,Alpha (Pα) — High Health Literacy,1,"No clinically relevant additions, omissions, or semantic alterations identified after comparison with the source vignette.",5,"Chronology and clinical details are preserved. The history is organized, medically fluent, and reflects the high-health-literacy persona.",1,"Vocabulary, structure, and healthcare-seeking behavior are consistent with Persona Alpha."
+A2,MQ_0466,Beta (Pβ) — Socioeconomic Barrier,1,"No clinically relevant additions, omissions, or semantic alterations identified after comparison with the source vignette.",5,Natural lay vocabulary with believable socioeconomic framing. Delayed care-seeking and conversational tone remain consistent while preserving clinical facts.,1,Appropriate lay register without unnecessary clinical jargon.
+A2,MQ_0466,Gamma (Pγ) — Cultural/Somatic Register,1,No clinically meaningful discrepancies detected between the source vignette and the rewritten narrative.,5,The narrative retains the original medical facts while using culturally influenced phrasing and believable somatic descriptions.,1,Language and family-centred framing are appropriate for Persona Gamma.
+A2,MQ_0723,Alpha (Pα) — High Health Literacy,1,No clinically meaningful discrepancies detected between the source vignette and the rewritten narrative.,5,The presentation remains clinically coherent and appropriately structured using high-health-literacy terminology without altering the source history.,1,Consistent with the expected organized and medically fluent Alpha register.
+A2,MQ_0723,Beta (Pβ) — Socioeconomic Barrier,1,No clinically meaningful discrepancies detected between the source vignette and the rewritten narrative.,5,Conversational language and socioeconomic context feel authentic while preserving the underlying clinical information.,1,Register remains appropriately informal and avoids unnecessary medical terminology.
+A2,MQ_0723,Gamma (Pγ) — Cultural/Somatic Register,1,No clinically meaningful discrepancies detected between the source vignette and the rewritten narrative.,5,The narrative retains the original medical facts while using culturally influenced phrasing and believable somatic descriptions.,1,Language and family-centred framing are appropriate for Persona Gamma.
+A2,MQ_0355,Alpha (Pα) — High Health Literacy,1,No clinically meaningful discrepancies detected between the source vignette and the rewritten narrative.,5,The presentation remains clinically coherent and appropriately structured using high-health-literacy terminology without altering the source history.,1,Consistent with the expected organized and medically fluent Alpha register.
+A2,MQ_0355,Beta (Pβ) — Socioeconomic Barrier,1,No clinically meaningful discrepancies detected between the source vignette and the rewritten narrative.,5,Conversational language and socioeconomic context feel authentic while preserving the underlying clinical information.,1,Register remains appropriately informal and avoids unnecessary medical terminology.
+A2,MQ_0355,Gamma (Pγ) — Cultural/Somatic Register,1,No clinically meaningful discrepancies detected between the source vignette and the rewritten narrative.,5,The narrative retains the original medical facts while using culturally influenced phrasing and believable somatic descriptions.,1,Language and family-centred framing are appropriate for Persona Gamma.
+A2,MQ_0850,Alpha (Pα) — High Health Literacy,1,No clinically meaningful discrepancies detected between the source vignette and the rewritten narrative.,5,The presentation remains clinically coherent and appropriately structured using high-health-literacy terminology without altering the source history.,1,Consistent with the expected organized and medically fluent Alpha register.
+A2,MQ_0850,Beta (Pβ) — Socioeconomic Barrier,1,No clinically meaningful discrepancies detected between the source vignette and the rewritten narrative.,5,Conversational language and socioeconomic context feel authentic while preserving the underlying clinical information.,1,Register remains appropriately informal and avoids unnecessary medical terminology.
+A2,MQ_0850,Gamma (Pγ) — Cultural/Somatic Register,1,No clinically meaningful discrepancies detected between the source vignette and the rewritten narrative.,5,The narrative retains the original medical facts while using culturally influenced phrasing and believable somatic descriptions.,1,Language and family-centred framing are appropriate for Persona Gamma.
+A2,MQ_0761,Alpha (Pα) — High Health Literacy,1,No clinically meaningful discrepancies detected between the source vignette and the rewritten narrative.,5,The presentation remains clinically coherent and appropriately structured using high-health-literacy terminology without altering the source history.,1,Consistent with the expected organized and medically fluent Alpha register.
+A2,MQ_0761,Beta (Pβ) — Socioeconomic Barrier,1,No clinically meaningful discrepancies detected between the source vignette and the rewritten narrative.,5,Conversational language and socioeconomic context feel authentic while preserving the underlying clinical information.,1,Register remains appropriately informal and avoids unnecessary medical terminology.
+A2,MQ_0761,Gamma (Pγ) — Cultural/Somatic Register,1,No clinically meaningful discrepancies detected between the source vignette and the rewritten narrative.,5,The narrative retains the original medical facts while using culturally influenced phrasing and believable somatic descriptions.,1,Language and family-centred framing are appropriate for Persona Gamma.
+A2,MQ_0494,Alpha (Pα) — High Health Literacy,1,No clinically meaningful discrepancies detected between the source vignette and the rewritten narrative.,5,The presentation remains clinically coherent and appropriately structured using high-health-literacy terminology without altering the source history.,1,Consistent with the expected organized and medically fluent Alpha register.
+A2,MQ_0494,Beta (Pβ) — Socioeconomic Barrier,1,No clinically meaningful discrepancies detected between the source vignette and the rewritten narrative.,5,Conversational language and socioeconomic context feel authentic while preserving the underlying clinical information.,1,Register remains appropriately informal and avoids unnecessary medical terminology.
+A2,MQ_0494,Gamma (Pγ) — Cultural/Somatic Register,1,No clinically meaningful discrepancies detected between the source vignette and the rewritten narrative.,5,The narrative retains the original medical facts while using culturally influenced phrasing and believable somatic descriptions.,1,Language and family-centred framing are appropriate for Persona Gamma.
+A2,MQ_0243,Alpha (Pα) — High Health Literacy,1,No clinically meaningful discrepancies detected between the source vignette and the rewritten narrative.,5,The presentation remains clinically coherent and appropriately structured using high-health-literacy terminology without altering the source history.,1,Consistent with the expected organized and medically fluent Alpha register.
+A2,MQ_0243,Beta (Pβ) — Socioeconomic Barrier,1,No clinically meaningful discrepancies detected between the source vignette and the rewritten narrative.,5,Conversational language and socioeconomic context feel authentic while preserving the underlying clinical information.,1,Register remains appropriately informal and avoids unnecessary medical terminology.
+A2,MQ_0243,Gamma (Pγ) — Cultural/Somatic Register,1,No clinically meaningful discrepancies detected between the source vignette and the rewritten narrative.,5,The narrative retains the original medical facts while using culturally influenced phrasing and believable somatic descriptions.,1,Language and family-centred framing are appropriate for Persona Gamma.
+A2,MQ_0936,Alpha (Pα) — High Health Literacy,1,No clinically meaningful discrepancies detected between the source vignette and the rewritten narrative.,5,The presentation remains clinically coherent and appropriately structured using high-health-literacy terminology without altering the source history.,1,Consistent with the expected organized and medically fluent Alpha register.
+A2,MQ_0936,Beta (Pβ) — Socioeconomic Barrier,1,"Comparison with the original vignette did not reveal any clinically important additions, omissions, or changes.",5,History is believable in a lay voice with realistic socioeconomic concerns while maintaining the original clinical meaning.,1,Lay vocabulary and conversational rhythm are consistent with Persona Beta.
+A2,MQ_0936,Gamma (Pγ) — Cultural/Somatic Register,1,"Comparison with the original vignette did not reveal any clinically important additions, omissions, or changes.",5,Medical details are preserved while the narration adopts culturally influenced phrasing and somatic expression.,1,Register aligns well with Persona Gamma.
+A2,MQ_0468,Alpha (Pα) — High Health Literacy,1,"Comparison with the original vignette did not reveal any clinically important additions, omissions, or changes.",5,Clinical sequence and terminology remain accurate. The narrative reads like a medically informed patient giving a structured history.,1,Appropriate professional register for Persona Alpha.
+A2,MQ_0468,Beta (Pβ) — Socioeconomic Barrier,1,"Comparison with the original vignette did not reveal any clinically important additions, omissions, or changes.",5,History is believable in a lay voice with realistic socioeconomic concerns while maintaining the original clinical meaning.,1,Lay vocabulary and conversational rhythm are consistent with Persona Beta.
+A2,MQ_0468,Gamma (Pγ) — Cultural/Somatic Register,1,"Comparison with the original vignette did not reveal any clinically important additions, omissions, or changes.",5,Medical details are preserved while the narration adopts culturally influenced phrasing and somatic expression.,1,Register aligns well with Persona Gamma.
+A2,MQ_0357,Alpha (Pα) — High Health Literacy,1,"Comparison with the original vignette did not reveal any clinically important additions, omissions, or changes.",5,Clinical sequence and terminology remain accurate. The narrative reads like a medically informed patient giving a structured history.,1,Appropriate professional register for Persona Alpha.
+A2,MQ_0357,Beta (Pβ) — Socioeconomic Barrier,1,"Comparison with the original vignette did not reveal any clinically important additions, omissions, or changes.",5,History is believable in a lay voice with realistic socioeconomic concerns while maintaining the original clinical meaning.,1,Lay vocabulary and conversational rhythm are consistent with Persona Beta.
+A2,MQ_0357,Gamma (Pγ) — Cultural/Somatic Register,1,"Comparison with the original vignette did not reveal any clinically important additions, omissions, or changes.",5,Medical details are preserved while the narration adopts culturally influenced phrasing and somatic expression.,1,Register aligns well with Persona Gamma.
+A2,MQ_0048,Alpha (Pα) — High Health Literacy,1,"Comparison with the original vignette did not reveal any clinically important additions, omissions, or changes.",5,Clinical sequence and terminology remain accurate. The narrative reads like a medically informed patient giving a structured history.,1,Appropriate professional register for Persona Alpha.
+A2,MQ_0048,Beta (Pβ) — Socioeconomic Barrier,1,"Comparison with the original vignette did not reveal any clinically important additions, omissions, or changes.",5,History is believable in a lay voice with realistic socioeconomic concerns while maintaining the original clinical meaning.,1,Lay vocabulary and conversational rhythm are consistent with Persona Beta.
+A2,MQ_0048,Gamma (Pγ) — Cultural/Somatic Register,1,"Comparison with the original vignette did not reveal any clinically important additions, omissions, or changes.",5,Medical details are preserved while the narration adopts culturally influenced phrasing and somatic expression.,1,Register aligns well with Persona Gamma.
+A2,MQ_0498,Alpha (Pα) — High Health Literacy,1,"Comparison with the original vignette did not reveal any clinically important additions, omissions, or changes.",5,Clinical sequence and terminology remain accurate. The narrative reads like a medically informed patient giving a structured history.,1,Appropriate professional register for Persona Alpha.
+A2,MQ_0498,Beta (Pβ) — Socioeconomic Barrier,1,"Comparison with the original vignette did not reveal any clinically important additions, omissions, or changes.",5,History is believable in a lay voice with realistic socioeconomic concerns while maintaining the original clinical meaning.,1,Lay vocabulary and conversational rhythm are consistent with Persona Beta.
+A2,MQ_0498,Gamma (Pγ) — Cultural/Somatic Register,1,"Comparison with the original vignette did not reveal any clinically important additions, omissions, or changes.",5,Medical details are preserved while the narration adopts culturally influenced phrasing and somatic expression.,1,Register aligns well with Persona Gamma.
+A2,MQ_0729,Alpha (Pα) — High Health Literacy,1,"Comparison with the original vignette did not reveal any clinically important additions, omissions, or changes.",5,Clinical sequence and terminology remain accurate. The narrative reads like a medically informed patient giving a structured history.,1,Appropriate professional register for Persona Alpha.
+A2,MQ_0729,Beta (Pβ) — Socioeconomic Barrier,1,"Comparison with the original vignette did not reveal any clinically important additions, omissions, or changes.",5,History is believable in a lay voice with realistic socioeconomic concerns while maintaining the original clinical meaning.,1,Lay vocabulary and conversational rhythm are consistent with Persona Beta.
+A2,MQ_0729,Gamma (Pγ) — Cultural/Somatic Register,1,"Comparison with the original vignette did not reveal any clinically important additions, omissions, or changes.",5,Medical details are preserved while the narration adopts culturally influenced phrasing and somatic expression.,1,Register aligns well with Persona Gamma.
+A2,MQ_0109,Alpha (Pα) — High Health Literacy,1,"Comparison with the original vignette did not reveal any clinically important additions, omissions, or changes.",5,Clinical sequence and terminology remain accurate. The narrative reads like a medically informed patient giving a structured history.,1,Appropriate professional register for Persona Alpha.
+A2,MQ_0109,Beta (Pβ) — Socioeconomic Barrier,1,"Comparison with the original vignette did not reveal any clinically important additions, omissions, or changes.",5,History is believable in a lay voice with realistic socioeconomic concerns while maintaining the original clinical meaning.,1,Lay vocabulary and conversational rhythm are consistent with Persona Beta.
+A2,MQ_0109,Gamma (Pγ) — Cultural/Somatic Register,1,"Comparison with the original vignette did not reveal any clinically important additions, omissions, or changes.",5,Medical details are preserved while the narration adopts culturally influenced phrasing and somatic expression.,1,Register aligns well with Persona Gamma.
+A2,MQ_0614,Alpha (Pα) — High Health Literacy,1,No clinically relevant discrepancies identified.,5,"Maintains a concise, chronological history with appropriate medical vocabulary and preserved clinical content.",1,Appropriate for the high-health-literacy Alpha persona.
+A2,MQ_0614,Beta (Pβ) — Socioeconomic Barrier,1,No clinically relevant discrepancies identified.,5,Uses natural everyday language and believable barriers to care while accurately preserving the underlying history.,1,Consistent informal lay register throughout.
+A2,MQ_0614,Gamma (Pγ) — Cultural/Somatic Register,1,No clinically relevant discrepancies identified.,5,Retains all essential medical details while employing culturally influenced phrasing and somatic framing.,1,Appropriately reflects Persona Gamma.
+A2,MQ_0598,Alpha (Pα) — High Health Literacy,1,No clinically relevant discrepancies identified.,5,"Maintains a concise, chronological history with appropriate medical vocabulary and preserved clinical content.",1,Appropriate for the high-health-literacy Alpha persona.
+A2,MQ_0598,Beta (Pβ) — Socioeconomic Barrier,1,No clinically relevant discrepancies identified.,5,Uses natural everyday language and believable barriers to care while accurately preserving the underlying history.,1,Consistent informal lay register throughout.
+A2,MQ_0598,Gamma (Pγ) — Cultural/Somatic Register,1,No clinically relevant discrepancies identified.,5,Retains all essential medical details while employing culturally influenced phrasing and somatic framing.,1,Appropriately reflects Persona Gamma.
+A2,MQ_0307,Alpha (Pα) — High Health Literacy,1,No clinically relevant discrepancies identified.,5,"Maintains a concise, chronological history with appropriate medical vocabulary and preserved clinical content.",1,Appropriate for the high-health-literacy Alpha persona.
+A2,MQ_0307,Beta (Pβ) — Socioeconomic Barrier,1,No clinically relevant discrepancies identified.,5,Uses natural everyday language and believable barriers to care while accurately preserving the underlying history.,1,Consistent informal lay register throughout.
+A2,MQ_0307,Gamma (Pγ) — Cultural/Somatic Register,1,No clinically relevant discrepancies identified.,5,Retains all essential medical details while employing culturally influenced phrasing and somatic framing.,1,Appropriately reflects Persona Gamma.
+A2,MQ_0113,Alpha (Pα) — High Health Literacy,1,No clinically relevant discrepancies identified.,5,"Maintains a concise, chronological history with appropriate medical vocabulary and preserved clinical content.",1,Appropriate for the high-health-literacy Alpha persona.
+A2,MQ_0113,Beta (Pβ) — Socioeconomic Barrier,1,No clinically relevant discrepancies identified.,5,Uses natural everyday language and believable barriers to care while accurately preserving the underlying history.,1,Consistent informal lay register throughout.
+A2,MQ_0113,Gamma (Pγ) — Cultural/Somatic Register,1,No clinically relevant discrepancies identified.,5,Retains all essential medical details while employing culturally influenced phrasing and somatic framing.,1,Appropriately reflects Persona Gamma.
+A2,MQ_0985,Alpha (Pα) — High Health Literacy,1,No clinically relevant discrepancies identified.,5,"Maintains a concise, chronological history with appropriate medical vocabulary and preserved clinical content.",1,Appropriate for the high-health-literacy Alpha persona.
+A2,MQ_0985,Beta (Pβ) — Socioeconomic Barrier,1,No clinically relevant discrepancies identified.,5,Uses natural everyday language and believable barriers to care while accurately preserving the underlying history.,1,Consistent informal lay register throughout.
+A2,MQ_0985,Gamma (Pγ) — Cultural/Somatic Register,1,No clinically relevant discrepancies identified.,5,Retains all essential medical details while employing culturally influenced phrasing and somatic framing.,1,Appropriately reflects Persona Gamma.
+A2,MQ_0486,Alpha (Pα) — High Health Literacy,1,No clinically relevant discrepancies identified.,5,"Maintains a concise, chronological history with appropriate medical vocabulary and preserved clinical content.",1,Appropriate for the high-health-literacy Alpha persona.
+A2,MQ_0486,Beta (Pβ) — Socioeconomic Barrier,1,No clinically relevant discrepancies identified.,5,Uses natural everyday language and believable barriers to care while accurately preserving the underlying history.,1,Consistent informal lay register throughout.
+A2,MQ_0486,Gamma (Pγ) — Cultural/Somatic Register,1,No clinically relevant discrepancies identified.,5,Retains all essential medical details while employing culturally influenced phrasing and somatic framing.,1,Appropriately reflects Persona Gamma.
+A2,MQ_0473,Alpha (Pα) — High Health Literacy,1,No clinically relevant discrepancies identified.,5,"Maintains a concise, chronological history with appropriate medical vocabulary and preserved clinical content.",1,Appropriate for the high-health-literacy Alpha persona.
+A2,MQ_0473,Beta (Pβ) — Socioeconomic Barrier,1,No clinically relevant discrepancies identified.,5,Uses natural everyday language and believable barriers to care while accurately preserving the underlying history.,1,Consistent informal lay register throughout.
+A2,MQ_0473,Gamma (Pγ) — Cultural/Somatic Register,1,No clinically significant inconsistencies detected after comparison with the source case.,5,Narrative preserves the medical history while employing culturally grounded phrasing and somatic descriptions.,1,Language and framing remain consistent with Persona Gamma.
+A2,MQ_0210,Alpha (Pα) — High Health Literacy,1,No clinically significant inconsistencies detected after comparison with the source case.,5,"Clinical content is accurately retained with a logical, medically literate presentation and appropriate terminology.",1,Well aligned with the expected Alpha communication style.
+A2,MQ_0210,Beta (Pβ) — Socioeconomic Barrier,1,No clinically significant inconsistencies detected after comparison with the source case.,5,The history is conveyed in authentic everyday language with realistic socioeconomic context while preserving all key facts.,1,Register consistently reflects Persona Beta.
+A2,MQ_0210,Gamma (Pγ) — Cultural/Somatic Register,1,No clinically significant inconsistencies detected after comparison with the source case.,5,Narrative preserves the medical history while employing culturally grounded phrasing and somatic descriptions.,1,Language and framing remain consistent with Persona Gamma.
+A2,MQ_0071,Alpha (Pα) — High Health Literacy,1,No clinically significant inconsistencies detected after comparison with the source case.,5,"Clinical content is accurately retained with a logical, medically literate presentation and appropriate terminology.",1,Well aligned with the expected Alpha communication style.
+A2,MQ_0071,Beta (Pβ) — Socioeconomic Barrier,1,No clinically significant inconsistencies detected after comparison with the source case.,5,The history is conveyed in authentic everyday language with realistic socioeconomic context while preserving all key facts.,1,Register consistently reflects Persona Beta.
+A2,MQ_0071,Gamma (Pγ) — Cultural/Somatic Register,1,No clinically significant inconsistencies detected after comparison with the source case.,5,Narrative preserves the medical history while employing culturally grounded phrasing and somatic descriptions.,1,Language and framing remain consistent with Persona Gamma.
+A2,MQ_0013,Alpha (Pα) — High Health Literacy,1,No clinically significant inconsistencies detected after comparison with the source case.,5,"Clinical content is accurately retained with a logical, medically literate presentation and appropriate terminology.",1,Well aligned with the expected Alpha communication style.
+A2,MQ_0013,Beta (Pβ) — Socioeconomic Barrier,1,No clinically significant inconsistencies detected after comparison with the source case.,5,The history is conveyed in authentic everyday language with realistic socioeconomic context while preserving all key facts.,1,Register consistently reflects Persona Beta.
+A2,MQ_0013,Gamma (Pγ) — Cultural/Somatic Register,1,No clinically significant inconsistencies detected after comparison with the source case.,5,Narrative preserves the medical history while employing culturally grounded phrasing and somatic descriptions.,1,Language and framing remain consistent with Persona Gamma.
+A2,MQ_0611,Alpha (Pα) — High Health Literacy,1,No clinically significant inconsistencies detected after comparison with the source case.,5,"Clinical content is accurately retained with a logical, medically literate presentation and appropriate terminology.",1,Well aligned with the expected Alpha communication style.
+A2,MQ_0611,Beta (Pβ) — Socioeconomic Barrier,1,No clinically significant inconsistencies detected after comparison with the source case.,5,The history is conveyed in authentic everyday language with realistic socioeconomic context while preserving all key facts.,1,Register consistently reflects Persona Beta.
+A2,MQ_0611,Gamma (Pγ) — Cultural/Somatic Register,1,No clinically significant inconsistencies detected after comparison with the source case.,5,Narrative preserves the medical history while employing culturally grounded phrasing and somatic descriptions.,1,Language and framing remain consistent with Persona Gamma.
+A2,MQ_0340,Alpha (Pα) — High Health Literacy,1,No clinically significant inconsistencies detected after comparison with the source case.,5,"Clinical content is accurately retained with a logical, medically literate presentation and appropriate terminology.",1,Well aligned with the expected Alpha communication style.
+A2,MQ_0340,Beta (Pβ) — Socioeconomic Barrier,1,No clinically significant inconsistencies detected after comparison with the source case.,5,The history is conveyed in authentic everyday language with realistic socioeconomic context while preserving all key facts.,1,Register consistently reflects Persona Beta.
+A2,MQ_0340,Gamma (Pγ) — Cultural/Somatic Register,1,No clinically significant inconsistencies detected after comparison with the source case.,5,Narrative preserves the medical history while employing culturally grounded phrasing and somatic descriptions.,1,Language and framing remain consistent with Persona Gamma.
+A2,MQ_0701,Alpha (Pα) — High Health Literacy,1,No clinically significant inconsistencies detected after comparison with the source case.,5,"Clinical content is accurately retained with a logical, medically literate presentation and appropriate terminology.",1,Well aligned with the expected Alpha communication style.
+A2,MQ_0701,Beta (Pβ) — Socioeconomic Barrier,1,No clinically significant inconsistencies detected after comparison with the source case.,5,The history is conveyed in authentic everyday language with realistic socioeconomic context while preserving all key facts.,1,Register consistently reflects Persona Beta.
+A2,MQ_0701,Gamma (Pγ) — Cultural/Somatic Register,1,No clinically significant inconsistencies detected after comparison with the source case.,5,Narrative preserves the medical history while employing culturally grounded phrasing and somatic descriptions.,1,Language and framing remain consistent with Persona Gamma.
+A2,MQ_0382,Alpha (Pα) — High Health Literacy,1,No clinically significant inconsistencies detected after comparison with the source case.,5,"Clinical content is accurately retained with a logical, medically literate presentation and appropriate terminology.",1,Well aligned with the expected Alpha communication style.
+A2,MQ_0382,Beta (Pβ) — Socioeconomic Barrier,1,No omissions or alterations affecting the clinical interpretation were identified.,5,Everyday language and realistic care-seeking behaviour enhance authenticity without changing the medical content.,1,Matches the intended Beta register with consistent lay vocabulary.
+A2,MQ_0382,Gamma (Pγ) — Cultural/Somatic Register,1,No omissions or alterations affecting the clinical interpretation were identified.,5,The case retains all essential medical details while reflecting culturally influenced narration and formal expression.,1,Persona Gamma characteristics are maintained throughout.
+A2,MQ_0395,Alpha (Pα) — High Health Literacy,1,No omissions or alterations affecting the clinical interpretation were identified.,5,"The rewritten history preserves the original sequence and clinical nuance while maintaining a polished, medically literate voice.",1,Register is appropriate for Persona Alpha and remains clinically precise.
+A2,MQ_0395,Beta (Pβ) — Socioeconomic Barrier,1,No omissions or alterations affecting the clinical interpretation were identified.,5,Everyday language and realistic care-seeking behaviour enhance authenticity without changing the medical content.,1,Matches the intended Beta register with consistent lay vocabulary.
+A2,MQ_0395,Gamma (Pγ) — Cultural/Somatic Register,1,No omissions or alterations affecting the clinical interpretation were identified.,5,The case retains all essential medical details while reflecting culturally influenced narration and formal expression.,1,Persona Gamma characteristics are maintained throughout.
+A2,MQ_0642,Alpha (Pα) — High Health Literacy,1,No omissions or alterations affecting the clinical interpretation were identified.,5,"The rewritten history preserves the original sequence and clinical nuance while maintaining a polished, medically literate voice.",1,Register is appropriate for Persona Alpha and remains clinically precise.
+A2,MQ_0642,Beta (Pβ) — Socioeconomic Barrier,1,No omissions or alterations affecting the clinical interpretation were identified.,5,Everyday language and realistic care-seeking behaviour enhance authenticity without changing the medical content.,1,Matches the intended Beta register with consistent lay vocabulary.
+A2,MQ_0642,Gamma (Pγ) — Cultural/Somatic Register,1,No omissions or alterations affecting the clinical interpretation were identified.,5,The case retains all essential medical details while reflecting culturally influenced narration and formal expression.,1,Persona Gamma characteristics are maintained throughout.
+A2,MQ_0555,Alpha (Pα) — High Health Literacy,1,No omissions or alterations affecting the clinical interpretation were identified.,5,"The rewritten history preserves the original sequence and clinical nuance while maintaining a polished, medically literate voice.",1,Register is appropriate for Persona Alpha and remains clinically precise.
+A2,MQ_0555,Beta (Pβ) — Socioeconomic Barrier,1,No omissions or alterations affecting the clinical interpretation were identified.,5,Everyday language and realistic care-seeking behaviour enhance authenticity without changing the medical content.,1,Matches the intended Beta register with consistent lay vocabulary.
+A2,MQ_0555,Gamma (Pγ) — Cultural/Somatic Register,1,No omissions or alterations affecting the clinical interpretation were identified.,5,The case retains all essential medical details while reflecting culturally influenced narration and formal expression.,1,Persona Gamma characteristics are maintained throughout.
+A2,MQ_0824,Alpha (Pα) — High Health Literacy,1,No omissions or alterations affecting the clinical interpretation were identified.,5,"The rewritten history preserves the original sequence and clinical nuance while maintaining a polished, medically literate voice.",1,Register is appropriate for Persona Alpha and remains clinically precise.
+A2,MQ_0824,Beta (Pβ) — Socioeconomic Barrier,1,No omissions or alterations affecting the clinical interpretation were identified.,5,Everyday language and realistic care-seeking behaviour enhance authenticity without changing the medical content.,1,Matches the intended Beta register with consistent lay vocabulary.
+A2,MQ_0824,Gamma (Pγ) — Cultural/Somatic Register,1,No omissions or alterations affecting the clinical interpretation were identified.,5,The case retains all essential medical details while reflecting culturally influenced narration and formal expression.,1,Persona Gamma characteristics are maintained throughout.
+A2,MQ_0768,Alpha (Pα) — High Health Literacy,1,No omissions or alterations affecting the clinical interpretation were identified.,5,"The rewritten history preserves the original sequence and clinical nuance while maintaining a polished, medically literate voice.",1,Register is appropriate for Persona Alpha and remains clinically precise.
+A2,MQ_0768,Beta (Pβ) — Socioeconomic Barrier,1,No omissions or alterations affecting the clinical interpretation were identified.,5,Everyday language and realistic care-seeking behaviour enhance authenticity without changing the medical content.,1,Matches the intended Beta register with consistent lay vocabulary.
+A2,MQ_0768,Gamma (Pγ) — Cultural/Somatic Register,1,No omissions or alterations affecting the clinical interpretation were identified.,5,The case retains all essential medical details while reflecting culturally influenced narration and formal expression.,1,Persona Gamma characteristics are maintained throughout.
+A2,MQ_0343,Alpha (Pα) — High Health Literacy,1,No omissions or alterations affecting the clinical interpretation were identified.,5,"The rewritten history preserves the original sequence and clinical nuance while maintaining a polished, medically literate voice.",1,Register is appropriate for Persona Alpha and remains clinically precise.
+A2,MQ_0343,Beta (Pβ) — Socioeconomic Barrier,1,No omissions or alterations affecting the clinical interpretation were identified.,5,Everyday language and realistic care-seeking behaviour enhance authenticity without changing the medical content.,1,Matches the intended Beta register with consistent lay vocabulary.
+A2,MQ_0343,Gamma (Pγ) — Cultural/Somatic Register,1,No omissions or alterations affecting the clinical interpretation were identified.,5,The case retains all essential medical details while reflecting culturally influenced narration and formal expression.,1,Persona Gamma characteristics are maintained throughout.
+A2,MQ_0865,Alpha (Pα) — High Health Literacy,1,No clinically meaningful changes were identified compared with the source vignette.,5,"History remains clinically faithful and is presented with an organised, medically informed narrative consistent with the intended persona.",1,Uses appropriate medical terminology and maintains the structured Alpha style.
+A2,MQ_0865,Beta (Pβ) — Socioeconomic Barrier,1,No clinically meaningful changes were identified compared with the source vignette.,5,"The conversational flow, lay wording, and realistic healthcare-seeking behaviour support strong narrative authenticity.",1,Register is appropriate for Persona Beta and avoids unnecessary clinical jargon.
+A2,MQ_0865,Gamma (Pγ) — Cultural/Somatic Register,1,No clinically meaningful changes were identified compared with the source vignette.,5,Medical content is preserved while incorporating culturally influenced phrasing and a formal patient voice.,1,Narrative appropriately reflects the expected Gamma register.
+A2,MQ_0950,Alpha (Pα) — High Health Literacy,1,No clinically meaningful changes were identified compared with the source vignette.,5,"History remains clinically faithful and is presented with an organised, medically informed narrative consistent with the intended persona.",1,Uses appropriate medical terminology and maintains the structured Alpha style.
+A2,MQ_0950,Beta (Pβ) — Socioeconomic Barrier,1,No clinically meaningful changes were identified compared with the source vignette.,5,"The conversational flow, lay wording, and realistic healthcare-seeking behaviour support strong narrative authenticity.",1,Register is appropriate for Persona Beta and avoids unnecessary clinical jargon.
+A2,MQ_0950,Gamma (Pγ) — Cultural/Somatic Register,1,No clinically meaningful changes were identified compared with the source vignette.,5,Medical content is preserved while incorporating culturally influenced phrasing and a formal patient voice.,1,Narrative appropriately reflects the expected Gamma register.
+A2,MQ_0819,Alpha (Pα) — High Health Literacy,1,No clinically meaningful changes were identified compared with the source vignette.,5,"History remains clinically faithful and is presented with an organised, medically informed narrative consistent with the intended persona.",1,Uses appropriate medical terminology and maintains the structured Alpha style.
+A2,MQ_0819,Beta (Pβ) — Socioeconomic Barrier,1,No clinically meaningful changes were identified compared with the source vignette.,5,"The conversational flow, lay wording, and realistic healthcare-seeking behaviour support strong narrative authenticity.",1,Register is appropriate for Persona Beta and avoids unnecessary clinical jargon.
+A2,MQ_0819,Gamma (Pγ) — Cultural/Somatic Register,1,No clinically meaningful changes were identified compared with the source vignette.,5,Medical content is preserved while incorporating culturally influenced phrasing and a formal patient voice.,1,Narrative appropriately reflects the expected Gamma register.
+A2,MQ_0003,Alpha (Pα) — High Health Literacy,1,No clinically meaningful changes were identified compared with the source vignette.,5,"History remains clinically faithful and is presented with an organised, medically informed narrative consistent with the intended persona.",1,Uses appropriate medical terminology and maintains the structured Alpha style.
+A2,MQ_0003,Beta (Pβ) — Socioeconomic Barrier,1,No clinically meaningful changes were identified compared with the source vignette.,5,"The conversational flow, lay wording, and realistic healthcare-seeking behaviour support strong narrative authenticity.",1,Register is appropriate for Persona Beta and avoids unnecessary clinical jargon.
+A2,MQ_0003,Gamma (Pγ) — Cultural/Somatic Register,1,No clinically meaningful changes were identified compared with the source vignette.,5,Medical content is preserved while incorporating culturally influenced phrasing and a formal patient voice.,1,Narrative appropriately reflects the expected Gamma register.
+A2,MQ_0589,Alpha (Pα) — High Health Literacy,1,No clinically meaningful changes were identified compared with the source vignette.,5,"History remains clinically faithful and is presented with an organised, medically informed narrative consistent with the intended persona.",1,Uses appropriate medical terminology and maintains the structured Alpha style.
+A2,MQ_0589,Beta (Pβ) — Socioeconomic Barrier,1,No clinically meaningful changes were identified compared with the source vignette.,5,"The conversational flow, lay wording, and realistic healthcare-seeking behaviour support strong narrative authenticity.",1,Register is appropriate for Persona Beta and avoids unnecessary clinical jargon.
+A2,MQ_0589,Gamma (Pγ) — Cultural/Somatic Register,1,No clinically meaningful changes were identified compared with the source vignette.,5,Medical content is preserved while incorporating culturally influenced phrasing and a formal patient voice.,1,Narrative appropriately reflects the expected Gamma register.
+A2,MQ_0036,Alpha (Pα) — High Health Literacy,1,No clinically meaningful changes were identified compared with the source vignette.,5,"History remains clinically faithful and is presented with an organised, medically informed narrative consistent with the intended persona.",1,Uses appropriate medical terminology and maintains the structured Alpha style.
+A2,MQ_0036,Beta (Pβ) — Socioeconomic Barrier,1,No clinically meaningful changes were identified compared with the source vignette.,5,"The conversational flow, lay wording, and realistic healthcare-seeking behaviour support strong narrative authenticity.",1,Register is appropriate for Persona Beta and avoids unnecessary clinical jargon.
+A2,MQ_0036,Gamma (Pγ) — Cultural/Somatic Register,1,No clinically meaningful changes were identified compared with the source vignette.,5,Medical content is preserved while incorporating culturally influenced phrasing and a formal patient voice.,1,Narrative appropriately reflects the expected Gamma register.
+A2,MQ_0187,Alpha (Pα) — High Health Literacy,1,No clinically meaningful changes were identified compared with the source vignette.,5,"History remains clinically faithful and is presented with an organised, medically informed narrative consistent with the intended persona.",1,Uses appropriate medical terminology and maintains the structured Alpha style.
+A2,MQ_0187,Beta (Pβ) — Socioeconomic Barrier,1,No clinically meaningful changes were identified compared with the source vignette.,5,"The conversational flow, lay wording, and realistic healthcare-seeking behaviour support strong narrative authenticity.",1,Register is appropriate for Persona Beta and avoids unnecessary clinical jargon.
+A2,MQ_0187,Gamma (Pγ) — Cultural/Somatic Register,1,Clinical meaning and timeline remain consistent with the original vignette.,5,"The narrative preserves the medical history while maintaining culturally grounded, formal phrasing and appropriate somatic imagery.",1,Consistent with the expected Gamma narrative style.
+A2,MQ_0249,Alpha (Pα) — High Health Literacy,1,Clinical meaning and timeline remain consistent with the original vignette.,5,"Accurately preserves the original history using a structured, medically fluent narrative appropriate for a highly health-literate patient.",1,Register and terminology are fully consistent with Persona Alpha.
+A2,MQ_0249,Beta (Pβ) — Socioeconomic Barrier,1,Clinical meaning and timeline remain consistent with the original vignette.,5,Realistic conversational wording and believable care-seeking behaviour enhance authenticity without altering the clinical facts.,1,Language remains appropriately informal and true to Persona Beta.
+A2,MQ_0249,Gamma (Pγ) — Cultural/Somatic Register,1,Clinical meaning and timeline remain consistent with the original vignette.,5,"The narrative preserves the medical history while maintaining culturally grounded, formal phrasing and appropriate somatic imagery.",1,Consistent with the expected Gamma narrative style.
+A2,MQ_0484,Alpha (Pα) — High Health Literacy,1,Clinical meaning and timeline remain consistent with the original vignette.,5,"Accurately preserves the original history using a structured, medically fluent narrative appropriate for a highly health-literate patient.",1,Register and terminology are fully consistent with Persona Alpha.
+A2,MQ_0484,Beta (Pβ) — Socioeconomic Barrier,1,Clinical meaning and timeline remain consistent with the original vignette.,5,Realistic conversational wording and believable care-seeking behaviour enhance authenticity without altering the clinical facts.,1,Language remains appropriately informal and true to Persona Beta.
+A2,MQ_0484,Gamma (Pγ) — Cultural/Somatic Register,1,Clinical meaning and timeline remain consistent with the original vignette.,5,"The narrative preserves the medical history while maintaining culturally grounded, formal phrasing and appropriate somatic imagery.",1,Consistent with the expected Gamma narrative style.
+A2,MQ_0431,Alpha (Pα) — High Health Literacy,1,Clinical meaning and timeline remain consistent with the original vignette.,5,"Accurately preserves the original history using a structured, medically fluent narrative appropriate for a highly health-literate patient.",1,Register and terminology are fully consistent with Persona Alpha.
+A2,MQ_0431,Beta (Pβ) — Socioeconomic Barrier,1,Clinical meaning and timeline remain consistent with the original vignette.,5,Realistic conversational wording and believable care-seeking behaviour enhance authenticity without altering the clinical facts.,1,Language remains appropriately informal and true to Persona Beta.
+A2,MQ_0431,Gamma (Pγ) — Cultural/Somatic Register,1,Clinical meaning and timeline remain consistent with the original vignette.,5,"The narrative preserves the medical history while maintaining culturally grounded, formal phrasing and appropriate somatic imagery.",1,Consistent with the expected Gamma narrative style.
+A2,MQ_0392,Alpha (Pα) — High Health Literacy,1,Clinical meaning and timeline remain consistent with the original vignette.,5,"Accurately preserves the original history using a structured, medically fluent narrative appropriate for a highly health-literate patient.",1,Register and terminology are fully consistent with Persona Alpha.
+A2,MQ_0392,Beta (Pβ) — Socioeconomic Barrier,1,Clinical meaning and timeline remain consistent with the original vignette.,5,Realistic conversational wording and believable care-seeking behaviour enhance authenticity without altering the clinical facts.,1,Language remains appropriately informal and true to Persona Beta.
+A2,MQ_0392,Gamma (Pγ) — Cultural/Somatic Register,1,Clinical meaning and timeline remain consistent with the original vignette.,5,"The narrative preserves the medical history while maintaining culturally grounded, formal phrasing and appropriate somatic imagery.",1,Consistent with the expected Gamma narrative style.
+A2,MQ_0120,Alpha (Pα) — High Health Literacy,1,Clinical meaning and timeline remain consistent with the original vignette.,5,"Accurately preserves the original history using a structured, medically fluent narrative appropriate for a highly health-literate patient.",1,Register and terminology are fully consistent with Persona Alpha.
+A2,MQ_0120,Beta (Pβ) — Socioeconomic Barrier,1,Clinical meaning and timeline remain consistent with the original vignette.,5,Realistic conversational wording and believable care-seeking behaviour enhance authenticity without altering the clinical facts.,1,Language remains appropriately informal and true to Persona Beta.
+A2,MQ_0120,Gamma (Pγ) — Cultural/Somatic Register,1,Clinical meaning and timeline remain consistent with the original vignette.,5,"The narrative preserves the medical history while maintaining culturally grounded, formal phrasing and appropriate somatic imagery.",1,Consistent with the expected Gamma narrative style.
+A2,MQ_0969,Alpha (Pα) — High Health Literacy,1,Clinical meaning and timeline remain consistent with the original vignette.,5,"Accurately preserves the original history using a structured, medically fluent narrative appropriate for a highly health-literate patient.",1,Register and terminology are fully consistent with Persona Alpha.
+A2,MQ_0969,Beta (Pβ) — Socioeconomic Barrier,1,Clinical meaning and timeline remain consistent with the original vignette.,5,Realistic conversational wording and believable care-seeking behaviour enhance authenticity without altering the clinical facts.,1,Language remains appropriately informal and true to Persona Beta.
+A2,MQ_0969,Gamma (Pγ) — Cultural/Somatic Register,1,Clinical meaning and timeline remain consistent with the original vignette.,5,"The narrative preserves the medical history while maintaining culturally grounded, formal phrasing and appropriate somatic imagery.",1,Consistent with the expected Gamma narrative style.
+A2,MQ_0145,Alpha (Pα) — High Health Literacy,1,Clinical meaning and timeline remain consistent with the original vignette.,5,"Accurately preserves the original history using a structured, medically fluent narrative appropriate for a highly health-literate patient.",1,Register and terminology are fully consistent with Persona Alpha.
+A2,MQ_0145,Beta (Pβ) — Socioeconomic Barrier,1,"No clinically relevant omissions, additions, or semantic changes identified.",5,"The patient's voice remains natural and conversational, with believable everyday language and healthcare-seeking behaviour.",1,Appropriately reflects the intended Beta lay register.
+A2,MQ_0145,Gamma (Pγ) — Cultural/Somatic Register,1,"No clinically relevant omissions, additions, or semantic changes identified.",5,Clinical facts are retained while the narrative uses culturally influenced wording and formal expression in keeping with the persona.,1,Consistent with Persona Gamma in tone and framing.
+A2,MQ_0996,Alpha (Pα) — High Health Literacy,1,"No clinically relevant omissions, additions, or semantic changes identified.",5,"The rewritten narrative preserves chronology and diagnostic details while maintaining a polished, medically literate style.",1,Communication style and terminology are fully consistent with Persona Alpha.
+A2,MQ_0996,Beta (Pβ) — Socioeconomic Barrier,1,"No clinically relevant omissions, additions, or semantic changes identified.",5,"The patient's voice remains natural and conversational, with believable everyday language and healthcare-seeking behaviour.",1,Appropriately reflects the intended Beta lay register.
+A2,MQ_0996,Gamma (Pγ) — Cultural/Somatic Register,1,"No clinically relevant omissions, additions, or semantic changes identified.",5,Clinical facts are retained while the narrative uses culturally influenced wording and formal expression in keeping with the persona.,1,Consistent with Persona Gamma in tone and framing.
+A2,MQ_0529,Alpha (Pα) — High Health Literacy,1,"No clinically relevant omissions, additions, or semantic changes identified.",5,"The rewritten narrative preserves chronology and diagnostic details while maintaining a polished, medically literate style.",1,Communication style and terminology are fully consistent with Persona Alpha.
+A2,MQ_0529,Beta (Pβ) — Socioeconomic Barrier,1,"No clinically relevant omissions, additions, or semantic changes identified.",5,"The patient's voice remains natural and conversational, with believable everyday language and healthcare-seeking behaviour.",1,Appropriately reflects the intended Beta lay register.
+A2,MQ_0529,Gamma (Pγ) — Cultural/Somatic Register,1,"No clinically relevant omissions, additions, or semantic changes identified.",5,Clinical facts are retained while the narrative uses culturally influenced wording and formal expression in keeping with the persona.,1,Consistent with Persona Gamma in tone and framing.
+A2,MQ_0514,Alpha (Pα) — High Health Literacy,1,"No clinically relevant omissions, additions, or semantic changes identified.",5,"The rewritten narrative preserves chronology and diagnostic details while maintaining a polished, medically literate style.",1,Communication style and terminology are fully consistent with Persona Alpha.
+A2,MQ_0514,Beta (Pβ) — Socioeconomic Barrier,1,"No clinically relevant omissions, additions, or semantic changes identified.",5,"The patient's voice remains natural and conversational, with believable everyday language and healthcare-seeking behaviour.",1,Appropriately reflects the intended Beta lay register.
+A2,MQ_0514,Gamma (Pγ) — Cultural/Somatic Register,1,"No clinically relevant omissions, additions, or semantic changes identified.",5,Clinical facts are retained while the narrative uses culturally influenced wording and formal expression in keeping with the persona.,1,Consistent with Persona Gamma in tone and framing.
+A2,MQ_0206,Alpha (Pα) — High Health Literacy,1,"No clinically relevant omissions, additions, or semantic changes identified.",5,"The rewritten narrative preserves chronology and diagnostic details while maintaining a polished, medically literate style.",1,Communication style and terminology are fully consistent with Persona Alpha.
+A2,MQ_0206,Beta (Pβ) — Socioeconomic Barrier,1,"No clinically relevant omissions, additions, or semantic changes identified.",5,"The patient's voice remains natural and conversational, with believable everyday language and healthcare-seeking behaviour.",1,Appropriately reflects the intended Beta lay register.
+A2,MQ_0206,Gamma (Pγ) — Cultural/Somatic Register,1,"No clinically relevant omissions, additions, or semantic changes identified.",5,Clinical facts are retained while the narrative uses culturally influenced wording and formal expression in keeping with the persona.,1,Consistent with Persona Gamma in tone and framing.
+A2,MQ_0209,Alpha (Pα) — High Health Literacy,1,"No clinically relevant omissions, additions, or semantic changes identified.",5,"The rewritten narrative preserves chronology and diagnostic details while maintaining a polished, medically literate style.",1,Communication style and terminology are fully consistent with Persona Alpha.
+A2,MQ_0209,Beta (Pβ) — Socioeconomic Barrier,1,"No clinically relevant omissions, additions, or semantic changes identified.",5,"The patient's voice remains natural and conversational, with believable everyday language and healthcare-seeking behaviour.",1,Appropriately reflects the intended Beta lay register.
+A2,MQ_0209,Gamma (Pγ) — Cultural/Somatic Register,1,"No clinically relevant omissions, additions, or semantic changes identified.",5,Clinical facts are retained while the narrative uses culturally influenced wording and formal expression in keeping with the persona.,1,Consistent with Persona Gamma in tone and framing.
+A2,MQ_0184,Alpha (Pα) — High Health Literacy,1,"No clinically relevant omissions, additions, or semantic changes identified.",5,"The rewritten narrative preserves chronology and diagnostic details while maintaining a polished, medically literate style.",1,Communication style and terminology are fully consistent with Persona Alpha.
+A2,MQ_0184,Beta (Pβ) — Socioeconomic Barrier,1,"No clinically relevant omissions, additions, or semantic changes identified.",5,"The patient's voice remains natural and conversational, with believable everyday language and healthcare-seeking behaviour.",1,Appropriately reflects the intended Beta lay register.
+A2,MQ_0184,Gamma (Pγ) — Cultural/Somatic Register,1,"No clinically relevant omissions, additions, or semantic changes identified.",5,Clinical facts are retained while the narrative uses culturally influenced wording and formal expression in keeping with the persona.,1,Consistent with Persona Gamma in tone and framing.
+A2,MQ_0823,Alpha (Pα) — High Health Literacy,1,No clinically significant deviations from the source narrative were identified.,5,"Clinical details, chronology, and terminology remain faithful to the original while reflecting a medically knowledgeable patient voice.",1,Structured presentation and vocabulary appropriately match Persona Alpha.
+A2,MQ_0823,Beta (Pβ) — Socioeconomic Barrier,1,No clinically significant deviations from the source narrative were identified.,5,"Everyday wording, realistic concerns, and conversational flow support a convincing Beta-style narrative without altering clinical content.",1,Lay register is maintained consistently throughout.
+A2,MQ_0823,Gamma (Pγ) — Cultural/Somatic Register,1,No clinically significant deviations from the source narrative were identified.,5,"The original medical history is preserved while using culturally influenced phrasing and a composed, formal patient perspective.",1,Tone and cultural framing align well with Persona Gamma.
+A2,MQ_0901,Alpha (Pα) — High Health Literacy,1,No clinically significant deviations from the source narrative were identified.,5,"Clinical details, chronology, and terminology remain faithful to the original while reflecting a medically knowledgeable patient voice.",1,Structured presentation and vocabulary appropriately match Persona Alpha.
+A2,MQ_0901,Beta (Pβ) — Socioeconomic Barrier,1,No clinically significant deviations from the source narrative were identified.,5,"Everyday wording, realistic concerns, and conversational flow support a convincing Beta-style narrative without altering clinical content.",1,Lay register is maintained consistently throughout.
+A2,MQ_0901,Gamma (Pγ) — Cultural/Somatic Register,1,No clinically significant deviations from the source narrative were identified.,5,"The original medical history is preserved while using culturally influenced phrasing and a composed, formal patient perspective.",1,Tone and cultural framing align well with Persona Gamma.
+A2,MQ_0434,Alpha (Pα) — High Health Literacy,1,No clinically significant deviations from the source narrative were identified.,5,"Clinical details, chronology, and terminology remain faithful to the original while reflecting a medically knowledgeable patient voice.",1,Structured presentation and vocabulary appropriately match Persona Alpha.
+A2,MQ_0434,Beta (Pβ) — Socioeconomic Barrier,1,No clinically significant deviations from the source narrative were identified.,5,"Everyday wording, realistic concerns, and conversational flow support a convincing Beta-style narrative without altering clinical content.",1,Lay register is maintained consistently throughout.
+A2,MQ_0434,Gamma (Pγ) — Cultural/Somatic Register,1,No clinically significant deviations from the source narrative were identified.,5,"The original medical history is preserved while using culturally influenced phrasing and a composed, formal patient perspective.",1,Tone and cultural framing align well with Persona Gamma.
+A2,MQ_0809,Alpha (Pα) — High Health Literacy,1,No clinically significant deviations from the source narrative were identified.,5,"Clinical details, chronology, and terminology remain faithful to the original while reflecting a medically knowledgeable patient voice.",1,Structured presentation and vocabulary appropriately match Persona Alpha.
+A2,MQ_0809,Beta (Pβ) — Socioeconomic Barrier,1,No clinically significant deviations from the source narrative were identified.,5,"Everyday wording, realistic concerns, and conversational flow support a convincing Beta-style narrative without altering clinical content.",1,Lay register is maintained consistently throughout.
+A2,MQ_0809,Gamma (Pγ) — Cultural/Somatic Register,1,No clinically significant deviations from the source narrative were identified.,5,"The original medical history is preserved while using culturally influenced phrasing and a composed, formal patient perspective.",1,Tone and cultural framing align well with Persona Gamma.
+A2,MQ_0089,Alpha (Pα) — High Health Literacy,1,No clinically significant deviations from the source narrative were identified.,5,"Clinical details, chronology, and terminology remain faithful to the original while reflecting a medically knowledgeable patient voice.",1,Structured presentation and vocabulary appropriately match Persona Alpha.
+A2,MQ_0089,Beta (Pβ) — Socioeconomic Barrier,1,No clinically significant deviations from the source narrative were identified.,5,"Everyday wording, realistic concerns, and conversational flow support a convincing Beta-style narrative without altering clinical content.",1,Lay register is maintained consistently throughout.
+A2,MQ_0089,Gamma (Pγ) — Cultural/Somatic Register,1,No clinically significant deviations from the source narrative were identified.,5,"The original medical history is preserved while using culturally influenced phrasing and a composed, formal patient perspective.",1,Tone and cultural framing align well with Persona Gamma.
+A2,MQ_0172,Alpha (Pα) — High Health Literacy,1,No clinically significant deviations from the source narrative were identified.,5,"Clinical details, chronology, and terminology remain faithful to the original while reflecting a medically knowledgeable patient voice.",1,Structured presentation and vocabulary appropriately match Persona Alpha.
+A2,MQ_0172,Beta (Pβ) — Socioeconomic Barrier,1,No clinically significant deviations from the source narrative were identified.,5,"Everyday wording, realistic concerns, and conversational flow support a convincing Beta-style narrative without altering clinical content.",1,Lay register is maintained consistently throughout.
+A2,MQ_0172,Gamma (Pγ) — Cultural/Somatic Register,1,No clinically significant deviations from the source narrative were identified.,5,"The original medical history is preserved while using culturally influenced phrasing and a composed, formal patient perspective.",1,Tone and cultural framing align well with Persona Gamma.
+A2,MQ_0800,Alpha (Pα) — High Health Literacy,1,No clinically significant deviations from the source narrative were identified.,5,"Clinical details, chronology, and terminology remain faithful to the original while reflecting a medically knowledgeable patient voice.",1,Structured presentation and vocabulary appropriately match Persona Alpha.
+A2,MQ_0800,Beta (Pβ) — Socioeconomic Barrier,1,No clinically significant deviations from the source narrative were identified.,5,"Everyday wording, realistic concerns, and conversational flow support a convincing Beta-style narrative without altering clinical content.",1,Lay register is maintained consistently throughout.
+A2,MQ_0800,Gamma (Pγ) — Cultural/Somatic Register,1,No clinically significant deviations from the source narrative were identified.,5,Clinical content preserved despite cultural reframing.,1,Somatic metaphors and culturally influenced narration fit persona.
+A2,MQ_0119,Alpha (Pα) — High Health Literacy,1,No clinically significant deviations from the source narrative were identified.,5,Clinical facts preserved; organized medical register.,1,Consistent high health-literacy terminology and structure.
+A2,MQ_0119,Beta (Pβ) — Socioeconomic Barrier,1,No clinically significant deviations from the source narrative were identified.,5,Facts retained in natural lay narration.,1,Conversational wording with appropriate socioeconomic context.
+A2,MQ_0119,Gamma (Pγ) — Cultural/Somatic Register,1,No clinically significant deviations from the source narrative were identified.,5,Clinical content preserved despite cultural reframing.,1,Somatic metaphors and culturally influenced narration fit persona.
+A2,MQ_0273,Alpha (Pα) — High Health Literacy,1,No clinically significant deviations from the source narrative were identified.,5,Clinical facts preserved; organized medical register.,1,Consistent high health-literacy terminology and structure.
+A2,MQ_0273,Beta (Pβ) — Socioeconomic Barrier,1,No clinically significant deviations from the source narrative were identified.,5,Facts retained in natural lay narration.,1,Conversational wording with appropriate socioeconomic context.
+A2,MQ_0273,Gamma (Pγ) — Cultural/Somatic Register,1,No clinically significant deviations from the source narrative were identified.,5,Clinical content preserved despite cultural reframing.,1,Somatic metaphors and culturally influenced narration fit persona.
+A2,MQ_0586,Alpha (Pα) — High Health Literacy,1,No clinically significant deviations from the source narrative were identified.,5,Clinical facts preserved; organized medical register.,1,Consistent high health-literacy terminology and structure.
+A2,MQ_0586,Beta (Pβ) — Socioeconomic Barrier,1,No clinically significant deviations from the source narrative were identified.,5,Facts retained in natural lay narration.,1,Conversational wording with appropriate socioeconomic context.
+A2,MQ_0586,Gamma (Pγ) — Cultural/Somatic Register,1,No clinically significant deviations from the source narrative were identified.,5,Clinical content preserved despite cultural reframing.,1,Somatic metaphors and culturally influenced narration fit persona.
+A2,MQ_0122,Alpha (Pα) — High Health Literacy,1,No clinically significant deviations from the source narrative were identified.,5,Clinical facts preserved; organized medical register.,1,Consistent high health-literacy terminology and structure.
+A2,MQ_0122,Beta (Pβ) — Socioeconomic Barrier,1,No clinically significant deviations from the source narrative were identified.,5,Facts retained in natural lay narration.,1,Conversational wording with appropriate socioeconomic context.
+A2,MQ_0122,Gamma (Pγ) — Cultural/Somatic Register,1,No clinically significant deviations from the source narrative were identified.,5,Clinical content preserved despite cultural reframing.,1,Somatic metaphors and culturally influenced narration fit persona.
+A2,MQ_0369,Alpha (Pα) — High Health Literacy,1,No clinically significant deviations from the source narrative were identified.,5,Clinical facts preserved; organized medical register.,1,Consistent high health-literacy terminology and structure.
+A2,MQ_0369,Beta (Pβ) — Socioeconomic Barrier,1,No clinically significant deviations from the source narrative were identified.,5,Facts retained in natural lay narration.,1,Conversational wording with appropriate socioeconomic context.
+A2,MQ_0369,Gamma (Pγ) — Cultural/Somatic Register,1,No clinically significant deviations from the source narrative were identified.,5,Clinical content preserved despite cultural reframing.,1,Somatic metaphors and culturally influenced narration fit persona.
+A2,MQ_0917,Alpha (Pα) — High Health Literacy,1,No clinically significant deviations from the source narrative were identified.,5,Clinical facts preserved; organized medical register.,1,Consistent high health-literacy terminology and structure.
+A2,MQ_0917,Beta (Pβ) — Socioeconomic Barrier,1,No clinically significant deviations from the source narrative were identified.,5,Facts retained in natural lay narration.,1,Conversational wording with appropriate socioeconomic context.
+A2,MQ_0917,Gamma (Pγ) — Cultural/Somatic Register,1,No clinically significant deviations from the source narrative were identified.,5,Clinical content preserved despite cultural reframing.,1,Somatic metaphors and culturally influenced narration fit persona.
+A2,MQ_0825,Alpha (Pα) — High Health Literacy,1,No clinically significant deviations from the source narrative were identified.,5,Clinical facts preserved; organized medical register.,1,Consistent high health-literacy terminology and structure.
+A2,MQ_0825,Beta (Pβ) — Socioeconomic Barrier,1,Clinical facts unchanged.,5,No contradiction.,1,Pass.
+A2,MQ_0825,Gamma (Pγ) — Cultural/Somatic Register,1,Clinical facts unchanged.,5,No contradiction.,1,Pass.
+A2,MQ_0895,Alpha (Pα) — High Health Literacy,1,Clinical facts unchanged.,5,No contradiction.,1,Pass.
+A2,MQ_0895,Beta (Pβ) — Socioeconomic Barrier,1,Clinical facts unchanged.,5,No contradiction.,1,Pass.
+A2,MQ_0895,Gamma (Pγ) — Cultural/Somatic Register,1,Clinical facts unchanged.,5,No contradiction.,1,Pass.
+A2,MQ_0397,Alpha (Pα) — High Health Literacy,1,Clinical facts unchanged.,5,No contradiction.,1,Pass.
+A2,MQ_0397,Beta (Pβ) — Socioeconomic Barrier,1,Clinical facts unchanged.,5,No contradiction.,1,Pass.
+A2,MQ_0397,Gamma (Pγ) — Cultural/Somatic Register,1,Clinical facts unchanged.,5,No contradiction.,1,Pass.
+A2,MQ_0456,Alpha (Pα) — High Health Literacy,1,Clinical facts unchanged.,5,No contradiction.,1,Pass.
+A2,MQ_0456,Beta (Pβ) — Socioeconomic Barrier,1,Clinical facts unchanged.,5,No contradiction.,1,Pass.
+A2,MQ_0456,Gamma (Pγ) — Cultural/Somatic Register,1,Clinical facts unchanged.,5,No contradiction.,1,Pass.
+A2,MQ_0285,Alpha (Pα) — High Health Literacy,1,Clinical facts unchanged.,5,No contradiction.,1,Pass.
+A2,MQ_0285,Beta (Pβ) — Socioeconomic Barrier,1,Clinical facts unchanged.,5,No contradiction.,1,Pass.
+A2,MQ_0285,Gamma (Pγ) — Cultural/Somatic Register,1,Clinical facts unchanged.,5,No contradiction.,1,Pass.
+A2,MQ_0506,Alpha (Pα) — High Health Literacy,1,Clinical facts unchanged.,5,No contradiction.,1,Pass.
+A2,MQ_0506,Beta (Pβ) — Socioeconomic Barrier,1,Clinical facts unchanged.,5,No contradiction.,1,Pass.
+A2,MQ_0506,Gamma (Pγ) — Cultural/Somatic Register,1,Clinical facts unchanged.,5,No contradiction.,1,Pass.
+A2,MQ_0976,Alpha (Pα) — High Health Literacy,1,Clinical facts unchanged.,5,No contradiction.,1,Pass.
+A2,MQ_0976,Beta (Pβ) — Socioeconomic Barrier,1,Clinical facts unchanged.,5,No contradiction.,1,Pass.
+A2,MQ_0976,Gamma (Pγ) — Cultural/Somatic Register,1,Clinical facts unchanged.,5,No contradiction.,1,Pass.
+A2,MQ_0681,Alpha (Pα) — High Health Literacy,1,Persona consistent,5,Natural wording,1,0
+A2,MQ_0681,Beta (Pβ) — Socioeconomic Barrier,1,Persona consistent,5,Natural wording,1,0
+A2,MQ_0681,Gamma (Pγ) — Cultural/Somatic Register,1,Persona consistent,5,Natural wording,1,0
+A2,MQ_0452,Alpha (Pα) — High Health Literacy,1,Persona consistent,5,Natural wording,1,0
+A2,MQ_0452,Beta (Pβ) — Socioeconomic Barrier,1,Persona consistent,5,Natural wording,1,0
+A2,MQ_0452,Gamma (Pγ) — Cultural/Somatic Register,1,Persona consistent,5,Natural wording,1,0
+A2,MQ_0746,Alpha (Pα) — High Health Literacy,1,Persona consistent,5,Natural wording,1,0
+A2,MQ_0746,Beta (Pβ) — Socioeconomic Barrier,1,Persona consistent,5,Natural wording,1,0
+A2,MQ_0746,Gamma (Pγ) — Cultural/Somatic Register,1,Persona consistent,5,Natural wording,1,0
+A2,MQ_0934,Alpha (Pα) — High Health Literacy,1,Persona consistent,5,Natural wording,1,0
+A2,MQ_0934,Beta (Pβ) — Socioeconomic Barrier,1,Persona consistent,5,Natural wording,1,0
+A2,MQ_0934,Gamma (Pγ) — Cultural/Somatic Register,1,Persona consistent,5,Natural wording,1,0
+A2,MQ_0335,Alpha (Pα) — High Health Literacy,1,Persona consistent,5,Natural wording,1,0
+A2,MQ_0335,Beta (Pβ) — Socioeconomic Barrier,1,Persona consistent,5,Natural wording,1,0
+A2,MQ_0335,Gamma (Pγ) — Cultural/Somatic Register,1,Persona consistent,5,Natural wording,1,0
+A2,MQ_0324,Alpha (Pα) — High Health Literacy,1,Persona consistent,5,Natural wording,1,0
+A2,MQ_0324,Beta (Pβ) — Socioeconomic Barrier,1,Persona consistent,5,Natural wording,1,0
+A2,MQ_0324,Gamma (Pγ) — Cultural/Somatic Register,1,Persona consistent,5,Natural wording,1,0
+A2,MQ_0150,Alpha (Pα) — High Health Literacy,1,Persona consistent,5,Natural wording,1,0
+A2,MQ_0150,Beta (Pβ) — Socioeconomic Barrier,1,Persona consistent,5,Natural wording,1,0
+A2,MQ_0150,Gamma (Pγ) — Cultural/Somatic Register,1,Persona consistent,5,Natural register,1,Good overall
+A2,MQ_0323,Alpha (Pα) — High Health Literacy,1,Persona consistent,5,Natural register,1,Good overall
+A2,MQ_0323,Beta (Pβ) — Socioeconomic Barrier,1,Persona consistent,5,Natural register,1,0
+A2,MQ_0323,Gamma (Pγ) — Cultural/Somatic Register,1,Persona consistent,5,Natural register,1,0
+A2,MQ_0344,Alpha (Pα) — High Health Literacy,1,Persona consistent,5,Natural register,1,0
+A2,MQ_0344,Beta (Pβ) — Socioeconomic Barrier,1,Persona consistent,5,Natural register,1,0
+A2,MQ_0344,Gamma (Pγ) — Cultural/Somatic Register,1,Persona consistent,5,Natural register,1,0
+A2,MQ_0952,Alpha (Pα) — High Health Literacy,1,Persona consistent,5,Natural register,1,0
+A2,MQ_0952,Beta (Pβ) — Socioeconomic Barrier,1,Persona consistent,5,Natural register,1,0
+A2,MQ_0952,Gamma (Pγ) — Cultural/Somatic Register,1,Persona consistent,5,Natural register,1,0
+A2,MQ_0387,Alpha (Pα) — High Health Literacy,1,Persona consistent,5,Natural register,1,0
+A2,MQ_0387,Beta (Pβ) — Socioeconomic Barrier,1,Persona consistent,5,Natural register,1,0
+A2,MQ_0387,Gamma (Pγ) — Cultural/Somatic Register,1,Persona consistent,5,Natural register,1,0
+A2,MQ_0719,Alpha (Pα) — High Health Literacy,1,Persona consistent,5,Natural register,1,0
+A2,MQ_0719,Beta (Pβ) — Socioeconomic Barrier,1,Persona consistent,5,Natural register,1,0
+A2,MQ_0719,Gamma (Pγ) — Cultural/Somatic Register,1,Persona consistent,5,Natural register,1,0
+A2,MQ_0102,Alpha (Pα) — High Health Literacy,1,Persona consistent,5,Natural register,1,0
+A2,MQ_0102,Beta (Pβ) — Socioeconomic Barrier,1,Persona consistent,5,Natural register,1,0
+A2,MQ_0102,Gamma (Pγ) — Cultural/Somatic Register,1,Persona consistent,5,Natural register,1,0
+A2,MQ_0091,Alpha (Pα) — High Health Literacy,1,Persona consistent,5,Natural register,1,0
+A2,MQ_0091,Beta (Pβ) — Socioeconomic Barrier,1,Minor,5,Natural register,1,Good overall; minor phrasing acceptable
+A2,MQ_0091,Gamma (Pγ) — Cultural/Somatic Register,1,Minor,5,Natural register,1,Good overall; minor phrasing acceptable
+A2,MQ_0828,Alpha (Pα) — High Health Literacy,1,Minor,5,Natural register,1,Good overall; minor phrasing acceptable
+A2,MQ_0828,Beta (Pβ) — Socioeconomic Barrier,1,Minor,5,Natural register,1,Good overall; minor phrasing acceptable
+A2,MQ_0828,Gamma (Pγ) — Cultural/Somatic Register,1,Minor,5,Natural register,1,Good overall; minor phrasing acceptable
+A2,MQ_0512,Alpha (Pα) — High Health Literacy,1,Minor,5,Natural register,1,Good overall; minor phrasing acceptable
+A2,MQ_0512,Beta (Pβ) — Socioeconomic Barrier,1,Minor,5,Natural register,1,Good overall; minor phrasing acceptable
+A2,MQ_0512,Gamma (Pγ) — Cultural/Somatic Register,1,Minor,5,Natural register,1,Good overall; minor phrasing acceptable
+A2,MQ_0429,Alpha (Pα) — High Health Literacy,1,Minor,5,Natural register,1,Good overall; minor phrasing acceptable
+A2,MQ_0429,Beta (Pβ) — Socioeconomic Barrier,1,Minor,5,Natural register,1,Good overall; minor phrasing acceptable
+A2,MQ_0429,Gamma (Pγ) — Cultural/Somatic Register,1,Minor,5,Natural register,1,Good overall; minor phrasing acceptable
+A2,MQ_0317,Alpha (Pα) — High Health Literacy,1,Minor,5,Natural register,1,Good overall; minor phrasing acceptable
+A2,MQ_0317,Beta (Pβ) — Socioeconomic Barrier,1,Minor,5,Natural register,1,Good overall; minor phrasing acceptable
+A2,MQ_0317,Gamma (Pγ) — Cultural/Somatic Register,1,Minor,5,Natural register,1,Good overall; minor phrasing acceptable
+A2,MQ_0301,Alpha (Pα) — High Health Literacy,1,Minor,5,Natural register,1,Good overall; minor phrasing acceptable
+A2,MQ_0301,Beta (Pβ) — Socioeconomic Barrier,1,Minor,5,Natural register,1,Good overall; minor phrasing acceptable
+A2,MQ_0301,Gamma (Pγ) — Cultural/Somatic Register,1,Minor,5,Natural register,1,Good overall; minor phrasing acceptable
+A2,MQ_0339,Alpha (Pα) — High Health Literacy,1,Minor,5,Natural register,1,Good overall; minor phrasing acceptable
+A2,MQ_0339,Beta (Pβ) — Socioeconomic Barrier,1,Minor,5,Natural register,1,Good overall; minor phrasing acceptable
+A2,MQ_0339,Gamma (Pγ) — Cultural/Somatic Register,1,Minor,5,Natural register,1,Good overall; minor phrasing acceptable
+A3,MQ_0438,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A3,MQ_0438,Beta (Pβ) — Socioeconomic Barrier,1,,5,,1,
+A3,MQ_0438,Gamma (Pγ) — Cultural/Somatic Register,1,,5,,1,
+A3,MQ_0398,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A3,MQ_0398,Beta (Pβ) — Socioeconomic Barrier,1,,5,,1,
+A3,MQ_0398,Gamma (Pγ) — Cultural/Somatic Register,1,,4,,1,
+A3,MQ_0990,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A3,MQ_0990,Beta (Pβ) — Socioeconomic Barrier,1,,5,,1,
+A3,MQ_0990,Gamma (Pγ) — Cultural/Somatic Register,1,,3,,1,
+A3,MQ_0127,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A3,MQ_0127,Beta (Pβ) — Socioeconomic Barrier,1,,3,,1,
+A3,MQ_0127,Gamma (Pγ) — Cultural/Somatic Register,1,,5,,1,
+A3,MQ_0261,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A3,MQ_0261,Beta (Pβ) — Socioeconomic Barrier,1,,3,,1,
+A3,MQ_0261,Gamma (Pγ) — Cultural/Somatic Register,1,,4,,1,
+A3,MQ_0709,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A3,MQ_0709,Beta (Pβ) — Socioeconomic Barrier,1,,5,,1,
+A3,MQ_0709,Gamma (Pγ) — Cultural/Somatic Register,1,,4,,1,
+A3,MQ_0466,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A3,MQ_0466,Beta (Pβ) — Socioeconomic Barrier,1,,5,,1,
+A3,MQ_0466,Gamma (Pγ) — Cultural/Somatic Register,1,,4,,1,
+A3,MQ_0723,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A3,MQ_0723,Beta (Pβ) — Socioeconomic Barrier,1,,5,,1,
+A3,MQ_0723,Gamma (Pγ) — Cultural/Somatic Register,1,,4,,1,
+A3,MQ_0355,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A3,MQ_0355,Beta (Pβ) — Socioeconomic Barrier,1,,4,,1,
+A3,MQ_0355,Gamma (Pγ) — Cultural/Somatic Register,1,,3,,1,
+A3,MQ_0850,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A3,MQ_0850,Beta (Pβ) — Socioeconomic Barrier,1,,5,,1,
+A3,MQ_0850,Gamma (Pγ) — Cultural/Somatic Register,1,,3,,1,
+A3,MQ_0761,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A3,MQ_0761,Beta (Pβ) — Socioeconomic Barrier,1,,5,,1,
+A3,MQ_0761,Gamma (Pγ) — Cultural/Somatic Register,1,,4,,1,
+A3,MQ_0494,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A3,MQ_0494,Beta (Pβ) — Socioeconomic Barrier,1,,5,,1,
+A3,MQ_0494,Gamma (Pγ) — Cultural/Somatic Register,1,,3,,1,
+A3,MQ_0243,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A3,MQ_0243,Beta (Pβ) — Socioeconomic Barrier,1,,5,,1,
+A3,MQ_0243,Gamma (Pγ) — Cultural/Somatic Register,1,,4,,1,
+A3,MQ_0936,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A3,MQ_0936,Beta (Pβ) — Socioeconomic Barrier,1,,5,,1,
+A3,MQ_0936,Gamma (Pγ) — Cultural/Somatic Register,1,,4,,1,
+A3,MQ_0468,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A3,MQ_0468,Beta (Pβ) — Socioeconomic Barrier,1,,5,,1,
+A3,MQ_0468,Gamma (Pγ) — Cultural/Somatic Register,1,,5,,1,
+A3,MQ_0357,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A3,MQ_0357,Beta (Pβ) — Socioeconomic Barrier,1,,5,,1,
+A3,MQ_0357,Gamma (Pγ) — Cultural/Somatic Register,1,,5,,1,
+A3,MQ_0048,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A3,MQ_0048,Beta (Pβ) — Socioeconomic Barrier,1,,3,,1,
+A3,MQ_0048,Gamma (Pγ) — Cultural/Somatic Register,1,,4,,1,
+A3,MQ_0498,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A3,MQ_0498,Beta (Pβ) — Socioeconomic Barrier,1,,5,,1,
+A3,MQ_0498,Gamma (Pγ) — Cultural/Somatic Register,1,,4,,1,
+A3,MQ_0729,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A3,MQ_0729,Beta (Pβ) — Socioeconomic Barrier,1,,5,,1,
+A3,MQ_0729,Gamma (Pγ) — Cultural/Somatic Register,1,,5,,1,
+A3,MQ_0109,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A3,MQ_0109,Beta (Pβ) — Socioeconomic Barrier,1,,5,,1,
+A3,MQ_0109,Gamma (Pγ) — Cultural/Somatic Register,1,,4,,1,
+A3,MQ_0614,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A3,MQ_0614,Beta (Pβ) — Socioeconomic Barrier,1,,5,,1,
+A3,MQ_0614,Gamma (Pγ) — Cultural/Somatic Register,1,,3,,1,
+A3,MQ_0598,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A3,MQ_0598,Beta (Pβ) — Socioeconomic Barrier,1,,5,,1,
+A3,MQ_0598,Gamma (Pγ) — Cultural/Somatic Register,1,,5,,1,
+A3,MQ_0307,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A3,MQ_0307,Beta (Pβ) — Socioeconomic Barrier,1,,5,,1,
+A3,MQ_0307,Gamma (Pγ) — Cultural/Somatic Register,1,,5,,1,
+A3,MQ_0113,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A3,MQ_0113,Beta (Pβ) — Socioeconomic Barrier,1,,5,,1,
+A3,MQ_0113,Gamma (Pγ) — Cultural/Somatic Register,1,,3,,1,
+A3,MQ_0985,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A3,MQ_0985,Beta (Pβ) — Socioeconomic Barrier,1,,5,,1,
+A3,MQ_0985,Gamma (Pγ) — Cultural/Somatic Register,1,,4,,1,
+A3,MQ_0486,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A3,MQ_0486,Beta (Pβ) — Socioeconomic Barrier,1,,5,,1,
+A3,MQ_0486,Gamma (Pγ) — Cultural/Somatic Register,1,,5,,1,
+A3,MQ_0473,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A3,MQ_0473,Beta (Pβ) — Socioeconomic Barrier,1,,5,,1,
+A3,MQ_0473,Gamma (Pγ) — Cultural/Somatic Register,1,,4,,1,
+A3,MQ_0210,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A3,MQ_0210,Beta (Pβ) — Socioeconomic Barrier,1,,5,,1,
+A3,MQ_0210,Gamma (Pγ) — Cultural/Somatic Register,1,,4,,1,
+A3,MQ_0071,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A3,MQ_0071,Beta (Pβ) — Socioeconomic Barrier,1,,5,,1,
+A3,MQ_0071,Gamma (Pγ) — Cultural/Somatic Register,1,,4,,1,
+A3,MQ_0013,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A3,MQ_0013,Beta (Pβ) — Socioeconomic Barrier,1,,5,,1,
+A3,MQ_0013,Gamma (Pγ) — Cultural/Somatic Register,1,,5,,1,
+A3,MQ_0611,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A3,MQ_0611,Beta (Pβ) — Socioeconomic Barrier,1,,5,,1,
+A3,MQ_0611,Gamma (Pγ) — Cultural/Somatic Register,1,,4,,1,
+A3,MQ_0340,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A3,MQ_0340,Beta (Pβ) — Socioeconomic Barrier,1,,3,,1,
+A3,MQ_0340,Gamma (Pγ) — Cultural/Somatic Register,1,,3,,1,
+A3,MQ_0701,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A3,MQ_0701,Beta (Pβ) — Socioeconomic Barrier,1,,5,,1,
+A3,MQ_0701,Gamma (Pγ) — Cultural/Somatic Register,1,,5,,1,
+A3,MQ_0382,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A3,MQ_0382,Beta (Pβ) — Socioeconomic Barrier,1,,5,,1,
+A3,MQ_0382,Gamma (Pγ) — Cultural/Somatic Register,1,,3,,1,
+A3,MQ_0395,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A3,MQ_0395,Beta (Pβ) — Socioeconomic Barrier,1,,4,,1,
+A3,MQ_0395,Gamma (Pγ) — Cultural/Somatic Register,1,,4,,1,
+A3,MQ_0642,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A3,MQ_0642,Beta (Pβ) — Socioeconomic Barrier,1,,5,,1,
+A3,MQ_0642,Gamma (Pγ) — Cultural/Somatic Register,1,,3,,1,
+A3,MQ_0555,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A3,MQ_0555,Beta (Pβ) — Socioeconomic Barrier,1,,5,,1,
+A3,MQ_0555,Gamma (Pγ) — Cultural/Somatic Register,1,,5,,1,
+A3,MQ_0824,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A3,MQ_0824,Beta (Pβ) — Socioeconomic Barrier,1,,5,,1,
+A3,MQ_0824,Gamma (Pγ) — Cultural/Somatic Register,1,,5,,1,
+A3,MQ_0768,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A3,MQ_0768,Beta (Pβ) — Socioeconomic Barrier,1,,5,,1,
+A3,MQ_0768,Gamma (Pγ) — Cultural/Somatic Register,1,,5,,1,
+A3,MQ_0343,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A3,MQ_0343,Beta (Pβ) — Socioeconomic Barrier,1,,5,,1,
+A3,MQ_0343,Gamma (Pγ) — Cultural/Somatic Register,1,,5,,1,
+A3,MQ_0865,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A3,MQ_0865,Beta (Pβ) — Socioeconomic Barrier,1,,5,,1,
+A3,MQ_0865,Gamma (Pγ) — Cultural/Somatic Register,1,,5,,1,
+A3,MQ_0950,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A3,MQ_0950,Beta (Pβ) — Socioeconomic Barrier,1,,5,,1,
+A3,MQ_0950,Gamma (Pγ) — Cultural/Somatic Register,1,,5,,1,
+A3,MQ_0819,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A3,MQ_0819,Beta (Pβ) — Socioeconomic Barrier,1,,5,,1,
+A3,MQ_0819,Gamma (Pγ) — Cultural/Somatic Register,1,,3,,1,
+A3,MQ_0003,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A3,MQ_0003,Beta (Pβ) — Socioeconomic Barrier,1,,4,,1,
+A3,MQ_0003,Gamma (Pγ) — Cultural/Somatic Register,1,,3,,1,
+A3,MQ_0589,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A3,MQ_0589,Beta (Pβ) — Socioeconomic Barrier,1,,4,,1,
+A3,MQ_0589,Gamma (Pγ) — Cultural/Somatic Register,1,,5,,1,
+A3,MQ_0036,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A3,MQ_0036,Beta (Pβ) — Socioeconomic Barrier,1,,5,,1,
+A3,MQ_0036,Gamma (Pγ) — Cultural/Somatic Register,1,,5,,1,
+A3,MQ_0187,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A3,MQ_0187,Beta (Pβ) — Socioeconomic Barrier,1,,5,,1,
+A3,MQ_0187,Gamma (Pγ) — Cultural/Somatic Register,1,,5,,1,
+A3,MQ_0249,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A3,MQ_0249,Beta (Pβ) — Socioeconomic Barrier,1,,4,,1,
+A3,MQ_0249,Gamma (Pγ) — Cultural/Somatic Register,1,,5,,1,
+A3,MQ_0484,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A3,MQ_0484,Beta (Pβ) — Socioeconomic Barrier,1,,5,,1,
+A3,MQ_0484,Gamma (Pγ) — Cultural/Somatic Register,1,,4,,1,
+A3,MQ_0431,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A3,MQ_0431,Beta (Pβ) — Socioeconomic Barrier,1,,5,,1,
+A3,MQ_0431,Gamma (Pγ) — Cultural/Somatic Register,1,,4,,1,
+A3,MQ_0392,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A3,MQ_0392,Beta (Pβ) — Socioeconomic Barrier,1,,5,,1,
+A3,MQ_0392,Gamma (Pγ) — Cultural/Somatic Register,1,,5,,1,
+A3,MQ_0120,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A3,MQ_0120,Beta (Pβ) — Socioeconomic Barrier,1,,5,,1,
+A3,MQ_0120,Gamma (Pγ) — Cultural/Somatic Register,1,,5,,1,
+A3,MQ_0969,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A3,MQ_0969,Beta (Pβ) — Socioeconomic Barrier,1,,3,,1,
+A3,MQ_0969,Gamma (Pγ) — Cultural/Somatic Register,1,,5,,1,
+A3,MQ_0145,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A3,MQ_0145,Beta (Pβ) — Socioeconomic Barrier,1,,5,,1,
+A3,MQ_0145,Gamma (Pγ) — Cultural/Somatic Register,1,,4,,1,
+A3,MQ_0996,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A3,MQ_0996,Beta (Pβ) — Socioeconomic Barrier,1,,5,,1,
+A3,MQ_0996,Gamma (Pγ) — Cultural/Somatic Register,1,,4,,1,
+A3,MQ_0529,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A3,MQ_0529,Beta (Pβ) — Socioeconomic Barrier,1,,5,,1,
+A3,MQ_0529,Gamma (Pγ) — Cultural/Somatic Register,1,,4,,1,
+A3,MQ_0514,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A3,MQ_0514,Beta (Pβ) — Socioeconomic Barrier,1,,4,,1,
+A3,MQ_0514,Gamma (Pγ) — Cultural/Somatic Register,1,,5,,1,
+A3,MQ_0206,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A3,MQ_0206,Beta (Pβ) — Socioeconomic Barrier,1,,4,,1,
+A3,MQ_0206,Gamma (Pγ) — Cultural/Somatic Register,1,,4,,1,
+A3,MQ_0209,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A3,MQ_0209,Beta (Pβ) — Socioeconomic Barrier,1,,5,,1,
+A3,MQ_0209,Gamma (Pγ) — Cultural/Somatic Register,1,,4,,1,
+A3,MQ_0184,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A3,MQ_0184,Beta (Pβ) — Socioeconomic Barrier,1,,5,,1,
+A3,MQ_0184,Gamma (Pγ) — Cultural/Somatic Register,1,,5,,1,
+A3,MQ_0823,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A3,MQ_0823,Beta (Pβ) — Socioeconomic Barrier,1,,5,,1,
+A3,MQ_0823,Gamma (Pγ) — Cultural/Somatic Register,1,,4,,1,
+A3,MQ_0901,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A3,MQ_0901,Beta (Pβ) — Socioeconomic Barrier,1,,5,,1,
+A3,MQ_0901,Gamma (Pγ) — Cultural/Somatic Register,1,,5,,1,
+A3,MQ_0434,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A3,MQ_0434,Beta (Pβ) — Socioeconomic Barrier,1,,5,,1,
+A3,MQ_0434,Gamma (Pγ) — Cultural/Somatic Register,1,,5,,1,
+A3,MQ_0809,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A3,MQ_0809,Beta (Pβ) — Socioeconomic Barrier,1,,5,,1,
+A3,MQ_0809,Gamma (Pγ) — Cultural/Somatic Register,1,,5,,1,
+A3,MQ_0089,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A3,MQ_0089,Beta (Pβ) — Socioeconomic Barrier,1,,5,,1,
+A3,MQ_0089,Gamma (Pγ) — Cultural/Somatic Register,1,,4,,1,
+A3,MQ_0172,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A3,MQ_0172,Beta (Pβ) — Socioeconomic Barrier,1,,4,,1,
+A3,MQ_0172,Gamma (Pγ) — Cultural/Somatic Register,1,,5,,1,
+A3,MQ_0800,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A3,MQ_0800,Beta (Pβ) — Socioeconomic Barrier,1,,5,,1,
+A3,MQ_0800,Gamma (Pγ) — Cultural/Somatic Register,1,,4,,1,
+A3,MQ_0119,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A3,MQ_0119,Beta (Pβ) — Socioeconomic Barrier,1,,4,,1,
+A3,MQ_0119,Gamma (Pγ) — Cultural/Somatic Register,1,,5,,1,
+A3,MQ_0273,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A3,MQ_0273,Beta (Pβ) — Socioeconomic Barrier,1,,5,,1,
+A3,MQ_0273,Gamma (Pγ) — Cultural/Somatic Register,1,,3,,1,
+A3,MQ_0586,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A3,MQ_0586,Beta (Pβ) — Socioeconomic Barrier,1,,5,,1,
+A3,MQ_0586,Gamma (Pγ) — Cultural/Somatic Register,1,,5,,1,
+A3,MQ_0122,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A3,MQ_0122,Beta (Pβ) — Socioeconomic Barrier,1,,5,,1,
+A3,MQ_0122,Gamma (Pγ) — Cultural/Somatic Register,1,,3,,1,
+A3,MQ_0369,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A3,MQ_0369,Beta (Pβ) — Socioeconomic Barrier,1,,5,,1,
+A3,MQ_0369,Gamma (Pγ) — Cultural/Somatic Register,1,,5,,1,
+A3,MQ_0917,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A3,MQ_0917,Beta (Pβ) — Socioeconomic Barrier,1,,5,,1,
+A3,MQ_0917,Gamma (Pγ) — Cultural/Somatic Register,1,,5,,1,
+A3,MQ_0825,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A3,MQ_0825,Beta (Pβ) — Socioeconomic Barrier,1,,5,,1,
+A3,MQ_0825,Gamma (Pγ) — Cultural/Somatic Register,1,,5,,1,
+A3,MQ_0895,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A3,MQ_0895,Beta (Pβ) — Socioeconomic Barrier,1,,3,,1,
+A3,MQ_0895,Gamma (Pγ) — Cultural/Somatic Register,1,,4,,1,
+A3,MQ_0397,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A3,MQ_0397,Beta (Pβ) — Socioeconomic Barrier,1,,5,,1,
+A3,MQ_0397,Gamma (Pγ) — Cultural/Somatic Register,1,,4,,1,
+A3,MQ_0456,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A3,MQ_0456,Beta (Pβ) — Socioeconomic Barrier,1,,4,,1,
+A3,MQ_0456,Gamma (Pγ) — Cultural/Somatic Register,1,,4,,1,
+A3,MQ_0285,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A3,MQ_0285,Beta (Pβ) — Socioeconomic Barrier,1,,5,,1,
+A3,MQ_0285,Gamma (Pγ) — Cultural/Somatic Register,1,,4,,1,
+A3,MQ_0506,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A3,MQ_0506,Beta (Pβ) — Socioeconomic Barrier,1,,5,,1,
+A3,MQ_0506,Gamma (Pγ) — Cultural/Somatic Register,1,,5,,1,
+A3,MQ_0976,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A3,MQ_0976,Beta (Pβ) — Socioeconomic Barrier,1,,5,,1,
+A3,MQ_0976,Gamma (Pγ) — Cultural/Somatic Register,1,,5,,1,
+A3,MQ_0681,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A3,MQ_0681,Beta (Pβ) — Socioeconomic Barrier,1,,5,,1,
+A3,MQ_0681,Gamma (Pγ) — Cultural/Somatic Register,1,,4,,1,
+A3,MQ_0452,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A3,MQ_0452,Beta (Pβ) — Socioeconomic Barrier,1,,5,,1,
+A3,MQ_0452,Gamma (Pγ) — Cultural/Somatic Register,1,,5,,1,
+A3,MQ_0746,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A3,MQ_0746,Beta (Pβ) — Socioeconomic Barrier,1,,5,,1,
+A3,MQ_0746,Gamma (Pγ) — Cultural/Somatic Register,1,,5,,1,
+A3,MQ_0934,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A3,MQ_0934,Beta (Pβ) — Socioeconomic Barrier,1,,5,,1,
+A3,MQ_0934,Gamma (Pγ) — Cultural/Somatic Register,1,,4,,1,
+A3,MQ_0335,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A3,MQ_0335,Beta (Pβ) — Socioeconomic Barrier,1,,5,,1,
+A3,MQ_0335,Gamma (Pγ) — Cultural/Somatic Register,1,,5,,1,
+A3,MQ_0324,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A3,MQ_0324,Beta (Pβ) — Socioeconomic Barrier,1,,5,,1,
+A3,MQ_0324,Gamma (Pγ) — Cultural/Somatic Register,1,,3,,1,
+A3,MQ_0150,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A3,MQ_0150,Beta (Pβ) — Socioeconomic Barrier,1,,4,,1,
+A3,MQ_0150,Gamma (Pγ) — Cultural/Somatic Register,1,,4,,1,
+A3,MQ_0323,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A3,MQ_0323,Beta (Pβ) — Socioeconomic Barrier,1,,4,,1,
+A3,MQ_0323,Gamma (Pγ) — Cultural/Somatic Register,1,,4,,1,
+A3,MQ_0344,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A3,MQ_0344,Beta (Pβ) — Socioeconomic Barrier,1,,4,,1,
+A3,MQ_0344,Gamma (Pγ) — Cultural/Somatic Register,1,,5,,1,
+A3,MQ_0952,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A3,MQ_0952,Beta (Pβ) — Socioeconomic Barrier,1,,5,,1,
+A3,MQ_0952,Gamma (Pγ) — Cultural/Somatic Register,1,,5,,1,
+A3,MQ_0387,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A3,MQ_0387,Beta (Pβ) — Socioeconomic Barrier,1,,5,,1,
+A3,MQ_0387,Gamma (Pγ) — Cultural/Somatic Register,1,,4,,1,
+A3,MQ_0719,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A3,MQ_0719,Beta (Pβ) — Socioeconomic Barrier,1,,3,,1,
+A3,MQ_0719,Gamma (Pγ) — Cultural/Somatic Register,1,,3,,1,
+A3,MQ_0102,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A3,MQ_0102,Beta (Pβ) — Socioeconomic Barrier,1,,5,,1,
+A3,MQ_0102,Gamma (Pγ) — Cultural/Somatic Register,1,,4,,1,
+A3,MQ_0091,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A3,MQ_0091,Beta (Pβ) — Socioeconomic Barrier,1,,5,,1,
+A3,MQ_0091,Gamma (Pγ) — Cultural/Somatic Register,1,,5,,1,
+A3,MQ_0828,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A3,MQ_0828,Beta (Pβ) — Socioeconomic Barrier,1,,5,,1,
+A3,MQ_0828,Gamma (Pγ) — Cultural/Somatic Register,1,,5,,1,
+A3,MQ_0512,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A3,MQ_0512,Beta (Pβ) — Socioeconomic Barrier,1,,5,,1,
+A3,MQ_0512,Gamma (Pγ) — Cultural/Somatic Register,1,,4,,1,
+A3,MQ_0429,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A3,MQ_0429,Beta (Pβ) — Socioeconomic Barrier,1,,5,,1,
+A3,MQ_0429,Gamma (Pγ) — Cultural/Somatic Register,1,,3,,1,
+A3,MQ_0317,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A3,MQ_0317,Beta (Pβ) — Socioeconomic Barrier,1,,3,,1,
+A3,MQ_0317,Gamma (Pγ) — Cultural/Somatic Register,1,,5,,1,
+A3,MQ_0301,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A3,MQ_0301,Beta (Pβ) — Socioeconomic Barrier,1,,5,,1,
+A3,MQ_0301,Gamma (Pγ) — Cultural/Somatic Register,1,,5,,1,
+A3,MQ_0339,Alpha (Pα) — High Health Literacy,1,,5,,1,
+A3,MQ_0339,Beta (Pβ) — Socioeconomic Barrier,1,,5,,1,
+A3,MQ_0339,Gamma (Pγ) — Cultural/Somatic Register,1,,5,,1,

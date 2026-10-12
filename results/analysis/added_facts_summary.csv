@@ -1,0 +1,4 @@
+persona,n,mean_added,mean_relevant,pct_any_relevant,pct_ge2
+alpha,1000,0.367,0.264,0.226,0.034
+beta,1000,4.664,1.591,0.859,0.463
+gamma,1000,3.181,1.431,0.793,0.402

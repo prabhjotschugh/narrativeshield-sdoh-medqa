@@ -1,0 +1,33 @@
+judge,subset,cond,n_q,gap,lo,hi
+gemini-3.8-flash,all,B1,1000,0.096,0.082,0.11
+gemini-3.8-flash,all,NS-full,1000,0.005,-0.002,0.012
+gemini-3.8-flash,zero added (both),B1,53,0.127,0.064,0.194
+gemini-3.8-flash,zero added (both),NS-full,53,0.021,-0.013,0.057
+gemini-3.8-flash,<=1 added (both),B1,344,0.094,0.07,0.12
+gemini-3.8-flash,<=1 added (both),NS-full,344,0.007,-0.004,0.019
+gemini-3.8-flash,>=2 added (either),B1,656,0.097,0.081,0.113
+gemini-3.8-flash,>=2 added (either),NS-full,656,0.003,-0.004,0.012
+gemini-2.5-flash,all,B1,182,0.088,0.057,0.12
+gemini-2.5-flash,all,NS-full,182,0.008,-0.007,0.024
+gemini-2.5-flash,zero added (both),B1,0,,,
+gemini-2.5-flash,zero added (both),NS-full,0,,,
+gemini-2.5-flash,<=1 added (both),B1,6,0.257,0.118,0.41
+gemini-2.5-flash,<=1 added (both),NS-full,6,0.028,-0.049,0.111
+gemini-2.5-flash,>=2 added (either),B1,176,0.082,0.052,0.112
+gemini-2.5-flash,>=2 added (either),NS-full,176,0.007,-0.008,0.023
+gemini-3.1-flash-lite,all,B1,1000,0.096,0.083,0.11
+gemini-3.1-flash-lite,all,NS-full,1000,0.005,-0.002,0.012
+gemini-3.1-flash-lite,zero added (both),B1,25,0.103,0.003,0.213
+gemini-3.1-flash-lite,zero added (both),NS-full,25,0.012,-0.03,0.06
+gemini-3.1-flash-lite,<=1 added (both),B1,277,0.091,0.065,0.117
+gemini-3.1-flash-lite,<=1 added (both),NS-full,277,0.007,-0.005,0.02
+gemini-3.1-flash-lite,>=2 added (either),B1,723,0.098,0.082,0.115
+gemini-3.1-flash-lite,>=2 added (either),NS-full,723,0.004,-0.004,0.012
+gemini-3.1-pro-preview,all,B1,1000,0.096,0.081,0.111
+gemini-3.1-pro-preview,all,NS-full,1000,0.005,-0.002,0.011
+gemini-3.1-pro-preview,zero added (both),B1,8,0.083,-0.016,0.198
+gemini-3.1-pro-preview,zero added (both),NS-full,8,-0.068,-0.125,-0.005
+gemini-3.1-pro-preview,<=1 added (both),B1,77,0.109,0.057,0.163
+gemini-3.1-pro-preview,<=1 added (both),NS-full,77,0.001,-0.025,0.027
+gemini-3.1-pro-preview,>=2 added (either),B1,923,0.095,0.081,0.109
+gemini-3.1-pro-preview,>=2 added (either),NS-full,923,0.005,-0.002,0.013

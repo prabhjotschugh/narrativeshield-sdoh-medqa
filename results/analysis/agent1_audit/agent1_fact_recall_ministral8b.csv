@@ -1,0 +1,301 @@
+model,question_id,persona,agent1_parse_success,audit_pass,facts_present,facts_missing,total_facts_extracted,audit_note
+ministral8b,MQ_0755,alpha,True,False,13,8,21,"Multiple exam findings, timeline details, ECG results, and SPEP were omitted from the JSON extraction."
+ministral8b,MQ_0755,beta,True,False,10,7,17,"Key lab findings, ECG results, and symptom negatives were omitted from the extraction."
+ministral8b,MQ_0755,gamma,True,False,10,11,21,"The JSON omitted numerous pertinent negatives, exam findings, diagnostic test results, and temporal details."
+ministral8b,MQ_0947,alpha,True,False,17,4,21,Key contextual history and exam details were omitted in the JSON extraction.
+ministral8b,MQ_0947,beta,True,False,13,7,20,"Multiple clinical symptoms, exam findings, and history elements were omitted."
+ministral8b,MQ_0947,gamma,True,False,13,0,19,Multiple clinical history details and physical examination findings were omitted from the extraction.
+ministral8b,MQ_0341,alpha,True,False,11,5,16,Key clinical facts including rhythm irregularity and repeat ECG resolution are missing.
+ministral8b,MQ_0341,beta,True,False,13,3,16,Key clinical triggers including heavy alcohol intake and rhythm irregularity were omitted.
+ministral8b,MQ_0341,gamma,True,False,8,7,15,Multiple clinical exam and diagnostic findings including ECG results and rhythm conversion are missing.
+ministral8b,MQ_0802,alpha,True,False,12,4,16,Negative review of systems findings and onset timing were omitted from the extraction.
+ministral8b,MQ_0802,beta,True,False,11,4,15,Multiple clinical exam and history findings are missing from the extraction.
+ministral8b,MQ_0802,gamma,True,False,12,4,16,"Several clinical details including physical exam findings, leg pain, and home interventions were omitted."
+ministral8b,MQ_0954,alpha,True,False,15,2,17,Symptom duration and surgical excision were omitted from the extraction.
+ministral8b,MQ_0954,beta,True,False,13,1,14,The rewritten JSON captures nearly all clinical details but omits the surgical pathology specimen image.
+ministral8b,MQ_0954,gamma,True,False,10,6,16,"Multiple clinical facts including symptom duration, physical exam details, and surgical history were omitted."
+ministral8b,MQ_0422,alpha,True,False,9,9,18,"Multiple key clinical facts including obstetric parity, exam negatives, and fetal monitoring findings are missing."
+ministral8b,MQ_0422,beta,True,False,12,6,18,Key clinical details including cessation of contractions and fetal monitor findings were omitted.
+ministral8b,MQ_0422,gamma,True,False,11,5,16,Key clinical details including abnormal fetal heart rate decelerations and symptom duration were omitted.
+ministral8b,MQ_0822,alpha,True,False,14,1,15,The specification of oxygen saturation on room air was omitted.
+ministral8b,MQ_0822,beta,True,False,9,6,15,"Multiple clinical symptoms, scan details, and antacid trial were omitted."
+ministral8b,MQ_0822,gamma,True,False,13,3,16,"Rewritten JSON misses the negative back pain finding, pulsing quality of pain, and ultrasound modality."
+ministral8b,MQ_0686,alpha,True,False,6,2,8,The JSON missed the symptom onset duration and visible distress on exam.
+ministral8b,MQ_0686,beta,True,False,4,3,7,Multiple clinical symptoms and the arterial nature of the blood draw were omitted.
+ministral8b,MQ_0686,gamma,True,False,7,2,9,Symptom onset duration and distress on physical exam were omitted.
+ministral8b,MQ_0885,alpha,True,False,24,3,27,"Platelet count, differential, and sick contacts were omitted from the extraction."
+ministral8b,MQ_0885,beta,True,False,27,5,32,Critical bone marrow biopsy findings and symptom details were omitted from the extraction.
+ministral8b,MQ_0885,gamma,True,False,29,9,38,Omitted critical bone marrow biopsy findings and several physical exam details.
+ministral8b,MQ_0753,alpha,True,False,15,6,21,The JSON omits several history and lesion progression details.
+ministral8b,MQ_0753,beta,True,False,7,9,16,"Multiple clinical facts including travel history, HbA1c, anthropometrics, and lesion spread are missing."
+ministral8b,MQ_0753,gamma,True,False,13,6,19,"Multiple contextual, anthropometric, and travel history facts were omitted from the extraction."
+ministral8b,MQ_0831,alpha,True,False,6,1,7,The presentation setting to primary care is omitted from the structured extraction.
+ministral8b,MQ_0831,beta,True,False,4,1,5,The one-month duration of hematuria was omitted from the extraction.
+ministral8b,MQ_0831,gamma,True,False,5,3,8,Key negative findings including absence of dysuria and flank pain were omitted from the extraction.
+ministral8b,MQ_0255,alpha,True,False,15,2,17,The exposure setting at a campsite and timeline of several hours prior were omitted.
+ministral8b,MQ_0255,beta,True,False,11,3,14,"Rewritten JSON misses recent Pepto-Bismol use, subjective palpitations, and acute hourly onset."
+ministral8b,MQ_0255,gamma,True,False,8,4,12,"Key clinical details including absence of diarrhea, hypertension history, and exposure context were omitted."
+ministral8b,MQ_0274,alpha,True,False,12,2,14,The JSON captures laboratory values and symptoms but omits the timeline of onset and the unwitnessed ingestion detail.
+ministral8b,MQ_0274,beta,True,False,11,3,14,"Age, sex, and oral rehydration treatment were omitted from the extraction."
+ministral8b,MQ_0274,gamma,True,False,10,6,16,"Key clinical facts including sex, pesticide exposure risk, abdominal symptoms, and exam findings are missing."
+ministral8b,MQ_0164,alpha,True,False,19,8,27,All lumbar puncture and CSF analysis findings were omitted from the extraction.
+ministral8b,MQ_0164,beta,True,False,20,7,27,"Multiple clinical symptoms, medication use, and sexual history details were omitted from the extraction."
+ministral8b,MQ_0164,gamma,True,False,16,9,25,"Multiple clinical facts including constitutional symptoms, CD4 count, and key CSF findings were omitted."
+ministral8b,MQ_0807,alpha,True,True,15,0,15,All clinical facts from the original vignette are preserved in the structured extraction.
+ministral8b,MQ_0807,beta,True,False,12,3,15,"Key exposure history, symptom duration, and diplopia were omitted."
+ministral8b,MQ_0807,gamma,True,False,13,3,16,"Key diurnal variation, ADL impairment, and negated back pain were omitted from the extraction."
+ministral8b,MQ_0719,alpha,True,False,21,5,26,"Key negative physical findings, smoking status, symptom duration, and lab differential were omitted."
+ministral8b,MQ_0719,beta,True,False,18,8,26,"Multiple exam findings, negative findings, and symptoms were omitted from the extraction."
+ministral8b,MQ_0719,gamma,True,False,21,7,28,"Several pertinent negative physical exam findings, fatigue, and the three-month symptom duration were omitted."
+ministral8b,MQ_0111,alpha,True,False,13,7,20,"Key anthropometric measurements, vital status, and specific physical exam details were omitted from the extraction."
+ministral8b,MQ_0111,beta,True,False,7,8,15,"Multiple clinical details including morning stiffness duration, vitals, anthropometrics, and specific physical exam features were omitted."
+ministral8b,MQ_0111,gamma,True,False,11,7,18,"Multiple clinical details including morning stiffness duration, anthropometrics, and vital signs were omitted."
+ministral8b,MQ_0392,alpha,True,False,14,4,18,"Key clinical details including negative exam findings, timing relative to menses, and medication use were omitted."
+ministral8b,MQ_0392,beta,True,False,9,8,17,Multiple critical gynecologic and gastrointestinal symptoms and physical exam findings were omitted.
+ministral8b,MQ_0392,gamma,True,False,9,9,18,"Multiple clinical symptoms, physical exam negatives, and anatomical findings were omitted from the extraction."
+ministral8b,MQ_0894,alpha,True,False,14,3,17,"Omitted specific onset timeline for saddle anesthesia, its anatomical distribution, and progressive nature of urinary retention."
+ministral8b,MQ_0894,beta,True,False,10,4,14,Several clinical details including prior treatments and normal exam findings were omitted.
+ministral8b,MQ_0894,gamma,True,False,9,6,15,Key neurological exam findings and symptom details were omitted from the structured extraction.
+ministral8b,MQ_0040,alpha,True,False,24,6,30,Several key clinical characterizations of the pain and exam findings were omitted.
+ministral8b,MQ_0040,beta,True,False,19,9,28,Multiple clinical history and physical examination findings were omitted from the structured extraction.
+ministral8b,MQ_0040,gamma,True,False,18,11,29,"Multiple exam findings, pain characteristics, and pertinent negatives were omitted from the extraction."
+ministral8b,MQ_0880,alpha,True,False,7,4,11,"Key negatives, emesis frequency, and imaging modality were omitted."
+ministral8b,MQ_0880,beta,True,False,7,7,14,"Key clinical details including bilious emesis, duration, frequency, sex, and specific imaging findings were omitted."
+ministral8b,MQ_0880,gamma,True,False,2,7,9,"Key clinical details including bilious vomiting, patient demographics, and specific anatomical imaging findings were missed."
+ministral8b,MQ_0482,alpha,True,False,5,2,7,Omitted specific nocturnal sleep duration and daytime nap details.
+ministral8b,MQ_0482,beta,True,False,4,4,8,Key clinical details including cranial radiation history and symptom duration were omitted.
+ministral8b,MQ_0482,gamma,True,False,6,3,9,Specific sleep patterns and timing of cancer diagnosis were omitted.
+ministral8b,MQ_0228,alpha,True,False,18,1,19,Irregular heart rhythm was omitted from the structured extraction.
+ministral8b,MQ_0228,beta,True,False,20,2,22,Critical stroke onset timeframe and normal blood work results were omitted.
+ministral8b,MQ_0228,gamma,True,False,17,4,21,"Multiple clinical facts including symptom onset time, bleeding absence, and normal lab counts were omitted."
+ministral8b,MQ_0205,alpha,True,False,20,8,28,"Multiple clinical exam findings, exposure negatives, and symptom durations were omitted from the extraction."
+ministral8b,MQ_0205,beta,True,False,21,4,25,"Rewritten JSON omits significant weight loss, antacid use, and normal exam findings."
+ministral8b,MQ_0205,gamma,True,False,20,10,30,"Multiple clinical exam findings, neurological deficits, and symptom details were omitted from the extraction."
+ministral8b,MQ_0837,alpha,True,False,9,9,18,"Multiple dietary details, eliminated symptoms, and pertinent negatives were omitted from the extraction."
+ministral8b,MQ_0837,beta,True,False,5,10,15,"The JSON omits demographics, specific intake/output volumes, milestones, and family history."
+ministral8b,MQ_0837,gamma,True,False,7,11,18,"The JSON extraction omitted patient sex, detailed dietary history, milestone development, and stool exam findings."
+ministral8b,MQ_0941,alpha,True,False,13,9,22,"Multiple exam findings, trauma mechanism, and disposition details were omitted."
+ministral8b,MQ_0941,beta,True,False,17,7,24,"Multiple clinical exam findings, vomiting, and admission disposition were omitted."
+ministral8b,MQ_0941,gamma,True,False,12,8,20,"Multiple critical neurological and exam findings including seizure, vomiting, and loss of consciousness were omitted."
+ministral8b,MQ_0472,alpha,True,False,12,2,14,Male sex and the specific flow cytometry finding of marked reduction were omitted.
+ministral8b,MQ_0472,beta,True,False,11,6,17,"Key clinical facts including sex, ear pain, vomiting, and low lab values were omitted."
+ministral8b,MQ_0472,gamma,True,False,14,1,15,The home remedy chest poultice was omitted from the extraction.
+ministral8b,MQ_0359,alpha,True,False,12,2,14,Physical exam omitted rectovaginal approach and manual reducibility into anal sphincter.
+ministral8b,MQ_0359,beta,True,False,10,3,13,Key exam and symptom features including painlessness and reducibility were omitted.
+ministral8b,MQ_0359,gamma,True,False,11,0,15,"The rewritten JSON misses important physical exam features including reducibility and tenderness, as well as pain negation."
+ministral8b,MQ_0313,alpha,True,False,21,5,26,"The rewrite omits acute clinical deterioration on day two, repeat vital signs, and pending blood cultures."
+ministral8b,MQ_0313,beta,True,False,20,8,28,"Multiple clinical facts including deteriorated vitals, bleeding sites, and altered mental status were omitted."
+ministral8b,MQ_0313,gamma,True,False,18,8,26,"The JSON missed hospital day two deterioration, second set of vitals, venipuncture bleeding, and blood cultures."
+ministral8b,MQ_0841,alpha,True,False,14,10,24,"Multiple clinical details regarding functional limitations, specific ROM values, and rotator cuff exam were omitted."
+ministral8b,MQ_0841,beta,True,False,9,3,12,Key physical exam findings and past medical history were omitted from the extraction.
+ministral8b,MQ_0841,gamma,True,False,18,4,22,Several functional impairments and negative trauma history were omitted from the JSON extraction.
+ministral8b,MQ_0815,alpha,True,False,21,3,24,Social history negations and oxygen delivery method were omitted.
+ministral8b,MQ_0815,beta,True,False,11,7,18,"Multiple clinical facts including sputum production, duration, breath sounds, and substance history were omitted."
+ministral8b,MQ_0815,gamma,True,False,13,7,20,"Multiple negated symptoms, exam observations, and supplemental oxygen status were omitted from the extraction."
+ministral8b,MQ_0893,alpha,True,False,19,2,21,Symptom onset duration was incorrectly converted and temperature unit was mislabeled as Fahrenheit.
+ministral8b,MQ_0893,beta,True,False,9,8,17,"Multiple vital feeding, weight, output, and screening details were omitted from the extraction."
+ministral8b,MQ_0893,gamma,True,False,16,5,21,"Key feeding history, elimination output, and patient sex were omitted from the extraction."
+ministral8b,MQ_0234,alpha,True,False,26,12,38,"Multiple clinical facts including pain characterization, paracentesis results, and family history are missing."
+ministral8b,MQ_0234,beta,True,False,19,11,30,"The rewritten JSON omitted several exam details, social history, and critical paracentesis results."
+ministral8b,MQ_0234,gamma,True,False,17,11,28,"Multiple vital history details, social history, exam negatives, and paracentesis labs were omitted."
+ministral8b,MQ_0229,alpha,True,False,19,3,22,"Key contextual details, negative social history, and biopsy findings are omitted from the extraction."
+ministral8b,MQ_0229,beta,True,False,16,7,23,"Multiple clinical details including duration, anthropometrics, abdominal exam, and biopsy findings were omitted."
+ministral8b,MQ_0229,gamma,True,False,15,9,24,"Multiple clinical history items, physical exam details, and biopsy results are omitted from the extraction."
+ministral8b,MQ_0025,alpha,True,False,6,3,9,"Smoking history, progressive exertional dyspnea, and normotension were omitted from the structured extraction."
+ministral8b,MQ_0025,beta,True,False,5,5,10,Key quantitative smoking history and qualitative symptom specifics were omitted.
+ministral8b,MQ_0025,gamma,True,False,7,2,9,Omitted exertional quality of dyspnea and ineffective trial of eucalyptus steam.
+ministral8b,MQ_0676,alpha,True,False,7,4,11,"Key clinical facts including family history, negative findings, and management plan were omitted."
+ministral8b,MQ_0676,beta,True,False,7,2,9,Age was left null and family history of eye misalignment was omitted.
+ministral8b,MQ_0676,gamma,True,False,3,3,6,"The extracted JSON omits the birth weight, occlusion therapy, and negative systemic findings."
+ministral8b,MQ_0198,alpha,True,False,15,2,17,The structured extraction omits the patient's race and the routine follow-up context.
+ministral8b,MQ_0198,beta,True,False,14,2,16,Patient race and OTC medication use were omitted from the structured extraction.
+ministral8b,MQ_0198,gamma,True,False,14,3,17,The JSON omits race and documented negative findings.
+ministral8b,MQ_0409,alpha,True,False,14,4,18,"Key quantitative details including specific weight loss amount, duration, BMI, and emesis frequency were omitted."
+ministral8b,MQ_0409,beta,True,False,12,7,19,"Multiple clinical signs including altered mental status, deep breathing, and BMI were omitted from the extraction."
+ministral8b,MQ_0409,gamma,True,False,11,9,20,"The JSON extraction omitted patient sex, several key DKA symptoms, exam findings, and history details."
+ministral8b,MQ_0337,alpha,True,False,18,2,20,The normal leukocyte differential and room air specification were omitted from the extraction.
+ministral8b,MQ_0337,beta,True,False,13,5,18,"Key clinical facts including ibuprofen use, palpitations, and vomiting were omitted."
+ministral8b,MQ_0337,gamma,True,False,13,8,21,"Multiple clinical history elements, symptoms, and exam findings were omitted."
+ministral8b,MQ_0286,alpha,True,False,21,3,24,"Key clinical facts including symptom duration, BMI, and nasal exam findings were omitted."
+ministral8b,MQ_0286,beta,True,False,12,8,20,"Multiple key clinical facts including nocturnal dyspnea, BMI, and imaging details were omitted."
+ministral8b,MQ_0286,gamma,True,False,11,10,21,"Multiple clinical features including sleep apnea symptoms, BMI, pulmonary hypertension, and negative findings were omitted."
+ministral8b,MQ_0886,alpha,True,True,15,0,15,All clinical facts from the original narrative are accurately preserved in the JSON.
+ministral8b,MQ_0886,beta,True,False,13,4,17,"Pain quality, progression, and attempted home remedies were omitted."
+ministral8b,MQ_0886,gamma,True,False,12,3,15,"Symptom duration, agitation, and home compress remedy were omitted from the extraction."
+ministral8b,MQ_0072,alpha,True,False,12,10,22,"Multiple clinical history elements, normal lab findings, and duration were omitted or misattributed."
+ministral8b,MQ_0072,beta,True,False,11,10,21,"Multiple key clinical symptoms, vitals/measurements, and normal lab results were omitted."
+ministral8b,MQ_0072,gamma,True,False,10,10,20,"The rewritten JSON omits smoking history, claudication details, lab normals, and anthropometrics."
+ministral8b,MQ_0792,alpha,True,False,22,6,28,Multiple clinical exam and history details were omitted from the extraction.
+ministral8b,MQ_0792,beta,True,False,16,12,28,"Multiple exam findings, physical measurements, and negative symptoms were omitted in the JSON extraction."
+ministral8b,MQ_0792,gamma,True,False,18,10,28,"Multiple vital/anthropometric, exam findings, and symptoms were omitted from the extraction."
+ministral8b,MQ_0961,alpha,True,False,13,4,17,Key clinical facts including arthralgias and symptom duration were omitted in the JSON extraction.
+ministral8b,MQ_0961,beta,True,False,13,4,17,"The extracted JSON omits ankle pain, travel history, normal vitals, and medication use."
+ministral8b,MQ_0961,gamma,True,False,9,5,14,"Multiple clinical details including travel history, allergies, symptom duration, and exam specifics were omitted."
+ministral8b,MQ_0360,alpha,True,False,7,1,8,The lymph node biopsy finding showing absence of germinal centers was omitted.
+ministral8b,MQ_0360,beta,True,False,4,7,11,"Key demographic, symptom, imaging, and biopsy findings were omitted."
+ministral8b,MQ_0360,gamma,True,False,4,4,8,Key diagnostic immunodeficiency findings including absent thymus and recurrent infections were omitted.
+ministral8b,MQ_0657,alpha,True,False,8,7,15,Multiple key clinical details regarding the suicide attempt context and treatment-resistant status are omitted.
+ministral8b,MQ_0657,beta,True,False,4,6,10,Multiple clinical symptoms and treatment history details were omitted from the extraction.
+ministral8b,MQ_0657,gamma,True,False,5,6,11,The structured extraction omits critical clinical details including the acute suicide attempt and treatment resistance history.
+ministral8b,MQ_0522,alpha,True,False,16,5,21,"Multiple clinical details including symptom duration, episode count, and lab differentials were omitted."
+ministral8b,MQ_0522,beta,True,False,12,7,19,"Multiple clinical details including symptom duration, stool characteristics, WBC differential, and pneumonia history were omitted."
+ministral8b,MQ_0522,gamma,True,False,9,8,17,"Multiple clinical facts including diarrhea, lab differentials, duration, and exam findings are missing."
+ministral8b,MQ_0410,alpha,True,False,29,7,36,"Key infectious serologies, mental status details, and symptom duration were omitted."
+ministral8b,MQ_0410,beta,True,False,19,7,26,"Multiple diagnostic test results, exam details, and history facts were omitted."
+ministral8b,MQ_0410,gamma,True,False,18,10,28,"Multiple prominent cognitive/psychiatric symptoms, negative exam findings, and infectious serologies were omitted."
+ministral8b,MQ_0696,alpha,True,False,20,2,22,The HIV test result was left null and lesion stability was omitted.
+ministral8b,MQ_0696,beta,True,False,12,8,20,"Multiple sexual history details, negative findings, and the HIV test result were omitted."
+ministral8b,MQ_0696,gamma,True,False,9,6,15,"The rewritten JSON missed several anatomical details, exam findings, duration, and test results."
+ministral8b,MQ_0864,alpha,True,False,17,5,22,"Several clinical exam findings, receptor status, and pain score were omitted from the extraction."
+ministral8b,MQ_0864,beta,True,False,11,7,18,"The JSON missed several key clinical details including duration, pain severity, negative exam findings, and prior treatment."
+ministral8b,MQ_0864,gamma,True,False,12,8,20,"Multiple vital signs, exam findings, and oncologic history details were omitted from the extraction."
+ministral8b,MQ_0550,alpha,True,False,20,2,22,The chromosome 9 mutation finding and iron study abnormalities directions were omitted.
+ministral8b,MQ_0550,beta,True,False,14,10,24,"The rewritten JSON omitted several critical clinical details including bone marrow biopsy findings, genetic mutation, and specific lab directions."
+ministral8b,MQ_0550,gamma,True,False,16,6,22,"Multiple clinical findings including bone marrow results, smear morphology, dizziness, and biological sex were omitted or altered."
+ministral8b,MQ_0340,alpha,True,False,19,6,25,Multiple physical exam findings and specific incontinence characteristics were omitted from the extraction.
+ministral8b,MQ_0340,beta,True,False,14,6,20,Multiple exam findings and negative urinary symptoms were omitted from the extraction.
+ministral8b,MQ_0340,gamma,True,False,8,10,18,"Multiple pertinent negative symptoms, surgical details, and exam findings were omitted from the extraction."
+ministral8b,MQ_0029,alpha,True,False,20,2,22,The rewrite omits denial of prior similar symptoms and performance of an ECG.
+ministral8b,MQ_0029,beta,True,False,17,4,21,"Key clinical facts including symptom onset time, presyncope, pallor, and weakness were omitted."
+ministral8b,MQ_0029,gamma,True,False,19,4,23,Several clinical details including symptom duration and general appearance findings were omitted.
+ministral8b,MQ_0119,alpha,True,False,8,7,15,Key urinalysis findings and urine characteristics were completely omitted from the structured extraction.
+ministral8b,MQ_0119,beta,True,False,8,12,20,"Multiple vital clinical details, urinalysis findings, and age were omitted."
+ministral8b,MQ_0119,gamma,True,False,17,4,21,Multiple discrete lab values and clinical intake symptoms were omitted from the extraction.
+ministral8b,MQ_0899,alpha,True,False,9,7,16,"Multiple clinical history details, BMI, and the negative pregnancy test were omitted."
+ministral8b,MQ_0899,beta,True,False,9,8,17,"The JSON omits several key gynecologic history details, BMI, parity, and the negative pregnancy test result."
+ministral8b,MQ_0899,gamma,True,False,9,7,16,"Multiple key gynecological history details, BMI, and a negative pregnancy test were omitted."
+ministral8b,MQ_0268,alpha,True,False,15,5,20,Key cardiac and developmental history facts were omitted from the extraction.
+ministral8b,MQ_0268,beta,True,False,10,5,15,Several key clinical details including leg weakness and physical exam discrepancies were omitted.
+ministral8b,MQ_0268,gamma,True,False,8,5,13,The rewritten JSON misses important diagnostic findings including first-degree heart block and pertinent negatives.
+ministral8b,MQ_0183,alpha,True,False,20,7,27,"Multiple urinalysis findings, BMI, and duration are omitted."
+ministral8b,MQ_0183,beta,True,False,18,8,26,"Multiple clinical symptoms, physical exam findings, and urinalysis lab results were omitted."
+ministral8b,MQ_0183,gamma,True,False,22,7,29,"Multiple clinical details including symptom duration, BMI, physical exam findings, and negative findings were omitted."
+ministral8b,MQ_0595,alpha,True,False,18,7,25,"Key menstrual history, family history attributions, psychological details, and the negative pregnancy test are missing."
+ministral8b,MQ_0595,beta,True,False,16,8,24,Multiple clinical history and physical exam details were omitted in the JSON extraction.
+ministral8b,MQ_0595,gamma,True,False,17,7,24,"Multiple clinical history, anthropometric, and exam findings were omitted from the extraction."
+ministral8b,MQ_0272,alpha,True,False,8,2,10,Hypercalciuria and unknown specific family diagnosis were omitted from the extraction.
+ministral8b,MQ_0272,beta,True,False,8,2,10,Hypercalciuria and administration of Pedialyte were omitted from the extraction.
+ministral8b,MQ_0272,gamma,True,False,8,2,10,The JSON missed the patient's male sex and the finding of excessive urinary calcium loss.
+ministral8b,MQ_0981,alpha,True,False,9,1,10,The specific age of onset for chronic bronchitis was omitted.
+ministral8b,MQ_0981,beta,True,False,8,1,9,The five-month nightly use of Vicks Sinex nasal spray was omitted from medications.
+ministral8b,MQ_0981,gamma,True,False,7,2,9,The JSON omits the patient's anosmia and trial of eucalyptus steam inhalation.
+ministral8b,MQ_0112,alpha,True,False,17,9,26,"Multiple ventilator settings, anthropometrics, negative history findings, and ABG values were omitted."
+ministral8b,MQ_0112,beta,True,False,12,9,21,"Multiple vital ventilator settings, physical exam details, and ABG findings were omitted."
+ministral8b,MQ_0112,gamma,True,False,10,12,22,"Multiple vital measurements, mechanical ventilation settings, physical exam findings, and arterial blood gas values were omitted."
+ministral8b,MQ_0611,alpha,True,False,8,5,13,"Key exam findings, timing, quantity, and expressed desire to live were omitted."
+ministral8b,MQ_0611,beta,True,False,5,3,8,Key clinical facts regarding timing and exam findings were omitted.
+ministral8b,MQ_0611,gamma,True,False,6,8,14,"Multiple acute clinical details, ingestion timeline, and negative review of systems are missing."
+ministral8b,MQ_0445,alpha,True,False,14,2,16,Context and sudden nature of symptom onset were omitted from the extraction.
+ministral8b,MQ_0445,beta,True,False,11,4,15,"Key physical exam findings of acute limb ischemia like pallor, coldness, and 1/5 strength were omitted."
+ministral8b,MQ_0445,gamma,True,False,18,2,20,Omitted normal right leg exam and walking onset context.
+ministral8b,MQ_0354,alpha,True,False,8,1,9,Normal physical examination finding was omitted from the structured extraction.
+ministral8b,MQ_0354,beta,True,False,7,3,10,"Key clinical details including physical exam findings, symptom duration, and liquid iron use were omitted."
+ministral8b,MQ_0354,gamma,True,False,7,2,9,Key lab MCV and unremarkable physical exam findings were omitted.
+ministral8b,MQ_0747,alpha,True,False,8,7,15,"Follow-up status, response to sertraline, and negative substance/exam findings were omitted."
+ministral8b,MQ_0747,beta,True,False,4,12,16,"The structured extraction omits numerous key clinical symptoms, social history negatives, vitals, and treatment duration details."
+ministral8b,MQ_0747,gamma,True,False,11,5,16,"The JSON omits anhedonia, treatment duration, and partial treatment response."
+ministral8b,MQ_0806,alpha,True,False,7,6,13,"Key details including timing of collapse, fluid/blood volumes, and breastfeeding attempts were omitted."
+ministral8b,MQ_0806,beta,True,False,6,6,12,"The JSON missed neonatal Apgar scores, specific fluid/blood quantities, clamminess, and timeline details."
+ministral8b,MQ_0806,gamma,True,False,6,7,13,"The JSON extraction missed key clinical facts including agalactia, Apgar scores, and resuscitation details."
+ministral8b,MQ_0322,alpha,True,False,15,6,21,"Key murmur characteristics, stool frequency, edema extent, and unremarkable exam/lab baselines were omitted."
+ministral8b,MQ_0322,beta,True,False,5,9,14,"Multiple key symptoms including diarrhea, flushing, and non-pitting edema were completely omitted from the extraction."
+ministral8b,MQ_0322,gamma,True,False,8,6,14,"Multiple clinical specifics including symptom duration, bowel habit details, edema characteristics, and mass measurements were omitted."
+ministral8b,MQ_0447,alpha,True,False,15,4,19,"Omitted the positive urine pregnancy test, unknown LMP, and details of prior PID treatment."
+ministral8b,MQ_0447,beta,True,False,16,2,18,Clinical history details regarding antacid use and unknown LMP were omitted.
+ministral8b,MQ_0447,gamma,True,False,12,6,18,"Multiple clinical symptoms, negative findings, and the positive urine pregnancy test were omitted."
+ministral8b,MQ_0621,alpha,True,False,18,8,26,"Key urinalysis findings, duration, social history, and medication indication were omitted."
+ministral8b,MQ_0621,beta,True,False,13,6,19,"Key urinalysis findings, edema severity, social history, and symptom duration were omitted."
+ministral8b,MQ_0621,gamma,True,False,19,7,26,The JSON extraction completely omits all urinalysis findings and pertinent negative symptoms.
+ministral8b,MQ_0524,alpha,True,False,6,7,13,The JSON omits key negative psychotic symptoms and specific motor restlessness features indicative of akathisia.
+ministral8b,MQ_0524,beta,True,False,3,5,8,The structured extraction omits resolved psychotic symptoms and specific motor manifestations of akathisia.
+ministral8b,MQ_0524,gamma,True,False,11,4,15,Key negative findings regarding resolved psychotic symptoms were omitted from the extraction.
+ministral8b,MQ_0999,alpha,True,False,13,12,25,"Multiple lab test results, history details, and BMI were omitted or recorded without values."
+ministral8b,MQ_0999,beta,True,False,21,8,29,"Multiple clinical labs, exam details, history, and negative findings were omitted from the JSON extraction."
+ministral8b,MQ_0999,gamma,True,False,12,8,20,"Key clinical facts including BMI, lab coagulation findings, and dry mouth were omitted."
+ministral8b,MQ_0395,alpha,True,False,5,5,10,"Multiple clinical facts including anhedonia, substance history, exam, and lab findings are missing."
+ministral8b,MQ_0395,beta,True,False,5,7,12,"Multiple clinical facts including social history, medications, anhedonia, and normal findings were omitted."
+ministral8b,MQ_0395,gamma,True,False,6,8,14,"Key depressive symptoms, exam findings, and lab results were omitted or inaccurately captured."
+ministral8b,MQ_0922,alpha,True,False,11,5,16,"Multiple hematologic smear findings, duration, and LAP elevation were omitted."
+ministral8b,MQ_0922,beta,True,False,9,4,13,Multiple hematologic and history details were omitted from the extraction.
+ministral8b,MQ_0922,gamma,True,False,12,7,19,"Multiple laboratory, exam, and clinical symptom details were omitted from the JSON extraction."
+ministral8b,MQ_0591,alpha,True,False,9,7,16,"Multiple pertinent negatives, feeding behaviors, and dehydration history details were omitted."
+ministral8b,MQ_0591,beta,True,False,7,9,16,"The JSON extraction missed key clinical signs, age, negative findings, and dehydration details."
+ministral8b,MQ_0591,gamma,True,False,6,9,15,"Key clinical details including age, vomiting characteristics, and specific dehydration signs were omitted."
+ministral8b,MQ_0195,alpha,True,False,19,2,21,Stable vital signs and RUQ ultrasound imaging modality were omitted.
+ministral8b,MQ_0195,beta,True,False,12,6,18,"Multiple clinical details including duration, negatives, and specific ultrasound limitations were omitted."
+ministral8b,MQ_0195,gamma,True,False,12,6,18,"Multiple clinical symptoms, negative findings, and vital sign details were omitted from the extraction."
+ministral8b,MQ_0261,alpha,True,False,14,2,16,The JSON omits the anatomical extent of the sensory symptoms and room air specification.
+ministral8b,MQ_0261,beta,True,False,14,4,18,Key cauda equina signs including bowel dysfunction and progressive sensory distribution were omitted.
+ministral8b,MQ_0261,gamma,True,False,10,4,14,"Key neurological symptoms, bowel dysfunction, and reduced anal tone were omitted from the extraction."
+ministral8b,MQ_0046,alpha,True,False,17,1,18,The specific location of the holosystolic murmur was omitted.
+ministral8b,MQ_0046,beta,True,False,13,3,16,"The extraction omitted orthopnea, palpitations, and the two-week symptom duration."
+ministral8b,MQ_0046,gamma,True,False,9,6,15,"Multiple key clinical facts including IV drug use history, night sweats, and orthopnea were omitted."
+ministral8b,MQ_0726,alpha,True,False,13,2,15,Neurovascular status and emergency department presentation were omitted from the extraction.
+ministral8b,MQ_0726,beta,True,False,9,6,15,Multiple clinical features including skin hyperextensibility and distal neurovascular intactness were omitted.
+ministral8b,MQ_0726,gamma,True,False,5,11,16,"Multiple key findings including skin hyperextensibility, atrophic scarring, neurovascular status, and exam posture were omitted."
+ministral8b,MQ_0933,alpha,True,False,5,6,11,"Multiple exam findings, negative symptoms, and normal vital signs were omitted."
+ministral8b,MQ_0933,beta,True,False,7,3,10,"Medication history, negative symptom reports, and normal vitals were omitted from the structured extraction."
+ministral8b,MQ_0933,gamma,True,False,5,6,11,Key physical exam findings and vital sign statuses were omitted from the structured extraction.
+ministral8b,MQ_0002,alpha,True,False,16,9,25,"Multiple contextual details, developmental specifics, and vaccination history are omitted in the JSON extraction."
+ministral8b,MQ_0002,beta,True,False,12,6,18,"Key demographic, sensory, and symptom timeline details were omitted in the JSON extraction."
+ministral8b,MQ_0002,gamma,True,False,13,5,18,Multiple clinical examination and developmental facts are missing from the structured JSON.
+ministral8b,MQ_0533,alpha,True,False,8,12,20,"Multiple psychiatric symptoms, stressors, and melatonin use were omitted."
+ministral8b,MQ_0533,beta,True,False,10,10,20,"Multiple psychiatric symptoms, psychosocial stressors, and melatonin use were omitted."
+ministral8b,MQ_0533,gamma,True,False,5,8,13,"Multiple clinical symptoms, psychiatric history, a medication, and physical exam findings were omitted."
+ministral8b,MQ_0826,alpha,True,False,14,4,18,Physical anthropometrics and alcohol history were omitted from the extraction.
+ministral8b,MQ_0826,beta,True,False,11,5,16,"Several anthropometric values, social history, and the pneumothorax size measurement were omitted."
+ministral8b,MQ_0826,gamma,True,False,11,9,20,"Multiple vital lifestyle habits, body measurements, negative symptoms, and specific imaging measurements were omitted."
+ministral8b,MQ_0552,alpha,True,False,13,1,14,The rewritten JSON omitted the patient's family history of maternal breast cancer.
+ministral8b,MQ_0552,beta,True,False,10,6,16,Multiple clinical details including postpartum timing and nursing status were omitted.
+ministral8b,MQ_0552,gamma,True,False,6,8,14,"Key postpartum, lactation, and examination details were omitted from the extraction."
+ministral8b,MQ_0704,alpha,True,False,16,2,18,Administration of 100% oxygen and room air context for oxygen saturation were omitted.
+ministral8b,MQ_0704,beta,True,False,15,5,20,Key clinical facts including ripping pain to back and oxygen therapy were omitted.
+ministral8b,MQ_0704,gamma,True,False,14,6,20,"Multiple clinical details including radiation, exam tenderness, obesity, and oxygen therapy were omitted."
+ministral8b,MQ_0737,alpha,True,False,10,8,18,"Multiple key intrapartum interventions, fetal monitoring findings, and obstetric history details are missing."
+ministral8b,MQ_0737,beta,True,False,8,8,16,"Key fetal monitoring data, interventions, and contraction patterns were omitted from the extraction."
+ministral8b,MQ_0737,gamma,True,False,8,8,16,"Multiple labor progress, resuscitation, and contraction findings were omitted."
+ministral8b,MQ_0760,alpha,True,False,9,3,12,Key general examination findings were omitted from the structured extraction.
+ministral8b,MQ_0760,beta,True,False,8,4,12,Multiple clinical exam and history details from the original narrative were omitted.
+ministral8b,MQ_0760,gamma,True,False,8,5,13,Multiple exam findings and symptoms including early satiety and negated guarding were omitted.
+ministral8b,MQ_1000,alpha,True,False,17,7,24,"Multiple exam, birth, and developmental history details were omitted from the structured extraction."
+ministral8b,MQ_1000,beta,True,False,16,9,25,Several pediatric history and physical exam findings were omitted from the structured extraction.
+ministral8b,MQ_1000,gamma,True,False,20,5,25,Key dietary history including early cow's milk transition and delivery method were omitted.
+ministral8b,MQ_0687,alpha,True,False,12,5,17,"Several key claudication characteristics, prior therapy failure, and social history were omitted."
+ministral8b,MQ_0687,beta,True,False,11,6,17,Key vascular history and exam findings were omitted from the extraction.
+ministral8b,MQ_0687,gamma,True,False,14,7,21,Multiple clinical history and exam details were omitted in the JSON extraction.
+ministral8b,MQ_0202,alpha,True,False,14,5,19,Key fetal monitoring findings and obstetric details were omitted from the extraction.
+ministral8b,MQ_0202,beta,True,False,12,5,17,Key clinical facts including membrane rupture and absence of pain were omitted.
+ministral8b,MQ_0202,gamma,True,False,12,4,16,"Key fetal monitoring findings, exam details, and ED fluid administration were omitted."
+ministral8b,MQ_0373,alpha,True,False,20,8,28,Multiple clinical facts including coagulation studies and history timelines were omitted.
+ministral8b,MQ_0373,beta,True,False,20,6,26,"Key coagulation labs, VDRL, mixing study, and medication history are omitted."
+ministral8b,MQ_0373,gamma,True,False,22,5,27,Key clinical facts including history of DVT and uncorrected mixing study were omitted.
+ministral8b,MQ_0442,alpha,True,False,13,3,16,"Key clinical details including fatigue, diurnal variation of stiffness, and intact muscle strength were omitted."
+ministral8b,MQ_0442,beta,True,False,11,5,16,"Key clinical features including morning stiffness, fatigue, and functional mobility struggles were omitted."
+ministral8b,MQ_0442,gamma,True,False,11,6,17,"Multiple clinical details including morning stiffness, intact motor strength, and difficulty rising were omitted."
+ministral8b,MQ_0959,alpha,True,False,9,6,15,"Key urinalysis findings, symptom durations, joint localizations, and prior treatments were omitted."
+ministral8b,MQ_0959,beta,True,False,16,5,21,"Key clinical details including joint locations, drainage characteristics, and symptom durations were omitted."
+ministral8b,MQ_0959,gamma,True,False,10,6,16,Key lab findings of hematuria and proteinuria along with symptom durations were omitted.
+ministral8b,MQ_0681,alpha,True,False,10,4,14,"The extracted JSON omits symptom duration, relieving factors, occupation, and the exercise trial."
+ministral8b,MQ_0681,beta,True,False,9,5,14,"The JSON omits symptom duration, claudication characteristics, topical trial, and prescribed exercise therapy."
+ministral8b,MQ_0681,gamma,True,False,8,6,14,"Multiple clinical features including symptom relieving/aggravating factors, negative findings, and exercise therapy were omitted."
+ministral8b,MQ_0339,alpha,True,False,16,4,20,"Symptom timing, smoking history, and normal vital signs were omitted from the extraction."
+ministral8b,MQ_0339,beta,True,False,8,9,17,"Multiple key exam, history, and physical findings were omitted in the JSON extraction."
+ministral8b,MQ_0339,gamma,True,False,8,10,18,"Multiple physical exam findings, vital sign status, and social/medical history elements were omitted."
+ministral8b,MQ_0639,alpha,True,False,11,7,18,Key contextual history and exam negatives are omitted from the JSON extraction.
+ministral8b,MQ_0639,beta,True,False,12,7,19,"Key clinical details including sex, delivery mode, mechanism, prior treatment, and negative exam findings were omitted."
+ministral8b,MQ_0639,gamma,True,False,11,5,16,Multiple clinical history elements and palmar sparing are missing from the extraction.
+ministral8b,MQ_0934,alpha,True,False,10,3,13,Rewritten misclassifies past medication as current and omits step-parent context and ongoing resistance.
+ministral8b,MQ_0934,beta,True,False,5,6,11,Key conduct disorder criteria and medication non-adherence were omitted from the extraction.
+ministral8b,MQ_0934,gamma,True,False,5,5,10,Key conduct disorder symptoms and current medication status were omitted or incorrectly recorded.
+ministral8b,MQ_0680,alpha,True,False,9,7,16,"The JSON omitted hospital course details including ICU admission, biliary surgery, and the IV site infection symptoms."
+ministral8b,MQ_0680,beta,True,False,7,8,15,The rewritten JSON omits the central presenting issue of catheter-related infection along with several clinical details.
+ministral8b,MQ_0680,gamma,True,False,6,12,18,"Multiple clinical facts including urine/stool changes, vitals, biliary procedure, and peripheral IV complications were omitted."
+ministral8b,MQ_0869,alpha,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+ministral8b,MQ_0869,beta,True,False,15,13,28,"Multiple clinical symptoms, test results, urinalysis findings, and social/family history details were omitted."
+ministral8b,MQ_0869,gamma,True,False,19,7,26,"Multiple key clinical facts including cognitive screening score, duration, ECG, and urinalysis were omitted."
+ministral8b,MQ_0128,alpha,True,False,16,4,20,Key symptom characteristics and alcohol consumption history were omitted from the extraction.
+ministral8b,MQ_0128,beta,True,False,11,7,18,"The structured extraction omits key lifestyle factors, chronicity, and relieving/aggravating factors."
+ministral8b,MQ_0128,gamma,True,False,16,7,23,"The JSON missed symptom alleviating/aggravating factors, duration, alcohol use, knee involvement, and pertinent negatives."
+ministral8b,MQ_0738,alpha,True,False,11,2,13,Key exam findings including being afebrile and difficult to arouse were omitted from the extraction.
+ministral8b,MQ_0738,beta,True,False,8,3,11,"Key clinical details including male sex, vomiting duration, and current absence of fever were omitted."
+ministral8b,MQ_0738,gamma,True,False,7,6,13,"Key neurologic symptoms, prior medications, and initial viral prodrome features were omitted."

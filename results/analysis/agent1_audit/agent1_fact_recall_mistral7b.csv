@@ -1,0 +1,301 @@
+model,question_id,persona,agent1_parse_success,audit_pass,facts_present,facts_missing,total_facts_extracted,audit_note
+mistral7b,MQ_0570,alpha,True,False,18,2,20,Patient obesity and the one-week timeline for systemic symptoms were omitted.
+mistral7b,MQ_0570,beta,True,False,11,7,18,"Multiple clinical features including patch anhidrosis, alopecia, systemic symptoms, and planned biopsy were omitted."
+mistral7b,MQ_0570,gamma,True,False,14,4,18,"Key clinical facts including thyroid condition, analgesia to pinprick, and skin biopsy are missing."
+mistral7b,MQ_0678,alpha,True,False,32,2,34,"The onset duration was incorrectly captured as one day instead of one hour, and stable gait was omitted."
+mistral7b,MQ_0678,beta,True,False,27,4,31,"Smoking history, symptom duration, and select exam findings were omitted."
+mistral7b,MQ_0678,gamma,True,False,19,8,27,The JSON extraction omitted symptom onset duration and several key neurological exam findings.
+mistral7b,MQ_0736,alpha,True,False,24,2,26,Vital sign stability and presentation setting were omitted from the extraction.
+mistral7b,MQ_0736,beta,True,False,16,9,25,"Multiple clinical details including dyspnea, abdominal distension, negative JVD, and specific social history were omitted."
+mistral7b,MQ_0736,gamma,True,False,18,8,26,"The JSON extraction omitted several clinical symptoms, physical examination findings, and medical history details."
+mistral7b,MQ_0499,alpha,True,False,18,3,21,Neurocognitive testing specifics and detailed facial nerve findings were omitted from the extraction.
+mistral7b,MQ_0499,beta,True,False,17,5,22,"Multiple clinical facts including baseline prescription medications, orientation details, and lesion location were omitted."
+mistral7b,MQ_0499,gamma,True,False,11,6,17,"Multiple clinical facts including facial weakness, gray-white junction location, and medical history were omitted."
+mistral7b,MQ_0159,alpha,True,False,15,3,18,Key hematologic evaluation findings including smear and bone marrow biopsy were omitted from the extraction.
+mistral7b,MQ_0159,beta,True,False,15,2,17,Omitted prior Tylenol administration and peripheral blood smear cell morphology.
+mistral7b,MQ_0159,gamma,True,False,12,2,14,Key findings from peripheral blood smear and bone marrow examination were omitted.
+mistral7b,MQ_0195,alpha,True,False,17,2,19,Vital signs stability and pain persistence detail were omitted from structured extraction.
+mistral7b,MQ_0195,beta,True,False,15,3,18,"Key clinical facts including antacid trial, postprandial timing, and normal triage vitals were omitted."
+mistral7b,MQ_0195,gamma,True,False,15,5,20,"Multiple clinical symptoms, negative findings, and exam results were omitted from the extraction."
+mistral7b,MQ_0304,alpha,True,False,11,3,14,"Rewritten JSON misses initial discharge quality, general wellness status, and social childcare context."
+mistral7b,MQ_0304,beta,True,False,11,4,15,Key clinical descriptors and history elements were omitted from the JSON extraction.
+mistral7b,MQ_0304,gamma,True,False,10,4,14,"The JSON missed key clinical details including term delivery, negative odor, and maternal treatment."
+mistral7b,MQ_0223,alpha,True,False,16,2,18,Omitted history of prolonged labor and pending laboratory workup.
+mistral7b,MQ_0223,beta,True,False,9,12,21,"Multiple clinical symptoms, medication history, delivery details, and negative exam findings were omitted."
+mistral7b,MQ_0223,gamma,True,False,9,7,16,"Multiple clinical features including dysuria, lung exam abnormalities, and negative findings were omitted."
+mistral7b,MQ_0992,alpha,True,False,14,1,15,The history of one year of unprotected intercourse was omitted from the structured extraction.
+mistral7b,MQ_0992,beta,True,False,13,3,16,"Rewritten JSON omitted conception history, symptom timing, and normal pelvic examination."
+mistral7b,MQ_0992,gamma,True,False,12,2,14,The rewritten JSON omits the failed ginger trial and normal pelvic examination.
+mistral7b,MQ_0060,alpha,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+mistral7b,MQ_0060,beta,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+mistral7b,MQ_0060,gamma,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+mistral7b,MQ_0594,alpha,True,False,12,1,13,Temperature was entered into a Fahrenheit field without conversion from Celsius.
+mistral7b,MQ_0594,beta,True,True,12,0,12,All clinical facts and vitals were accurately extracted into the structured JSON.
+mistral7b,MQ_0594,gamma,True,False,11,2,13,The rewritten JSON omits the 4-month duration and orthopnea.
+mistral7b,MQ_0754,alpha,True,False,20,3,23,Negated travel/food history and the dog-walking business context were omitted.
+mistral7b,MQ_0754,beta,True,False,15,6,21,"Multiple clinical symptoms, medications, exam findings, and negative histories were omitted from the structured extraction."
+mistral7b,MQ_0754,gamma,True,False,14,7,21,"The rewritten JSON omits throat symptoms, travel/dietary history, and WBC differential details."
+mistral7b,MQ_0556,alpha,True,False,18,10,28,"Multiple ROS findings, history details, and negative lab results were omitted."
+mistral7b,MQ_0556,beta,True,False,13,7,20,"Multiple clinical history details, normal labs, and photophobia were omitted or misclassified."
+mistral7b,MQ_0556,gamma,True,False,12,9,21,"Multiple clinical symptoms, negative findings, pregnancy test status, and home remedies were omitted."
+mistral7b,MQ_0063,alpha,True,False,12,2,14,Physical exam deferral and room air specification were omitted.
+mistral7b,MQ_0063,beta,True,False,7,4,11,The rewrite incorrectly describes the timeline and omits prior episodes and incomplete exam.
+mistral7b,MQ_0063,gamma,True,False,10,3,13,Key clinical details including relief with hot water and intravenous drug use history were omitted.
+mistral7b,MQ_0766,alpha,True,False,7,4,11,Multiple clinical history and vital sign details were omitted from the extraction.
+mistral7b,MQ_0766,beta,True,False,6,5,11,"Multiple clinical background details, feeding history, and normal vitals were omitted."
+mistral7b,MQ_0766,gamma,True,False,5,6,11,"Multiple birth, feeding, growth, vital sign, and contralateral eye exam facts were omitted."
+mistral7b,MQ_0322,alpha,True,False,16,4,20,"Omitted stool frequency, edema extent, and negative findings for vitals and labs."
+mistral7b,MQ_0322,beta,True,False,8,8,16,"The rewritten JSON omits key clinical facts including the heart murmur, palpitations, duration, and prior antacid use."
+mistral7b,MQ_0322,gamma,True,False,10,6,16,"Multiple clinical details including duration, non-pitting edema, and normal lab/vital findings were omitted."
+mistral7b,MQ_0059,alpha,True,False,7,3,10,The pathology report findings and cyclic nature of the pain were omitted.
+mistral7b,MQ_0059,beta,True,False,10,2,12,The rewritten JSON omits self-administered ibuprofen and the one-month post-hysterectomy timeframe.
+mistral7b,MQ_0059,gamma,True,False,6,4,10,"Key pathology findings, recent hysterectomy, and heavy menstrual bleeding were omitted."
+mistral7b,MQ_0052,alpha,True,False,6,7,13,"Multiple clinical history elements, lab results, and patient sex were omitted."
+mistral7b,MQ_0052,beta,True,False,9,5,14,"Rewritten JSON omitted patient sex, duration, home medication, and normal test/vital results."
+mistral7b,MQ_0052,gamma,True,False,6,5,11,"Key contextual details, normal labs, normal vitals, and patient sex were omitted."
+mistral7b,MQ_0599,alpha,True,False,20,5,25,"Multiple clinical context facts, triggers, and growth parameters were omitted from the extraction."
+mistral7b,MQ_0599,beta,True,False,20,3,23,Key clinical facts including weight-bearing ability and absence of trauma were omitted.
+mistral7b,MQ_0599,gamma,True,False,17,7,24,"Key physical exam specifics, negative exam findings, and family history details were omitted."
+mistral7b,MQ_0489,alpha,True,False,8,3,11,"The extracted JSON omits the chronicity, lack of regression, and morphological progression of the lesion."
+mistral7b,MQ_0489,beta,True,False,8,2,10,Topical Orajel use was omitted from medications and initial lack of pain was missed.
+mistral7b,MQ_0489,gamma,True,False,7,5,12,"Several clinical details including lesion duration, evolution, and absence of pain were omitted."
+mistral7b,MQ_0515,alpha,True,False,15,1,16,The rewritten JSON omits the patient's last menstrual period timing.
+mistral7b,MQ_0515,beta,True,False,12,3,15,Key pre-hospital medication and physical findings of lethargy were omitted.
+mistral7b,MQ_0515,gamma,True,False,9,2,11,Omitted female biological sex and vomiting symptom.
+mistral7b,MQ_0942,alpha,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+mistral7b,MQ_0942,beta,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+mistral7b,MQ_0942,gamma,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+mistral7b,MQ_0874,alpha,True,False,10,7,17,"Multiple clinical details including milestones, growth percentiles, vitals status, and immunizations were omitted."
+mistral7b,MQ_0874,beta,True,False,9,9,18,"Multiple developmental milestones, growth percentiles, vaccination status, and patient sex are missing."
+mistral7b,MQ_0874,gamma,True,False,10,10,20,"The JSON extraction omitted milestones, growth percentiles, vitals status, sex, and immunization history."
+mistral7b,MQ_0544,alpha,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+mistral7b,MQ_0544,beta,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+mistral7b,MQ_0544,gamma,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+mistral7b,MQ_0162,alpha,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+mistral7b,MQ_0162,beta,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+mistral7b,MQ_0162,gamma,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+mistral7b,MQ_0984,alpha,True,False,18,5,23,Negated exam findings were omitted and HBV DNA was conflated with HBsAg.
+mistral7b,MQ_0984,beta,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+mistral7b,MQ_0984,gamma,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+mistral7b,MQ_0521,alpha,True,False,19,7,26,"The JSON omitted orthostatic vitals, family history, anthropometrics, ECG results, and trauma status."
+mistral7b,MQ_0521,beta,True,False,14,5,19,"Key clinical metrics including orthostatic vital signs, anthropometrics, and cardiac rhythm were omitted."
+mistral7b,MQ_0521,gamma,True,False,13,11,24,"The JSON omits multiple specific clinical history elements, anthropometrics, and physical examination findings."
+mistral7b,MQ_0083,alpha,True,False,9,1,10,The detail that the patient presented with her mother was omitted.
+mistral7b,MQ_0083,beta,True,False,7,3,10,"The rewrite omits disorganized speech, current Tylenol use, and presentation with mother."
+mistral7b,MQ_0083,gamma,True,False,7,2,9,Rewritten JSON misses the presentation context and pertinent negative of absent pain.
+mistral7b,MQ_0872,alpha,True,False,8,3,11,Key symptom characteristics and dietary triggers were omitted from the extraction.
+mistral7b,MQ_0872,beta,True,False,8,4,12,"The rewritten JSON omits rebound tenderness, nausea duration, medication inefficacy, and pain character."
+mistral7b,MQ_0872,gamma,True,False,5,4,9,"Several specific clinical details including pain triggers, nausea duration, rebound tenderness, and home treatments were omitted."
+mistral7b,MQ_0191,alpha,True,False,15,6,21,"Key delivery details, screening results, progression anatomy, and negative findings were omitted."
+mistral7b,MQ_0191,beta,True,False,10,7,17,"Multiple clinical facts including sex, feeding, output, vitals, and jaundice distribution were omitted."
+mistral7b,MQ_0191,gamma,True,False,11,9,20,"Multiple clinical details including feeding, elimination, symptom progression, and screening were omitted."
+mistral7b,MQ_0071,alpha,True,False,13,1,14,The specific quality of the phantosmia (burnt rubber odor) was omitted.
+mistral7b,MQ_0071,beta,True,False,8,5,13,"Key pertinent negatives including substance use, medications, and family history were omitted."
+mistral7b,MQ_0071,gamma,True,False,8,5,13,"Multiple clinical history details including phantosmia, substance history, medications, and negative back pain were omitted."
+mistral7b,MQ_0610,alpha,True,False,10,8,18,"Several dynamic mass characteristics, sex, and negative findings were omitted in the JSON extraction."
+mistral7b,MQ_0610,beta,True,False,8,6,14,The JSON missed multiple key physical exam characteristics and developmental history.
+mistral7b,MQ_0610,gamma,True,False,6,7,13,"Multiple clinical exam and history details were omitted, and sex was incorrectly classified."
+mistral7b,MQ_0070,alpha,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+mistral7b,MQ_0070,beta,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+mistral7b,MQ_0070,gamma,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+mistral7b,MQ_0692,alpha,True,False,11,0,16,Multiple history and exam details were omitted in the JSON extraction.
+mistral7b,MQ_0692,beta,True,False,6,10,16,"Multiple clinical facts including active chemotherapy, bleeding on scraping, and negated symptoms were omitted."
+mistral7b,MQ_0692,gamma,True,False,13,5,18,"Key social history, chemotherapy cycle, and normal exam findings were omitted."
+mistral7b,MQ_0883,alpha,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+mistral7b,MQ_0883,beta,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+mistral7b,MQ_0883,gamma,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+mistral7b,MQ_0241,alpha,True,False,18,2,20,The chronic constipation history and specific white blood cell differential counts were omitted.
+mistral7b,MQ_0241,beta,True,False,13,9,22,"Multiple laboratory differential values, medications, and pertinent negative symptoms were omitted."
+mistral7b,MQ_0241,gamma,True,False,16,5,21,"Multiple lab differential values, negative dysuria, and chronic constipation history are missing."
+mistral7b,MQ_0414,alpha,True,False,10,5,15,"Key vitals, urinalysis findings, and medication history details were omitted from structured extraction."
+mistral7b,MQ_0414,beta,True,False,6,5,11,"Vitals, negative physical exam findings, and specific side pain character were omitted."
+mistral7b,MQ_0414,gamma,True,False,8,6,14,"Multiple vital sign negatives, duration, and pain character details were omitted from the structured extraction."
+mistral7b,MQ_0123,alpha,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+mistral7b,MQ_0123,beta,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+mistral7b,MQ_0123,gamma,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+mistral7b,MQ_0912,alpha,True,False,16,2,18,Neutrophil percentage and paracentesis source for WBC count were omitted.
+mistral7b,MQ_0912,beta,True,False,12,2,14,Key clinical findings including asterixis and paracentesis were omitted from the structured extraction.
+mistral7b,MQ_0912,gamma,True,False,13,3,16,Key elements of past medical history and hepatic encephalopathy were omitted from the extraction.
+mistral7b,MQ_0584,alpha,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+mistral7b,MQ_0584,beta,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+mistral7b,MQ_0584,gamma,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+mistral7b,MQ_0253,alpha,True,False,20,8,28,"Multiple clinical facts including microbiology, treatment course, follow-up echocardiogram, and urinalysis values are missing."
+mistral7b,MQ_0253,beta,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+mistral7b,MQ_0253,gamma,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+mistral7b,MQ_0593,alpha,True,False,20,5,25,"Several clinical details including temperature, mental status, and specific symptom qualifiers are omitted."
+mistral7b,MQ_0593,beta,True,False,18,4,22,"Several clinical details including medication trial, orientation status, and symptom durations were omitted."
+mistral7b,MQ_0593,gamma,True,False,17,5,22,"Multiple clinical details including mental status, position-dependent pain, and specific durations/amounts were omitted."
+mistral7b,MQ_0609,alpha,True,False,14,2,16,Emergency department setting and room air specification are omitted.
+mistral7b,MQ_0609,beta,True,False,12,2,14,The rewritten extraction missed current DayQuil use and profound fatigue.
+mistral7b,MQ_0609,gamma,True,True,15,0,15,All clinical facts from the original narrative are successfully captured in the JSON structure.
+mistral7b,MQ_0041,alpha,True,False,14,1,15,Stool guaiac test positive for occult blood was omitted from the extracted labs.
+mistral7b,MQ_0041,beta,True,False,8,5,13,Key clinical facts including stool blood and antecedent pharyngitis with antibiotic use were omitted.
+mistral7b,MQ_0041,gamma,True,False,12,2,14,Amoxicillin treatment history and positive stool occult blood test were omitted.
+mistral7b,MQ_0635,alpha,True,False,9,10,19,"Multiple acute neurological, physical exam, and vital sign findings were omitted."
+mistral7b,MQ_0635,beta,True,False,7,11,18,"Multiple vital signs, exam findings, and acute injury details were omitted from the structured extraction."
+mistral7b,MQ_0635,gamma,True,False,6,10,16,"The structured extraction omits critical negative and resolved concussion findings, timing, and exam details."
+mistral7b,MQ_0084,alpha,True,False,11,2,13,Episode duration and general signs of intoxication were omitted from the extraction.
+mistral7b,MQ_0084,beta,True,False,6,7,13,"Multiple discrete clinical symptoms, substance use concerns, and demographic details were omitted."
+mistral7b,MQ_0084,gamma,True,False,6,7,13,"Multiple clinical features including slurred speech, conjunctival injection, and specific negative findings were omitted."
+mistral7b,MQ_0430,alpha,True,False,18,3,21,Normal growth parameters and peripheral smear details were omitted from the extraction.
+mistral7b,MQ_0430,beta,True,False,14,7,21,"Multiple key clinical facts including venous lead level, medication, exposure history, and exam findings were omitted."
+mistral7b,MQ_0430,gamma,True,False,16,6,22,"The JSON missed the patient's male sex, muscle complaints, 1950 home, normal bowel sounds, normal growth, and clear mentation."
+mistral7b,MQ_0674,alpha,True,False,15,6,21,Several normal neurological exam findings and resolution of transient deficits were omitted.
+mistral7b,MQ_0674,beta,True,False,12,7,19,Multiple negative and resolved physical exam findings and history details were omitted.
+mistral7b,MQ_0674,gamma,True,False,12,6,18,Multiple exam findings and transient symptom characteristics were omitted from the structured extraction.
+mistral7b,MQ_0598,alpha,True,False,16,2,18,Gradual symptom onset and passive range of motion discomfort were omitted.
+mistral7b,MQ_0598,beta,True,False,14,6,20,"Multiple clinical details including patient sex, specific temperature, exam negatives, and treatments were omitted."
+mistral7b,MQ_0598,gamma,True,False,16,2,18,"Patient sex was marked unknown despite explicit mentions of grandson/boy, and home remedy was omitted."
+mistral7b,MQ_0579,alpha,True,False,16,2,18,The negative direct antiglobulin test and the timing of the valve replacement were omitted.
+mistral7b,MQ_0579,beta,True,False,11,4,15,"Key negative lab result, pallor, and medication history were omitted."
+mistral7b,MQ_0579,gamma,True,False,18,1,19,The negative direct antiglobulin test result was omitted from the extracted labs.
+mistral7b,MQ_0536,alpha,True,False,20,4,24,"Key procedural events, post-catheterization complications, and fluid resuscitation response were omitted."
+mistral7b,MQ_0536,beta,True,False,11,7,18,"Multiple clinical facts including interventions, post-fluid vitals, and cardiac findings were omitted."
+mistral7b,MQ_0536,gamma,True,False,18,5,23,"Key post-resuscitation vitals, fluid therapy, ECG findings, and palpation tenderness were omitted."
+mistral7b,MQ_0324,alpha,True,False,12,9,21,"Multiple clinical details including menstrual characteristics, parity, anthropometrics, and lab results were omitted."
+mistral7b,MQ_0324,beta,True,False,12,9,21,"Multiple clinical history, medication, and biometric facts were omitted from the JSON extraction."
+mistral7b,MQ_0324,gamma,True,False,15,6,21,"Anthropometric measurements, menarche age, prior cycle characteristics, and trial of home remedies were omitted."
+mistral7b,MQ_0268,alpha,True,False,17,3,20,Electrocardiogram findings and specific functional weakness details were omitted.
+mistral7b,MQ_0268,beta,True,False,8,8,16,"Key diagnostic features including EKG heart block, leg weakness, and muscle disproportion were omitted."
+mistral7b,MQ_0268,gamma,True,False,13,3,16,"Key cardiac conduction finding, respiratory symptom, and developmental history were omitted."
+mistral7b,MQ_0210,alpha,True,False,10,4,14,"Key growth, negative exam findings, and interpersonal exam behaviors were omitted."
+mistral7b,MQ_0210,beta,True,False,8,5,13,"Multiple clinical details including medication, growth percentiles, and clinic exam behavior were omitted."
+mistral7b,MQ_0210,gamma,True,False,8,5,13,"Key clinical details including selective whispering, school mutism, and growth percentiles were omitted."
+mistral7b,MQ_0686,alpha,True,False,6,2,8,Physical exam distress finding is omitted and onset duration is inaccurately converted.
+mistral7b,MQ_0686,beta,True,False,6,2,8,Rewritten JSON omitted visual disturbance and inability to stand.
+mistral7b,MQ_0686,gamma,True,False,8,2,10,The JSON omits the acute 30-minute onset timing and home remedy attempt.
+mistral7b,MQ_0734,alpha,True,False,19,3,22,"Rewritten JSON omitted afebrile status, benign abdominal exam, and specific timing of stepwise cognitive declines."
+mistral7b,MQ_0734,beta,True,False,12,6,18,"Key symptom timelines, medication non-adherence, and several negative review-of-systems findings were omitted."
+mistral7b,MQ_0734,gamma,True,False,13,5,18,"Multiple exam findings, timeline details, and obesity history were omitted from the extraction."
+mistral7b,MQ_0985,alpha,True,False,14,3,17,"Omitted seizure chronicity duration, periodicity, and normal remainder of physical exam."
+mistral7b,MQ_0985,beta,True,False,8,6,14,"Key clinical details including seizure semiology, duration, and substance use route were omitted."
+mistral7b,MQ_0985,gamma,True,False,12,3,15,The JSON missed the 20-year symptom duration and specific exam and history details.
+mistral7b,MQ_0245,alpha,True,False,13,2,15,Ethnicity and ART adherence were omitted from the structured extraction.
+mistral7b,MQ_0245,beta,True,False,11,3,14,Key lab finding of low albumin and kidney biopsy context were omitted.
+mistral7b,MQ_0245,gamma,True,False,8,5,13,"Multiple clinical symptoms, negative findings, and urinalysis results were omitted."
+mistral7b,MQ_0272,alpha,True,False,8,2,10,Hypercalciuria and unknown family diagnosis were omitted from the extraction.
+mistral7b,MQ_0272,beta,True,False,10,2,12,"Sex was marked unknown despite being stated as a boy, and Pedialyte was omitted."
+mistral7b,MQ_0272,gamma,True,False,8,2,10,Male sex and hypercalciuria were omitted or incompletely extracted.
+mistral7b,MQ_0406,alpha,True,False,8,3,11,Multiple clinical durations and negated comorbidities were omitted from the extraction.
+mistral7b,MQ_0406,beta,True,False,8,2,10,Key familial history and timeline of prior DVT were omitted from the structured extraction.
+mistral7b,MQ_0406,gamma,True,False,11,3,14,Key contextual and treatment details were omitted from the structured extraction.
+mistral7b,MQ_0135,alpha,True,False,37,1,38,The negative history of antecedent trauma was omitted.
+mistral7b,MQ_0135,beta,True,False,27,9,36,"Multiple exam findings, vitals, dimensions, and negative history details were omitted from the extraction."
+mistral7b,MQ_0135,gamma,True,False,17,8,25,"Multiple vital metrics, historical events, and symptom duration were omitted from the extraction."
+mistral7b,MQ_0688,alpha,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+mistral7b,MQ_0688,beta,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+mistral7b,MQ_0688,gamma,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+mistral7b,MQ_0661,alpha,True,False,18,2,20,Platelet count and normal differential were omitted from laboratory results.
+mistral7b,MQ_0661,beta,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+mistral7b,MQ_0661,gamma,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+mistral7b,MQ_0308,alpha,True,False,13,2,15,Spirometry findings and post-bronchodilator reversibility were completely omitted from the extraction.
+mistral7b,MQ_0308,beta,True,False,10,7,17,"Multiple key clinical symptoms, social history items, and spirometry findings were omitted."
+mistral7b,MQ_0308,gamma,True,False,14,5,19,Several key asthma staging criteria and spirometry reversibility data were omitted.
+mistral7b,MQ_0469,alpha,True,False,20,4,24,Key urinalysis findings indicating possible rhabdomyolysis and post-ictal context were omitted.
+mistral7b,MQ_0469,beta,True,False,16,5,21,Rewritten JSON omitted several exam findings and cognitive/neurological symptoms.
+mistral7b,MQ_0469,gamma,True,False,16,9,25,Multiple critical toxicologic and physical examination findings were omitted in the JSON extraction.
+mistral7b,MQ_0949,alpha,True,False,7,5,12,"Key clinical facts including symptom duration, psychiatric denial, and agoraphobic avoidance behavior were omitted."
+mistral7b,MQ_0949,beta,True,False,6,6,12,Multiple clinical history details including prior negative cardiac workup and psychiatric history are omitted.
+mistral7b,MQ_0949,gamma,True,False,8,6,14,"Key diagnostic workup, prior ED evaluation, and avoidance behaviors were omitted."
+mistral7b,MQ_0770,alpha,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+mistral7b,MQ_0770,beta,True,False,15,12,27,"Multiple exam findings, interventions, negative lab results, and medications were omitted."
+mistral7b,MQ_0770,gamma,True,False,20,4,24,"Rewritten JSON omits home antipyretics, ED dextrose administrations, and prior medical history."
+mistral7b,MQ_0075,alpha,True,False,14,1,15,Blood culture findings were omitted from the extracted JSON.
+mistral7b,MQ_0075,beta,True,False,10,3,13,"Tylenol was omitted, respiratory rate was misattributed to heart rate, and painlessness of palm spots was lost."
+mistral7b,MQ_0075,gamma,True,False,11,5,16,"Key exam nuances, lab details regarding catalyst reaction, and imaging modality details were omitted."
+mistral7b,MQ_0010,alpha,True,False,7,3,10,"The structured JSON omits the honeymoon context, the UTI diagnosis, and travel distress."
+mistral7b,MQ_0010,beta,True,False,6,2,8,The structured extraction omits prior over-the-counter medication use and recent frequent sexual intercourse.
+mistral7b,MQ_0010,gamma,True,False,6,4,10,"Key clinical facts including dysuria, urgency, and accurate symptom onset timing were omitted."
+mistral7b,MQ_0470,alpha,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+mistral7b,MQ_0470,beta,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+mistral7b,MQ_0470,gamma,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+mistral7b,MQ_0637,alpha,True,True,16,0,16,All clinical facts from the original text are accurately preserved.
+mistral7b,MQ_0637,beta,True,False,8,3,11,Rewritten JSON omitted fatigue and pertinent negative environmental exposures.
+mistral7b,MQ_0637,gamma,True,False,10,3,13,Key clinical facts including fatigue and travel history were omitted from the extraction.
+mistral7b,MQ_0577,alpha,True,False,13,4,17,"The rewritten narrative omits substance denial, the gastric pH value, and negative ulcer biopsy results."
+mistral7b,MQ_0577,beta,True,False,13,5,18,"Multiple clinical facts including substance negations, smoking pack-per-day quantity, exam details, and biopsy results were omitted."
+mistral7b,MQ_0577,gamma,True,False,10,6,16,"Multiple clinical details including reflux symptoms, negative substance history, thickened gastric folds, and negative biopsy were omitted."
+mistral7b,MQ_0103,alpha,True,False,22,3,25,"Omitted patient mental status, immobilization status, and specific hand involvement."
+mistral7b,MQ_0103,beta,True,False,10,8,18,Multiple clinical details including past medical history and neurological findings were omitted.
+mistral7b,MQ_0103,gamma,True,False,12,6,18,Multiple specific neurologic exam findings and trauma details were omitted.
+mistral7b,MQ_0076,alpha,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+mistral7b,MQ_0076,beta,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+mistral7b,MQ_0076,gamma,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+mistral7b,MQ_0551,alpha,True,False,17,1,18,Baseline functional status without ADL impairment was omitted from the extraction.
+mistral7b,MQ_0551,beta,True,False,14,2,16,The extracted JSON missed the patient's blood pressure medication and Tylenol use.
+mistral7b,MQ_0551,gamma,True,False,10,6,16,"Multiple clinical history elements including recent fall, cardiac history, and negated symptoms were omitted."
+mistral7b,MQ_0219,alpha,True,False,29,3,32,"Episode duration, functional status, and pulmonary exam findings were omitted."
+mistral7b,MQ_0219,beta,True,False,25,4,29,"The extraction omitted episode frequency/timeframe, ineffective topical trial, left-sided normal baseline, and clear lung exam."
+mistral7b,MQ_0219,gamma,True,False,22,4,26,"Multiple clinical details including episode duration, count, lung exam, and sensation were omitted."
+mistral7b,MQ_0519,alpha,True,False,12,2,14,The rewritten JSON omits that this is a follow-up visit and that the physical examination was unremarkable.
+mistral7b,MQ_0519,beta,True,False,11,4,15,Several key confirmatory diagnostic test results were omitted from the structured extraction.
+mistral7b,MQ_0519,gamma,True,False,12,4,16,Key diagnostic procedures and negative symptoms were omitted from the extraction.
+mistral7b,MQ_0979,alpha,True,False,11,3,14,"The rewritten JSON missed the symptom duration of 90 minutes, graduate student status, and ED setting."
+mistral7b,MQ_0979,beta,True,False,10,4,14,"Key clinical facts including symptom onset, tremors, and sleep deprivation were omitted from the extraction."
+mistral7b,MQ_0979,gamma,True,False,10,7,17,"Multiple clinical history elements, onset timing, and exam findings were omitted from the extraction."
+mistral7b,MQ_0136,alpha,True,False,18,1,19,The rewritten narrative omits the patient's daily alcohol consumption history.
+mistral7b,MQ_0136,beta,True,False,11,7,18,"Multiple clinical history elements including social history, past flares, and prior treatments were omitted."
+mistral7b,MQ_0136,gamma,True,False,15,3,18,Social history including alcohol consumption and substance use was omitted from the extraction.
+mistral7b,MQ_0358,alpha,True,False,16,6,22,Key physical exam findings and acute ED interventions were omitted from the extraction.
+mistral7b,MQ_0358,beta,True,False,11,6,17,Multiple acute clinical management details and physical exam findings were omitted.
+mistral7b,MQ_0358,gamma,True,False,12,5,17,"Key clinical interventions, physical exam findings, and timeline details were omitted."
+mistral7b,MQ_0903,alpha,True,False,6,2,8,The rewritten JSON omits the negative history of dialysis and the specific imaging modality.
+mistral7b,MQ_0903,beta,True,False,3,5,8,"Multiple clinical history elements, medications, and symptom qualifiers were omitted from the JSON extraction."
+mistral7b,MQ_0903,gamma,True,False,6,3,9,Dysuria was incorrectly captured as hematuria and dialysis history was omitted.
+mistral7b,MQ_0970,alpha,True,False,19,2,21,Key contextual details regarding visit type and unconfirmed snoring history were omitted.
+mistral7b,MQ_0970,beta,True,False,12,7,19,"Multiple exam findings, chronic conditions, and symptom duration were omitted from the structured extraction."
+mistral7b,MQ_0970,gamma,True,False,15,3,18,"Key clinical details including weight, symptom duration, and absence of edema were omitted from the extraction."
+mistral7b,MQ_0901,alpha,True,False,15,5,20,Multiple exam findings and neurological status details were omitted.
+mistral7b,MQ_0901,beta,True,False,15,6,21,Key clinical facts including intravenous drug use and neurologic status to painful stimuli were omitted.
+mistral7b,MQ_0901,gamma,True,False,13,3,16,"The JSON extraction omits transient loss of consciousness, ascites/fluid wave, and normal chest findings."
+mistral7b,MQ_0251,alpha,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+mistral7b,MQ_0251,beta,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+mistral7b,MQ_0251,gamma,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+mistral7b,MQ_0379,alpha,True,False,12,8,20,"Multiple negative history findings, substance use history, and examination results were omitted."
+mistral7b,MQ_0379,beta,True,False,7,8,15,Multiple critical psychiatric symptoms and exam findings were omitted from the extraction.
+mistral7b,MQ_0379,gamma,True,False,6,12,18,"Multiple key clinical symptoms, substance use history, and examination findings were omitted."
+mistral7b,MQ_0292,alpha,True,False,14,4,18,Key details on rash progression and seizure type were omitted from the extraction.
+mistral7b,MQ_0292,beta,True,False,15,4,19,"Key clinical details including seizure duration, rash appearance, and prior history were omitted from the extraction."
+mistral7b,MQ_0292,gamma,True,False,10,9,19,The rewritten version misidentifies the infant's age as 9 years and omits multiple key clinical facts.
+mistral7b,MQ_0976,alpha,True,False,10,4,14,Key developmental and behavioral exam details were omitted in the JSON extraction.
+mistral7b,MQ_0976,beta,True,False,7,4,11,"Key developmental screening milestones including eye contact, responding to name, and social play were omitted."
+mistral7b,MQ_0976,gamma,True,False,3,7,10,Multiple key social and behavioral milestones ruling out autism are missing.
+mistral7b,MQ_0449,alpha,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+mistral7b,MQ_0449,beta,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+mistral7b,MQ_0449,gamma,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+mistral7b,MQ_0854,alpha,True,False,9,5,14,"Multiple clinical details including past dysmenorrhea, surgical timing, and acute post-op fluid response were omitted."
+mistral7b,MQ_0854,beta,True,False,7,7,14,"Rewritten JSON misses key symptoms including syncope, dyspnea, dizziness, and critical history of kidney tumors."
+mistral7b,MQ_0854,gamma,True,False,7,7,14,Key acute symptoms including dyspnea and syncope as well as temporal details were omitted from the extraction.
+mistral7b,MQ_0557,alpha,True,False,13,1,14,The biopsy ruling out malignancy was completely omitted from the extraction.
+mistral7b,MQ_0557,beta,True,False,9,4,13,Key clinical facts including prior biopsy results and menopause history were omitted.
+mistral7b,MQ_0557,gamma,True,False,12,1,13,The JSON omits the attempted home remedy with neem leaf baths.
+mistral7b,MQ_0721,alpha,True,False,16,4,20,Social history and pending diagnostic tests were omitted from the extraction.
+mistral7b,MQ_0721,beta,True,False,15,5,20,"Multiple clinical elements including oxygen saturation, osteopenia history, and alleviating factors were omitted."
+mistral7b,MQ_0721,gamma,True,False,16,6,22,"Key exam findings, relieving factors, and planned labs were omitted from the extraction."
+mistral7b,MQ_0310,alpha,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+mistral7b,MQ_0310,beta,True,False,21,9,30,"Multiple clinical facts including negative physical exam findings, social history, fatigue, and trial medications were omitted."
+mistral7b,MQ_0310,gamma,True,False,25,5,30,"The JSON missed over-the-counter medication trials, ear exam findings, and initial rhinorrhea characteristics."
+mistral7b,MQ_0627,alpha,True,False,14,5,19,"Key negative findings, rash evolution, lesion duration, and urinalysis results were omitted from the structured extraction."
+mistral7b,MQ_0627,beta,True,False,12,6,18,Multiple clinical history elements and a negative lab finding were omitted from the extraction.
+mistral7b,MQ_0627,gamma,True,False,11,7,18,"Key dermatologic features including pruritus, central clearing, and lesion persistence were omitted."
+mistral7b,MQ_0827,alpha,True,False,18,2,20,Precipitating kickboxing activity and sharp pain quality were omitted from the extraction.
+mistral7b,MQ_0827,beta,True,False,11,4,15,"Key clinical details including onset context, medication trial, and sexual history were omitted."
+mistral7b,MQ_0827,gamma,True,False,10,6,16,Multiple key reproductive history details and pelvic exam findings were omitted.
+mistral7b,MQ_0670,alpha,True,False,25,7,32,"Social history, anthropometrics, and specific symptom duration/impact were omitted from the extraction."
+mistral7b,MQ_0670,beta,True,False,17,7,24,"Multiple clinical examination findings, vitals/anthropometrics, and social history items were omitted."
+mistral7b,MQ_0670,gamma,True,False,24,6,30,"Key anthropometrics, social history, and specific eye examination details were omitted."
+mistral7b,MQ_0542,alpha,True,False,17,7,24,"Multiple clinical elements including lab results, family history, and topical treatment were omitted."
+mistral7b,MQ_0542,beta,True,False,19,3,22,Omitted prior topical cream and negative pregnancy test results.
+mistral7b,MQ_0542,gamma,True,False,18,6,24,"Multiple lab tests, family history details, skin type, and prior topical treatments were omitted."
+mistral7b,MQ_0009,alpha,True,False,15,2,17,The rewritten JSON omits multiple prior hospital admissions and room air specification.
+mistral7b,MQ_0009,beta,True,False,17,1,18,Past history of severe bloodstream infection was omitted from past medical history.
+mistral7b,MQ_0009,gamma,True,False,17,3,20,"Rewritten JSON misses past blood poisoning, shallow breathing, and absent flank/kidney pain."
+mistral7b,MQ_0684,alpha,True,False,7,1,8,The biopsy finding of giant binucleate cells was omitted from the extraction.
+mistral7b,MQ_0684,beta,True,False,11,2,13,Fatigue and prior trial of topical Vicks were omitted from the extraction.
+mistral7b,MQ_0684,gamma,True,False,8,4,12,"Key systemic symptoms including weight loss, fatigue, and three-month duration were omitted."
+mistral7b,MQ_0837,alpha,True,False,11,5,16,"Several elimination habits, feeding symptoms, and family history details were omitted."
+mistral7b,MQ_0837,beta,True,False,10,7,17,"The JSON omits several key intake, output, behavioral, and linear growth clinical details."
+mistral7b,MQ_0837,gamma,True,False,9,7,16,"Multiple clinical details including sex, feeding details, growth parameters, and exam findings are missing."
+mistral7b,MQ_0568,alpha,True,False,12,1,13,Missed functional impairment detail regarding class attendance.
+mistral7b,MQ_0568,beta,True,False,8,2,10,The JSON omits prior burn cream application and the specific joint locations affected.
+mistral7b,MQ_0568,gamma,True,False,9,4,13,"Key clinical features including hair loss, photosensitivity, and specific joint locations were omitted."

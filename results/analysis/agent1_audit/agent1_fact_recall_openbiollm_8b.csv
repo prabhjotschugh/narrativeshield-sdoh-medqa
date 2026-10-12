@@ -1,0 +1,301 @@
+model,question_id,persona,agent1_parse_success,audit_pass,facts_present,facts_missing,total_facts_extracted,audit_note
+openbiollm_8b,MQ_0655,alpha,True,False,17,3,20,Key timeline details and negative physical examination findings were omitted or inaccurately converted.
+openbiollm_8b,MQ_0655,beta,True,False,11,5,16,"Multiple clinical facts including medications, prior STI history, and physical exam findings were omitted."
+openbiollm_8b,MQ_0655,gamma,True,False,7,9,16,"Multiple vital details including age, medication, symptom onset, and active vomiting were omitted or contradicted."
+openbiollm_8b,MQ_0115,alpha,True,True,17,0,17,All clinical facts from the original narrative are preserved.
+openbiollm_8b,MQ_0115,beta,True,False,16,3,19,Key exam findings including trapezius and sternocleidomastoid atrophy were omitted from the extraction.
+openbiollm_8b,MQ_0115,gamma,True,False,10,6,16,"Key demographic details, gait ataxia, Babinski sign, and symptom duration were omitted."
+openbiollm_8b,MQ_0026,alpha,True,False,9,5,14,"The rewritten JSON omits past medical history, family history, weight loss, and duration."
+openbiollm_8b,MQ_0026,beta,True,False,8,7,15,"Multiple symptoms, medications, and laboratory findings were omitted from the structured extraction."
+openbiollm_8b,MQ_0026,gamma,True,False,9,5,14,Multiple clinical details including specific antibody targets and weight loss amounts were omitted or mischaracterized.
+openbiollm_8b,MQ_0760,alpha,True,False,7,5,12,Multiple physical exam findings and symptom characteristics were omitted from the extraction.
+openbiollm_8b,MQ_0760,beta,True,False,5,7,12,"The JSON extraction omitted age, medications, exam findings, and prior treatments."
+openbiollm_8b,MQ_0760,gamma,True,False,14,3,17,"Rewritten JSON omits inability to finish meals, alertness, and mild discomfort."
+openbiollm_8b,MQ_0282,alpha,True,False,14,3,17,Demographics and urinary incontinence were omitted from the extraction.
+openbiollm_8b,MQ_0282,beta,True,False,6,8,14,"Multiple specific vital signs, examination findings, and symptoms like urinary incontinence are missing from the extraction."
+openbiollm_8b,MQ_0282,gamma,True,False,1,15,16,The rewritten text describes an entirely different clinical case of appendicitis.
+openbiollm_8b,MQ_0251,alpha,True,False,13,15,28,"The JSON extraction missed current medications, ROS details, social history, and physical examination findings."
+openbiollm_8b,MQ_0251,beta,True,False,12,14,26,"The JSON missed extensive patient history, medications, social history, and secondary symptoms."
+openbiollm_8b,MQ_0251,gamma,True,False,11,14,25,"Multiple vital history elements, urine laboratory values, and pertinent negatives were omitted or left as placeholders."
+openbiollm_8b,MQ_0229,alpha,True,False,23,4,27,"Physical measurements including height, weight, BMI, and specific smoking duration details were omitted."
+openbiollm_8b,MQ_0229,beta,True,False,22,4,26,"Several clinical details including patient height, hypertension history, and biopsy findings were omitted."
+openbiollm_8b,MQ_0229,gamma,True,False,8,12,20,"The rewritten JSON omitted physical exam findings, smoking history, height/weight, and all diagnostic imaging and biopsy results."
+openbiollm_8b,MQ_0143,alpha,True,False,12,9,21,"Multiple key historical symptoms, exam signs, and pulsus paradoxus were omitted from the extraction."
+openbiollm_8b,MQ_0143,beta,True,False,14,13,27,"Multiple clinical symptoms, medical history, and demographic details were omitted from the structured extraction."
+openbiollm_8b,MQ_0143,gamma,True,False,20,4,24,Key positional and pleuritic features of the chest pain along with smoking quantification were omitted.
+openbiollm_8b,MQ_0755,alpha,True,True,21,0,21,All clinical facts are preserved verbatim in the JSON extraction.
+openbiollm_8b,MQ_0755,beta,True,False,5,12,17,"Multiple medical history, physical exam, and laboratory findings are missing from the extraction."
+openbiollm_8b,MQ_0755,gamma,True,False,12,10,22,"Multiple clinical exam findings, history details, and diagnostic tests were omitted."
+openbiollm_8b,MQ_0105,alpha,True,False,12,3,15,"Age is null and platelet count value was incorrectly extracted as 77 instead of 77,000."
+openbiollm_8b,MQ_0105,beta,True,False,8,5,13,"Key clinical demographics, substance use history, and self-treatment medications were omitted."
+openbiollm_8b,MQ_0105,gamma,True,False,7,6,13,"Key demographic, substance use history, and accurate platelet count were omitted or incorrectly recorded."
+openbiollm_8b,MQ_0693,alpha,True,False,16,2,18,Normal cardiac and lung auscultation findings were omitted from the examination field.
+openbiollm_8b,MQ_0693,beta,True,False,9,10,19,"Key history, substance use, and exam details were omitted."
+openbiollm_8b,MQ_0693,gamma,True,False,12,10,22,"Key clinical details including lesion morphology, substance use history, and durations were omitted."
+openbiollm_8b,MQ_0759,alpha,True,False,4,11,15,"Multiple clinical history, physical exam, and medication details are omitted."
+openbiollm_8b,MQ_0759,beta,True,False,4,9,13,"Multiple clinical exam findings, reproductive history details, and past medical history elements are omitted."
+openbiollm_8b,MQ_0759,gamma,True,False,4,10,14,"The JSON missed extensive physical exam findings, past medical history, and current medications."
+openbiollm_8b,MQ_0914,alpha,True,False,9,14,23,"The JSON extraction omitted extensive physical examination findings, family history, and symptom duration."
+openbiollm_8b,MQ_0914,beta,True,False,4,17,21,"The JSON extraction missed nearly all physical exam findings, medications, and family history."
+openbiollm_8b,MQ_0914,gamma,True,False,8,12,20,"Multiple vital physical exam findings, medications, and family history details were omitted."
+openbiollm_8b,MQ_0559,alpha,True,False,6,9,15,"Multiple constitutional symptoms, demographics, physical examination findings, and lab results were omitted."
+openbiollm_8b,MQ_0559,beta,True,False,9,4,13,Demographics and correct vital signs were omitted or misassigned.
+openbiollm_8b,MQ_0559,gamma,True,False,13,5,18,Key demographic details and several documented negative findings were omitted in the JSON extraction.
+openbiollm_8b,MQ_0090,alpha,True,False,9,6,15,Key history and FNA cytology findings were omitted from the extraction.
+openbiollm_8b,MQ_0090,beta,True,False,5,8,13,"The JSON missed extensive critical clinical information including imaging, biopsy results, and smoking history."
+openbiollm_8b,MQ_0090,gamma,True,False,5,7,12,Multiple critical diagnostic findings including smoking history and FNA cytology were omitted.
+openbiollm_8b,MQ_0605,alpha,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+openbiollm_8b,MQ_0605,beta,True,False,0,16,16,"The rewritten JSON omitted all clinical findings, vitals, history, and lab results."
+openbiollm_8b,MQ_0605,gamma,True,False,16,2,18,Conjunctival pallor and topical home treatments were omitted from the extraction.
+openbiollm_8b,MQ_0433,alpha,True,False,11,9,20,"Multiple clinical exam findings, medications, and the key diagnostic test were omitted."
+openbiollm_8b,MQ_0433,beta,True,False,10,0,19,"Multiple medications, associated symptoms, negative exam findings, and microscopy results were omitted."
+openbiollm_8b,MQ_0433,gamma,True,False,10,9,19,"Multiple clinical facts including medications, auscultation findings, and microscopic scraping results were omitted."
+openbiollm_8b,MQ_0033,alpha,True,False,13,6,19,"Key historical details, duration, restlessness, and cyst measurements were omitted."
+openbiollm_8b,MQ_0033,beta,True,False,12,4,16,"The rewritten JSON omits patient age, restlessness, and medication history while incorrectly negating vomiting."
+openbiollm_8b,MQ_0033,gamma,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+openbiollm_8b,MQ_0031,alpha,True,False,10,3,13,"Key details regarding uncle's age of diagnosis, vital sign stability, and hematoma extension were omitted."
+openbiollm_8b,MQ_0031,beta,True,False,5,10,15,"Multiple clinical details including laterality, easy bruising history, medications, and negative findings were omitted."
+openbiollm_8b,MQ_0031,gamma,True,False,4,10,14,"The rewrite omits patient demographics, trauma history, vitals, exam details, and relevant personal and family history."
+openbiollm_8b,MQ_0096,alpha,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+openbiollm_8b,MQ_0096,beta,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+openbiollm_8b,MQ_0096,gamma,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+openbiollm_8b,MQ_0224,alpha,True,False,17,3,20,"Pain quality, exacerbating factor, and presentation setting were omitted."
+openbiollm_8b,MQ_0224,beta,True,False,9,6,15,"Multiple clinical exam findings, neurological symptoms, and patient age were omitted or contradicted in the rewritten text."
+openbiollm_8b,MQ_0224,gamma,True,False,2,15,17,Rewritten JSON contains only two exam findings and omits nearly all clinical history and examination details.
+openbiollm_8b,MQ_0239,alpha,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+openbiollm_8b,MQ_0239,beta,True,False,13,11,24,"Multiple vital signs, demographics, negative exam findings, and developmental history details are missing."
+openbiollm_8b,MQ_0239,gamma,True,False,2,20,22,"The JSON extraction missed almost all clinical facts, vitals, exam findings, and lab results."
+openbiollm_8b,MQ_0518,alpha,True,False,23,2,25,Rewritten text omits presentation to the emergency department and that dyspnea was initially exertional.
+openbiollm_8b,MQ_0518,beta,True,False,11,5,16,"Vital signs, smoking history, and X-ray findings were omitted from the extraction."
+openbiollm_8b,MQ_0518,gamma,True,False,7,11,18,"Multiple clinical history details, symptom characteristics, and objective findings were omitted from the extraction."
+openbiollm_8b,MQ_0617,alpha,True,False,10,8,18,"Key birth, immunization, growth percentile, and feeding details were omitted."
+openbiollm_8b,MQ_0617,beta,True,False,16,2,18,Chronic diarrhea and failure to gain weight were omitted from the extracted narrative.
+openbiollm_8b,MQ_0617,gamma,True,False,12,8,20,"Key clinical facts including age, sex, diarrhea, and poor growth were omitted."
+openbiollm_8b,MQ_0028,alpha,True,False,11,4,15,Multiple clinical and contextual details including obesity and presentation circumstances were omitted.
+openbiollm_8b,MQ_0028,beta,True,False,12,12,24,"Rewritten JSON omitted all vitals, physical exam findings, and hematology labs."
+openbiollm_8b,MQ_0028,gamma,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+openbiollm_8b,MQ_0575,alpha,True,False,5,14,19,"Multiple vital endocrine symptoms, exam metrics, negative history, and lab results were omitted."
+openbiollm_8b,MQ_0575,beta,True,False,8,9,17,"Multiple lifestyle, anthropometric, medication, and specific timeline details were omitted."
+openbiollm_8b,MQ_0575,gamma,True,False,5,10,15,"Multiple vital measurements, durations, and negative diagnostic findings were omitted."
+openbiollm_8b,MQ_0204,alpha,True,False,6,4,10,"Pertinent negative symptoms, repeat confirmatory scan, and ordered tests were omitted from the extraction."
+openbiollm_8b,MQ_0204,beta,True,False,2,9,11,"The structured extraction omits patient age, demographics, negative symptoms, labs, and all ultrasound findings."
+openbiollm_8b,MQ_0204,gamma,True,False,3,7,10,"Multiple key clinical findings including imaging results, negated symptoms, and parity were omitted."
+openbiollm_8b,MQ_0734,alpha,True,False,13,12,25,"Multiple medical history items, physical exam findings, and temporal details were omitted."
+openbiollm_8b,MQ_0734,beta,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+openbiollm_8b,MQ_0734,gamma,True,False,7,11,18,"Multiple medications, vital signs, exam findings, and temporal symptom steps were omitted."
+openbiollm_8b,MQ_0666,alpha,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+openbiollm_8b,MQ_0666,beta,True,False,8,2,10,Key past medical and family history elements were omitted from the structured extraction.
+openbiollm_8b,MQ_0666,gamma,True,False,5,6,11,"Key demographic, chronologic, and family history details were omitted from the structured extraction."
+openbiollm_8b,MQ_0719,alpha,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+openbiollm_8b,MQ_0719,beta,True,False,15,13,28,"Multiple physical exam findings, medications, and clinical history elements were omitted."
+openbiollm_8b,MQ_0719,gamma,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+openbiollm_8b,MQ_0987,alpha,True,False,20,2,22,Omitted history of obesity and compensatory overdose of hydrochlorothiazide.
+openbiollm_8b,MQ_0987,beta,True,False,20,2,22,The rewritten narrative omits history of diabetes and obesity.
+openbiollm_8b,MQ_0987,gamma,True,False,14,5,19,Multiple clinical history details including medications and dietary triggers were omitted from the extraction.
+openbiollm_8b,MQ_0430,alpha,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+openbiollm_8b,MQ_0430,beta,True,False,15,6,21,"Multiple clinical facts including negative symptoms, growth, and prior medications were omitted."
+openbiollm_8b,MQ_0430,gamma,True,False,13,9,22,"Multiple demographic, historical, and examination findings were omitted in the JSON extraction."
+openbiollm_8b,MQ_0226,alpha,True,False,11,3,14,"Constipation, stool softener use, and smoking history were omitted from the extraction."
+openbiollm_8b,MQ_0226,beta,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+openbiollm_8b,MQ_0226,gamma,True,False,5,8,13,"Multiple clinical symptoms, medications, and social history were omitted from the extraction."
+openbiollm_8b,MQ_0460,alpha,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+openbiollm_8b,MQ_0460,beta,True,False,11,9,20,"Multiple clinical facts including liquid dysphagia, nocturnal regurgitation, smoking, and manometry were omitted."
+openbiollm_8b,MQ_0460,gamma,True,False,2,13,15,"The JSON extraction omitted nearly all clinical history, medications, diagnostics, and misstated weight loss."
+openbiollm_8b,MQ_0604,alpha,True,False,4,11,15,"Multiple negative symptoms, detailed lesion characteristics, and gynecological history were omitted."
+openbiollm_8b,MQ_0604,beta,True,False,12,4,16,"Age, oral hygiene, eating impairment, and lack of prior episodes were omitted."
+openbiollm_8b,MQ_0604,gamma,True,False,8,7,15,Multiple clinical exam features and relevant history elements were omitted from the extraction.
+openbiollm_8b,MQ_0285,alpha,True,False,10,9,19,"Multiple clinical details, negative findings, and mental status exam results are omitted."
+openbiollm_8b,MQ_0285,beta,True,False,12,6,18,"Key clinical details including age, medication use, and negated symptoms were omitted."
+openbiollm_8b,MQ_0285,gamma,True,False,6,6,12,"Key clinical features including manic sleep reduction, affect changes, and critical negations were omitted."
+openbiollm_8b,MQ_0829,alpha,True,False,16,2,18,The unremarkable remainder of physical exam and normal lab results were omitted.
+openbiollm_8b,MQ_0829,beta,True,False,20,4,24,"Multiple clinical details including symptom durations, OTC medication use, and baseline contralateral exam findings were omitted."
+openbiollm_8b,MQ_0829,gamma,True,False,20,3,23,The rewritten JSON omits the headache symptom and both symptom durations.
+openbiollm_8b,MQ_0891,alpha,True,False,14,7,21,Multiple clinical history and physical examination findings were omitted from the extraction.
+openbiollm_8b,MQ_0891,beta,True,False,13,7,20,"Multiple clinical symptoms, pain severity, home medications, and pertinent negatives were omitted."
+openbiollm_8b,MQ_0891,gamma,True,False,8,12,20,"Multiple vital signs, exam findings, and clinical history details are omitted."
+openbiollm_8b,MQ_0007,alpha,True,False,8,17,25,"The JSON extraction omitted major medical history, medications, exam findings, and cystoscopy results."
+openbiollm_8b,MQ_0007,beta,True,False,6,20,26,"The rewritten JSON omitted medical history, medications, physical exam, cystoscopy findings, and chronicity."
+openbiollm_8b,MQ_0007,gamma,True,False,2,18,20,"The extracted JSON failed to capture nearly all clinical symptoms, exam findings, medications, and history."
+openbiollm_8b,MQ_0778,alpha,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+openbiollm_8b,MQ_0778,beta,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+openbiollm_8b,MQ_0778,gamma,True,False,17,9,26,"Multiple clinical history elements, negative viral labs, age, and biopsy results were omitted."
+openbiollm_8b,MQ_0826,alpha,True,False,9,6,15,"The JSON output failed to capture patient age, anthropometrics, and negative respiratory symptoms."
+openbiollm_8b,MQ_0826,beta,True,False,8,8,16,"Multiple vital clinical details including age, demographics, smoking history, and negative symptoms were omitted."
+openbiollm_8b,MQ_0826,gamma,True,False,6,14,20,"Key imaging findings, physical exam results, and social history were completely omitted."
+openbiollm_8b,MQ_0164,alpha,True,False,21,10,31,The JSON extraction completely omitted the lumbar puncture and CSF analysis results as well as several specific historical details.
+openbiollm_8b,MQ_0164,beta,True,False,1,28,29,The JSON extraction failed to capture almost all clinical facts from the narrative.
+openbiollm_8b,MQ_0164,gamma,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+openbiollm_8b,MQ_0715,alpha,True,True,8,0,8,All clinical facts are preserved within the relevant history field of the JSON.
+openbiollm_8b,MQ_0715,beta,True,False,6,3,9,"The rewritten JSON omits OTC medication use, symptom duration, and back pain."
+openbiollm_8b,MQ_0715,gamma,True,False,4,3,7,"The structured extraction omits patient sex, fatigue, and specific orthopnea details."
+openbiollm_8b,MQ_0984,alpha,True,False,17,5,22,"Key negative exam findings, dark urine, PMH, and respiratory rate were omitted."
+openbiollm_8b,MQ_0984,beta,True,False,17,3,20,"Omitted dark urine, antacid medication use, and absence of spider veins."
+openbiollm_8b,MQ_0984,gamma,True,False,15,9,24,"Multiple clinical symptoms, demographic details, and exam findings were omitted from the extraction."
+openbiollm_8b,MQ_0349,alpha,True,False,9,8,17,"Multiple constitutional symptoms, vitals status, imaging confirmation, and laboratory results were omitted."
+openbiollm_8b,MQ_0349,beta,True,False,12,7,19,"Multiple clinical details including vitals, imaging, pallor, and appetite loss were omitted from the extraction."
+openbiollm_8b,MQ_0349,gamma,True,False,10,6,16,"Multiple exam and lab findings including pallor, vitals, organomegaly, and cytopenias were omitted."
+openbiollm_8b,MQ_0965,alpha,True,False,12,4,16,"Several temporal details, symptom qualities, and pertinent negatives were omitted from the extraction."
+openbiollm_8b,MQ_0965,beta,True,False,7,7,14,"Multiple exam findings, medications, and relevant social/medical history were omitted from the extraction."
+openbiollm_8b,MQ_0965,gamma,True,False,6,10,16,"Multiple clinical history findings, physical examination details, and medications were omitted from the extraction."
+openbiollm_8b,MQ_0160,alpha,True,False,9,5,14,Multiple clinical history and exam details were omitted in the JSON extraction.
+openbiollm_8b,MQ_0160,beta,True,False,9,4,13,"Key medication levothyroxine, thyroid history, muscle cream use, and normal palpation findings were omitted."
+openbiollm_8b,MQ_0160,gamma,True,False,6,8,14,"Multiple clinical exam findings, medications, and contextual risk factors were omitted."
+openbiollm_8b,MQ_0221,alpha,True,True,14,0,14,All clinical facts from the original narrative are fully preserved within the JSON structure.
+openbiollm_8b,MQ_0221,beta,True,False,1,11,12,"The rewritten version omitted nearly all clinical history, symptoms, and pertinent negatives."
+openbiollm_8b,MQ_0221,gamma,True,False,4,9,13,"Multiple key urinary symptoms, duration, home treatments, and pertinent negatives were omitted."
+openbiollm_8b,MQ_0782,alpha,True,False,13,5,18,Key clinical progression details including secondary BP elevation and medication administration were omitted.
+openbiollm_8b,MQ_0782,beta,True,False,5,11,16,"Multiple vital signs, history items, and clinical timeline details were omitted from the extraction."
+openbiollm_8b,MQ_0782,gamma,True,False,10,6,16,"Multiple clinical facts including smoking history, subsequent vital signs, visual symptoms, and ED medications were omitted."
+openbiollm_8b,MQ_0345,alpha,True,False,17,11,28,"Multiple clinical history elements, medications, and temperature were omitted from the extraction."
+openbiollm_8b,MQ_0345,beta,True,False,20,2,22,Omitted physical exam pallor and peripheral blood smear findings.
+openbiollm_8b,MQ_0345,gamma,True,False,18,7,25,"The structured JSON missed patient demographics, smoking and alcohol history, exertional dyspnea, and specific negative findings."
+openbiollm_8b,MQ_0991,alpha,True,False,5,10,15,"Multiple perinatal, neonatal, and maternal clinical history details were omitted from the structured extraction."
+openbiollm_8b,MQ_0991,beta,True,False,1,12,13,"The structured extraction failed to capture almost all clinical, maternal, and physical exam findings."
+openbiollm_8b,MQ_0991,gamma,True,False,2,12,14,"The rewritten JSON misses maternal history, delivery details, APGAR scores, and misidentifies infant age."
+openbiollm_8b,MQ_0095,alpha,True,False,18,16,34,"Multiple exam findings, ECG interpretations, and pertinent negatives were omitted from the extraction."
+openbiollm_8b,MQ_0095,beta,True,False,10,12,22,"Multiple vital exam findings, ECG specifics, negative symptoms, and asthma history were omitted."
+openbiollm_8b,MQ_0095,gamma,True,False,15,15,30,"The structured extraction omits critical ECG findings, vital physical exam signs, and key negative symptoms."
+openbiollm_8b,MQ_0390,alpha,True,False,7,2,9,Key collateral details regarding school absences and teacher allegations were omitted.
+openbiollm_8b,MQ_0390,beta,True,False,6,2,8,Critical behavioral and safeguarding details regarding school truancy and alleged abuse were omitted.
+openbiollm_8b,MQ_0390,gamma,True,False,6,3,9,"The extraction omits the patient's age, symptom duration, and previous home remedies."
+openbiollm_8b,MQ_0100,alpha,True,False,12,6,18,"Demographics, specific sleep duration, collateral details, and lab results were omitted."
+openbiollm_8b,MQ_0100,beta,True,False,9,6,15,"Key clinical facts including normal labs, pacing, and psychiatric history were omitted."
+openbiollm_8b,MQ_0100,gamma,True,False,8,5,13,"Key symptom durations, specific disinhibited behaviors, and normal lab results were omitted from the extraction."
+openbiollm_8b,MQ_0368,alpha,True,False,4,8,12,Multiple clinical history and detailed physical examination findings are omitted from the extraction.
+openbiollm_8b,MQ_0368,beta,True,False,4,6,10,Key clinical details including pupillary examination and smoking history were omitted.
+openbiollm_8b,MQ_0368,gamma,True,False,5,4,9,Several key examination findings and symptom durations were omitted.
+openbiollm_8b,MQ_0868,alpha,True,False,10,6,16,"Key developmental, growth, and fundoscopy findings were omitted from the extraction."
+openbiollm_8b,MQ_0868,beta,True,False,9,10,19,"Multiple developmental milestones, physical exam findings, and the fatal outcome were omitted from the extraction."
+openbiollm_8b,MQ_0868,gamma,True,False,4,12,16,"The JSON omits critical developmental, physical exam, and outcome details."
+openbiollm_8b,MQ_0353,alpha,True,False,17,9,26,"Multiple exam findings, transient visual symptoms, and functional status were omitted from the extraction."
+openbiollm_8b,MQ_0353,beta,True,False,25,12,37,"The rewritten JSON omitted several key clinical features including transient monocular vision loss, cognitive exam details, and historical timelines."
+openbiollm_8b,MQ_0353,gamma,True,False,10,8,18,"Multiple clinical symptoms, PMH details, and exam findings were omitted from the structured extraction."
+openbiollm_8b,MQ_0619,alpha,True,False,12,2,14,The unremarkable non-contrast head CT and transport via law enforcement were omitted from the extraction.
+openbiollm_8b,MQ_0619,beta,True,False,4,6,10,"Multiple clinical history, physical exam, and imaging findings are missing."
+openbiollm_8b,MQ_0619,gamma,True,False,4,10,14,"The JSON extraction omitted extensive medical history, presenting symptoms, and exam findings."
+openbiollm_8b,MQ_0271,alpha,True,False,12,6,18,"The rewritten JSON drops the patient's age, stool frequency, stool studies, and rehydration details."
+openbiollm_8b,MQ_0271,beta,True,False,9,8,17,"Multiple clinical facts including age, medication, dry mouth, and specific stool test findings were omitted."
+openbiollm_8b,MQ_0271,gamma,True,False,13,3,16,"The JSON captures most clinical facts in the chief complaint narrative but omits stool frequency, flank exam, and home treatment."
+openbiollm_8b,MQ_0827,alpha,True,False,11,7,18,"Multiple sexual history details, pelvic exam findings, and pelvic ultrasound results were omitted."
+openbiollm_8b,MQ_0827,beta,True,False,8,6,14,"Multiple key gynecological, medication, history, and ultrasound findings were omitted from the extraction."
+openbiollm_8b,MQ_0827,gamma,True,False,8,7,15,"Key gynecologic history, onset details, and physical exam findings were omitted."
+openbiollm_8b,MQ_0045,alpha,True,False,9,4,13,Key medical history and normal lab results were omitted from the extraction.
+openbiollm_8b,MQ_0045,beta,True,False,6,9,15,"Multiple clinical facts including age, medications, PMH, and labs were omitted or mislabeled."
+openbiollm_8b,MQ_0045,gamma,True,False,5,10,15,"The JSON extraction omitted critical demographics, past medical history, medications, and negative physical symptoms."
+openbiollm_8b,MQ_0748,alpha,True,False,6,6,12,"Growth parameters, bone age imaging, and history were omitted in the JSON extraction."
+openbiollm_8b,MQ_0748,beta,True,False,5,6,11,Key physical exam findings including thelarche and pubarche were omitted from the extraction.
+openbiollm_8b,MQ_0748,gamma,True,False,7,5,12,"Key findings including age, percentiles, bone age x-ray, and normal exam findings were omitted."
+openbiollm_8b,MQ_0471,alpha,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+openbiollm_8b,MQ_0471,beta,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+openbiollm_8b,MQ_0471,gamma,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+openbiollm_8b,MQ_0550,alpha,True,False,22,1,23,The current medication enalapril was omitted from the extracted narrative.
+openbiollm_8b,MQ_0550,beta,True,False,13,11,24,"Key hematologic, genetic, and diagnostic findings were omitted from the extraction."
+openbiollm_8b,MQ_0550,gamma,True,False,16,4,20,Multiple clinical details including elevated TIBC and symptom specifics were omitted.
+openbiollm_8b,MQ_0128,alpha,True,False,15,6,21,Key symptom characteristics and social history details were omitted from the extraction.
+openbiollm_8b,MQ_0128,beta,True,False,4,16,20,"The JSON extraction omitted extensive medical history, medications, and multiple affected joint locations."
+openbiollm_8b,MQ_0128,gamma,True,False,13,8,21,"The rewritten JSON omits several key symptoms, lifestyle risk factors, and pertinent negative findings."
+openbiollm_8b,MQ_0388,alpha,True,False,5,17,22,"The JSON extraction omitted extensive negative review of systems, social history, and normal objective findings."
+openbiollm_8b,MQ_0388,beta,True,False,13,4,17,"Key history including past IV drug use, initial URI symptoms, and smoking pack-years are omitted or contradicted."
+openbiollm_8b,MQ_0388,gamma,True,False,10,12,22,"The rewritten JSON omitted age, past substance/smoking history, prior viral symptoms, exam/diagnostic findings, and several pertinent negatives."
+openbiollm_8b,MQ_0081,alpha,True,False,20,6,26,"Key pain characteristics, medical history, and lab timing were omitted from the extraction."
+openbiollm_8b,MQ_0081,beta,True,False,18,7,25,"Multiple clinical facts including age, medical history, physical exam, and symptom duration were omitted."
+openbiollm_8b,MQ_0081,gamma,True,False,13,12,25,"The JSON missed demographics, vitals, vomiting, symptom duration, radiation, and skin findings."
+openbiollm_8b,MQ_0566,alpha,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+openbiollm_8b,MQ_0566,beta,True,False,15,11,26,"Multiple vital signs, exact lab values, and demographic details were omitted."
+openbiollm_8b,MQ_0566,gamma,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+openbiollm_8b,MQ_0301,alpha,True,False,20,9,29,"Multiple clinical history elements, symptoms, and medications were omitted from the structured extraction."
+openbiollm_8b,MQ_0301,beta,True,False,21,5,26,"Rewritten JSON omitted several clinical symptoms, prior treatments, and recent infection history."
+openbiollm_8b,MQ_0301,gamma,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+openbiollm_8b,MQ_0850,alpha,True,False,11,2,13,Deep tendon reflex examination findings were omitted from the extracted JSON.
+openbiollm_8b,MQ_0850,beta,True,False,8,3,11,Key clinical exam findings and demographic details were omitted in the rewritten extraction.
+openbiollm_8b,MQ_0850,gamma,True,False,9,4,13,Key symptom durations and magnitude of weight gain were omitted from the extraction.
+openbiollm_8b,MQ_0644,alpha,True,False,17,13,30,"Multiple physical exam findings, ophthalmologic results, durations, and ECG findings were omitted."
+openbiollm_8b,MQ_0644,beta,True,False,17,10,27,"Multiple ophthalmologic exam findings, ECG results, and symptom specifics were omitted."
+openbiollm_8b,MQ_0644,gamma,True,False,13,12,25,Multiple key clinical history and exam findings were omitted from the extraction.
+openbiollm_8b,MQ_0634,alpha,True,False,12,9,21,"Multiple vital clinical status details, neurological exam findings, and pediatric age units were omitted."
+openbiollm_8b,MQ_0634,beta,True,False,17,4,21,"Rewritten text omits home antipyretic administration, symptom duration, and postictal somnolence."
+openbiollm_8b,MQ_0634,gamma,True,False,6,9,15,"Critical seizure history, exam findings, demographics, and medication administration were omitted."
+openbiollm_8b,MQ_0907,alpha,True,False,14,10,24,"Multiple clinical facts including age, pregnancy history, anthropometrics, and current medications were omitted."
+openbiollm_8b,MQ_0907,beta,True,False,11,14,25,"Multiple vital signs, exam findings, symptoms, and medications were omitted from the extraction."
+openbiollm_8b,MQ_0907,gamma,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+openbiollm_8b,MQ_0883,alpha,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+openbiollm_8b,MQ_0883,beta,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+openbiollm_8b,MQ_0883,gamma,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+openbiollm_8b,MQ_0371,alpha,True,False,3,4,7,Multiple clinical history and lab details were omitted from the extraction.
+openbiollm_8b,MQ_0371,beta,True,False,1,7,8,"The JSON missed patient age, duration of infertility, partner testing, and past STI history."
+openbiollm_8b,MQ_0371,gamma,True,False,2,5,7,Multiple key clinical history and contextual elements were omitted in the rewritten JSON.
+openbiollm_8b,MQ_0592,alpha,True,False,14,13,27,"Multiple constitutional symptoms, exam findings, and ophthalmic assessment details were omitted from the extraction."
+openbiollm_8b,MQ_0592,beta,True,False,18,8,26,"Multiple clinical details including medication use, pertinent negatives, and normal lab results were omitted."
+openbiollm_8b,MQ_0592,gamma,True,False,18,6,24,"Multiple clinical details including duration, vertigo, anorexia, and negative findings were omitted."
+openbiollm_8b,MQ_0197,alpha,True,False,11,5,16,"Symptom durations, specific lesion descriptor, and negative family history were omitted."
+openbiollm_8b,MQ_0197,beta,True,False,8,4,12,"Social history, hoarseness, and an exam finding of a vocal cord growth were omitted or altered."
+openbiollm_8b,MQ_0197,gamma,True,False,1,14,15,"The JSON extraction omitted almost all clinical facts including symptoms, vitals, and social history."
+openbiollm_8b,MQ_0722,alpha,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+openbiollm_8b,MQ_0722,beta,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+openbiollm_8b,MQ_0722,gamma,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+openbiollm_8b,MQ_0072,alpha,True,False,10,16,26,"Multiple key clinical history, lifestyle, physical exam, and lab facts were omitted."
+openbiollm_8b,MQ_0072,beta,True,False,8,17,25,"Multiple key clinical symptoms, vitals, labs, and demographic facts are missing from the structured extraction."
+openbiollm_8b,MQ_0072,gamma,True,False,8,8,16,"Multiple key clinical facts including claudication symptoms, smoking history, and current medications were omitted."
+openbiollm_8b,MQ_0047,alpha,True,False,8,7,15,"The JSON extraction omitted multiple associated symptoms, pertinent negatives, exam findings, and lab results."
+openbiollm_8b,MQ_0047,beta,True,False,13,5,18,Multiple clinical facts including rapid strep test result and medications were omitted.
+openbiollm_8b,MQ_0047,gamma,True,False,13,5,18,The structured extraction failed to capture the patient's age and several pertinent negatives and symptoms.
+openbiollm_8b,MQ_0678,alpha,True,False,33,2,35,Symptom onset duration and smoking history were omitted.
+openbiollm_8b,MQ_0678,beta,True,False,27,7,34,"Multiple clinical details including age, specific symptom onset time, intact sensation, and negative history findings were omitted."
+openbiollm_8b,MQ_0678,gamma,True,False,14,14,28,"The rewritten text omits acute onset duration, key focal exam findings, medications, and smoking history."
+openbiollm_8b,MQ_0234,alpha,True,False,17,18,35,"Multiple clinical history elements, negative symptoms, and exam findings were omitted in the JSON extraction."
+openbiollm_8b,MQ_0234,beta,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+openbiollm_8b,MQ_0234,gamma,True,False,22,12,34,Multiple clinical history and physical examination findings were omitted from the extraction.
+openbiollm_8b,MQ_0792,alpha,True,False,20,5,25,"Key demographic, history, and examination details were omitted from the JSON extraction."
+openbiollm_8b,MQ_0792,beta,True,False,0,26,26,The rewritten text is only a question-answer pair and omits all clinical facts from the original narrative.
+openbiollm_8b,MQ_0792,gamma,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+openbiollm_8b,MQ_0297,alpha,True,False,14,4,18,"Social history, sexual history, and pain progression details were omitted."
+openbiollm_8b,MQ_0297,beta,True,False,12,8,20,"Key imaging findings, medication history, and patient history details were omitted from the extraction."
+openbiollm_8b,MQ_0297,gamma,True,False,6,9,15,"Multiple clinical findings, urinalysis results, demographics, and imaging results were omitted."
+openbiollm_8b,MQ_0082,alpha,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+openbiollm_8b,MQ_0082,beta,True,False,8,5,13,"The rewritten JSON omitted age, treatments tried, prior fever, and sexual history."
+openbiollm_8b,MQ_0082,gamma,True,False,5,5,10,"The structured extraction omits patient age, pertinent negatives including dysuria and discharge, and fever."
+openbiollm_8b,MQ_0876,alpha,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+openbiollm_8b,MQ_0876,beta,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+openbiollm_8b,MQ_0876,gamma,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+openbiollm_8b,MQ_0979,alpha,True,False,9,3,12,Ocular exam finding of mydriasis and true duration of 90 minutes were omitted or misrepresented.
+openbiollm_8b,MQ_0979,beta,True,False,10,4,14,"Key clinical facts including study pill ingestion, pupil dilation, shaking, and symptom onset timing were omitted."
+openbiollm_8b,MQ_0979,gamma,True,False,11,6,17,"Key demographic data, timing details, dilated pupils, and pertinent negative flank exam were omitted."
+openbiollm_8b,MQ_0888,alpha,True,False,11,4,15,Key demographic details and months of chronic abdominal pain/diarrhea were omitted.
+openbiollm_8b,MQ_0888,beta,True,False,9,4,13,"The rewritten JSON omits age, stomach perforation, and specific symptom/medication durations."
+openbiollm_8b,MQ_0888,gamma,True,False,3,11,14,"The rewritten JSON misses critical vitals, acute perforation, surgical findings, and the patient's death."
+openbiollm_8b,MQ_0104,alpha,True,False,10,4,14,"Rewritten JSON omits surgical intervention, histopathology, and specific emesis chronicity details."
+openbiollm_8b,MQ_0104,beta,True,False,7,5,12,"Key clinical facts including vomiting, visual acuity, surgical history, and family history were omitted or misclassified."
+openbiollm_8b,MQ_0104,gamma,True,False,7,7,14,"The rewritten extraction omits patient age, visual acuity, surgical history, and incorrectly negates nausea."
+openbiollm_8b,MQ_0948,alpha,True,False,16,9,25,"The rewrite omits secondary symptoms, substance history, obstetric parity, and the specific qualitative lab test results."
+openbiollm_8b,MQ_0948,beta,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+openbiollm_8b,MQ_0948,gamma,True,False,4,20,24,"The rewritten version omits almost all clinical details, vital signs, and laboratory values."
+openbiollm_8b,MQ_0955,alpha,True,False,10,4,14,Key negative physical exam findings and absent symptoms were omitted.
+openbiollm_8b,MQ_0955,beta,True,False,5,9,14,"Multiple clinical facts including exam negatives, imaging findings, and surgical history were omitted."
+openbiollm_8b,MQ_0955,gamma,True,False,4,7,11,"The JSON extraction omitted significant negative exam findings, surgical history, and implant status."
+openbiollm_8b,MQ_0465,alpha,True,False,11,16,27,"The JSON extraction omitted medical history, medications, social history, anthropometrics, and symptom triggers."
+openbiollm_8b,MQ_0465,beta,True,False,12,8,20,"The JSON omits all medications, social history, family history, anthropometrics, and morning stiffness."
+openbiollm_8b,MQ_0465,gamma,True,False,16,9,25,"Multiple lifestyle factors, physical metrics, and historical details were omitted."
+openbiollm_8b,MQ_0651,alpha,True,True,17,0,17,All clinical facts from the original narrative are successfully captured in the JSON extraction.
+openbiollm_8b,MQ_0651,beta,True,False,10,6,16,"Multiple clinical history elements, physical exam findings, and smear results were omitted from the extraction."
+openbiollm_8b,MQ_0651,gamma,True,False,11,4,15,"Key exam findings, smear results, and personal medical history were omitted from the extraction."
+openbiollm_8b,MQ_0855,alpha,True,False,11,7,18,Key travel history and detailed physical exam measurements were omitted in the JSON extraction.
+openbiollm_8b,MQ_0855,beta,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+openbiollm_8b,MQ_0855,gamma,True,False,5,8,13,"Multiple key diagnostic facts including travel specifics, jaundice, and chloroquine use were omitted."
+openbiollm_8b,MQ_0374,alpha,True,False,7,3,10,Key rash progression characteristics and unvaccinated status were omitted.
+openbiollm_8b,MQ_0374,beta,True,False,5,5,10,"Key clinical details including sex, pruritus, medication history, and unimmunized status were omitted or marked unknown."
+openbiollm_8b,MQ_0374,gamma,True,False,8,3,11,Multiple contextual and clinical details were omitted from the structured extraction.
+openbiollm_8b,MQ_0167,alpha,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+openbiollm_8b,MQ_0167,beta,True,False,14,5,19,"The rewritten JSON omits patient demographics, anthropometrics, and antacid trial."
+openbiollm_8b,MQ_0167,gamma,True,False,18,2,20,Inability to remain upright and cessation of morning prayers were omitted from the extraction.
+openbiollm_8b,MQ_0380,alpha,True,True,9,0,9,All clinical facts from the original narrative are preserved.
+openbiollm_8b,MQ_0380,beta,True,False,4,6,10,"The structured extraction omits key visual symptoms, duration, progression, sex, and medication history."
+openbiollm_8b,MQ_0380,gamma,True,False,4,5,9,"Multiple clinical symptoms including halos, glare, duration, and prior interventions were omitted."
+openbiollm_8b,MQ_0364,alpha,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+openbiollm_8b,MQ_0364,beta,True,False,7,5,12,"Demographics, herbal medication, and behavioral exam findings were omitted from the extraction."
+openbiollm_8b,MQ_0364,gamma,True,False,5,4,9,Key psychiatric exam findings and symptom duration were omitted from the extraction.
+openbiollm_8b,MQ_0215,alpha,True,False,10,10,20,"The JSON omits patient age, hypertension history, symptom duration, and all individual BMP lab values."
+openbiollm_8b,MQ_0215,beta,True,False,17,4,21,"Key demographic, past medical history, and duration details were omitted from the JSON extraction."
+openbiollm_8b,MQ_0215,gamma,True,False,16,2,18,Key clinical facts regarding reduced grip strength and prior splint trial were omitted.
+openbiollm_8b,MQ_0687,alpha,False,False,0,-1,0,Agent1 JSON extraction failed — no audit possible.
+openbiollm_8b,MQ_0687,beta,True,False,12,6,18,Multiple clinical history and lifestyle details were omitted in the rewritten JSON.
+openbiollm_8b,MQ_0687,gamma,True,False,13,7,20,"Multiple clinical symptoms, history elements, and exam findings were omitted from the extraction."

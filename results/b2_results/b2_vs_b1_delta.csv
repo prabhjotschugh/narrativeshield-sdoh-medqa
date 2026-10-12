@@ -1,0 +1,13 @@
+Model,Delta OMR Overall,Delta NAG,Delta DSS,Delta DSS<0.8(%),Interpretation
+llama32_3b,0.0127,0.016,-0.1194,39.3,CoT worsens anchoring (NAG up)
+medgemma_4b,0.0764,-0.018,-0.079,16.1,CoT reduces anchoring (NAG down)
+phi4_mini,0.054,0.003,0.04,-1.4,CoT improves stability (DSS up)
+qwen25_7b,0.021,0.002,-0.1393,32.3,CoT negligible effect
+mistral7b,0.012,-0.001,-0.028,17.8,CoT negligible effect
+qwen3_8b,0.089,-0.017,0.1382,-5.8,CoT helps: NAG down DSS up
+ministral8b,-0.018,-0.014,0.1283,-25.2,CoT helps: NAG down DSS up
+llama31_8b,0.0346,-0.028,-0.1379,36.0,CoT reduces anchoring (NAG down)
+openbiollm_8b,-0.1623,-0.057,-0.1397,26.4,CoT reduces anchoring (NAG down)
+gemma3_12b,0.0366,-0.017,-0.1381,36.8,CoT reduces anchoring (NAG down)
+qwen25_14b,0.0504,0.0,0.0609,-11.6,CoT improves stability (DSS up)
+mistral_small_24b,0.037,-0.015,-0.0594,-9.3,CoT reduces anchoring (NAG down)

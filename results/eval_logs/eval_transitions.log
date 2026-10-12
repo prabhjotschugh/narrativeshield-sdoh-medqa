@@ -1,0 +1,171 @@
+======================================================================
+  NarrativeShield — Paired Transition-Table Analysis (NS ablation=full)
+======================================================================
+
+  llama32_3b | alpha vs beta  (n=1000)
+    Anchoring victims (B1 control correct, B1 beta wrong): 233
+      -> recovered by NS: 137 (58.8%)  |  still failing: 96
+    Both correct under B1: 435  -> maintained: 320  |  newly broken (collateral damage): 115 (26.4%)
+    Both wrong under B1: 263  -> newly fixed: 56  |  still failing: 207
+
+  llama32_3b | alpha vs gamma  (n=1000)
+    Anchoring victims (B1 control correct, B1 gamma wrong): 192
+      -> recovered by NS: 102 (53.1%)  |  still failing: 90
+    Both correct under B1: 476  -> maintained: 321  |  newly broken (collateral damage): 155 (32.6%)
+    Both wrong under B1: 263  -> newly fixed: 62  |  still failing: 201
+
+  medgemma_4b | alpha vs beta  (n=1000)
+    Anchoring victims (B1 control correct, B1 beta wrong): 193
+      -> recovered by NS: 107 (55.4%)  |  still failing: 86
+    Both correct under B1: 474  -> maintained: 376  |  newly broken (collateral damage): 98 (20.7%)
+    Both wrong under B1: 253  -> newly fixed: 47  |  still failing: 206
+
+  medgemma_4b | alpha vs gamma  (n=1000)
+    Anchoring victims (B1 control correct, B1 gamma wrong): 228
+      -> recovered by NS: 120 (52.6%)  |  still failing: 108
+    Both correct under B1: 439  -> maintained: 348  |  newly broken (collateral damage): 91 (20.7%)
+    Both wrong under B1: 258  -> newly fixed: 52  |  still failing: 206
+
+  phi4_mini | alpha vs beta  (n=1000)
+    Anchoring victims (B1 control correct, B1 beta wrong): 163
+      -> recovered by NS: 89 (54.6%)  |  still failing: 74
+    Both correct under B1: 399  -> maintained: 306  |  newly broken (collateral damage): 93 (23.3%)
+    Both wrong under B1: 345  -> newly fixed: 80  |  still failing: 265
+
+  phi4_mini | alpha vs gamma  (n=1000)
+    Anchoring victims (B1 control correct, B1 gamma wrong): 175
+      -> recovered by NS: 86 (49.1%)  |  still failing: 89
+    Both correct under B1: 387  -> maintained: 300  |  newly broken (collateral damage): 87 (22.5%)
+    Both wrong under B1: 352  -> newly fixed: 86  |  still failing: 266
+
+  qwen25_7b | alpha vs beta  (n=1000)
+    Anchoring victims (B1 control correct, B1 beta wrong): 162
+      -> recovered by NS: 83 (51.2%)  |  still failing: 79
+    Both correct under B1: 452  -> maintained: 370  |  newly broken (collateral damage): 82 (18.1%)
+    Both wrong under B1: 302  -> newly fixed: 66  |  still failing: 236
+
+  qwen25_7b | alpha vs gamma  (n=1000)
+    Anchoring victims (B1 control correct, B1 gamma wrong): 167
+      -> recovered by NS: 87 (52.1%)  |  still failing: 80
+    Both correct under B1: 447  -> maintained: 356  |  newly broken (collateral damage): 91 (20.4%)
+    Both wrong under B1: 310  -> newly fixed: 67  |  still failing: 243
+
+  mistral7b | alpha vs beta  (n=1000)
+    Anchoring victims (B1 control correct, B1 beta wrong): 157
+      -> recovered by NS: 73 (46.5%)  |  still failing: 84
+    Both correct under B1: 373  -> maintained: 273  |  newly broken (collateral damage): 100 (26.8%)
+    Both wrong under B1: 372  -> newly fixed: 55  |  still failing: 317
+
+  mistral7b | alpha vs gamma  (n=1000)
+    Anchoring victims (B1 control correct, B1 gamma wrong): 158
+      -> recovered by NS: 77 (48.7%)  |  still failing: 81
+    Both correct under B1: 372  -> maintained: 278  |  newly broken (collateral damage): 94 (25.3%)
+    Both wrong under B1: 381  -> newly fixed: 70  |  still failing: 311
+
+  qwen3_8b | alpha vs beta  (n=1000)
+    Anchoring victims (B1 control correct, B1 beta wrong): 182
+      -> recovered by NS: 117 (64.3%)  |  still failing: 65
+    Both correct under B1: 468  -> maintained: 401  |  newly broken (collateral damage): 67 (14.3%)
+    Both wrong under B1: 264  -> newly fixed: 67  |  still failing: 197
+
+  qwen3_8b | alpha vs gamma  (n=1000)
+    Anchoring victims (B1 control correct, B1 gamma wrong): 171
+      -> recovered by NS: 109 (63.7%)  |  still failing: 62
+    Both correct under B1: 479  -> maintained: 401  |  newly broken (collateral damage): 78 (16.3%)
+    Both wrong under B1: 261  -> newly fixed: 72  |  still failing: 189
+
+  ministral8b | alpha vs beta  (n=1000)
+    Anchoring victims (B1 control correct, B1 beta wrong): 163
+      -> recovered by NS: 63 (38.7%)  |  still failing: 100
+    Both correct under B1: 432  -> maintained: 273  |  newly broken (collateral damage): 159 (36.8%)
+    Both wrong under B1: 320  -> newly fixed: 73  |  still failing: 247
+
+  ministral8b | alpha vs gamma  (n=1000)
+    Anchoring victims (B1 control correct, B1 gamma wrong): 162
+      -> recovered by NS: 67 (41.4%)  |  still failing: 95
+    Both correct under B1: 433  -> maintained: 275  |  newly broken (collateral damage): 158 (36.5%)
+    Both wrong under B1: 327  -> newly fixed: 82  |  still failing: 245
+
+  llama31_8b | alpha vs beta  (n=1000)
+    Anchoring victims (B1 control correct, B1 beta wrong): 182
+      -> recovered by NS: 106 (58.2%)  |  still failing: 76
+    Both correct under B1: 547  -> maintained: 444  |  newly broken (collateral damage): 103 (18.8%)
+    Both wrong under B1: 200  -> newly fixed: 49  |  still failing: 151
+
+  llama31_8b | alpha vs gamma  (n=1000)
+    Anchoring victims (B1 control correct, B1 gamma wrong): 217
+      -> recovered by NS: 117 (53.9%)  |  still failing: 100
+    Both correct under B1: 512  -> maintained: 399  |  newly broken (collateral damage): 113 (22.1%)
+    Both wrong under B1: 205  -> newly fixed: 53  |  still failing: 152
+
+  openbiollm_8b | alpha vs beta  (n=1000)
+    Anchoring victims (B1 control correct, B1 beta wrong): 155
+      -> recovered by NS: 62 (40.0%)  |  still failing: 93
+    Both correct under B1: 367  -> maintained: 229  |  newly broken (collateral damage): 138 (37.6%)
+    Both wrong under B1: 372  -> newly fixed: 63  |  still failing: 309
+
+  openbiollm_8b | alpha vs gamma  (n=1000)
+    Anchoring victims (B1 control correct, B1 gamma wrong): 185
+      -> recovered by NS: 79 (42.7%)  |  still failing: 106
+    Both correct under B1: 337  -> maintained: 205  |  newly broken (collateral damage): 132 (39.2%)
+    Both wrong under B1: 388  -> newly fixed: 69  |  still failing: 319
+
+  gemma3_12b | alpha vs beta  (n=1000)
+    Anchoring victims (B1 control correct, B1 beta wrong): 153
+      -> recovered by NS: 85 (55.6%)  |  still failing: 68
+    Both correct under B1: 504  -> maintained: 413  |  newly broken (collateral damage): 91 (18.1%)
+    Both wrong under B1: 261  -> newly fixed: 45  |  still failing: 216
+
+  gemma3_12b | alpha vs gamma  (n=1000)
+    Anchoring victims (B1 control correct, B1 gamma wrong): 182
+      -> recovered by NS: 118 (64.8%)  |  still failing: 64
+    Both correct under B1: 475  -> maintained: 382  |  newly broken (collateral damage): 93 (19.6%)
+    Both wrong under B1: 256  -> newly fixed: 47  |  still failing: 209
+
+  qwen25_14b | alpha vs beta  (n=1000)
+    Anchoring victims (B1 control correct, B1 beta wrong): 153
+      -> recovered by NS: 90 (58.8%)  |  still failing: 63
+    Both correct under B1: 519  -> maintained: 481  |  newly broken (collateral damage): 38 (7.3%)
+    Both wrong under B1: 248  -> newly fixed: 58  |  still failing: 190
+
+  qwen25_14b | alpha vs gamma  (n=1000)
+    Anchoring victims (B1 control correct, B1 gamma wrong): 148
+      -> recovered by NS: 92 (62.2%)  |  still failing: 56
+    Both correct under B1: 524  -> maintained: 475  |  newly broken (collateral damage): 49 (9.4%)
+    Both wrong under B1: 262  -> newly fixed: 64  |  still failing: 198
+
+  mistral_small_24b | alpha vs beta  (n=1000)
+    Anchoring victims (B1 control correct, B1 beta wrong): 158
+      -> recovered by NS: 110 (69.6%)  |  still failing: 48
+    Both correct under B1: 594  -> maintained: 529  |  newly broken (collateral damage): 65 (10.9%)
+    Both wrong under B1: 189  -> newly fixed: 42  |  still failing: 147
+
+  mistral_small_24b | alpha vs gamma  (n=1000)
+    Anchoring victims (B1 control correct, B1 gamma wrong): 183
+      -> recovered by NS: 135 (73.8%)  |  still failing: 48
+    Both correct under B1: 569  -> maintained: 510  |  newly broken (collateral damage): 59 (10.4%)
+    Both wrong under B1: 199  -> newly fixed: 62  |  still failing: 137
+
+[OK] Transition table summary -> /path/to/scratch/ns_results/transition_tables.csv
+[OK] Per-question detail       -> /path/to/scratch/ns_results/transition_tables_detail.csv  (24000 rows)
+
+======================================================================
+  INTERPRETATION NOTE
+======================================================================
+
+The "anchoring_victim_recovery_rate" is the load-bearing number for the
+mitigation claim. A near-zero NAG under NarrativeShield is consistent with
+TWO very different underlying mechanisms:
+
+  (a) Genuine mitigation: anchoring victims are recovered at a high rate
+      (this is what the paper wants to claim).
+  (b) Uniform degradation: NarrativeShield lowers accuracy roughly evenly
+      across control and marked personas, closing the GAP without actually
+      helping the disadvantaged persona (reviewer Hakh's Llama-3.2 reading).
+
+Report BOTH the recovery rate AND the collateral-damage rate (newly-broken
+questions that both personas previously got right) alongside NAG for every
+model — a model can only support the mitigation narrative if recovery rate
+is meaningfully higher than what random accuracy churn would produce, and
+collateral damage is not absorbing the apparent gain.
+
